@@ -40,7 +40,7 @@ const NotFound = () => {
     <section className="py-12 sm:py-20">
       <Seo title={seo.title} description={seo.description} noindex />
       <div className="max-w-2xl mx-auto bg-white rounded-[32px] p-8 sm:p-12 border border-slate-200/80 shadow-luxury text-center space-y-5">
-        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest bg-blue-50 text-[#122d52] border border-blue-200/60">
+        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest bg-blue-50 text-[#132e53] border border-blue-200/60">
           <IconSparkleStar className="w-3.5 h-3.5 text-[#0284c7]" />
           <span>{copy.badge}</span>
         </span>
@@ -57,22 +57,22 @@ const NotFound = () => {
           <button
             type="button"
             onClick={() => navigate(to("/"))}
-            className="px-6 py-3.5 rounded-full bg-gradient-to-r from-[#122d52] to-[#0284c7] text-white font-extrabold text-xs sm:text-sm shadow-lg shadow-blue-900/20 cursor-pointer"
+            className="px-6 py-3.5 rounded-full bg-gradient-to-r from-[#132e53] to-[#0284c7] text-white font-extrabold text-xs sm:text-sm shadow-lg shadow-blue-900/20 cursor-pointer"
           >
             {copy.homeBtn} →
           </button>
           <button
             type="button"
             onClick={() => navigate(to("/services"))}
-            className="px-6 py-3.5 rounded-full bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-[#122d52] font-bold text-xs sm:text-sm transition-colors cursor-pointer"
+            className="px-6 py-3.5 rounded-full bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-[#132e53] font-bold text-xs sm:text-sm transition-colors cursor-pointer"
           >
             {copy.servicesBtn}
           </button>
           <a
             href={DOCTOR_INFO.phoneHref}
-            className="px-5 py-3.5 rounded-full bg-white border border-slate-200 text-[#122d52] font-bold text-xs sm:text-sm inline-flex items-center gap-2"
+            className="px-5 py-3.5 rounded-full bg-white border border-slate-200 text-[#132e53] font-bold text-xs sm:text-sm inline-flex items-center gap-2"
           >
-            <IconPhone className="w-4 h-4 text-[#122d52]" />
+            <IconPhone className="w-4 h-4 text-[#132e53]" />
             <span>{DOCTOR_INFO.phone}</span>
           </a>
         </div>

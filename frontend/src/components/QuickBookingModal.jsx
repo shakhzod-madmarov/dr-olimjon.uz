@@ -288,7 +288,7 @@ const QuickBookingModal = ({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Luxury Header Banner */}
-        <div className="bg-gradient-to-r from-[#0a192f] via-[#122d52] to-[#0c1f3a] p-5 sm:p-6 text-white relative">
+        <div className="bg-gradient-to-r from-[#0a192f] via-[#132e53] to-[#0c1f3a] p-5 sm:p-6 text-white relative">
           <button
             type="button"
             onClick={onClose}
@@ -370,7 +370,7 @@ const QuickBookingModal = ({
                   <span className="text-slate-500 font-semibold">
                     {lang === "uz" ? "Sana va vaqt:" : lang === "ru" ? "Дата и время:" : "Date & Time:"}
                   </span>
-                  <span className="font-bold text-[#122d52]">
+                  <span className="font-bold text-[#132e53]">
                     {formatDateBadge(activeDayObj.date || selectedDate, lang)} · {selectedTime}
                   </span>
                 </div>
@@ -447,15 +447,15 @@ const QuickBookingModal = ({
                         onClick={() => setSelectedService(item.id)}
                         className={`p-2.5 rounded-xl border text-left flex items-center gap-2.5 transition-all cursor-pointer ${
                           active
-                            ? "bg-blue-50/90 border-[#122d52] text-[#122d52] shadow-2xs ring-1 ring-[#122d52]/30"
+                            ? "bg-blue-50/90 border-[#132e53] text-[#132e53] shadow-2xs ring-1 ring-[#132e53]/30"
                             : "bg-slate-50/70 border-slate-200/80 text-slate-700 hover:bg-white hover:border-slate-300"
                         }`}
                       >
                         <div
                           className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
                             active
-                              ? "bg-[#122d52] text-white"
-                              : "bg-white text-[#122d52] border border-slate-200"
+                              ? "bg-[#132e53] text-white"
+                              : "bg-white text-[#132e53] border border-slate-200"
                           }`}
                         >
                           {item.icon}
@@ -478,7 +478,7 @@ const QuickBookingModal = ({
               <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
                 <div className="flex items-center justify-between">
                   <span id="qbm-slot-label" className="text-[11px] font-black uppercase tracking-wider text-slate-600 flex items-center gap-1.5">
-                    <IconClock className="w-3.5 h-3.5 text-[#122d52]" />
+                    <IconClock className="w-3.5 h-3.5 text-[#132e53]" />
                     <span>
                       {lang === "uz"
                         ? "2. Qabul kuni va bo'sh vaqt:"
@@ -505,7 +505,7 @@ const QuickBookingModal = ({
                         onClick={() => setSelectedDate(d.date)}
                         className={`px-3 py-1.5 rounded-xl text-[11px] font-bold whitespace-nowrap transition-all cursor-pointer border ${
                           isSelectedDay
-                            ? "bg-[#122d52] text-white border-[#122d52] shadow-2xs"
+                            ? "bg-[#132e53] text-white border-[#132e53] shadow-2xs"
                             : "bg-white text-slate-700 border-slate-200 hover:border-blue-300"
                         }`}
                       >
@@ -558,7 +558,7 @@ const QuickBookingModal = ({
                         ? "Например: Сардорбек"
                         : "e.g., Sardorbek"
                     }
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs sm:text-sm font-semibold focus:outline-none focus:border-[#122d52] focus:bg-white transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs sm:text-sm font-semibold focus:outline-none focus:border-[#132e53] focus:bg-white transition-all"
                   />
                 </div>
                 <div>
@@ -574,7 +574,7 @@ const QuickBookingModal = ({
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="+998 (90) 123-45-67"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs sm:text-sm font-semibold focus:outline-none focus:border-[#122d52] focus:bg-white transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs sm:text-sm font-semibold focus:outline-none focus:border-[#132e53] focus:bg-white transition-all"
                   />
                 </div>
               </div>
@@ -589,7 +589,7 @@ const QuickBookingModal = ({
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-[#122d52] via-[#1d4ed8] to-[#0284c7] hover:brightness-110 disabled:opacity-60 text-white font-black text-sm shadow-lg shadow-blue-900/25 flex items-center justify-center gap-2 cursor-pointer transition-all active:scale-98"
+                className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-[#132e53] via-[#1d4ed8] to-[#0284c7] hover:brightness-110 disabled:opacity-60 text-white font-black text-sm shadow-lg shadow-blue-900/25 flex items-center justify-center gap-2 cursor-pointer transition-all active:scale-98"
               >
                 <span>
                   {submitting
@@ -621,9 +621,9 @@ const QuickBookingModal = ({
                 </span>
                 <a
                   href={DOCTOR_INFO.phoneHref}
-                  className="inline-flex items-center gap-1 font-extrabold text-[#122d52] hover:underline"
+                  className="inline-flex items-center gap-1 font-extrabold text-[#132e53] hover:underline"
                 >
-                  <IconPhone className="w-3.5 h-3.5 text-[#122d52]" />
+                  <IconPhone className="w-3.5 h-3.5 text-[#132e53]" />
                   <span>{DOCTOR_INFO.phone}</span>
                 </a>
               </div>

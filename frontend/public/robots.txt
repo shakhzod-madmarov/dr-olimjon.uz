@@ -28,4 +28,4 @@ User-agent: DuckDuckBot
 Allow: /
 
 Sitemap: https://dentist-olimjon.uz/sitemap.xml
-Host: https://dentist-olimjon.uz
+Host: dentist-olimjon.uz

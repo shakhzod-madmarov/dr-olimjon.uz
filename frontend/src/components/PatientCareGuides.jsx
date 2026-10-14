@@ -195,7 +195,7 @@ const PatientCareGuides = () => {
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-8">
-          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#122d52] px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/70 mb-2.5">
+          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#132e53] px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/70 mb-2.5">
             <IconShieldCheck className="w-3.5 h-3.5 text-[#0284c7]" />
             <span>
               {lang === "uz"
@@ -240,8 +240,8 @@ const PatientCareGuides = () => {
                 onClick={() => setActiveId(g.id)}
                 className={`px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold inline-flex items-center gap-2 transition-all cursor-pointer border ${
                   isSelected
-                    ? "bg-[#122d52] text-white border-[#122d52] shadow-md shadow-blue-950/20"
-                    : "bg-slate-50 text-slate-700 border-slate-200 hover:border-blue-300 hover:text-[#122d52]"
+                    ? "bg-[#132e53] text-white border-[#132e53] shadow-md shadow-blue-950/20"
+                    : "bg-slate-50 text-slate-700 border-slate-200 hover:border-blue-300 hover:text-[#132e53]"
                 }`}
               >
                 {g.icon}
@@ -262,7 +262,7 @@ const PatientCareGuides = () => {
             <h3 className="text-lg sm:text-2xl font-black text-slate-900">
               {current.title[lang]}
             </h3>
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#122d52] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#132e53] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
               <IconClock className="w-3.5 h-3.5 text-[#0284c7]" />
               <span>Dr. Olimjon Murzajanov · Sevdo Denta</span>
             </span>

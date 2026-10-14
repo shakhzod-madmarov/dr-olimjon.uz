@@ -64,19 +64,42 @@ const setCanonical = (html, value) =>
 const setHtmlLang = (html, lang) =>
   html.replace(/<html([^>]*)\s+lang="[^"]*"/, `<html$1 lang="${lang}"`);
 
-/* Alternates go next to the canonical, which is where crawlers expect them. */
+const OG_LOCALES = {
+  uz: "uz_UZ",
+  ru: "ru_RU",
+  en: "en_US",
+};
+
+const setOgLocales = (html, lang) => {
+  const primary = OG_LOCALES[lang] || OG_LOCALES[DEFAULT_LANG] || "uz_UZ";
+  const alternates = Object.entries(OG_LOCALES)
+    .filter(([code]) => code !== lang)
+    .map(([, loc]) => `    <meta property="og:locale:alternate" content="${loc}" />`)
+    .join("\n");
+
+  const replacement = `    <meta property="og:locale" content="${primary}" />\n${alternates}`;
+  return html.replace(
+    /\s*<meta\s+property="og:locale"\s+content="[^"]*"\s*\/?>(\s*<meta\s+property="og:locale:alternate"\s+content="[^"]*"\s*\/?>)*/,
+    `\n${replacement}`
+  );
+};
+
+/* Alternates go next to the canonical, which is where crawlers expect them.
+   First strip any existing rel="alternate" hreflang links left from template. */
 const injectAlternates = (html, alternates) => {
-  if (!alternates || alternates.length === 0) return html;
+  const cleaned = html.replace(/\s*<link\s+rel="alternate"\s+hreflang="[^"]*"\s+href="[^"]*"\s*\/?>/gi, "");
+  if (!alternates || alternates.length === 0) return cleaned;
   const tags = alternates
     .map((a) => `    <link rel="alternate" hreflang="${a.hreflang}" href="${escapeAttr(a.href)}" />`)
     .join("\n");
-  return html.replace(/(<link\s+rel="canonical"[^>]*>)/, `$1\n${tags}`);
+  return cleaned.replace(/(<link\s+rel="canonical"[^>]*>)/, `$1\n${tags}`);
 };
 
 const setNoindex = (html) =>
   html
     .replace(/<meta\s+name="robots"[^>]*>/, '<meta name="robots" content="noindex, follow" />')
-    .replace(/<meta\s+name="googlebot"[^>]*>/, '<meta name="googlebot" content="noindex, follow" />');
+    .replace(/<meta\s+name="googlebot"[^>]*>/, '<meta name="googlebot" content="noindex, follow" />')
+    .replace(/<meta\s+name="yandex"[^>]*>/, '<meta name="yandex" content="noindex, follow" />');
 
 /* JSON-LD goes inside a <script>, so HTML-escaping would corrupt it. Only the
    sequence that could close the tag early needs neutralising. */
@@ -161,8 +184,10 @@ for (const route of routes) {
   page = setMetaName(page, "twitter:title", seo.title);
   page = setMetaName(page, "twitter:description", seo.description);
   page = setMetaName(page, "twitter:image", seo.ogImage);
+  const currentLang = seo.lang || DEFAULT_LANG;
   if (seo.noindex) page = setNoindex(page);
-  page = setHtmlLang(page, seo.lang || DEFAULT_LANG);
+  page = setHtmlLang(page, currentLang);
+  page = setOgLocales(page, currentLang);
   page = injectAlternates(page, seo.alternates);
   page = injectSchema(page, seo.schemaJson);
 

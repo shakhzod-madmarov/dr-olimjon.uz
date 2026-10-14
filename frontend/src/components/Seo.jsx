@@ -124,14 +124,18 @@ const Seo = ({
       document.head.appendChild(scriptTag);
     }
 
-    // 7. Robots
+    // 7. Robots (Google & Yandex)
     const robotsMeta = document.querySelector('meta[name="robots"]');
     const googlebotMeta = document.querySelector('meta[name="googlebot"]');
+    const yandexMeta = document.querySelector('meta[name="yandex"]');
     if (robotsMeta) {
       robotsMeta.setAttribute("content", noindex ? ROBOTS_NOINDEX : ROBOTS_INDEXABLE);
     }
     if (googlebotMeta) {
       googlebotMeta.setAttribute("content", noindex ? ROBOTS_NOINDEX : GOOGLEBOT_INDEXABLE);
+    }
+    if (yandexMeta) {
+      yandexMeta.setAttribute("content", noindex ? ROBOTS_NOINDEX : "index, follow");
     }
 
     return () => {

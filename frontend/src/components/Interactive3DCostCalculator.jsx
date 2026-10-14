@@ -289,7 +289,7 @@ const Interactive3DCostCalculator = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-6">
-          <span className="text-xs font-black text-[#122d52] uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-blue-100/70 border border-blue-200 inline-block mb-2.5">
+          <span className="text-xs font-black text-[#132e53] uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-blue-100/70 border border-blue-200 inline-block mb-2.5">
             {lang === "uz" ? "KLINIK XIZMATLAR REJASI" :
              lang === "ru" ? "ПЛАН КЛИНИЧЕСКОГО ЛЕЧЕНИЯ" :
              "CLINICAL TREATMENT BLUEPRINT"}
@@ -325,15 +325,15 @@ const Interactive3DCostCalculator = () => {
                 onClick={() => setSelectedId(t.id)}
                 className={`group relative p-3.5 rounded-2xl text-left transition-all duration-200 flex items-center gap-3 border cursor-pointer select-none last:col-span-2 sm:last:col-span-1 ${
                   isSelected
-                    ? "bg-gradient-to-r from-[#122d52] via-[#1e40af] to-[#0284c7] text-white border-transparent shadow-lg shadow-blue-950/20 ring-2 ring-sky-400/40 scale-[1.01]"
-                    : "bg-white text-slate-800 border-slate-200/90 hover:border-blue-300 hover:bg-blue-50/30 hover:text-[#122d52] shadow-2xs"
+                    ? "bg-gradient-to-r from-[#132e53] via-[#1e40af] to-[#0284c7] text-white border-transparent shadow-lg shadow-blue-950/20 ring-2 ring-sky-400/40 scale-[1.01]"
+                    : "bg-white text-slate-800 border-slate-200/90 hover:border-blue-300 hover:bg-blue-50/30 hover:text-[#132e53] shadow-2xs"
                 }`}
               >
                 <div
                   className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors shadow-2xs ${
                     isSelected
                       ? "bg-white/20 text-white"
-                      : "bg-blue-50 text-[#122d52] group-hover:bg-blue-100/80"
+                      : "bg-blue-50 text-[#132e53] group-hover:bg-blue-100/80"
                   }`}
                 >
                   {t.icon}
@@ -341,7 +341,7 @@ const Interactive3DCostCalculator = () => {
                 <div className="min-w-0">
                   <span
                     className={`text-[9.5px] font-black uppercase tracking-wider block leading-none mb-1 ${
-                      isSelected ? "text-sky-100" : "text-slate-400 group-hover:text-[#122d52]"
+                      isSelected ? "text-sky-100" : "text-slate-400 group-hover:text-[#132e53]"
                     }`}
                   >
                     {t.categoryTag[lang]}
@@ -370,7 +370,7 @@ const Interactive3DCostCalculator = () => {
               {/* Header with Authentic Dental Icon Badge */}
               <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-4 mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200/70 text-[#122d52] flex items-center justify-center shadow-2xs shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200/70 text-[#132e53] flex items-center justify-center shadow-2xs shrink-0">
                     {current.icon}
                   </div>
                   <div>
@@ -400,7 +400,7 @@ const Interactive3DCostCalculator = () => {
               {current.plombaTypes && (
                 <div className="mb-6">
                   <div className="text-xs font-black uppercase tracking-wider text-slate-800 mb-2.5 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#122d52]" />
+                    <span className="w-2 h-2 rounded-full bg-[#132e53]" />
                     <span>{lang === "uz" ? "Mavjud Plomba Materiallari:" : lang === "ru" ? "Доступные Пломбировочные Материалы:" : "Available Filling Materials:"}</span>
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
@@ -425,7 +425,7 @@ const Interactive3DCostCalculator = () => {
               {current.crownTypes && (
                 <div className="mb-6">
                   <div className="text-xs font-black uppercase tracking-wider text-slate-800 mb-2.5 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#122d52]" />
+                    <span className="w-2 h-2 rounded-full bg-[#132e53]" />
                     <span>{lang === "uz" ? "Old & Orqa Tish Karonkalari (Xitoy, Germaniya, Avstraliya):" : lang === "ru" ? "Коронки для Передних и Жевательных Зубов:" : "Crown Systems (Front & Back):"}</span>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
@@ -489,7 +489,7 @@ const Interactive3DCostCalculator = () => {
           </div>
 
           {/* Right: Quick Booking Form Card (Clean Luxury) */}
-          <div className="lg:col-span-5 bg-gradient-to-br from-[#0a192f] via-[#122d52] to-[#0f172a] rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col justify-between border border-blue-900/40">
+          <div className="lg:col-span-5 bg-gradient-to-br from-[#0a192f] via-[#132e53] to-[#0f172a] rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col justify-between border border-blue-900/40">
             <div>
               <span className="text-[10px] font-black text-amber-300 uppercase tracking-widest block mb-2">
                 {lang === "uz" ? "TEZKOR QABUL · SEVDO DENTA" : lang === "ru" ? "БЫСТРАЯ ЗАПИСЬ · SEVDO DENTA" : "PRIORITY BOOKING · SEVDO DENTA"}

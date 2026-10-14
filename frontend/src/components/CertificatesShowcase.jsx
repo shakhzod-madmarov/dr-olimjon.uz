@@ -129,14 +129,14 @@ const CertificatesShowcase = () => {
                   setActiveCert(cert);
                 }
               }}
-              className="group bg-white rounded-3xl p-5 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between cursor-pointer relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-[#122d52]"
+              className="group bg-white rounded-3xl p-5 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between cursor-pointer relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-[#132e53]"
             >
               {/* Subtle Gold Top Bar */}
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#122d52] via-[#0284c7] to-[#122d52]" />
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#132e53] via-[#0284c7] to-[#132e53]" />
 
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3 pt-1">
-                  <span className="text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 text-[#122d52] border border-blue-200/60">
+                  <span className="text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 text-[#132e53] border border-blue-200/60">
                     {cert.badge[lang]}
                   </span>
                   <span className="text-xs font-black text-amber-600 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200/60">
@@ -152,7 +152,7 @@ const CertificatesShowcase = () => {
                     </span>
                     <IconAward className="w-4 h-4 text-amber-500 shrink-0" />
                   </div>
-                  <h3 className="text-sm font-black text-slate-900 leading-snug group-hover:text-[#122d52] transition-colors">
+                  <h3 className="text-sm font-black text-slate-900 leading-snug group-hover:text-[#132e53] transition-colors">
                     {cert.title[lang]}
                   </h3>
                 </div>
@@ -166,7 +166,7 @@ const CertificatesShowcase = () => {
                 <span className="font-mono text-slate-400 font-semibold">
                   #{cert.serial}
                 </span>
-                <span className="font-bold text-[#122d52] group-hover:translate-x-0.5 transition-transform">
+                <span className="font-bold text-[#132e53] group-hover:translate-x-0.5 transition-transform">
                   {lang === "uz" ? "Ko'rish →" : lang === "ru" ? "Открыть →" : "Inspect →"}
                 </span>
               </div>

@@ -59,6 +59,7 @@ const Footer = () => {
     { path: "/services/implantatsiya", label: { uz: "Tish Implantatsiyasi (Osstem)", ru: "Имплантация Зубов (Osstem)", en: "Dental Implants (Osstem)" } },
     { path: "/services/tish-oqartirish", label: { uz: "Philips ZOOM 4 Oqartirish", ru: "Лазерное Отбеливание ZOOM 4", en: "Philips ZOOM 4 Whitening" } },
     { path: "/services/xirurgiya", label: { uz: "Atravmatik Tish Olish", ru: "Безболезненное Удаление Зубов", en: "Atraumatic Tooth Extraction" } },
+    { path: "/services/rentgen-diagnostika", label: { uz: "Raqamli Rentgen Diagnostika", ru: "Цифровая Рентген-Диагностика", en: "Digital X-Ray Diagnostics" } },
   ];
 
   return (
