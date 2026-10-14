@@ -119,35 +119,35 @@ const Booking = () => {
       </nav>
 
       {/* 1. Classic Doctor Profile Card */}
-      <article className="bg-white rounded-3xl border border-[#d5e0ec] shadow-sm overflow-hidden">
+      <article className="bg-white rounded-2xl sm:rounded-3xl border border-[#d5e0ec] shadow-sm overflow-hidden">
         <div className="h-1.5 w-full bg-gradient-to-r from-[#132e53] to-[#285983]" />
         <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
-          <figure className="lg:col-span-5 bg-[#f8fafc] flex items-center justify-center p-5 sm:p-6 m-0">
+          <figure className="lg:col-span-5 bg-[#f8fafc] flex items-center justify-center p-4 sm:p-6 m-0">
             <img
               src={assets.dr_olimjon_portrait}
               alt={t.name}
               width={420}
               height={520}
-              className="w-full max-w-[340px] h-auto max-h-[420px] rounded-2xl object-cover object-top border border-[#d5e0ec]"
+              className="w-full max-w-[280px] sm:max-w-[340px] h-auto max-h-[380px] sm:max-h-[420px] rounded-xl sm:rounded-2xl object-cover object-top border border-[#d5e0ec]"
               loading="eager"
               decoding="async"
             />
           </figure>
 
-          <section className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-center gap-5 text-left">
+          <section className="lg:col-span-7 p-4 sm:p-8 flex flex-col justify-center gap-4 sm:gap-5 text-left">
             <header>
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#285983]">
                 {t.badge}
               </p>
-              <h1 className="font-serif-classic text-3xl sm:text-4xl font-bold text-[#132e53] mt-1">
+              <h1 className="font-serif-classic text-2xl sm:text-3xl md:text-4xl font-bold text-[#132e53] mt-1">
                 {t.name}
               </h1>
-              <p className="text-slate-600 mt-1 text-sm sm:text-base font-medium">
+              <p className="text-slate-600 mt-1 text-xs sm:text-sm md:text-base font-medium">
                 {t.specialty}
               </p>
             </header>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm border-y border-[#e2eaf2] py-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm border-y border-[#e2eaf2] py-3 sm:py-4">
               <div>
                 <p className="text-slate-400 text-xs">{t.clinicLabel}</p>
                 <p className="font-bold text-[#132e53] mt-0.5">{t.clinicVal}</p>
@@ -160,14 +160,14 @@ const Booking = () => {
 
             <div>
               <p className="text-slate-400 text-xs mb-1">{t.aboutLabel}</p>
-              <p className="text-slate-700 leading-relaxed text-sm">{t.aboutVal}</p>
+              <p className="text-slate-700 leading-relaxed text-xs sm:text-sm">{t.aboutVal}</p>
             </div>
 
-            <ul className="text-xs sm:text-sm text-slate-600 space-y-1.5 bg-[#f8fafc] rounded-2xl p-4 border border-[#d5e0ec]">
+            <ul className="text-xs sm:text-sm text-slate-600 space-y-1.5 bg-[#f8fafc] rounded-xl sm:rounded-2xl p-3.5 sm:p-4 border border-[#d5e0ec]">
               <li className="font-semibold text-[#132e53]">• {t.onlineHours}</li>
               <li>• {t.lunch}</li>
               <li>• {t.sunday}</li>
-              <li className="pt-1 text-xs text-slate-500">{t.note}</li>
+              <li className="pt-1 text-[11px] sm:text-xs text-slate-500">{t.note}</li>
             </ul>
           </section>
         </div>

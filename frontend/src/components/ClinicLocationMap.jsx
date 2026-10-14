@@ -28,14 +28,14 @@ const ClinicLocationMap = ({ compact = false }) => {
               ? "Адрес Клиники"
               : "Clinic Location"}
           </p>
-          <h2 className="mt-1.5 font-serif-classic text-3xl sm:text-4xl font-bold text-[#132e53]">
+          <h2 className="mt-1.5 font-serif-classic text-2xl sm:text-3xl md:text-4xl font-bold text-[#132e53]">
             {lang === "uz"
               ? "Andijon sh., «Sevdo Denta» Klinikasi"
               : lang === "ru"
               ? "г. Андижан, Клиника «Sevdo Denta»"
               : "«Sevdo Denta» Dental Clinic, Andijan"}
           </h2>
-          <p className="mt-2 text-sm text-slate-600">
+          <p className="mt-2 text-xs sm:text-sm text-slate-600">
             {lang === "uz"
               ? "Qabulga tashrif buyurishdan oldin onlayn yozilishni tavsiya qilamiz."
               : lang === "ru"
@@ -45,17 +45,17 @@ const ClinicLocationMap = ({ compact = false }) => {
         </div>
       )}
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch bg-white rounded-3xl p-4 sm:p-6 border border-[#d5e0ec] shadow-sm">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch bg-white rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 border border-[#d5e0ec] shadow-sm">
         {/* Left Info Column */}
-        <div className="lg:col-span-5 flex flex-col justify-between p-5 sm:p-7 rounded-2xl bg-[#132e53] text-white">
-          <div className="space-y-5">
+        <div className="lg:col-span-5 flex flex-col justify-between p-4 sm:p-7 rounded-xl sm:rounded-2xl bg-[#132e53] text-white">
+          <div className="space-y-4 sm:space-y-5">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#285983] text-xs font-semibold text-white">
               <IconLocationPin className="w-3.5 h-3.5 text-white shrink-0" />
               <span>{c.badge[lang]}</span>
             </div>
 
             <div>
-              <h3 className="font-serif-classic text-2xl sm:text-3xl font-bold">
+              <h3 className="font-serif-classic text-xl sm:text-2xl md:text-3xl font-bold">
                 {c.name[lang]}
               </h3>
               <p className="mt-2 text-sm text-slate-200 leading-relaxed">

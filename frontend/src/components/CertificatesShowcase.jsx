@@ -83,12 +83,12 @@ const CertificatesShowcase = () => {
   const modalRef = useModalA11y(Boolean(activeCert), closeCert);
 
   return (
-    <section className="py-12 sm:py-16 bg-[#f8fafc] border-t border-slate-200/70">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-10 sm:py-16 bg-[#f8fafc] border-t border-slate-200/70">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest bg-amber-50 text-amber-800 border border-amber-200/80">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-widest bg-amber-50 text-amber-800 border border-amber-200/80">
             <IconAward className="w-4 h-4 text-amber-600" />
             <span>
               {lang === "uz"
@@ -98,14 +98,14 @@ const CertificatesShowcase = () => {
                 : "DIPLOMAS & CLINICAL CERTIFICATIONS"}
             </span>
           </span>
-          <h2 className="mt-3 text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          <h2 className="mt-2.5 sm:mt-3 text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
             {lang === "uz"
               ? "Tasdiqlangan Tibbiy Malaka & Xalqaro Tajriba"
               : lang === "ru"
               ? "Подтверждённая Квалификация и Опыт"
               : "Verified Medical Credentials & Honors"}
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-slate-600">
+          <p className="mt-2 text-xs sm:text-sm md:text-base text-slate-600">
             {lang === "uz"
               ? "Dr. Olimjon Murzajanov har yili Janubiy Koreya, Yevropa va O'zbekistonning yetakchi stomatologiya akademiyalarida malaka oshiradi."
               : lang === "ru"
@@ -115,7 +115,7 @@ const CertificatesShowcase = () => {
         </div>
 
         {/* 4 Certificate Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {certificates.map((cert) => (
             <div
               key={cert.id}
@@ -129,7 +129,7 @@ const CertificatesShowcase = () => {
                   setActiveCert(cert);
                 }
               }}
-              className="group bg-white rounded-3xl p-5 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between cursor-pointer relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-[#132e53]"
+              className="group bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 flex flex-col justify-between cursor-pointer relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-[#132e53]"
             >
               {/* Subtle Gold Top Bar */}
               <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#132e53] via-[#0284c7] to-[#132e53]" />
@@ -145,14 +145,14 @@ const CertificatesShowcase = () => {
                 </div>
 
                 {/* Stylized Certificate Frame Preview */}
-                <div className="p-3.5 rounded-2xl bg-gradient-to-br from-slate-50 to-blue-50/40 border border-slate-200/80 mb-3.5">
+                <div className="p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-slate-50 to-blue-50/40 border border-slate-200/80 mb-3.5">
                   <div className="flex items-center justify-between mb-1.5">
                     <span className="text-[9px] font-bold uppercase tracking-widest text-slate-400">
                       {cert.org}
                     </span>
                     <IconAward className="w-4 h-4 text-amber-500 shrink-0" />
                   </div>
-                  <h3 className="text-sm font-black text-slate-900 leading-snug group-hover:text-[#132e53] transition-colors">
+                  <h3 className="text-xs sm:text-sm font-black text-slate-900 leading-snug group-hover:text-[#132e53] transition-colors">
                     {cert.title[lang]}
                   </h3>
                 </div>
@@ -177,7 +177,7 @@ const CertificatesShowcase = () => {
         {/* Modal Lightbox for Certificate Details */}
         {activeCert && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-slate-950/75 backdrop-blur-sm"
             onClick={closeCert}
           >
             <div
@@ -186,7 +186,7 @@ const CertificatesShowcase = () => {
               aria-modal="true"
               aria-label={`${a11y.certificateModal}: ${activeCert.title[lang]}`}
               tabIndex={-1}
-              className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 border-2 border-amber-300 shadow-2xl relative"
+              className="bg-white rounded-2xl sm:rounded-3xl max-w-lg w-full p-4 sm:p-8 border-2 border-amber-300 shadow-2xl relative"
               onClick={(e) => e.stopPropagation()}
             >
               <button

@@ -435,16 +435,16 @@ const InlineBookingSection = ({
     <section
       id={sectionId}
       aria-labelledby={`${sectionId}-title`}
-      className="scroll-mt-24 bg-white rounded-3xl border border-[#d5e0ec] shadow-sm p-6 sm:p-8 lg:p-10"
+      className="scroll-mt-24 bg-white rounded-2xl sm:rounded-3xl border border-[#d5e0ec] shadow-sm p-4 sm:p-8 lg:p-10"
     >
       {/* ── Classic Professional Header ──────────────────────────────── */}
-      <div className="border-b border-[#e2eaf2] pb-5 mb-6 text-left sm:text-center">
+      <div className="border-b border-[#e2eaf2] pb-4 sm:pb-5 mb-5 sm:mb-6 text-left sm:text-center">
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#285983] mb-1.5">
           {t.kicker}
         </p>
         <h2
           id={`${sectionId}-title`}
-          className="font-serif-classic text-3xl sm:text-4xl font-bold text-[#132e53]"
+          className="font-serif-classic text-2xl sm:text-3xl md:text-4xl font-bold text-[#132e53]"
         >
           {t.heading}
         </h2>
@@ -475,15 +475,15 @@ const InlineBookingSection = ({
 
       {isSuccess ? (
         /* ══════════ STEP 5: CONFIRMATION + 1-CLICK TELEGRAM REMINDER ══════════ */
-        <div className="max-w-lg mx-auto py-4 text-center space-y-5">
-          <div className="w-16 h-16 rounded-full bg-[#f2f6fa] border border-[#d5e0ec] flex items-center justify-center mx-auto">
-            <IconCheckCircle className="w-8 h-8 text-[#132e53]" />
+        <div className="max-w-lg mx-auto py-4 text-center space-y-4 sm:space-y-5">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#f2f6fa] border border-[#d5e0ec] flex items-center justify-center mx-auto">
+            <IconCheckCircle className="w-7 h-7 sm:w-8 sm:h-8 text-[#132e53]" />
           </div>
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-[#285983] mb-1">
               {t.successBadge}
             </p>
-            <h3 className="font-serif-classic text-2xl sm:text-3xl font-bold text-[#132e53]">
+            <h3 className="font-serif-classic text-xl sm:text-2xl md:text-3xl font-bold text-[#132e53]">
               {t.successTitle}
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">
@@ -491,7 +491,7 @@ const InlineBookingSection = ({
             </p>
           </div>
 
-          <dl className="bg-[#f7f9fc] border border-[#d5e0ec] rounded-xl p-4 text-left text-xs space-y-2.5 text-slate-700">
+          <dl className="bg-[#f7f9fc] border border-[#d5e0ec] rounded-xl p-3.5 sm:p-4 text-left text-xs space-y-2.5 text-slate-700">
             <div className="flex justify-between border-b border-[#e2eaf2] pb-2">
               <dt className="text-slate-500">{t.summaryPatient}:</dt>
               <dd className="font-bold text-[#132e53]">{name}</dd>
@@ -513,7 +513,7 @@ const InlineBookingSection = ({
           </dl>
 
           {botLink && (
-            <div className="rounded-xl border border-[#d5e0ec] bg-[#f2f6fa] p-5 space-y-3 text-left">
+            <div className="rounded-xl border border-[#d5e0ec] bg-[#f2f6fa] p-4 sm:p-5 space-y-3 text-left">
               <p className="text-xs sm:text-sm font-bold text-[#132e53]">{t.botTitle}</p>
               {botQr && (
                 <img
@@ -547,14 +547,14 @@ const InlineBookingSection = ({
         </div>
       ) : (
         /* ══════════ STEPS 1–4: DATE, TIME, PATIENT INFO & E2EE SUBMIT ══════════ */
-        <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+        <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6" noValidate>
           {/* Step 1: Date Picker */}
           <div>
-            <p className="text-xs font-bold text-[#132e53] mb-2.5 text-left sm:text-center">
+            <p className="text-xs font-bold text-[#132e53] mb-2 sm:mb-2.5 text-left sm:text-center">
               {t.dayGroupLabel}
             </p>
             <div
-              className="flex gap-2 overflow-x-auto pb-2 justify-start sm:justify-center snap-x snap-mandatory"
+              className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-2 justify-start sm:justify-center snap-x snap-mandatory"
               role="group"
               aria-label={t.dayGroupLabel}
             >
@@ -571,7 +571,7 @@ const InlineBookingSection = ({
                       );
                     }}
                     aria-pressed={isActive}
-                    className={`shrink-0 snap-start px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-colors cursor-pointer ${
+                    className={`shrink-0 snap-start px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-colors cursor-pointer ${
                       isActive
                         ? "bg-[#132e53] text-white border-[#132e53]"
                         : "bg-[#f7f9fc] text-slate-700 border-[#d5e0ec] hover:bg-[#eef3f8] hover:border-[#285983]"
@@ -586,12 +586,12 @@ const InlineBookingSection = ({
 
           {/* Step 2: Free Time Slots */}
           <div>
-            <p className="text-xs font-bold text-[#132e53] mb-2.5 text-left sm:text-center">
+            <p className="text-xs font-bold text-[#132e53] mb-2 sm:mb-2.5 text-left sm:text-center">
               {t.timeGroupLabel}
             </p>
             {activeDay && activeDay.times.length > 0 && (
               <div
-                className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2.5"
+                className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 sm:gap-2.5"
                 role="group"
                 aria-label={t.timeGroupLabel}
               >
@@ -603,7 +603,7 @@ const InlineBookingSection = ({
                       type="button"
                       onClick={() => setSelectedTime(time)}
                       aria-pressed={isSelected}
-                      className={`py-3 rounded-xl border text-sm font-semibold transition-colors cursor-pointer ${
+                      className={`py-2.5 sm:py-3 rounded-xl border text-xs sm:text-sm font-semibold transition-colors cursor-pointer ${
                         isSelected
                           ? "bg-[#285983] text-white border-[#285983]"
                           : "bg-white text-[#132e53] border-[#d5e0ec] hover:bg-[#f2f6fa] hover:border-[#285983]"

@@ -162,11 +162,11 @@ const SmileAssessmentWizard = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 bg-white relative overflow-hidden border-t border-slate-100" aria-label={a11y.smileWizard}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-10 sm:py-16 bg-white relative overflow-hidden border-t border-slate-100" aria-label={a11y.smileWizard}>
+      <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-8">
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
           <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#132e53] px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/70 mb-2.5">
             <IconSparkleStar className="w-3.5 h-3.5 text-[#0284c7]" />
             <span>
@@ -177,14 +177,14 @@ const SmileAssessmentWizard = () => {
                 : "INTERACTIVE DENTAL ASSESSMENT"}
             </span>
           </span>
-          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
             {lang === "uz"
               ? "Sizni Qanday Muammo Bezovta Qilmoqda?"
               : lang === "ru"
               ? "Какая Проблема Вас Беспокоит?"
               : "What Dental Concern Can We Solve For You?"}
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-2">
+          <p className="text-slate-600 text-xs sm:text-sm md:text-base mt-2">
             {lang === "uz"
               ? "Holatingizni tanlang va Dr. Olimjon Murzajanovning klinik tavsiyasi hamda davolash vaqti bilan tanishing."
               : lang === "ru"
@@ -193,13 +193,13 @@ const SmileAssessmentWizard = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch">
           
           {/* Left: 5 Symptom Selection Buttons */}
           <div
             role="tablist"
             aria-label={lang === "uz" ? "Shikoyatlar ro'yxati" : lang === "ru" ? "Список симптомов" : "List of symptoms"}
-            className="lg:col-span-5 flex flex-col gap-2.5"
+            className="lg:col-span-5 flex flex-col gap-2 sm:gap-2.5"
           >
             {concerns.map((item) => {
               const isSelected = item.id === selectedConcern;
@@ -212,14 +212,14 @@ const SmileAssessmentWizard = () => {
                   id={`concern-tab-${item.id}`}
                   aria-controls="concern-panel"
                   onClick={() => setSelectedConcern(item.id)}
-                  className={`p-4 rounded-2xl border text-left transition-all duration-200 flex items-center gap-3.5 cursor-pointer ${
+                  className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl border text-left transition-all duration-200 flex items-center gap-2.5 sm:gap-3.5 cursor-pointer ${
                     isSelected
                       ? "bg-gradient-to-r from-[#132e53] to-[#0284c7] text-white border-transparent shadow-lg shadow-blue-950/20"
                       : "bg-slate-50/80 hover:bg-blue-50/40 text-slate-800 border-slate-200/90 hover:border-blue-300"
                   }`}
                 >
                   <div
-                    className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0 ${
                       isSelected
                         ? "bg-white/20 text-white"
                         : "bg-white text-[#132e53] border border-slate-200/80 shadow-2xs"
@@ -229,7 +229,7 @@ const SmileAssessmentWizard = () => {
                   </div>
                   <div className="min-w-0 flex-1">
                     <span
-                      className={`text-[10px] font-black uppercase tracking-wider block ${
+                      className={`text-[9.5px] sm:text-[10px] font-black uppercase tracking-wider block ${
                         isSelected ? "text-amber-300" : "text-[#0284c7]"
                       }`}
                     >
@@ -239,7 +239,7 @@ const SmileAssessmentWizard = () => {
                       {item.title[lang]}
                     </span>
                   </div>
-                  <span className={`text-sm font-bold ${isSelected ? "text-white" : "text-slate-400"}`}>
+                  <span className={`text-xs sm:text-sm font-bold ${isSelected ? "text-white" : "text-slate-400"}`}>
                     →
                   </span>
                 </button>
@@ -252,7 +252,7 @@ const SmileAssessmentWizard = () => {
             id="concern-panel"
             role="tabpanel"
             aria-labelledby={`concern-tab-${selectedConcern}`}
-            className="lg:col-span-7 bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200/90 flex flex-col justify-between"
+            className="lg:col-span-7 bg-slate-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200/90 flex flex-col justify-between"
           >
             <div>
               <div className="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-slate-200/80">
@@ -269,17 +269,17 @@ const SmileAssessmentWizard = () => {
                 </span>
               </div>
 
-              <h3 className="mt-4 text-xl sm:text-2xl font-black text-slate-900 leading-snug">
+              <h3 className="mt-3 sm:mt-4 text-lg sm:text-xl md:text-2xl font-black text-slate-900 leading-snug">
                 {active.recommendation[lang]}
               </h3>
 
-              <p className="mt-2.5 text-sm sm:text-base text-slate-600 leading-relaxed">
+              <p className="mt-2 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
                 {active.summary[lang]}
               </p>
 
               {/* 2 Protocol Pills */}
-              <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="p-3.5 rounded-2xl bg-white border border-slate-200/80">
+              <div className="mt-4 sm:mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+                <div className="p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white border border-slate-200/80">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
                     <IconClock className="w-3.5 h-3.5 text-[#0284c7]" />
                     <span>
@@ -290,7 +290,7 @@ const SmileAssessmentWizard = () => {
                     {active.duration[lang]}
                   </span>
                 </div>
-                <div className="p-3.5 rounded-2xl bg-white border border-slate-200/80">
+                <div className="p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white border border-slate-200/80">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
                     <IconShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                     <span>

@@ -190,11 +190,11 @@ const PatientCareGuides = () => {
   const current = guides.find((g) => g.id === activeId) || guides[0];
 
   return (
-    <section className="py-12 sm:py-16 bg-white border-t border-slate-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-10 sm:py-16 bg-white border-t border-slate-100">
+      <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-8">
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
           <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#132e53] px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/70 mb-2.5">
             <IconShieldCheck className="w-3.5 h-3.5 text-[#0284c7]" />
             <span>
@@ -205,14 +205,14 @@ const PatientCareGuides = () => {
                 : "POST-TREATMENT CARE GUIDES"}
             </span>
           </span>
-          <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
             {lang === "uz"
               ? "Muolajadan Keyingi To'g'ri Parvarish"
               : lang === "ru"
               ? "Рекомендации Врача После Процедур"
               : "Doctor's Post-Procedure Care Instructions"}
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-2">
+          <p className="text-slate-600 text-xs sm:text-sm md:text-base mt-2">
             {lang === "uz"
               ? "Dr. Olimjon Murzajanov tomonidan tayyorlangan muolajadan keyingi tez bitish va uzoq yillik natija qoidalari."
               : lang === "ru"
@@ -225,7 +225,7 @@ const PatientCareGuides = () => {
         <div
           role="tablist"
           aria-label={lang === "uz" ? "Parvarish qo'llanmalari" : lang === "ru" ? "Памятки по уходу" : "Care guides"}
-          className="flex flex-wrap justify-center gap-2.5 mb-8"
+          className="flex flex-wrap justify-center gap-2 sm:gap-2.5 mb-6 sm:mb-8"
         >
           {guides.map((g) => {
             const isSelected = g.id === activeId;
@@ -238,7 +238,7 @@ const PatientCareGuides = () => {
                 id={`guide-tab-${g.id}`}
                 aria-controls={`guide-panel-${g.id}`}
                 onClick={() => setActiveId(g.id)}
-                className={`px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold inline-flex items-center gap-2 transition-all cursor-pointer border ${
+                className={`px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-bold inline-flex items-center gap-1.5 sm:gap-2 transition-all cursor-pointer border ${
                   isSelected
                     ? "bg-[#132e53] text-white border-[#132e53] shadow-md shadow-blue-950/20"
                     : "bg-slate-50 text-slate-700 border-slate-200 hover:border-blue-300 hover:text-[#132e53]"
@@ -256,22 +256,22 @@ const PatientCareGuides = () => {
           id={`guide-panel-${current.id}`}
           role="tabpanel"
           aria-labelledby={`guide-tab-${current.id}`}
-          className="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200/90"
+          className="bg-slate-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200/90"
         >
-          <div className="flex flex-wrap items-center justify-between gap-2 pb-5 mb-6 border-b border-slate-200/80">
-            <h3 className="text-lg sm:text-2xl font-black text-slate-900">
+          <div className="flex flex-wrap items-center justify-between gap-2 pb-4 sm:pb-5 mb-5 sm:mb-6 border-b border-slate-200/80">
+            <h3 className="text-base sm:text-xl md:text-2xl font-black text-slate-900">
               {current.title[lang]}
             </h3>
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#132e53] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+            <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-[#132e53] bg-blue-50 px-2.5 sm:px-3 py-1 rounded-full border border-blue-200">
               <IconClock className="w-3.5 h-3.5 text-[#0284c7]" />
               <span>Dr. Olimjon Murzajanov · Sevdo Denta</span>
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {/* DOs */}
-            <div className="bg-white rounded-2xl p-5 border border-emerald-200/80 shadow-2xs">
-              <span className="text-xs font-black uppercase tracking-wider text-emerald-700 flex items-center gap-2 mb-3.5">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-emerald-200/80 shadow-2xs">
+              <span className="text-xs font-black uppercase tracking-wider text-emerald-700 flex items-center gap-2 mb-3">
                 <IconCheckCircle className="w-4 h-4 text-emerald-600" />
                 <span>
                   {lang === "uz"
@@ -294,8 +294,8 @@ const PatientCareGuides = () => {
             </div>
 
             {/* DONTs */}
-            <div className="bg-white rounded-2xl p-5 border border-red-200/80 shadow-2xs">
-              <span className="text-xs font-black uppercase tracking-wider text-red-700 flex items-center gap-2 mb-3.5">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-red-200/80 shadow-2xs">
+              <span className="text-xs font-black uppercase tracking-wider text-red-700 flex items-center gap-2 mb-3">
                 <span className="w-4 h-4 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-[10px] font-black">
                   ✕
                 </span>

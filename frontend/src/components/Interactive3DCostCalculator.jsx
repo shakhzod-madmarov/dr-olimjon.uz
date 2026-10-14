@@ -285,21 +285,21 @@ const Interactive3DCostCalculator = () => {
 
   return (
     <section className="pt-4 pb-10 sm:pt-6 sm:pb-14 bg-[#f8fafc] relative overflow-hidden" aria-label={a11y.treatmentPlan}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6">
+        <div className="text-center max-w-2xl mx-auto mb-5 sm:mb-6">
           <span className="text-xs font-black text-[#132e53] uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-blue-100/70 border border-blue-200 inline-block mb-2.5">
             {lang === "uz" ? "KLINIK XIZMATLAR REJASI" :
              lang === "ru" ? "ПЛАН КЛИНИЧЕСКОГО ЛЕЧЕНИЯ" :
              "CLINICAL TREATMENT BLUEPRINT"}
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
             {lang === "uz" ? "Muolaja Tafsilotlari & Tezkor Qabul" :
              lang === "ru" ? "Параметры Лечения и Быстрая Запись" :
              "Treatment Parameters & Priority Booking"}
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-2 font-normal">
+          <p className="text-slate-600 text-xs sm:text-sm md:text-base mt-2 font-normal">
             {lang === "uz" ? "Kerakli stomatologik yo'nalishni tanlang, muolaja vaqti, kafolati va natijasi bilan tanishing." :
              lang === "ru" ? "Выберите нужное направление, ознакомьтесь с параметрами и запишитесь на приём." :
              "Select your dental procedure to view duration, technology protocols and treatment outcomes."}
@@ -310,7 +310,7 @@ const Interactive3DCostCalculator = () => {
         <div
           role="tablist"
           aria-label={lang === "uz" ? "Davolash turlari" : lang === "ru" ? "Виды лечения" : "Treatment categories"}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-6"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3 mb-5 sm:mb-6"
         >
           {treatments.map((t) => {
             const isSelected = selectedId === t.id;
@@ -323,14 +323,14 @@ const Interactive3DCostCalculator = () => {
                 id={`plan-tab-${t.id}`}
                 aria-controls="plan-panel"
                 onClick={() => setSelectedId(t.id)}
-                className={`group relative p-3.5 rounded-2xl text-left transition-all duration-200 flex items-center gap-3 border cursor-pointer select-none last:col-span-2 sm:last:col-span-1 ${
+                className={`group relative p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl text-left transition-all duration-200 flex items-center gap-2 sm:gap-3 border cursor-pointer select-none last:col-span-2 sm:last:col-span-1 ${
                   isSelected
                     ? "bg-gradient-to-r from-[#132e53] via-[#1e40af] to-[#0284c7] text-white border-transparent shadow-lg shadow-blue-950/20 ring-2 ring-sky-400/40 scale-[1.01]"
                     : "bg-white text-slate-800 border-slate-200/90 hover:border-blue-300 hover:bg-blue-50/30 hover:text-[#132e53] shadow-2xs"
                 }`}
               >
                 <div
-                  className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors shadow-2xs ${
+                  className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0 transition-colors shadow-2xs ${
                     isSelected
                       ? "bg-white/20 text-white"
                       : "bg-blue-50 text-[#132e53] group-hover:bg-blue-100/80"
@@ -340,13 +340,13 @@ const Interactive3DCostCalculator = () => {
                 </div>
                 <div className="min-w-0">
                   <span
-                    className={`text-[9.5px] font-black uppercase tracking-wider block leading-none mb-1 ${
+                    className={`text-[9px] sm:text-[9.5px] font-black uppercase tracking-wider block leading-none mb-1 ${
                       isSelected ? "text-sky-100" : "text-slate-400 group-hover:text-[#132e53]"
                     }`}
                   >
                     {t.categoryTag[lang]}
                   </span>
-                  <span className="text-xs sm:text-[13px] font-bold block leading-tight">
+                  <span className="text-[11px] sm:text-xs md:text-[13px] font-bold block leading-tight">
                     {t.shortTitle[lang]}
                   </span>
                 </div>
@@ -360,30 +360,30 @@ const Interactive3DCostCalculator = () => {
           id="plan-panel"
           role="tabpanel"
           aria-labelledby={`plan-tab-${selectedId}`}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8 items-stretch"
         >
           
           {/* Left: Clean Clinical Dental Specification Sheet */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm flex flex-col justify-between">
+          <div className="lg:col-span-7 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200/90 shadow-sm flex flex-col justify-between">
             <div>
               
               {/* Header with Authentic Dental Icon Badge */}
-              <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-4 mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200/70 text-[#132e53] flex items-center justify-center shadow-2xs shrink-0">
+              <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3.5 sm:pb-4 mb-4">
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-50 border border-blue-200/70 text-[#132e53] flex items-center justify-center shadow-2xs shrink-0">
                     {current.icon}
                   </div>
                   <div>
-                    <span className="text-[10px] font-black uppercase tracking-widest text-[#0284c7] block leading-none mb-1">
+                    <span className="text-[9.5px] sm:text-[10px] font-black uppercase tracking-widest text-[#0284c7] block leading-none mb-1">
                       {current.badgeTitle[lang]}
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-tight">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-tight">
                       {current.title[lang]}
                     </h3>
                   </div>
                 </div>
 
-                <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/70 shrink-0 inline-flex items-center gap-1.5">
+                <span className="text-[11px] sm:text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 sm:px-3 py-1 rounded-full border border-emerald-200/70 shrink-0 inline-flex items-center gap-1.5">
                   <IconShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                   <span>
                     {lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Painless"}
@@ -392,27 +392,27 @@ const Interactive3DCostCalculator = () => {
               </div>
               
               {/* Clinical Narrative */}
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal mb-5">
+              <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed font-normal mb-5">
                 {current.desc[lang]}
               </p>
 
               {/* 4 PLOMBA TYPES SHOWCASE (IF TREATMENT SELECTED) */}
               {current.plombaTypes && (
-                <div className="mb-6">
-                  <div className="text-xs font-black uppercase tracking-wider text-slate-800 mb-2.5 flex items-center gap-2">
+                <div className="mb-5 sm:mb-6">
+                  <div className="text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-800 mb-2.5 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#132e53]" />
                     <span>{lang === "uz" ? "Mavjud Plomba Materiallari:" : lang === "ru" ? "Доступные Пломбировочные Материалы:" : "Available Filling Materials:"}</span>
                   </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5">
                     {current.plombaTypes.map((p, idx) => (
-                      <div key={idx} className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/90 text-left">
-                        <span className="text-[10px] font-black uppercase tracking-wider text-[#0284c7] block">
+                      <div key={idx} className="p-2 sm:p-2.5 rounded-xl bg-slate-50 border border-slate-200/90 text-left">
+                        <span className="text-[9.5px] sm:text-[10px] font-black uppercase tracking-wider text-[#0284c7] block">
                           {p.country[lang]}
                         </span>
-                        <span className="text-xs font-bold text-slate-900 block mt-0.5 leading-snug">
+                        <span className="text-[11px] sm:text-xs font-bold text-slate-900 block mt-0.5 leading-snug">
                           {p.brand}
                         </span>
-                        <span className="text-[10px] text-slate-500 block mt-1 leading-tight font-medium">
+                        <span className="text-[9.5px] sm:text-[10px] text-slate-500 block mt-1 leading-tight font-medium">
                           {p.desc[lang]}
                         </span>
                       </div>
@@ -423,21 +423,21 @@ const Interactive3DCostCalculator = () => {
 
               {/* 3 CROWN TYPES SHOWCASE */}
               {current.crownTypes && (
-                <div className="mb-6">
-                  <div className="text-xs font-black uppercase tracking-wider text-slate-800 mb-2.5 flex items-center gap-2">
+                <div className="mb-5 sm:mb-6">
+                  <div className="text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-800 mb-2.5 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#132e53]" />
                     <span>{lang === "uz" ? "Old & Orqa Tish Karonkalari (Xitoy, Germaniya, Avstraliya):" : lang === "ru" ? "Коронки для Передних и Жевательных Зубов:" : "Crown Systems (Front & Back):"}</span>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-2.5">
                     {current.crownTypes.map((c, idx) => (
-                      <div key={idx} className="p-3 rounded-xl bg-slate-50 border border-slate-200/90 text-left">
-                        <span className="text-[10px] font-black uppercase tracking-wider text-[#0284c7] block">
+                      <div key={idx} className="p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200/90 text-left">
+                        <span className="text-[9.5px] sm:text-[10px] font-black uppercase tracking-wider text-[#0284c7] block">
                           {c.country[lang]}
                         </span>
-                        <span className="text-xs font-bold text-slate-900 block mt-0.5 leading-snug">
+                        <span className="text-[11px] sm:text-xs font-bold text-slate-900 block mt-0.5 leading-snug">
                           {c.brand}
                         </span>
-                        <span className="text-[10px] text-slate-500 block mt-1 leading-tight font-medium">
+                        <span className="text-[9.5px] sm:text-[10px] text-slate-500 block mt-1 leading-tight font-medium">
                           {c.desc[lang]}
                         </span>
                       </div>
@@ -447,7 +447,7 @@ const Interactive3DCostCalculator = () => {
               )}
 
               {/* 3 Clinical Guarantees */}
-              <ul className="space-y-2.5 mb-6">
+              <ul className="space-y-2.5 mb-5 sm:mb-6">
                 {current.points[lang].map((point, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-xs sm:text-sm font-semibold text-slate-700">
                     <span className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200/80 flex items-center justify-center text-xs shrink-0 font-black">
@@ -460,28 +460,28 @@ const Interactive3DCostCalculator = () => {
             </div>
 
             {/* 3 Metric Tiles at Bottom */}
-            <div className="pt-4 border-t border-slate-100 grid grid-cols-3 gap-3 text-left">
-              <div className="bg-slate-50/80 p-3 rounded-2xl border border-slate-200/70 text-center sm:text-left">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+            <div className="pt-4 border-t border-slate-100 grid grid-cols-3 gap-1.5 sm:gap-3 text-left">
+              <div className="bg-slate-50/80 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-slate-200/70 text-center sm:text-left">
+                <span className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                   {lang === "uz" ? "Vaqt" : lang === "ru" ? "Время" : "Duration"}
                 </span>
-                <span className="text-xs sm:text-sm font-black text-slate-900 mt-0.5 block">
+                <span className="text-[11px] sm:text-xs md:text-sm font-black text-slate-900 mt-0.5 block leading-tight">
                   {current.duration[lang]}
                 </span>
               </div>
-              <div className="bg-slate-50/80 p-3 rounded-2xl border border-slate-200/70 text-center sm:text-left">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+              <div className="bg-slate-50/80 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-slate-200/70 text-center sm:text-left">
+                <span className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                   {lang === "uz" ? "Tashrif" : lang === "ru" ? "Визиты" : "Visits"}
                 </span>
-                <span className="text-xs sm:text-sm font-black text-slate-900 mt-0.5 block">
+                <span className="text-[11px] sm:text-xs md:text-sm font-black text-slate-900 mt-0.5 block leading-tight">
                   {current.visits[lang]}
                 </span>
               </div>
-              <div className="bg-slate-50/80 p-3 rounded-2xl border border-slate-200/70 text-center sm:text-left">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+              <div className="bg-slate-50/80 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-slate-200/70 text-center sm:text-left">
+                <span className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                   {lang === "uz" ? "Kafolat" : lang === "ru" ? "Гарантия" : "Outcome"}
                 </span>
-                <span className="text-xs sm:text-sm font-black text-slate-900 mt-0.5 block">
+                <span className="text-[11px] sm:text-xs md:text-sm font-black text-slate-900 mt-0.5 block leading-tight">
                   {current.result[lang]}
                 </span>
               </div>
@@ -489,16 +489,16 @@ const Interactive3DCostCalculator = () => {
           </div>
 
           {/* Right: Quick Booking Form Card (Clean Luxury) */}
-          <div className="lg:col-span-5 bg-gradient-to-br from-[#0a192f] via-[#132e53] to-[#0f172a] rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col justify-between border border-blue-900/40">
+          <div className="lg:col-span-5 bg-gradient-to-br from-[#0a192f] via-[#132e53] to-[#0f172a] rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 text-white shadow-xl flex flex-col justify-between border border-blue-900/40">
             <div>
-              <span className="text-[10px] font-black text-amber-300 uppercase tracking-widest block mb-2">
+              <span className="text-[9.5px] sm:text-[10px] font-black text-amber-300 uppercase tracking-widest block mb-2">
                 {lang === "uz" ? "TEZKOR QABUL · SEVDO DENTA" : lang === "ru" ? "БЫСТРАЯ ЗАПИСЬ · SEVDO DENTA" : "PRIORITY BOOKING · SEVDO DENTA"}
               </span>
               
-              <h4 className="text-2xl font-black text-white mb-2 tracking-tight">
+              <h4 className="text-xl sm:text-2xl font-black text-white mb-2 tracking-tight">
                 {lang === "uz" ? "Navbatsiz Qabulga Yozilish" : lang === "ru" ? "Запись на Приём Без Очереди" : "Book Priority Appointment"}
               </h4>
-              <p className="text-sky-200/80 text-xs leading-relaxed mb-6 font-normal">
+              <p className="text-sky-200/80 text-xs leading-relaxed mb-4 sm:mb-6 font-normal">
                 {lang === "uz" ? "Dr. Olimjon Murzajanov bilan to'g'ridan-to'g'ri bog'lanish va dastlabki konsultatsiya belgilash." :
                  lang === "ru" ? "Прямая связь с доктором Олимжоном Мурзажановым и запись на первичный осмотр." :
                  "Direct appointment booking with Dr. Olimjon Murzajanov with zero queue wait times."}

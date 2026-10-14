@@ -165,37 +165,37 @@ const ServiceDetail = () => {
       </div>
 
       {/* Hero Card */}
-      <div className="bg-[#132e53] text-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-sm border border-[#285983]/30 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div className="bg-[#132e53] text-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-12 shadow-sm border border-[#285983]/30 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
         <div className="lg:col-span-7 space-y-4">
           <span className="inline-block px-3.5 py-1 rounded-full bg-white/10 text-[#9cb8d4] text-xs font-bold uppercase tracking-wider">
             {service.category[lang]}
           </span>
-          <h1 className="font-serif-classic text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+          <h1 className="font-serif-classic text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
             {service.title[lang]}
           </h1>
-          <p className="text-sm sm:text-base text-slate-200 leading-relaxed max-w-2xl">
+          <p className="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed max-w-2xl">
             {service.shortDesc[lang]}
           </p>
 
-          <div className="flex flex-wrap items-center gap-3 pt-2">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 text-xs font-semibold">
-              <IconClock className="w-4 h-4 text-[#9cb8d4]" />
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-2">
+            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 border border-white/15 text-[11px] sm:text-xs font-semibold">
+              <IconClock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#9cb8d4]" />
               <span>{service.duration[lang]}</span>
             </span>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-200 text-xs font-semibold">
-              <IconShieldCheck className="w-4 h-4 text-emerald-300" />
+            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-200 text-[11px] sm:text-xs font-semibold">
+              <IconShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-300" />
               <span>{service.warranty[lang]}</span>
             </span>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#285983]/50 border border-white/15 text-white text-xs font-semibold">
-              <IconAward className="w-4 h-4 text-[#9cb8d4]" />
+            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[#285983]/50 border border-white/15 text-white text-[11px] sm:text-xs font-semibold">
+              <IconAward className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#9cb8d4]" />
               <span>Dr. Olimjon Murzajanov · {getExperienceBadge(lang)}</span>
             </span>
           </div>
 
-          <div className="pt-3 flex flex-wrap gap-3">
+          <div className="pt-3 flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
             <Link
               to={`${to("/booking")}?service=${service.id}`}
-              className="px-6 py-3.5 rounded-xl bg-white text-[#132e53] hover:bg-[#f2f6fa] font-bold text-xs sm:text-sm shadow-sm transition-colors text-center inline-block"
+              className="w-full sm:w-auto px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl bg-white text-[#132e53] hover:bg-[#f2f6fa] font-bold text-xs sm:text-sm shadow-sm transition-colors text-center inline-block"
             >
               {lang === "uz"
                 ? "Ushbu Muolajaga Yozilish →"
@@ -205,7 +205,7 @@ const ServiceDetail = () => {
             </Link>
             <a
               href={DOCTOR_INFO.phoneHref}
-              className="px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs sm:text-sm flex items-center gap-2 transition-colors"
+              className="w-full sm:w-auto justify-center px-4 py-3 sm:px-5 sm:py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs sm:text-sm flex items-center gap-2 transition-colors"
             >
               <IconPhone className="w-4 h-4 text-[#9cb8d4]" />
               <span>{DOCTOR_INFO.phone}</span>
@@ -214,7 +214,7 @@ const ServiceDetail = () => {
               href={DOCTOR_INFO.telegramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-3.5 rounded-xl bg-[#285983] hover:bg-[#326c9c] text-white font-semibold text-xs sm:text-sm flex items-center gap-2 transition-colors"
+              className="w-full sm:w-auto justify-center px-4 py-3 sm:px-5 sm:py-3.5 rounded-xl bg-[#285983] hover:bg-[#326c9c] text-white font-semibold text-xs sm:text-sm flex items-center gap-2 transition-colors"
             >
               <IconTelegram className="w-4 h-4 text-white" />
               <span>Telegram</span>
@@ -232,16 +232,16 @@ const ServiceDetail = () => {
               height={600}
               fetchPriority="high"
               decoding="async"
-              className="w-full h-64 sm:h-80 object-cover"
+              className="w-full h-52 sm:h-72 lg:h-80 object-cover"
             />
           </div>
         </div>
       </div>
 
       {/* Advantages & Procedure Steps */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-8 border border-[#d5e0ec] shadow-sm space-y-5">
-          <h2 className="font-serif-classic text-2xl font-bold text-[#132e53]">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+        <div className="lg:col-span-6 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-sm space-y-4 sm:space-y-5">
+          <h2 className="font-serif-classic text-xl sm:text-2xl font-bold text-[#132e53]">
             {lang === "uz"
               ? "Asosiy Ustunliklar va Texnologiya"
               : lang === "ru"
@@ -249,13 +249,13 @@ const ServiceDetail = () => {
               : "Key Clinical Advantages"}
           </h2>
 
-          <ul className="space-y-3.5">
+          <ul className="space-y-3">
             {service.highlights[lang].map((point, idx) => (
               <li
                 key={idx}
-                className="flex items-start gap-3 p-3.5 rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-sm text-slate-800 font-medium"
+                className="flex items-start gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-xs sm:text-sm text-slate-800 font-medium"
               >
-                <IconCheckCircle className="w-5 h-5 text-[#285983] shrink-0 mt-0.5" />
+                <IconCheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#285983] shrink-0 mt-0.5" />
                 <span>{point}</span>
               </li>
             ))}
@@ -263,8 +263,8 @@ const ServiceDetail = () => {
         </div>
 
         {/* Step-by-Step Procedure */}
-        <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-8 border border-[#d5e0ec] shadow-sm space-y-5">
-          <h2 className="font-serif-classic text-2xl font-bold text-[#132e53]">
+        <div className="lg:col-span-6 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-sm space-y-4 sm:space-y-5">
+          <h2 className="font-serif-classic text-xl sm:text-2xl font-bold text-[#132e53]">
             {lang === "uz"
               ? "Muolaja Qanday Bosqichlarda O'tadi?"
               : lang === "ru"
@@ -272,20 +272,20 @@ const ServiceDetail = () => {
               : "Step-by-Step Treatment Process"}
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {steps.map((st) => (
               <div
                 key={st.num}
-                className="flex items-start gap-4 p-4 rounded-2xl bg-[#f8fafc] border border-[#d5e0ec]"
+                className="flex items-start gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec]"
               >
-                <span className="w-9 h-9 rounded-xl bg-[#132e53] text-white font-bold text-xs flex items-center justify-center shrink-0">
+                <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#132e53] text-white font-bold text-xs flex items-center justify-center shrink-0">
                   {st.num}
                 </span>
                 <div>
                   <h3 className="text-sm sm:text-base font-bold text-[#132e53]">
                     {st.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 mt-0.5 sm:mt-1 leading-relaxed">
                     {st.desc}
                   </p>
                 </div>

@@ -124,11 +124,11 @@ const HeroSection = () => {
       {/* Editorial Accent Strip */}
       <div className="h-1.5 w-full bg-gradient-to-r from-[#132e53] via-[#285983] to-[#132e53]" />
 
-      <div className="p-6 sm:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div className="p-4 sm:p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left Editorial Copy (7 cols) */}
-        <div className="lg:col-span-7 space-y-6 text-left">
+        <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-left">
           {/* Status Badges */}
-          <div className="flex flex-wrap items-center gap-2.5">
+          <div className="flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#132e53]/5 border border-[#132e53]/15 text-xs font-bold uppercase tracking-wider text-[#132e53]">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               {t.badge}
@@ -149,21 +149,21 @@ const HeroSection = () => {
             <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.18em] text-[#285983]">
               {t.specialtyTitle}
             </p>
-            <h1 className="font-serif-classic text-4xl sm:text-5xl lg:text-[54px] font-bold text-[#132e53] leading-[1.08]">
+            <h1 className="font-serif-classic text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold text-[#132e53] leading-[1.12]">
               {t.doctorName}
             </h1>
-            <p className="pt-1 text-lg sm:text-xl font-bold text-slate-800 leading-snug max-w-2xl">
+            <p className="pt-1 text-base sm:text-xl font-bold text-slate-800 leading-snug max-w-2xl">
               {t.headline}
             </p>
           </div>
 
           {/* Subtitle */}
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl">
+          <p className="text-xs sm:text-base text-slate-600 leading-relaxed max-w-xl">
             {t.subtitle}
           </p>
 
           {/* Primary Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 pt-1">
             <button
               type="button"
               onClick={() => scrollToBooking("tish-davolash")}
@@ -190,28 +190,28 @@ const HeroSection = () => {
           </div>
 
           {/* Key Metrics Row */}
-          <div className="pt-6 border-t border-[#e2eaf2] grid grid-cols-3 divide-x divide-[#e2eaf2] max-w-xl">
-            <div className="pr-4 sm:pr-6">
-              <p className="font-serif-classic text-2xl sm:text-3xl font-bold text-[#132e53]">
+          <div className="pt-5 sm:pt-6 border-t border-[#e2eaf2] grid grid-cols-3 divide-x divide-[#e2eaf2] text-center sm:text-left max-w-xl">
+            <div className="pr-2 sm:pr-6">
+              <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">
                 {t.stat1Num}
               </p>
-              <p className="text-xs text-slate-600 font-medium mt-0.5">
+              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
                 {t.stat1Label}
               </p>
             </div>
-            <div className="px-4 sm:px-6">
-              <p className="font-serif-classic text-2xl sm:text-3xl font-bold text-[#132e53]">
+            <div className="px-2 sm:px-6">
+              <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">
                 {t.stat2Num}
               </p>
-              <p className="text-xs text-slate-600 font-medium mt-0.5">
+              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
                 {t.stat2Label}
               </p>
             </div>
-            <div className="pl-4 sm:pl-6">
-              <p className="font-serif-classic text-2xl sm:text-3xl font-bold text-[#285983]">
+            <div className="pl-2 sm:pl-6">
+              <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#285983]">
                 {t.stat3Num}
               </p>
-              <p className="text-xs text-slate-600 font-medium mt-0.5">
+              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
                 {t.stat3Label}
               </p>
             </div>
@@ -220,7 +220,7 @@ const HeroSection = () => {
 
         {/* Right Portrait Column (5 cols) */}
         <div className="lg:col-span-5">
-          <div className="max-w-[400px] mx-auto bg-[#f8fafc] p-3 sm:p-4 rounded-3xl border border-[#d5e0ec]">
+          <div className="max-w-[400px] mx-auto bg-[#f8fafc] p-2.5 sm:p-4 rounded-2xl sm:rounded-3xl border border-[#d5e0ec]">
             {/* Image Frame */}
             <div className="relative rounded-2xl overflow-hidden bg-white border border-[#d5e0ec] aspect-[4/4.4]">
               <img
@@ -517,8 +517,8 @@ const ServicesOverview = () => {
   ];
 
   return (
-    <section className="py-8 sm:py-12 bg-white rounded-3xl p-6 sm:p-10 border border-[#d5e0ec] shadow-sm">
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 pb-6 border-b border-slate-100">
+    <section className="py-6 sm:py-12 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 border border-[#d5e0ec] shadow-sm">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 pb-5 sm:pb-6 border-b border-slate-100">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#285983]">
             {lang === "uz"
@@ -527,7 +527,7 @@ const ServicesOverview = () => {
               ? "Стоматологические Услуги"
               : "Dental Services"}
           </p>
-          <h2 className="mt-1.5 font-serif-classic text-3xl sm:text-4xl font-bold text-[#132e53]">
+          <h2 className="mt-1.5 font-serif-classic text-2xl sm:text-3xl lg:text-4xl font-bold text-[#132e53]">
             {lang === "uz"
               ? "Asosiy Davolash Yo'nalishlari"
               : lang === "ru"
@@ -538,7 +538,7 @@ const ServicesOverview = () => {
 
         <Link
           to={to("/services")}
-          className="self-start md:self-auto px-5 py-2.5 rounded-xl bg-[#f2f6fa] hover:bg-[#132e53] text-[#132e53] hover:text-white border border-[#d5e0ec] text-xs sm:text-sm font-semibold transition-colors inline-block"
+          className="self-start md:self-auto px-4 sm:px-5 py-2.5 rounded-xl bg-[#f2f6fa] hover:bg-[#132e53] text-[#132e53] hover:text-white border border-[#d5e0ec] text-xs sm:text-sm font-semibold transition-colors inline-block text-center"
         >
           {lang === "uz"
             ? "Barcha xizmatlar va narxlar →"
@@ -548,7 +548,7 @@ const ServicesOverview = () => {
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {services.map((s) => (
           <div
             key={s.id}
@@ -559,7 +559,7 @@ const ServicesOverview = () => {
               className="block focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#285983]"
               aria-label={`${s.title[lang]} - ${lang === "uz" ? "Batafsil ma'lumot" : lang === "ru" ? "Подробнее" : "Details"}`}
             >
-              <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+              <div className="relative h-40 sm:h-44 w-full overflow-hidden bg-slate-900">
                 <img
                   src={s.image}
                   alt={s.title[lang]}
@@ -575,7 +575,7 @@ const ServicesOverview = () => {
                 </span>
               </div>
 
-              <div className="p-5">
+              <div className="p-4 sm:p-5">
                 <h3 className="text-base sm:text-lg font-bold text-[#132e53] group-hover:text-[#285983] transition-colors">
                   {s.title[lang]}
                 </h3>
@@ -585,7 +585,7 @@ const ServicesOverview = () => {
               </div>
             </Link>
 
-            <div className="px-5 pb-4 pt-3 border-t border-[#e2eaf2] flex items-center justify-between text-xs">
+            <div className="px-4 sm:px-5 pb-3.5 sm:pb-4 pt-3 border-t border-[#e2eaf2] flex items-center justify-between text-xs">
               <span className="text-slate-500 font-medium flex items-center gap-1.5">
                 <IconClock className="w-3.5 h-3.5 text-[#285983]" />
                 <span>{s.duration[lang]}</span>
@@ -643,8 +643,8 @@ const DoctorBioSpotlight = () => {
   const credentials = credentialsMap[lang] || credentialsMap.uz;
 
   return (
-    <section className="py-8 sm:py-12">
-      <div className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#d5e0ec] shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+    <section className="py-6 sm:py-12">
+      <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-12 border border-[#d5e0ec] shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
         {/* Portrait Column (5 cols) */}
         <div className="lg:col-span-5">
           <div className="max-w-sm mx-auto">

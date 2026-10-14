@@ -83,11 +83,11 @@ const Services = () => {
         {SERVICES_CATALOG.map((service) => (
           <div
             key={service.id}
-            className="bg-white rounded-3xl border border-[#d5e0ec] shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden"
+            className="bg-white rounded-2xl sm:rounded-3xl border border-[#d5e0ec] shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden"
           >
             <div>
               {/* Service Photo Banner */}
-              <div className="relative h-56 w-full overflow-hidden bg-slate-900">
+              <div className="relative h-48 sm:h-56 w-full overflow-hidden bg-slate-900">
                 <img
                   src={service.image}
                   alt={service.title[lang]}
@@ -98,35 +98,35 @@ const Services = () => {
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent" />
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full bg-white/95 text-[#132e53] shadow-xs">
+                <div className="absolute top-3 sm:top-4 left-3 sm:left-4 right-3 sm:right-4 flex items-center justify-between gap-2">
+                  <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-3 sm:px-3.5 py-1 rounded-full bg-white/95 text-[#132e53] shadow-xs">
                     {service.category[lang]}
                   </span>
-                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-slate-950/75 backdrop-blur-xs px-3 py-1 rounded-full border border-white/20">
+                  <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-white bg-slate-950/75 backdrop-blur-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/20">
                     <IconClock className="w-3.5 h-3.5 text-[#9cb8d4]" />
                     <span>{service.duration[lang]}</span>
                   </span>
                 </div>
-                <div className="absolute bottom-4 left-6 flex items-center gap-2.5">
-                  <div className="w-11 h-11 rounded-2xl bg-white text-[#132e53] shadow-md flex items-center justify-center">
+                <div className="absolute bottom-3 sm:bottom-4 left-4 sm:left-6 flex items-center gap-2.5">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-white text-[#132e53] shadow-md flex items-center justify-center">
                     {service.icon}
                   </div>
-                  <span className="text-xs font-semibold text-emerald-300 bg-slate-950/70 px-3 py-1 rounded-full border border-emerald-400/30">
+                  <span className="text-[11px] sm:text-xs font-semibold text-emerald-300 bg-slate-950/70 px-2.5 sm:px-3 py-1 rounded-full border border-emerald-400/30">
                     {service.warranty[lang]}
                   </span>
                 </div>
               </div>
 
-              <div className="p-6 sm:p-8">
+              <div className="p-4 sm:p-6 lg:p-8">
                 <h2 className="text-xl sm:text-2xl font-bold text-[#132e53]">
                   {service.title[lang]}
                 </h2>
 
-                <p className="mt-2.5 text-sm text-slate-600 leading-relaxed">
+                <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
                   {service.shortDesc[lang]}
                 </p>
 
-                <ul className="mt-5 space-y-2.5">
+                <ul className="mt-4 sm:mt-5 space-y-2.5">
                   {service.highlights[lang].map((point, idx) => (
                     <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 font-medium">
                       <IconCheckCircle className="w-4 h-4 text-[#285983] shrink-0 mt-0.5" />
@@ -137,7 +137,7 @@ const Services = () => {
               </div>
             </div>
 
-            <div className="px-6 sm:px-8 pb-6 sm:pb-8 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+            <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 pt-3 sm:pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <Link
                 to={to(`/services/${service.id}`)}
                 className="text-xs sm:text-sm font-bold text-[#285983] hover:text-[#132e53] hover:underline"
@@ -151,7 +151,7 @@ const Services = () => {
 
               <Link
                 to={`${to("/booking")}?service=${service.id}`}
-                className="px-5 py-2.5 rounded-xl bg-[#132e53] hover:bg-[#285983] text-white text-xs font-semibold shadow-xs transition-colors inline-block text-center"
+                className="px-5 py-2.5 rounded-xl bg-[#132e53] hover:bg-[#285983] text-white text-xs font-semibold shadow-xs transition-colors inline-block text-center w-full sm:w-auto"
               >
                 {lang === "uz"
                   ? "Qabulga Yozilish"
@@ -174,9 +174,9 @@ const Services = () => {
       <PatientCareGuides />
 
       {/* Bottom Consultation Card */}
-      <div className="rounded-3xl bg-[#132e53] text-white p-8 sm:p-10 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="rounded-2xl sm:rounded-3xl bg-[#132e53] text-white p-5 sm:p-8 lg:p-10 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-2 text-center md:text-left">
-          <h3 className="font-serif-classic text-2xl sm:text-3xl font-bold">
+          <h3 className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold">
             {lang === "uz"
               ? "Qaysi muolaja sizga mos kelishini bilmayapsizmi?"
               : lang === "ru"
@@ -192,16 +192,16 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-3 shrink-0">
+        <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full md:w-auto">
           <Link
             to={to("/booking")}
-            className="px-6 py-3.5 rounded-xl bg-white text-[#132e53] hover:bg-[#f2f6fa] font-bold text-xs sm:text-sm shadow-sm transition-colors text-center inline-block"
+            className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white text-[#132e53] hover:bg-[#f2f6fa] font-bold text-xs sm:text-sm shadow-sm transition-colors text-center inline-block"
           >
             {lang === "uz" ? "Konsultatsiyaga Yozilish →" : lang === "ru" ? "Записаться на Осмотр →" : "Book Consultation →"}
           </Link>
           <a
             href={DOCTOR_INFO.phoneHref}
-            className="px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs sm:text-sm flex items-center gap-2 transition-colors"
+            className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors"
           >
             <IconPhone className="w-4 h-4 text-[#9cb8d4]" />
             <span>{DOCTOR_INFO.phone}</span>

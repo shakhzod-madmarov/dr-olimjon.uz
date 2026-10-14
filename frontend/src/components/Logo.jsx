@@ -30,14 +30,14 @@ const Logo = ({ className = "h-10", inverted = false }) => {
       />
       <div className="flex flex-col leading-none text-left min-w-0">
         <span
-          className={`font-serif-classic text-[15px] sm:text-lg lg:text-xl font-bold tracking-tight truncate ${
+          className={`font-serif-classic text-[13.5px] sm:text-lg lg:text-xl font-bold tracking-tight truncate ${
             inverted ? "text-white" : "text-[#132e53]"
           }`}
         >
           Dr. Olimjon Murzajanov
         </span>
         <span
-          className={`text-[8.5px] sm:text-[10px] font-semibold uppercase tracking-[0.15em] sm:tracking-[0.18em] mt-0.5 sm:mt-1 truncate ${
+          className={`text-[8px] sm:text-[10px] font-semibold uppercase tracking-[0.12em] sm:tracking-[0.18em] mt-0.5 sm:mt-1 truncate ${
             inverted ? "text-[#9cb8d4]" : "text-[#285983]"
           }`}
         >

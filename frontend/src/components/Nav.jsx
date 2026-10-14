@@ -48,7 +48,7 @@ const Nav = ({ topOffset = 0 }) => {
             : "bg-white border-b border-[#e2eaf2] py-3.5"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-3">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-1.5 sm:gap-3">
           {/* Brand Logo */}
           <NavLink
             to={to("/")}
@@ -59,9 +59,9 @@ const Nav = ({ topOffset = 0 }) => {
                 ? "Dr. Olimjon Murzajanov — Go to homepage"
                 : "Dr. Olimjon Murzajanov — Bosh sahifaga o'tish"
             }
-            className="flex items-center gap-2 sm:gap-3 shrink-0"
+            className="flex items-center gap-1.5 sm:gap-3 shrink-0 min-w-0"
           >
-            <Logo className="h-9 sm:h-11" />
+            <Logo className="h-8 sm:h-11" />
           </NavLink>
 
           {/* Desktop Navigation Links */}
@@ -101,7 +101,7 @@ const Nav = ({ topOffset = 0 }) => {
                   onClick={() => changeLanguage(l)}
                   aria-pressed={lang === l}
                   aria-label={l === "uz" ? "O'zbek tili" : l === "ru" ? "Русский язык" : "English"}
-                  className={`px-2 sm:px-2.5 py-1 rounded-md text-[11px] font-bold uppercase transition-colors cursor-pointer ${
+                  className={`px-1.5 sm:px-2.5 py-1 rounded-md text-[10px] sm:text-[11px] font-bold uppercase transition-colors cursor-pointer ${
                     lang === l
                       ? "bg-[#132e53] text-white"
                       : "text-slate-600 hover:text-[#132e53]"
@@ -153,11 +153,11 @@ const Nav = ({ topOffset = 0 }) => {
               aria-label={a11y.openMenu}
               aria-expanded={showMenu}
               aria-controls="mobile-nav-drawer"
-              className="lg:hidden w-11 h-11 rounded-xl bg-[#f2f6fa] hover:bg-[#e4edf5] flex flex-col items-center justify-center gap-1.5 transition-colors border border-[#d5e0ec] cursor-pointer touch-manipulation"
+              className="lg:hidden w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-[#f2f6fa] hover:bg-[#e4edf5] flex flex-col items-center justify-center gap-1 sm:gap-1.5 transition-colors border border-[#d5e0ec] cursor-pointer touch-manipulation"
             >
-              <span className="w-5 h-0.5 bg-[#132e53] rounded-full" />
-              <span className="w-4 h-0.5 bg-[#285983] rounded-full" />
-              <span className="w-5 h-0.5 bg-[#132e53] rounded-full" />
+              <span className="w-4 sm:w-5 h-0.5 bg-[#132e53] rounded-full" />
+              <span className="w-3.5 sm:w-4 h-0.5 bg-[#285983] rounded-full" />
+              <span className="w-4 sm:w-5 h-0.5 bg-[#132e53] rounded-full" />
             </button>
           </div>
         </div>
@@ -178,7 +178,7 @@ const Nav = ({ topOffset = 0 }) => {
             aria-modal="true"
             aria-label={a11y.mobileNavigation}
             tabIndex={-1}
-            className="fixed inset-y-0 right-0 w-full max-w-xs bg-white shadow-2xl flex flex-col justify-between p-6 z-10 overflow-y-auto pb-[max(1.5rem,env(safe-area-inset-bottom))]"
+            className="fixed inset-y-0 right-0 w-full max-w-[280px] sm:max-w-xs bg-white shadow-2xl flex flex-col justify-between p-5 sm:p-6 z-10 overflow-y-auto pb-[max(1.5rem,env(safe-area-inset-bottom))]"
           >
             <div>
               <div className="flex items-center justify-between pb-5 border-b border-slate-200">

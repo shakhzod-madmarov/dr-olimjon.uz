@@ -83,14 +83,14 @@ const Contact = () => {
             ? "Андижан · Эски Шахар (Old City) · Sevdo Denta"
             : "Andijan · Old City (Eski Shahar) · Sevdo Denta"}
         </p>
-        <h1 className="font-serif-classic text-4xl sm:text-5xl font-bold text-[#132e53]">
+        <h1 className="font-serif-classic text-3xl sm:text-4xl md:text-5xl font-bold text-[#132e53]">
           {lang === "uz"
             ? "Aloqa va Klinika Manzili"
             : lang === "ru"
             ? "Контакты и Адрес Клиники"
             : "Contact & Clinic Location"}
         </h1>
-        <p className="text-sm sm:text-base text-slate-600">
+        <p className="text-xs sm:text-sm md:text-base text-slate-600">
           {lang === "uz"
             ? "Dr. Olimjon Murzajanov qabuliga telefon, Telegram, Instagram yoki onlayn shakl orqali yozilishingiz mumkin."
             : lang === "ru"
@@ -100,16 +100,16 @@ const Contact = () => {
       </div>
 
       {/* Contact Cards + Form Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
         {/* Left Contact Channels (6 cols) */}
-        <div className="lg:col-span-6 space-y-4">
+        <div className="lg:col-span-6 space-y-3.5 sm:space-y-4">
           {/* Phone Card */}
-          <div className="bg-white rounded-2xl p-6 border border-[#d5e0ec] shadow-luxury flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="bg-white rounded-2xl p-4 sm:p-6 border border-[#d5e0ec] shadow-luxury flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
             <div className="space-y-1">
               <span className="text-[11px] font-bold uppercase tracking-wider text-[#285983]">
                 {lang === "uz" ? "To'g'ridan-to'g'ri Qo'ng'iroq" : lang === "ru" ? "Прямой Телефон" : "Direct Phone"}
               </span>
-              <p className="font-serif-classic text-2xl sm:text-3xl font-bold text-[#132e53]">
+              <p className="font-serif-classic text-xl sm:text-2xl md:text-3xl font-bold text-[#132e53]">
                 {c.phone}
               </p>
               <p className="text-xs text-slate-500">{c.hours[lang]}</p>
@@ -126,7 +126,7 @@ const Contact = () => {
           </div>
 
           {/* Telegram Card */}
-          <div className="bg-white rounded-2xl p-6 border border-[#d5e0ec] shadow-luxury flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="bg-white rounded-2xl p-4 sm:p-6 border border-[#d5e0ec] shadow-luxury flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
             <div className="space-y-1">
               <span className="text-[11px] font-bold uppercase tracking-wider text-[#285983]">
                 {lang === "uz"
@@ -135,7 +135,7 @@ const Contact = () => {
                   ? "Telegram-канал и консультация"
                   : "Telegram Channel & Inquiries"}
               </span>
-              <p className="text-lg sm:text-xl font-bold text-[#132e53]">
+              <p className="text-base sm:text-lg md:text-xl font-bold text-[#132e53]">
                 {c.telegramHandle}
               </p>
               <p className="text-xs text-slate-500">
@@ -158,7 +158,7 @@ const Contact = () => {
           </div>
 
           {/* Instagram Card */}
-          <div className="bg-white rounded-2xl p-6 border border-[#d5e0ec] shadow-luxury flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="bg-white rounded-2xl p-4 sm:p-6 border border-[#d5e0ec] shadow-luxury flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
             <div className="space-y-1">
               <span className="text-[11px] font-bold uppercase tracking-wider text-[#285983]">
                 {lang === "uz"
@@ -167,7 +167,7 @@ const Contact = () => {
                   ? "Портфолио в Instagram"
                   : "Instagram Portfolio"}
               </span>
-              <p className="text-lg sm:text-xl font-bold text-[#132e53]">
+              <p className="text-base sm:text-lg md:text-xl font-bold text-[#132e53]">
                 {c.instagramHandle}
               </p>
               <p className="text-xs text-slate-500">
@@ -190,25 +190,25 @@ const Contact = () => {
           </div>
 
           {/* Address & Navigator Card */}
-          <div className="bg-white rounded-2xl p-6 border border-[#d5e0ec] shadow-luxury space-y-4">
+          <div className="bg-white rounded-2xl p-4 sm:p-6 border border-[#d5e0ec] shadow-luxury space-y-3.5 sm:space-y-4">
             <div className="flex items-start gap-3">
               <IconLocationPin className="w-5 h-5 text-[#132e53] shrink-0 mt-0.5" />
               <div>
                 <h2 className="text-base font-bold text-[#132e53]">
                   {c.name[lang]}
                 </h2>
-                <p className="text-sm text-slate-600 mt-0.5">{c.address[lang]}</p>
+                <p className="text-xs sm:text-sm text-slate-600 mt-0.5">{c.address[lang]}</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 text-xs text-slate-600 pt-2 border-t border-slate-100">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-slate-600 pt-2 border-t border-slate-100">
               <IconClock className="w-4 h-4 text-[#285983] shrink-0" />
               <span className="font-semibold">{c.hours[lang]}</span>
               <span>·</span>
               <span>{c.sundayNote[lang]}</span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-1">
               <a
                 href={c.maps.yandex}
                 target="_blank"
@@ -232,7 +232,7 @@ const Contact = () => {
         </div>
 
         {/* Right Quick Message Form (6 cols) */}
-        <div className="lg:col-span-6 bg-white rounded-2xl p-6 sm:p-8 border border-[#d5e0ec] shadow-luxury">
+        <div className="lg:col-span-6 bg-white rounded-2xl p-4 sm:p-8 border border-[#d5e0ec] shadow-luxury">
           <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#285983]">
             {lang === "uz"
               ? "Tezkor So'rov"
@@ -240,14 +240,14 @@ const Contact = () => {
               ? "Быстрое Обращение"
               : "Quick Inquiry"}
           </span>
-          <h2 className="font-serif-classic text-2xl sm:text-3xl font-bold text-[#132e53] mt-1">
+          <h2 className="font-serif-classic text-xl sm:text-2xl md:text-3xl font-bold text-[#132e53] mt-1">
             {lang === "uz"
               ? "Dr. Olimjonga Savol Yoki Qabul So'rovi Yuborish"
               : lang === "ru"
               ? "Задать Вопрос или Записаться на Консультацию"
               : "Send a Question or Consultation Request"}
           </h2>
-          <p className="text-xs sm:text-sm text-slate-500 mt-1 mb-6">
+          <p className="text-xs sm:text-sm text-slate-500 mt-1 mb-5 sm:mb-6">
             {lang === "uz"
               ? "Ma'lumotlaringizni qoldiring — keyingi oynada o'zingizga qulay bo'sh vaqtni tanlaysiz."
               : lang === "ru"

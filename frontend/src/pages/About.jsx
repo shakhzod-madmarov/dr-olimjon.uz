@@ -156,7 +156,7 @@ const About = () => {
       </nav>
 
       {/* Hero Bio Card */}
-      <section className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#d5e0ec] shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <section className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-12 border border-[#d5e0ec] shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
         {/* Left Dual Portrait Showcase (5 cols) */}
         <div className="lg:col-span-5">
           <div className="relative max-w-sm mx-auto space-y-3">
@@ -168,12 +168,12 @@ const About = () => {
                 height={760}
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-[380px] sm:h-[420px] object-cover object-top"
+                className="w-full h-[320px] sm:h-[420px] object-cover object-top"
               />
             </div>
 
             {/* In Clinic Card */}
-            <div className="grid grid-cols-12 gap-3 items-center bg-[#f8fafc] p-3 rounded-2xl border border-[#d5e0ec]">
+            <div className="grid grid-cols-12 gap-3 items-center bg-[#f8fafc] p-2.5 sm:p-3 rounded-2xl border border-[#d5e0ec]">
               <img
                 src={assets.dr_olimjon_clinic}
                 alt="Dr. Olimjon Murzajanov qabulda"
@@ -181,7 +181,7 @@ const About = () => {
                 height={160}
                 loading="lazy"
                 decoding="async"
-                className="col-span-4 w-full h-24 rounded-xl object-cover object-top border border-[#d5e0ec]"
+                className="col-span-4 w-full h-20 sm:h-24 rounded-xl object-cover object-top border border-[#d5e0ec]"
               />
               <div className="col-span-8 space-y-1">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#285983] block">
@@ -194,7 +194,7 @@ const About = () => {
                     ? "Эски Шахар (Old City), 1-й этаж"
                     : "Old City (Eski Shahar), 1st Floor"}
                 </p>
-                <div className="flex items-center gap-2 pt-0.5">
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-0.5">
                   <a
                     href={DOCTOR_INFO.telegramUrl}
                     target="_blank"
@@ -221,7 +221,7 @@ const About = () => {
         </div>
 
         {/* Right Biography Copy (7 cols) */}
-        <div className="lg:col-span-7 space-y-5">
+        <div className="lg:col-span-7 space-y-4 sm:space-y-5">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#285983]">
             {lang === "uz"
               ? `Stomatolog · Ortoped · ${years}+ Yillik Tajriba`
@@ -230,11 +230,11 @@ const About = () => {
               : `Dentist & Prosthodontist · ${years}+ Years Experience`}
           </p>
 
-          <h1 className="font-serif-classic text-4xl sm:text-5xl font-bold text-[#132e53] leading-tight">
+          <h1 className="font-serif-classic text-3xl sm:text-4xl md:text-5xl font-bold text-[#132e53] leading-tight">
             Dr. Olimjon Murzajanov
           </h1>
 
-          <p className="text-base sm:text-lg font-semibold text-[#285983]">
+          <p className="text-sm sm:text-base md:text-lg font-semibold text-[#285983]">
             {lang === "uz"
               ? "Andijon shahri vrach-stomatologi, stomatolog-ortoped va implantolog"
               : lang === "ru"
@@ -242,7 +242,7 @@ const About = () => {
               : "Restorative Dentist, Prosthodontist & Implantologist, Andijan"}
           </p>
 
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
             {lang === "uz"
               ? `Dr. Olimjon Murzajanov ${years} yildan ortiq vaqt davomida Andijon shahri va Farg'ona vodiysi aholisiga zamonaviy, 100% og'riqsiz va yuqori aniqlikdagi stomatologik xizmat ko'rsatib kelmoqda. Uning klinik yondashuvi tabiiy tishlarni maksimal darajada saqlab qolish, zamonaviy tsirkoniy va E-max keramik protezlash hamda xavfsiz implantatsiyaga asoslangan.`
               : lang === "ru"
@@ -251,37 +251,37 @@ const About = () => {
           </p>
 
           {/* Key Metrics Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-            <div className="p-4 rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-center">
-              <p className="font-serif-classic text-2xl sm:text-3xl font-bold text-[#132e53]">{years}+</p>
-              <p className="text-xs text-slate-600 font-medium mt-0.5">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 pt-2">
+            <div className="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-center">
+              <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">{years}+</p>
+              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
                 {lang === "uz" ? "Yil Tajriba" : lang === "ru" ? "Лет Опыта" : "Years Exp."}
               </p>
             </div>
-            <div className="p-4 rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-center">
-              <p className="font-serif-classic text-2xl sm:text-3xl font-bold text-[#132e53]">1,000+</p>
-              <p className="text-xs text-slate-600 font-medium mt-0.5">
+            <div className="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-center">
+              <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">1,000+</p>
+              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
                 {lang === "uz" ? "Mamnun Bemor" : lang === "ru" ? "Пациентов" : "Patients"}
               </p>
             </div>
-            <div className="p-4 rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-center">
-              <p className="font-serif-classic text-2xl sm:text-3xl font-bold text-[#132e53]">99.2%</p>
-              <p className="text-xs text-slate-600 font-medium mt-0.5">
+            <div className="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-center">
+              <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">99.2%</p>
+              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
                 {lang === "uz" ? "Implant Muvaffaqiyati" : lang === "ru" ? "Приживаемость" : "Implant Success"}
               </p>
             </div>
-            <div className="p-4 rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-center">
-              <p className="font-serif-classic text-2xl sm:text-3xl font-bold text-[#285983]">100%</p>
-              <p className="text-xs text-slate-600 font-medium mt-0.5">
+            <div className="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-center">
+              <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#285983]">100%</p>
+              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
                 {lang === "uz" ? "Steril va Og'riqsiz" : lang === "ru" ? "Без Боли" : "Painless Care"}
               </p>
             </div>
           </div>
 
-          <div className="pt-3 flex flex-wrap gap-3">
+          <div className="pt-3 flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
             <Link
               to={to("/booking")}
-              className="px-6 py-3.5 rounded-xl bg-[#132e53] hover:bg-[#285983] text-white font-semibold text-xs sm:text-sm transition-colors text-center inline-block"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#132e53] hover:bg-[#285983] text-white font-semibold text-xs sm:text-sm transition-colors text-center inline-block"
             >
               {lang === "uz"
                 ? "Dr. Olimjon Qabuliga Yozilish →"
@@ -291,7 +291,7 @@ const About = () => {
             </Link>
             <a
               href={DOCTOR_INFO.phoneHref}
-              className="px-6 py-3.5 rounded-xl bg-[#f8fafc] hover:bg-[#e4edf5] border border-[#d5e0ec] text-[#132e53] font-bold text-xs sm:text-sm transition-colors flex items-center gap-2"
+              className="w-full sm:w-auto justify-center px-6 py-3.5 rounded-xl bg-[#f8fafc] hover:bg-[#e4edf5] border border-[#d5e0ec] text-[#132e53] font-bold text-xs sm:text-sm transition-colors flex items-center gap-2"
             >
               <IconPhone className="w-4 h-4 text-[#285983]" />
               <span>{DOCTOR_INFO.phone}</span>
@@ -306,7 +306,7 @@ const About = () => {
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#285983]">
             {lang === "uz" ? "Kafolat va Xavfsizlik" : lang === "ru" ? "Гарантия и Безопасность" : "Safety & Warranty"}
           </p>
-          <h2 className="mt-1.5 font-serif-classic text-3xl sm:text-4xl font-bold text-[#132e53]">
+          <h2 className="mt-1.5 font-serif-classic text-2xl sm:text-3xl md:text-4xl font-bold text-[#132e53]">
             {lang === "uz"
               ? "Klinikamizning 3 Asosiy Qoidasi"
               : lang === "ru"
@@ -315,19 +315,19 @@ const About = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {values.map((v, i) => (
             <div
               key={i}
-              className="bg-white rounded-3xl p-6 sm:p-7 border border-[#d5e0ec] shadow-sm space-y-3"
+              className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-[#d5e0ec] shadow-sm space-y-3"
             >
               <div className="w-12 h-12 rounded-2xl bg-[#f2f6fa] border border-[#d5e0ec] flex items-center justify-center">
                 {v.icon}
               </div>
-              <h3 className="text-lg font-bold text-[#132e53]">
+              <h3 className="text-base sm:text-lg font-bold text-[#132e53]">
                 {v.title[lang]}
               </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 {v.desc[lang]}
               </p>
             </div>
@@ -336,8 +336,8 @@ const About = () => {
       </section>
 
       {/* Career & Education Timeline */}
-      <section className="bg-white rounded-3xl p-6 sm:p-10 border border-[#d5e0ec] shadow-sm">
-        <h2 className="font-serif-classic text-3xl font-bold text-[#132e53] mb-6">
+      <section className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 border border-[#d5e0ec] shadow-sm">
+        <h2 className="font-serif-classic text-2xl sm:text-3xl font-bold text-[#132e53] mb-5 sm:mb-6">
           {lang === "uz"
             ? "Kasbiy Faoliyat va Malaka Bosqichlari"
             : lang === "ru"
@@ -345,20 +345,20 @@ const About = () => {
             : "Clinical Experience & Qualifications"}
         </h2>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {timeline.map((item, idx) => (
             <div
               key={idx}
-              className="flex flex-col sm:flex-row sm:items-start gap-4 p-5 rounded-2xl bg-[#f8fafc] border border-[#d5e0ec]"
+              className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec]"
             >
-              <span className="inline-block px-3.5 py-1 rounded-lg bg-[#132e53] text-white text-xs font-semibold shrink-0 self-start">
+              <span className="inline-block px-3 py-1 rounded-lg bg-[#132e53] text-white text-xs font-semibold shrink-0 self-start">
                 {typeof item.year === "object" ? item.year[lang] : item.year}
               </span>
               <div>
-                <h3 className="text-base sm:text-lg font-bold text-[#132e53]">
+                <h3 className="text-sm sm:text-base md:text-lg font-bold text-[#132e53]">
                   {item.title[lang]}
                 </h3>
-                <p className="mt-1 text-sm text-slate-600 leading-relaxed">
+                <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
                   {item.desc[lang]}
                 </p>
               </div>

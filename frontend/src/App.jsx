@@ -86,7 +86,7 @@ const AppShell = () => {
 
       <Nav onOpenBooking={() => openBooking()} />
 
-      <main id="main-content" className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24">
+      <main id="main-content" className="flex-grow w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-20 sm:pt-24">
         <Routes>
           {/* Every page exists at three addresses: unprefixed Uzbek, /ru and
               /en. Defining them once per language keeps the three in step. */}
