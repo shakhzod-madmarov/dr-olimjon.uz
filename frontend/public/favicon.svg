@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" width="340" height="340">
+  <defs>
+    <linearGradient id="sqBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <clipPath id="leftHalf">
+      <rect x="0" y="0" width="170" height="340"/>
+    </clipPath>
+    <clipPath id="rightHalf">
+      <rect x="170" y="0" width="170" height="340"/>
+    </clipPath>
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Clean squircle badge with subtle border -->
+  <rect x="12" y="12" width="316" height="316" rx="68" ry="68" fill="url(#sqBg)" stroke="#e2e8f0" stroke-width="4" filter="url(#badgeShadow)"/>
+
+  <!-- Left half (Deep Navy #122d52) -->
+  <g clip-path="url(#leftHalf)">
+    <circle cx="170" cy="170" r="122" fill="none" stroke="#122d52" stroke-width="18"/>
+    <path d="M108 134 C106 105, 130 92, 152 100 C162 104, 166 108, 185 110" fill="none" stroke="#122d52" stroke-width="15" stroke-linecap="round"/>
+    <path d="M108 134 C108 175, 120 222, 134 252 C140 264, 150 264, 155 246 C160 228, 164 214, 170 214" fill="none" stroke="#122d52" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M138 176 C158 196, 198 196, 236 154" fill="none" stroke="#122d52" stroke-width="14" stroke-linecap="round"/>
+    <path d="M133 182 C134 172, 141 169, 146 171" fill="none" stroke="#122d52" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right half (Ocean Blue #245b84) -->
+  <g clip-path="url(#rightHalf)">
+    <circle cx="170" cy="170" r="122" fill="none" stroke="#245b84" stroke-width="18"/>
+    <path d="M166 98 C184 90, 212 94, 214 128 C215 142, 212 156, 208 168" fill="none" stroke="#245b84" stroke-width="15" stroke-linecap="round"/>
+    <path d="M204 188 C198 216, 192 240, 185 252 C180 264, 170 264, 165 246 C160 228, 156 214, 170 214" fill="none" stroke="#245b84" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M138 176 C158 196, 198 196, 236 154" fill="none" stroke="#173863" stroke-width="14" stroke-linecap="round"/>
+    <path d="M229 148 C238 148, 243 155, 240 164" fill="none" stroke="#173863" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

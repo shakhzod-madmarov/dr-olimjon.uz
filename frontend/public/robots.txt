@@ -1,0 +1,31 @@
+# robots.txt for https://dentist-olimjon.uz
+# Dr. Olimjon Murzajanov — Stomatolog va Ortoped (Andijon, Sevdo Denta)
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /stickers-preview
+
+# Major Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Yandex
+Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&fbclid&gclid&yclid /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+Sitemap: https://dentist-olimjon.uz/sitemap.xml
+Host: https://dentist-olimjon.uz

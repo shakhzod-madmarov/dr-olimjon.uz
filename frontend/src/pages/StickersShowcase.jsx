@@ -1,0 +1,264 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
+import { DOCTOR_INFO, getExperienceBadge, getServicesTag } from "../constants/doctor";
+import Seo from "../components/Seo";
+import DentalSticker from "../components/DentalSticker";
+import { IconSparkleStar, IconPhone } from "../components/MedicalIcons";
+
+const STICKER_PACK = [
+  {
+    id: "st-1",
+    variant: "tooth-crown",
+    color: "crimson",
+    rotate: "-rotate-2",
+    sublabel: "SEVDO DENTA · ANDIJON",
+    label: {
+      uz: "Qirollik Tabassumi",
+      ru: "Королевская Улыбка",
+      en: "Royal Smile Design",
+    },
+    desc: {
+      uz: "E-max press-keramika vinirlari va Germaniya tsirkoniy koronkalari uchun maxsus sifat stiker belgisi.",
+      ru: "Фирменный стикер для эстетического протезирования винирами E-max и циркониевыми коронками.",
+      en: "Signature die-cut badge for E-max ceramic veneers and zirconia prosthodontics.",
+    },
+  },
+  {
+    id: "st-2",
+    variant: "painless-heart",
+    color: "rose",
+    rotate: "rotate-2",
+    sublabel: "2-STEP ANESTHESIA",
+    label: {
+      uz: "100% Og'riqsiz",
+      ru: "100% Без Боли",
+      en: "100% Painless Care",
+    },
+    desc: {
+      uz: "Ikki bosqichli mikro-anesteziya: avval milk muzlatuvchi gel bilan og'riqsizlantiriladi, ukol sezilmaydi.",
+      ru: "Двухэтапная анестезия с предварительным обезболивающим гелем — без страха и боли.",
+      en: "Two-stage micro-anesthesia with topical pre-numbing gel for zero needle discomfort.",
+    },
+  },
+  {
+    id: "st-3",
+    variant: "implant-shield",
+    color: "emerald",
+    rotate: "-rotate-1",
+    sublabel: "OSSTEM & STRAUMANN",
+    label: {
+      uz: "Biotitan Implant",
+      ru: "Титановый Имплант",
+      en: "Bio-Titanium Implant",
+    },
+    desc: {
+      uz: "Janubiy Koreya va Shveysariya sertifikatlangan implantlari — 99.2% suyakka muvaffaqiyatli integratsiya.",
+      ru: "Сертифицированные корейские и швейцарские имплантаты с приживаемостью 99.2%.",
+      en: "Certified South Korean and Swiss titanium root fixtures with 99.2% osseointegration.",
+    },
+  },
+  {
+    id: "st-4",
+    variant: "laser-diamond",
+    color: "sky",
+    rotate: "rotate-2",
+    sublabel: "PHILIPS ZOOM® 4 LED",
+    label: {
+      uz: "Brilliant Oqlik",
+      ru: "Бриллиантовая Белизна",
+      en: "Diamond Whitening",
+    },
+    desc: {
+      uz: "Sovuq LED nuri yordamida tish emaliga zarar yetkazmasdan 1 seansda 8 tonga oqartirish.",
+      ru: "Безопасное холодное LED-отбеливание эмали на 8 тонов за один сеанс.",
+      en: "Cold-LED enamel brightening up to 8 shades in a single 45-minute session.",
+    },
+  },
+  {
+    id: "st-5",
+    variant: "women-only",
+    color: "gold",
+    rotate: "-rotate-2",
+    sublabel: getServicesTag("uz"),
+    label: {
+      uz: `Dr. Olimjon · ${getExperienceBadge("uz")}`,
+      ru: `Д-р Олимжон · ${getExperienceBadge("ru")}`,
+      en: `Dr. Olimjon · ${getExperienceBadge("en")}`,
+    },
+    desc: {
+      uz: "Andijon shahri Eski Shahar «Sevdo Denta» klinikasida 1,000+ dan ortiq mamnun bemorlar ishonchi.",
+      ru: "Более 1 000 довольных пациентов в современной клинике «Sevdo Denta» в Андижане.",
+      en: "Trusted by over 1,000 happy patients at «Sevdo Denta» Clinic in Andijan Old City.",
+    },
+  },
+  {
+    id: "st-6",
+    variant: "tooth-sparkle",
+    color: "violet",
+    rotate: "rotate-1",
+    sublabel: "ANTI-SPID · B-CLASS",
+    label: {
+      uz: "100% Steril Paket",
+      ru: "100% Стерильность",
+      en: "100% Sterile Pouch",
+    },
+    desc: {
+      uz: "Har bir bemor uchun alohida vakuumli avtoklavda sterillangan kraft-paket ko'z oldingizda ochiladi.",
+      ru: "Индивидуальный стерильный крафт-пакет вскрывается непосредственно перед пациентом.",
+      en: "Every instrument kit is autoclaved in B-class sterilizers and unsealed in front of you.",
+    },
+  },
+];
+
+const StickersShowcase = () => {
+  const navigate = useNavigate();
+  const { lang } = useLanguage();
+  const to = useLocalizedPath();
+  const [selectedSize, setSelectedSize] = useState("lg");
+
+  const seo = {
+    uz: {
+      title: "Stomatologik Sifat Stikerlari — Dr. Olimjon Murzajanov | Sevdo Denta",
+      description:
+        "Dr. Olimjon Murzajanov («Sevdo Denta» klinikasi) stomatologik sifat, 100% sterillik va og'riqsiz davolash kafolati belgilari.",
+    },
+    ru: {
+      title: "Фирменные Стикеры Качества — Д-р Олимжон Мурзажанов | Sevdo Denta",
+      description:
+        "Фирменные стоматологические стикеры и гарантии качества клиники «Sevdo Denta» Д-ра Олимжона Мурзажанова в Андижане.",
+    },
+    en: {
+      title: "Dental Quality Sticker Pack — Dr. Olimjon Murzajanov | Sevdo Denta",
+      description:
+        "Signature die-cut dental quality badges and clinical guarantees by Dr. Olimjon Murzajanov at «Sevdo Denta» Clinic in Andijan.",
+    },
+  }[lang];
+
+  return (
+    <div className="py-6 sm:py-10 space-y-12">
+      <Seo title={seo.title} description={seo.description} noindex />
+      {/* Header */}
+      <div className="text-center max-w-3xl mx-auto space-y-3">
+        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest bg-blue-50 text-[#122d52] border border-blue-200/60">
+          <IconSparkleStar className="w-4 h-4 text-[#0284c7]" />
+          <span>
+            {lang === "uz"
+              ? "SEVDO DENTA · MAXSUS DIZAYN STIKERLAR"
+              : lang === "ru"
+              ? "SEVDO DENTA · ФИРМЕННЫЙ СТИКЕРПАК"
+              : "SEVDO DENTA · DIE-CUT STICKER PACK"}
+          </span>
+        </span>
+        <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
+          {lang === "uz"
+            ? "Klinikamiz Sifat va Kafolat Stikerlari"
+            : lang === "ru"
+            ? "Фирменные Стикеры Качества и Гарантии"
+            : "Signature Dental Quality Sticker Pack"}
+        </h1>
+        <p className="text-sm sm:text-base text-slate-600">
+          {lang === "uz"
+            ? "Har bir stiker Dr. Olimjon Murzajanov klinikasining asosiy tibbiy standartlari — 100% sterillik, og'riqsiz anesteziya va xalqaro kafolatni ifodalaydi."
+            : lang === "ru"
+            ? "Каждый стикер отражает ключевые стандарты клиники Д-ра Олимжона Мурзажанова: 100% стерильность, лечение без боли и международную гарантию."
+            : "Each die-cut vinyl badge represents a core clinical standard at Dr. Olimjon Murzajanov's practice in Andijan."}
+        </p>
+
+        {/* Size Switcher */}
+        <div className="pt-2 flex items-center justify-center gap-2">
+          <span className="text-xs font-bold text-slate-500">
+            {lang === "uz" ? "O'lcham:" : lang === "ru" ? "Размер:" : "Sticker Size:"}
+          </span>
+          {["sm", "md", "lg"].map((sz) => (
+            <button
+              key={sz}
+              type="button"
+              onClick={() => setSelectedSize(sz)}
+              className={`px-3 py-1 rounded-full text-xs font-extrabold uppercase cursor-pointer transition-all ${
+                selectedSize === sz
+                  ? "bg-[#122d52] text-white shadow-xs"
+                  : "bg-white text-slate-600 border border-slate-200 hover:border-blue-300"
+              }`}
+            >
+              {sz}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Sticker Cards Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {STICKER_PACK.map((item) => (
+          <div
+            key={item.id}
+            className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-luxury hover:shadow-luxury-lg transition-all flex flex-col items-center text-center justify-between gap-6"
+          >
+            {/* Die-Cut Sticker Render Area */}
+            <div className="w-full py-8 rounded-2xl bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px] bg-slate-50/80 border border-slate-200/60 flex items-center justify-center">
+              <DentalSticker
+                variant={item.variant}
+                color={item.color}
+                rotate={item.rotate}
+                size={selectedSize}
+                sublabel={item.sublabel}
+                label={item.label[lang]}
+              />
+            </div>
+
+            <div className="space-y-2">
+              <h2 className="text-lg font-extrabold text-slate-900">
+                {item.label[lang]}
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                {item.desc[lang]}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Bottom CTA */}
+      <div className="rounded-[32px] bg-gradient-to-r from-[#0a192f] via-[#122d52] to-[#0f172a] text-white p-8 sm:p-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="space-y-1.5 text-center md:text-left">
+          <h3 className="text-xl sm:text-2xl font-extrabold">
+            {lang === "uz"
+              ? "Dr. Olimjon Murzajanov qabuliga navbatsiz yoziling"
+              : lang === "ru"
+              ? "Запишитесь на приём к Д-ру Олимжону без очереди"
+              : "Book a Priority Visit with Dr. Olimjon Murzajanov"}
+          </h3>
+          <p className="text-xs sm:text-sm text-sky-100/90">
+            {lang === "uz"
+              ? "Andijon shahri, Eski Shahar (Old City), 1-qavat — «Sevdo Denta» stomatologiya klinikasi"
+              : lang === "ru"
+              ? "г. Андижан, Эски Шахар (Old City), 1-й этаж — клиника «Sevdo Denta»"
+              : "Old City (Eski Shahar), 1st Floor, Andijan — «Sevdo Denta» Dental Clinic"}
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-3 shrink-0">
+          <button
+            type="button"
+            onClick={() => {
+              navigate(to("/booking"));
+              window.scrollTo(0, 0);
+            }}
+            className="px-6 py-3.5 rounded-full bg-white text-[#122d52] font-extrabold text-xs sm:text-sm shadow-lg cursor-pointer"
+          >
+            {lang === "uz" ? "Qabulga Yozilish →" : lang === "ru" ? "Записаться →" : "Book Visit →"}
+          </button>
+          <a
+            href={DOCTOR_INFO.phoneHref}
+            className="px-5 py-3.5 rounded-full bg-white/15 border border-white/25 text-white font-bold text-xs sm:text-sm flex items-center gap-2"
+          >
+            <IconPhone className="w-4 h-4 text-emerald-300" />
+            <span>{DOCTOR_INFO.phone}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default StickersShowcase;

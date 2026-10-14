@@ -1,0 +1,229 @@
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Logo from "./Logo";
+import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
+import { PRIMARY_CLINIC } from "../constants/clinics";
+import { DOCTOR_INFO, getExperienceBadge, getExperienceText } from "../constants/doctor";
+import { fetchDentistAvailability } from "../lib/medinsonBooking";
+import {
+  IconShieldCheck,
+  IconAward,
+  IconLocationPin,
+  IconClock,
+  IconPhone,
+  IconTelegram,
+  IconInstagram,
+  IconGoogle,
+  IconYandex,
+} from "./MedicalIcons";
+
+const Footer = () => {
+  const { lang } = useLanguage();
+  const to = useLocalizedPath();
+  const [workingHours, setWorkingHours] = useState({ start: "08:00", end: "18:00" });
+
+  useEffect(() => {
+    let active = true;
+    fetchDentistAvailability()
+      .then((data) => {
+        if (active && data?.dentist?.workingHours?.start && data?.dentist?.workingHours?.end) {
+          setWorkingHours(data.dentist.workingHours);
+        }
+      })
+      .catch(() => {});
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  const daysLabel =
+    lang === "uz"
+      ? "Dushanba - Shanba"
+      : lang === "ru"
+      ? "Понедельник - Суббота"
+      : "Monday - Saturday";
+  const hoursDisplay = `${workingHours.start} - ${workingHours.end}, ${daysLabel}`;
+
+  const quickLinks = [
+    { path: "/", label: { uz: "Bosh Sahifa", ru: "Главная", en: "Home" } },
+    { path: "/services", label: { uz: "Stomatologik Xizmatlar", ru: "Стоматологические Услуги", en: "Dental Services" } },
+    { path: "/about", label: { uz: "Dr. Olimjon Haqida", ru: "О Докторе Олимжоне", en: "About Dr. Olimjon" } },
+    { path: "/booking", label: { uz: "Onlayn Qabulga Yozilish", ru: "Онлайн Запись на Приём", en: "Book Appointment" } },
+    { path: "/contact", label: { uz: "Aloqa va Manzil", ru: "Контакты и Адрес", en: "Contact & Location" } },
+  ];
+
+  const specialtyLinks = [
+    { path: "/services/tish-davolash", label: { uz: "Og'riqsiz Tish Davolash va Plomba", ru: "Лечение Кариеса и Каналов", en: "Painless Caries & Root Canal" } },
+    { path: "/services/ortopediya", label: { uz: "Tsirkoniy Karonka va Ortopediya", ru: "Циркониевые Коронки и Протезы", en: "Zirconia Crowns & Prosthetics" } },
+    { path: "/services/estetik-stomatologiya", label: { uz: "E-max Vinirlar va Restavratsiya", ru: "Виниры E-max и Реставрация", en: "E-max Veneers & Smile Design" } },
+    { path: "/services/implantatsiya", label: { uz: "Tish Implantatsiyasi (Osstem)", ru: "Имплантация Зубов (Osstem)", en: "Dental Implants (Osstem)" } },
+    { path: "/services/tish-oqartirish", label: { uz: "Philips ZOOM 4 Oqartirish", ru: "Лазерное Отбеливание ZOOM 4", en: "Philips ZOOM 4 Whitening" } },
+    { path: "/services/xirurgiya", label: { uz: "Atravmatik Tish Olish", ru: "Безболезненное Удаление Зубов", en: "Atraumatic Tooth Extraction" } },
+  ];
+
+  return (
+    <footer className="bg-[#0f2442] text-slate-300 pt-14 pb-10 border-t border-[#285983]/30 mt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Top Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+          {/* Column 1: Brand & Bio (4 cols) */}
+          <div className="lg:col-span-4 space-y-4">
+            <Link
+              to={to("/")}
+              aria-label="Dr. Olimjon Murzajanov - Bosh sahifa"
+              className="inline-block cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#9cb8d4] rounded-lg"
+            >
+              <Logo className="h-10" inverted={true} />
+            </Link>
+
+            <p className="text-sm text-slate-300/85 leading-relaxed">
+              {lang === "uz"
+                ? `Andijon shahri Eski Shahar (Old City) hududidagi «Sevdo Denta» klinikasida 100% og'riqsiz davolash, zamonaviy ortopediya va implantatsiya. Dr. Olimjon Murzajanov — ${getExperienceText("uz").toLowerCase()} va 1,000+ mamnun bemorlar ishonchi.`
+                : lang === "ru"
+                ? `Современная стоматология, ортопедия и имплантация без боли в клинике «Sevdo Denta» (Андижан, Эски Шахар). Д-р Олимжон Мурзажанов — ${getExperienceText("ru").toLowerCase()} и более 1 000 довольных пациентов.`
+                : `Modern painless dentistry, prosthodontics, and implantology at «Sevdo Denta» Clinic in Andijan Old City. Dr. Olimjon Murzajanov — ${getExperienceText("en")} and 1,000+ satisfied patients.`}
+            </p>
+
+            <div className="flex flex-wrap gap-2 pt-1">
+              <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-md bg-white/10 text-white border border-white/15">
+                <IconShieldCheck className="w-3.5 h-3.5 text-[#9cb8d4]" />
+                <span>
+                  {lang === "uz" ? "100% Steril va Og'riqsiz" : lang === "ru" ? "100% Стерильно и Без Боли" : "100% Sterile & Painless"}
+                </span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-md bg-[#285983]/40 text-white border border-[#285983]/60">
+                <IconAward className="w-3.5 h-3.5 text-[#9cb8d4]" />
+                <span>{getExperienceBadge(lang)}</span>
+              </span>
+            </div>
+          </div>
+
+          {/* Column 2: Quick Navigation (2 cols) */}
+          <div className="lg:col-span-2 space-y-3">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9cb8d4]">
+              {lang === "uz" ? "Sahifalar" : lang === "ru" ? "Навигация" : "Navigation"}
+            </p>
+            <ul className="space-y-2.5 text-sm">
+              {quickLinks.map((item) => (
+                <li key={item.path}>
+                  <Link
+                    to={to(item.path)}
+                    className="text-slate-300/85 hover:text-white transition-colors inline-block py-1"
+                  >
+                    {item.label[lang]}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Main Dental Services (3 cols) */}
+          <div className="lg:col-span-3 space-y-3">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9cb8d4]">
+              {lang === "uz" ? "Asosiy Xizmatlar" : lang === "ru" ? "Основные Услуги" : "Core Specialties"}
+            </p>
+            <ul className="space-y-2.5 text-sm">
+              {specialtyLinks.map((item) => (
+                <li key={item.path}>
+                  <Link
+                    to={to(item.path)}
+                    className="text-slate-300/85 hover:text-white transition-colors inline-block py-1"
+                  >
+                    {item.label[lang]}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Contact & Clinic Info (3 cols) */}
+          <div className="lg:col-span-3 space-y-3">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9cb8d4]">
+              {lang === "uz" ? "Manzil va Aloqa" : lang === "ru" ? "Адрес и Контакты" : "Clinic & Contact"}
+            </p>
+
+            <div className="space-y-2.5 text-sm text-slate-300/90">
+              <p className="flex items-start gap-2.5">
+                <IconLocationPin className="w-4 h-4 text-[#9cb8d4] shrink-0 mt-0.5" />
+                <span>{PRIMARY_CLINIC.address[lang]}</span>
+              </p>
+              <p className="flex items-start gap-2.5">
+                <IconClock className="w-4 h-4 text-[#9cb8d4] shrink-0 mt-0.5" />
+                <span>{hoursDisplay}</span>
+              </p>
+              <p className="flex items-center gap-2.5">
+                <IconPhone className="w-4 h-4 text-[#9cb8d4] shrink-0" />
+                <a
+                  href={DOCTOR_INFO.phoneHref}
+                  className="text-white font-bold hover:text-[#9cb8d4] transition-colors"
+                >
+                  {DOCTOR_INFO.phone}
+                </a>
+              </p>
+            </div>
+
+            <div className="pt-2 flex flex-wrap gap-2">
+              <a
+                href={DOCTOR_INFO.telegramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-[#285983] text-xs font-semibold text-white border border-white/15 transition-colors"
+              >
+                <IconTelegram className="w-3.5 h-3.5 text-white" />
+                <span>Telegram</span>
+              </a>
+              <a
+                href={DOCTOR_INFO.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-[#285983] text-xs font-semibold text-white border border-white/15 transition-colors"
+              >
+                <IconInstagram className="w-3.5 h-3.5 text-white" />
+                <span>Instagram</span>
+              </a>
+              <a
+                href={PRIMARY_CLINIC.maps.yandex}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-[#285983] text-xs font-semibold text-white border border-white/15 transition-colors"
+              >
+                <IconYandex className="w-3.5 h-3.5" />
+                <span>Yandex Map</span>
+              </a>
+              <a
+                href={PRIMARY_CLINIC.maps.google}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-[#285983] text-xs font-semibold text-white border border-white/15 transition-colors"
+              >
+                <IconGoogle className="w-3.5 h-3.5" />
+                <span>Google Map</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Copyright Bar */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+          <p>
+            © {new Date().getFullYear()} Dr. Olimjon Murzajanov (dentist-olimjon.uz).{" "}
+            {lang === "uz"
+              ? "Barcha huquqlar himoyalangan."
+              : lang === "ru"
+              ? "Все права защищены."
+              : "All rights reserved."}
+          </p>
+          <p className="text-slate-400">
+            {lang === "uz"
+              ? "Andijon shahri · «Sevdo Denta» Stomatologiya Klinikasi"
+              : lang === "ru"
+              ? "г. Андижан · Стоматологическая клиника «Sevdo Denta»"
+              : "Andijan · «Sevdo Denta» Dental Clinic"}
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
