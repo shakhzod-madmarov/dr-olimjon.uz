@@ -500,7 +500,7 @@ const ServicesOverview = () => {
     {
       id: "rentgen-diagnostika",
       icon: <IconDigitalXray className="w-5 h-5 text-[#132e53]" />,
-      image: assets.service_surgery,
+      image: assets.service_xray,
       tag: { uz: "Diagnostika & Xirurgiya", ru: "3D Диагностика", en: "Diagnostics" },
       title: {
         uz: "3D Rentgen Diagnostika va Og'riqsiz Jarrohlik",

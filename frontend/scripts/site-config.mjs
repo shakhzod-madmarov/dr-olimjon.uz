@@ -40,7 +40,7 @@ export const ROUTES = [
     changefreq: "weekly",
     priority: "0.9",
     image: {
-      src: "src/assets/clinic_room.webp",
+      src: "src/assets/clinic_treatment_room.webp",
       title: "Stomatologik Xizmatlar — Sevdo Denta Andijon",
       caption:
         "Og'riqsiz tish davolash, tsirkoniy karonka, E-max vinirlar, tish implantatsiyasi va lazerli oqartirish",
@@ -76,7 +76,7 @@ export const ROUTES = [
     changefreq: "monthly",
     priority: "0.8",
     image: {
-      src: "src/assets/clinic_room.webp",
+      src: "src/assets/service_therapy.webp",
       title: "Og'riqsiz Tish Davolash va Endodontiya — Andijon",
       caption: "Karies, pulpit va tish kanallarini 100% og'riqsiz davolash",
     },
@@ -86,7 +86,7 @@ export const ROUTES = [
     changefreq: "monthly",
     priority: "0.8",
     image: {
-      src: "src/assets/hero_smile.webp",
+      src: "src/assets/service_veneers.webp",
       title: "Estetik Stomatologiya va E-max Keramik Vinirlar — Andijon",
       caption: "Gollivud tabassumi va badiiy restavratsiya",
     },
@@ -96,7 +96,7 @@ export const ROUTES = [
     changefreq: "monthly",
     priority: "0.8",
     image: {
-      src: "src/assets/hero_3d_tooth.webp",
+      src: "src/assets/service_crowns.webp",
       title: "Ortopedik Stomatologiya va Tsirkoniy Koronkalar — Andijon",
       caption: "Tsirkoniy (Zirconia) va E-max keramik tish qoplamalari",
     },
@@ -106,7 +106,7 @@ export const ROUTES = [
     changefreq: "monthly",
     priority: "0.8",
     image: {
-      src: "src/assets/treatment_implant.webp",
+      src: "src/assets/service_implant.webp",
       title: "Tish Implantatsiyasi (Osstem, Straumann) — Andijon",
       caption: "Yo'qotilgan tishlarni qo'shni tishlarni charxlamasdan qayta tiklash",
     },
@@ -116,7 +116,7 @@ export const ROUTES = [
     changefreq: "monthly",
     priority: "0.8",
     image: {
-      src: "src/assets/treatment_whitening.webp",
+      src: "src/assets/service_whitening.webp",
       title: "Philips ZOOM 4 Lazerli Tish Oqartirish va AirFlow — Andijon",
       caption: "Tish emaliga zarar yetkazmasdan 8-10 tongacha oqartirish",
     },
@@ -126,7 +126,7 @@ export const ROUTES = [
     changefreq: "monthly",
     priority: "0.75",
     image: {
-      src: "src/assets/treatment_surgery.webp",
+      src: "src/assets/service_surgery.webp",
       title: "Og'riqsiz Tish Olish va Jarrohlik Stomatologiyasi — Andijon",
       caption: "Aql tishlari va murakkab tishlarni atravmatik og'riqsiz olish",
     },
@@ -136,7 +136,7 @@ export const ROUTES = [
     changefreq: "monthly",
     priority: "0.75",
     image: {
-      src: "src/assets/hero_3d_tooth.webp",
+      src: "src/assets/service_xray.webp",
       title: "Raqamli 3D Rentgen va Viziografiya Diagnostikasi — Andijon",
       caption: "90% kam nurlanishli zamonaviy raqamli tish rentgeni",
     },

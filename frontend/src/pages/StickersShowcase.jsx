@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
-import { DOCTOR_INFO, getExperienceBadge, getServicesTag } from "../constants/doctor";
+import { DOCTOR_INFO, getExperienceBadge } from "../constants/doctor";
 import Seo from "../components/Seo";
 import DentalSticker from "../components/DentalSticker";
 import { IconSparkleStar, IconPhone } from "../components/MedicalIcons";
@@ -10,7 +10,7 @@ const STICKER_PACK = [
   {
     id: "st-1",
     variant: "tooth-crown",
-    color: "crimson",
+    color: "navy",
     rotate: "-rotate-2",
     sublabel: "SEVDO DENTA · ANDIJON",
     label: {
@@ -27,7 +27,7 @@ const STICKER_PACK = [
   {
     id: "st-2",
     variant: "painless-heart",
-    color: "rose",
+    color: "sky",
     rotate: "rotate-2",
     sublabel: "2-STEP ANESTHESIA",
     label: {
@@ -61,7 +61,7 @@ const STICKER_PACK = [
   {
     id: "st-4",
     variant: "laser-diamond",
-    color: "sky",
+    color: "slate",
     rotate: "rotate-2",
     sublabel: "PHILIPS ZOOM® 4 LED",
     label: {
@@ -77,10 +77,10 @@ const STICKER_PACK = [
   },
   {
     id: "st-5",
-    variant: "women-only",
+    variant: "doctor-badge",
     color: "gold",
     rotate: "-rotate-2",
-    sublabel: getServicesTag("uz"),
+    sublabel: "SEVDO DENTA · CERTIFIED",
     label: {
       uz: `Dr. Olimjon · ${getExperienceBadge("uz")}`,
       ru: `Д-р Олимжон · ${getExperienceBadge("ru")}`,
@@ -94,8 +94,8 @@ const STICKER_PACK = [
   },
   {
     id: "st-6",
-    variant: "tooth-sparkle",
-    color: "violet",
+    variant: "sterile-shield",
+    color: "indigo",
     rotate: "rotate-1",
     sublabel: "ANTI-SPID · B-CLASS",
     label: {
@@ -140,8 +140,8 @@ const StickersShowcase = () => {
       <Seo title={seo.title} description={seo.description} noindex />
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-3">
-        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest bg-blue-50 text-[#122d52] border border-blue-200/60">
-          <IconSparkleStar className="w-4 h-4 text-[#0284c7]" />
+        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#132e53]/5 text-[#132e53] border border-[#132e53]/15">
+          <IconSparkleStar className="w-4 h-4 text-[#285983]" />
           <span>
             {lang === "uz"
               ? "SEVDO DENTA · MAXSUS DIZAYN STIKERLAR"
@@ -150,7 +150,7 @@ const StickersShowcase = () => {
               : "SEVDO DENTA · DIE-CUT STICKER PACK"}
           </span>
         </span>
-        <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
+        <h1 className="font-serif-classic text-3xl sm:text-5xl font-bold text-[#132e53] tracking-tight">
           {lang === "uz"
             ? "Klinikamiz Sifat va Kafolat Stikerlari"
             : lang === "ru"
@@ -175,10 +175,10 @@ const StickersShowcase = () => {
               key={sz}
               type="button"
               onClick={() => setSelectedSize(sz)}
-              className={`px-3 py-1 rounded-full text-xs font-extrabold uppercase cursor-pointer transition-all ${
+              className={`px-3 py-1 rounded-full text-xs font-bold uppercase cursor-pointer transition-all ${
                 selectedSize === sz
-                  ? "bg-[#122d52] text-white shadow-xs"
-                  : "bg-white text-slate-600 border border-slate-200 hover:border-blue-300"
+                  ? "bg-[#132e53] text-white shadow-xs"
+                  : "bg-white text-slate-600 border border-slate-200 hover:border-[#285983]"
               }`}
             >
               {sz}
@@ -192,7 +192,7 @@ const StickersShowcase = () => {
         {STICKER_PACK.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-luxury hover:shadow-luxury-lg transition-all flex flex-col items-center text-center justify-between gap-6"
+            className="bg-white rounded-3xl p-6 sm:p-8 border border-[#d5e0ec] shadow-sm hover:shadow-md hover:border-[#285983] transition-all flex flex-col items-center text-center justify-between gap-6"
           >
             {/* Die-Cut Sticker Render Area */}
             <div className="w-full py-8 rounded-2xl bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px] bg-slate-50/80 border border-slate-200/60 flex items-center justify-center">
@@ -207,7 +207,7 @@ const StickersShowcase = () => {
             </div>
 
             <div className="space-y-2">
-              <h2 className="text-lg font-extrabold text-slate-900">
+              <h2 className="text-lg font-bold text-[#132e53]">
                 {item.label[lang]}
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -219,16 +219,16 @@ const StickersShowcase = () => {
       </div>
 
       {/* Bottom CTA */}
-      <div className="rounded-[32px] bg-gradient-to-r from-[#0a192f] via-[#122d52] to-[#0f172a] text-white p-8 sm:p-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="rounded-3xl bg-[#132e53] text-white p-8 sm:p-10 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-1.5 text-center md:text-left">
-          <h3 className="text-xl sm:text-2xl font-extrabold">
+          <h3 className="font-serif-classic text-xl sm:text-2xl font-bold">
             {lang === "uz"
               ? "Dr. Olimjon Murzajanov qabuliga navbatsiz yoziling"
               : lang === "ru"
               ? "Запишитесь на приём к Д-ру Олимжону без очереди"
               : "Book a Priority Visit with Dr. Olimjon Murzajanov"}
           </h3>
-          <p className="text-xs sm:text-sm text-sky-100/90">
+          <p className="text-xs sm:text-sm text-slate-200">
             {lang === "uz"
               ? "Andijon shahri, Eski Shahar (Old City), 1-qavat — «Sevdo Denta» stomatologiya klinikasi"
               : lang === "ru"
@@ -244,15 +244,15 @@ const StickersShowcase = () => {
               navigate(to("/booking"));
               window.scrollTo(0, 0);
             }}
-            className="px-6 py-3.5 rounded-full bg-white text-[#122d52] font-extrabold text-xs sm:text-sm shadow-lg cursor-pointer"
+            className="px-6 py-3.5 rounded-xl bg-white text-[#132e53] font-bold text-xs sm:text-sm shadow-sm hover:bg-[#f2f6fa] cursor-pointer transition-colors"
           >
             {lang === "uz" ? "Qabulga Yozilish →" : lang === "ru" ? "Записаться →" : "Book Visit →"}
           </button>
           <a
             href={DOCTOR_INFO.phoneHref}
-            className="px-5 py-3.5 rounded-full bg-white/15 border border-white/25 text-white font-bold text-xs sm:text-sm flex items-center gap-2"
+            className="px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs sm:text-sm flex items-center gap-2 transition-colors"
           >
-            <IconPhone className="w-4 h-4 text-emerald-300" />
+            <IconPhone className="w-4 h-4 text-[#9cb8d4]" />
             <span>{DOCTOR_INFO.phone}</span>
           </a>
         </div>

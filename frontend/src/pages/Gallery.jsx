@@ -89,7 +89,7 @@ const Gallery = () => {
     {
       id: "diagnostics-3d-xray",
       category: "diagnostics",
-      image: assets.service_surgery,
+      image: assets.service_xray,
       tag: { uz: "RAQAMLI VIZIOGRAFIYA", ru: "РАДИОВИЗИОГРАФИЯ", en: "DIGITAL X-RAY" },
       title: {
         uz: "Kam Nurlanishli Yuqori Aniqlikdagi 3D Rentgen Diagnostika",
@@ -115,7 +115,7 @@ const Gallery = () => {
     {
       id: "materials-zirconia-cadcam",
       category: "materials",
-      image: assets.hero_3d_tooth,
+      image: assets.service_crowns,
       tag: { uz: "MONOLIT TSIRKONIY & E-MAX", ru: "ДИОКСИД ЦИРКОНИЯ", en: "ZIRCONIA & E-MAX" },
       title: {
         uz: "Biomoslashuvchan Tsirkoniy va Ivoclar E-max Keramikasi",
@@ -141,7 +141,7 @@ const Gallery = () => {
     {
       id: "implantology-suite",
       category: "suites",
-      image: assets.treatment_implant,
+      image: assets.service_implant,
       tag: { uz: "ATRAVMATIK IMPLANTOLOGIYA", ru: "ИМПЛАНТОЛОГИЯ", en: "IMPLANTOLOGY SUITE" },
       title: {
         uz: "Biotitan Tish Implantatsiyasi va Mikro-Jarrohlik Xonasi",
@@ -167,7 +167,7 @@ const Gallery = () => {
     {
       id: "whitening-laser-unit",
       category: "materials",
-      image: assets.treatment_whitening,
+      image: assets.service_whitening,
       tag: { uz: "PHILIPS ZOOM 4", ru: "PHILIPS ZOOM 4", en: "PHILIPS ZOOM 4" },
       title: {
         uz: "Sovuq LED Nuri Bilan Xavfsiz Tish Oqartirish Tizimi",

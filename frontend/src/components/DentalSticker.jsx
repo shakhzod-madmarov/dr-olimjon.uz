@@ -3,20 +3,33 @@ import React from "react";
 /**
  * DentalSticker — Custom Die-Cut 3D Vinyl Dental Sticker Badge
  * Features thick white sticker border, glossy drop-shadow, subtle tilt, and vector dental artwork.
+ * 100% tailored to Dr. Olimjon Murzajanov & Sevdo Denta brand aesthetic (#132e53 / #285983).
  */
 const DentalSticker = ({
   variant = "tooth-sparkle",
   label,
   sublabel,
-  color = "crimson",
-  rotate = "-rotate-3",
+  color = "navy",
+  rotate = "-rotate-2",
   size = "md",
   className = "",
 }) => {
   const colorThemes = {
-    crimson: {
-      bg: "from-[#122d52] via-[#1d4ed8] to-[#0284c7]",
-      ring: "ring-blue-200/80",
+    navy: {
+      bg: "from-[#132e53] via-[#1c4475] to-[#285983]",
+      ring: "ring-[#9cb8d4]/70",
+      badgeText: "text-white",
+      subText: "text-[#9cb8d4]",
+    },
+    slate: {
+      bg: "from-[#285983] via-[#3572a5] to-[#132e53]",
+      ring: "ring-sky-200/80",
+      badgeText: "text-white",
+      subText: "text-sky-100",
+    },
+    sky: {
+      bg: "from-[#0284c7] via-[#0ea5e9] to-[#0369a1]",
+      ring: "ring-sky-200/80",
       badgeText: "text-white",
       subText: "text-sky-100",
     },
@@ -32,27 +45,15 @@ const DentalSticker = ({
       badgeText: "text-white",
       subText: "text-emerald-100",
     },
-    violet: {
-      bg: "from-indigo-600 via-blue-600 to-sky-600",
+    indigo: {
+      bg: "from-indigo-700 via-blue-800 to-[#132e53]",
       ring: "ring-indigo-200/80",
       badgeText: "text-white",
       subText: "text-indigo-100",
     },
-    sky: {
-      bg: "from-sky-500 via-blue-600 to-indigo-700",
-      ring: "ring-sky-200/80",
-      badgeText: "text-white",
-      subText: "text-sky-100",
-    },
-    rose: {
-      bg: "from-[#122d52] via-[#0284c7] to-[#0369a1]",
-      ring: "ring-sky-200/80",
-      badgeText: "text-white",
-      subText: "text-sky-100",
-    },
   };
 
-  const theme = colorThemes[color] || colorThemes.crimson;
+  const theme = colorThemes[color] || colorThemes.navy;
 
   const sizeClasses = {
     sm: "px-3 py-1.5 rounded-2xl gap-2",
@@ -81,17 +82,17 @@ const DentalSticker = ({
             <path
               d="M18 26C18 21 22 19 27 19C30 19 31 20.5 32 20.5C33 20.5 34 19 37 19C42 19 46 21 46 26C46 34 43 43 39 51C37.5 54 35 54 34 50L32 43L30 50C29 54 26.5 54 25 51C21 43 18 34 18 26Z"
               fill="#FFFFFF"
-              stroke="#122d52"
+              stroke="#132e53"
               strokeWidth="2.5"
             />
             <path
               d="M26 32C28 35 36 35 38 32"
-              stroke="#122d52"
+              stroke="#132e53"
               strokeWidth="2.5"
               strokeLinecap="round"
             />
-            <circle cx="25" cy="28" r="1.8" fill="#122d52" />
-            <circle cx="39" cy="28" r="1.8" fill="#122d52" />
+            <circle cx="25" cy="28" r="1.8" fill="#132e53" />
+            <circle cx="39" cy="28" r="1.8" fill="#132e53" />
           </svg>
         );
 
@@ -138,11 +139,11 @@ const DentalSticker = ({
             <polygon
               points="32,6 54,24 32,56 10,24"
               fill="#FFFFFF"
-              stroke="#2563EB"
+              stroke="#0284c7"
               strokeWidth="2.5"
               strokeLinejoin="round"
             />
-            <polygon points="32,12 46,24 32,48 18,24" fill="#DBEAFE" />
+            <polygon points="32,12 46,24 32,48 18,24" fill="#E0F2FE" />
             <path
               d="M48 10L50 15L55 17L50 19L48 24L46 19L41 17L46 15L48 10Z"
               fill="#FBBF24"
@@ -150,18 +151,38 @@ const DentalSticker = ({
           </svg>
         );
 
-      case "women-only":
+      case "doctor-badge":
         return (
           <svg viewBox="0 0 64 64" className="w-full h-full drop-shadow-xs" fill="none">
-            <circle cx="32" cy="32" r="24" fill="#FFFFFF" stroke="#122d52" strokeWidth="2.5" />
+            <circle cx="32" cy="32" r="24" fill="#FFFFFF" stroke="#132e53" strokeWidth="2.5" />
+            <circle cx="32" cy="32" r="20" fill="#132e53" />
             <path
-              d="M32 14L36.5 24.5L48 26L39.5 34L41.8 45.5L32 39.8L22.2 45.5L24.5 34L16 26L27.5 24.5L32 14Z"
-              fill="#0284c7"
-              stroke="#122d52"
-              strokeWidth="2"
+              d="M32 18L35.5 25.5L44 26.8L37.8 33L39.2 41.5L32 37.3L24.8 41.5L26.2 33L20 26.8L28.5 25.5L32 18Z"
+              fill="#FBBF24"
+              stroke="#FFFFFF"
+              strokeWidth="1.5"
+            />
+            <circle cx="32" cy="31" r="3" fill="#FFFFFF" />
+          </svg>
+        );
+
+      case "sterile-shield":
+        return (
+          <svg viewBox="0 0 64 64" className="w-full h-full drop-shadow-xs" fill="none">
+            <path
+              d="M32 6L14 14V30C14 43 21.5 53 32 58C42.5 53 50 43 50 30V14L32 6Z"
+              fill="#FFFFFF"
+              stroke="#132e53"
+              strokeWidth="2.5"
+            />
+            <path
+              d="M24 32L30 38L42 26"
+              stroke="#10B981"
+              strokeWidth="4"
+              strokeLinecap="round"
               strokeLinejoin="round"
             />
-            <circle cx="32" cy="31" r="4" fill="#FBBF24" />
+            <circle cx="32" cy="18" r="3" fill="#38BDF8" />
           </svg>
         );
 
@@ -172,17 +193,17 @@ const DentalSticker = ({
             <path
               d="M16 22C16 14 21 10 27 10C30 10 31.5 11.5 32 11.5C32.5 11.5 34 10 37 10C43 10 48 14 48 22C48 32 44 43 39.5 52C38 55 35 55 34 50.5L32 42L30 50.5C29 55 26 55 24.5 52C20 43 16 32 16 22Z"
               fill="#FFFFFF"
-              stroke="#122d52"
+              stroke="#132e53"
               strokeWidth="2.5"
             />
             <path
               d="M25 27C27.5 30.5 36.5 30.5 39 27"
-              stroke="#122d52"
+              stroke="#132e53"
               strokeWidth="2.5"
               strokeLinecap="round"
             />
-            <circle cx="24" cy="22" r="2" fill="#122d52" />
-            <circle cx="40" cy="22" r="2" fill="#122d52" />
+            <circle cx="24" cy="22" r="2" fill="#132e53" />
+            <circle cx="40" cy="22" r="2" fill="#132e53" />
             <path
               d="M50 8L52 14L58 16L52 18L50 24L48 18L42 16L48 14L50 8Z"
               fill="#FBBF24"
@@ -196,7 +217,7 @@ const DentalSticker = ({
 
   return (
     <div
-      className={`inline-flex items-center bg-gradient-to-br ${theme.bg} ${sizeClasses[size]} ${rotate} border-[4px] border-white ring-2 ${theme.ring} shadow-[0_10px_25px_-5px_rgba(18,45,82,0.28),0_4px_10px_-2px_rgba(0,0,0,0.12)] hover:rotate-0 hover:scale-105 transition-all duration-300 select-none ${className}`}
+      className={`inline-flex items-center bg-gradient-to-br ${theme.bg} ${sizeClasses[size]} ${rotate} border-[4px] border-white ring-2 ${theme.ring} shadow-[0_10px_25px_-5px_rgba(19,46,83,0.35),0_4px_10px_-2px_rgba(0,0,0,0.12)] hover:rotate-0 hover:scale-105 transition-all duration-300 select-none ${className}`}
     >
       <div className={`${iconSizes[size]} shrink-0 bg-white/20 rounded-2xl p-1 backdrop-blur-xs`}>
         {renderArtwork()}
