@@ -181,6 +181,7 @@ for (const route of routes) {
   page = setMetaProperty(page, "og:description", seo.description);
   page = setMetaProperty(page, "og:url", canonical);
   page = setMetaProperty(page, "og:image", seo.ogImage);
+  page = setMetaProperty(page, "og:image:secure_url", seo.ogImage);
   page = setMetaName(page, "twitter:title", seo.title);
   page = setMetaName(page, "twitter:description", seo.description);
   page = setMetaName(page, "twitter:image", seo.ogImage);

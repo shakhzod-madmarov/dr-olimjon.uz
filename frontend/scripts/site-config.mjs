@@ -29,7 +29,7 @@ export const ROUTES = [
     changefreq: "weekly",
     priority: "1.0",
     image: {
-      src: "public/dr_olimjon_branded.webp",
+      src: "public/dr_olimjon_og.jpg",
       title: "Dr. Olimjon Murzajanov — Stomatolog va Ortoped Andijon (Sevdo Denta)",
       caption:
         "Andijon shahridagi Sevdo Denta klinikasi stomatolog-ortopedi va terapevti Dr. Olimjon Murzajanov",

@@ -137,7 +137,6 @@ const About = () => {
         title={seo.title}
         description={seo.description}
         keywords={PAGE_KEYWORDS[lang]}
-        ogImage={`${SITE_ORIGIN}/dr_olimjon_portrait.webp`}
         schemaJson={aboutSchema}
       />
 

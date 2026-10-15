@@ -31,7 +31,7 @@ const Seo = ({
   description,
   keywords,
   canonical,
-  ogImage = `${SITE_ORIGIN}/dr_olimjon_branded.webp`,
+  ogImage = `${SITE_ORIGIN}/dr_olimjon_og.jpg`,
   schemaJson,
   noindex = false,
 }) => {
