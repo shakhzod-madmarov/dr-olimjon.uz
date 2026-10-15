@@ -75,10 +75,10 @@ const Nav = ({ topOffset = 0 }) => {
                 to={to(link.path)}
                 end={link.path === "/"}
                 className={({ isActive }) =>
-                  `px-4 py-2 rounded-lg text-xs font-semibold tracking-wide transition-colors duration-150 ${
+                  `px-4 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all duration-150 ${
                     isActive
-                      ? "bg-[#132e53] text-white"
-                      : "text-slate-700 hover:text-[#132e53] hover:bg-[#eef3f8]"
+                      ? "bg-[#eaf1f8] text-[#132e53] font-bold border border-[#bcd2e8]"
+                      : "text-slate-600 hover:text-[#132e53] hover:bg-[#f2f6fa]"
                   }`
                 }
               >

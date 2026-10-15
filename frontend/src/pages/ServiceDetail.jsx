@@ -224,7 +224,7 @@ const ServiceDetail = () => {
 
         {/* Service Photo Frame (5 cols) */}
         <div className="lg:col-span-5">
-          <div className="rounded-2xl overflow-hidden border border-white/20 shadow-md bg-slate-900">
+          <div className="rounded-2xl overflow-hidden border border-white/20 shadow-md bg-slate-100">
             <img
               src={service.image}
               alt={service.title[lang]}

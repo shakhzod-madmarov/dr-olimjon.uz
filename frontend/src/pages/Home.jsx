@@ -517,7 +517,7 @@ const ServicesOverview = () => {
   ];
 
   return (
-    <section className="py-6 sm:py-12 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 border border-[#d5e0ec] shadow-sm">
+    <section id="services" className="scroll-mt-24 py-6 sm:py-12 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 border border-[#d5e0ec] shadow-sm">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4 pb-5 sm:pb-6 border-b border-slate-100">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#285983]">
@@ -559,7 +559,7 @@ const ServicesOverview = () => {
               className="block focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#285983]"
               aria-label={`${s.title[lang]} - ${lang === "uz" ? "Batafsil ma'lumot" : lang === "ru" ? "Подробнее" : "Details"}`}
             >
-              <div className="relative h-40 sm:h-44 w-full overflow-hidden bg-slate-900">
+              <div className="relative h-44 sm:h-52 w-full overflow-hidden bg-slate-100">
                 <img
                   src={s.image}
                   alt={s.title[lang]}
@@ -569,8 +569,8 @@ const ServicesOverview = () => {
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0c1f38]/60 via-transparent to-transparent" />
-                <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/95 text-[#132e53]">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0c1f38]/50 via-transparent to-transparent pointer-events-none" />
+                <span className="absolute top-3 left-3 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-[#132e53] shadow-xs border border-white/60">
                   {s.tag[lang]}
                 </span>
               </div>

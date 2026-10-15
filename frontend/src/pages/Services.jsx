@@ -87,7 +87,7 @@ const Services = () => {
           >
             <div>
               {/* Service Photo Banner */}
-              <div className="relative h-48 sm:h-56 w-full overflow-hidden bg-slate-900">
+              <div className="relative h-48 sm:h-56 w-full overflow-hidden bg-slate-100">
                 <img
                   src={service.image}
                   alt={service.title[lang]}
@@ -95,9 +95,9 @@ const Services = () => {
                   height={600}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute top-3 sm:top-4 left-3 sm:left-4 right-3 sm:right-4 flex items-center justify-between gap-2">
                   <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-3 sm:px-3.5 py-1 rounded-full bg-white/95 text-[#132e53] shadow-xs">
                     {service.category[lang]}
