@@ -21,6 +21,7 @@ const certificates = [
       en: "Advanced certification in digital CAD/CAM smile reconstruction with monolithic zirconia crowns and E-max ceramic veneers.",
     },
     serial: "UZ-PROSTHO-2025-OM",
+    image: "/cert_prosthodontics.webp",
   },
   {
     id: "cert-osstem",
@@ -38,6 +39,7 @@ const certificates = [
       en: "Hands-on surgical certification from Osstem AIC covering atraumatic implant placement and immediate loading protocols.",
     },
     serial: "AIC-UZ-2024-8841",
+    image: "/cert_osstem_implant.webp",
   },
   {
     id: "cert-endo",
@@ -55,6 +57,7 @@ const certificates = [
       en: "International masterclass diploma in tooth-saving endodontic therapy and painless root canal treatment.",
     },
     serial: "ENDO-PRO-2023-419",
+    image: "/cert_endodontics.webp",
   },
   {
     id: "cert-aesthetic",
@@ -72,6 +75,7 @@ const certificates = [
       en: "Certification in biomimetic multi-layer composite artistry using German and Japanese nano-hybrid materials.",
     },
     serial: "IVOCLAR-2022-1094",
+    image: "/cert_aesthetic.webp",
   },
 ];
 
@@ -144,20 +148,35 @@ const CertificatesShowcase = () => {
                   </span>
                 </div>
 
-                {/* Stylized Certificate Frame Preview */}
-                <div className="p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-slate-50 to-blue-50/40 border border-slate-200/80 mb-3.5">
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-slate-400">
-                      {cert.org}
+                {/* Certificate Image Frame Preview */}
+                <div className="relative aspect-[16/11] w-full rounded-xl overflow-hidden mb-3 border border-slate-200/90 shadow-xs bg-slate-50 group-hover:border-[#0284c7] transition-all">
+                  <img
+                    src={cert.image}
+                    alt={cert.title[lang]}
+                    width={500}
+                    height={350}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/20 transition-colors flex items-center justify-center">
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/95 text-slate-900 text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg border border-slate-200 backdrop-blur-xs flex items-center gap-1.5">
+                      <IconAward className="w-3.5 h-3.5 text-amber-500" />
+                      {lang === "uz" ? "Kattalashtirish" : lang === "ru" ? "Увеличить" : "Zoom"}
                     </span>
-                    <IconAward className="w-4 h-4 text-amber-500 shrink-0" />
                   </div>
-                  <h3 className="text-xs sm:text-sm font-black text-slate-900 leading-snug group-hover:text-[#132e53] transition-colors">
+                </div>
+
+                <div className="mb-2">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">
+                    {cert.org}
+                  </span>
+                  <h3 className="text-xs sm:text-sm font-black text-slate-900 leading-snug group-hover:text-[#132e53] transition-colors line-clamp-2">
                     {cert.title[lang]}
                   </h3>
                 </div>
 
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
                   {cert.desc[lang]}
                 </p>
               </div>
@@ -177,7 +196,7 @@ const CertificatesShowcase = () => {
         {/* Modal Lightbox for Certificate Details */}
         {activeCert && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-slate-950/75 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-sm"
             onClick={closeCert}
           >
             <div
@@ -186,28 +205,43 @@ const CertificatesShowcase = () => {
               aria-modal="true"
               aria-label={`${a11y.certificateModal}: ${activeCert.title[lang]}`}
               tabIndex={-1}
-              className="bg-white rounded-2xl sm:rounded-3xl max-w-lg w-full p-4 sm:p-8 border-2 border-amber-300 shadow-2xl relative"
+              className="bg-white rounded-2xl sm:rounded-3xl max-w-2xl w-full p-4 sm:p-6 border-2 border-amber-300 shadow-2xl relative max-h-[92vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 type="button"
                 onClick={closeCert}
                 aria-label={a11y.closeModal}
-                className="absolute top-4 right-4 w-11 h-11 rounded-full bg-slate-100 hover:bg-blue-50 text-slate-700 flex items-center justify-center font-bold cursor-pointer transition-colors"
+                className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/90 hover:bg-slate-100 text-slate-700 flex items-center justify-center font-bold cursor-pointer shadow-md border border-slate-200 transition-colors"
               >
                 ✕
               </button>
 
-              <div className="text-center border-2 border-dashed border-amber-300/80 rounded-2xl p-5 sm:p-6 bg-gradient-to-b from-amber-50/30 to-white">
-                <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mx-auto mb-3">
-                  <IconAward className="w-6 h-6 text-amber-600" />
+              {/* Certificate Image in Gold Border */}
+              <div className="rounded-xl overflow-hidden border-2 border-amber-300 shadow-md bg-slate-50 mb-4">
+                <img
+                  src={activeCert.image}
+                  alt={activeCert.title[lang]}
+                  width={1000}
+                  height={700}
+                  className="w-full h-auto object-contain block"
+                />
+              </div>
+
+              <div className="px-1">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                  <span className="text-[11px] font-black uppercase tracking-widest text-[#0284c7]">
+                    {activeCert.org} · {activeCert.year}
+                  </span>
+                  <span className="font-mono text-xs font-semibold text-slate-400">
+                    #{activeCert.serial}
+                  </span>
                 </div>
-                <span className="text-[10px] font-black uppercase tracking-widest text-[#0284c7] block">
-                  {activeCert.org} · {activeCert.year}
-                </span>
-                <h3 className="text-lg sm:text-xl font-black text-slate-900 mt-1.5">
+
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 leading-snug">
                   {activeCert.title[lang]}
                 </h3>
+
                 <p className="text-xs font-bold text-slate-500 mt-1">
                   {lang === "uz"
                     ? "Berildi: Dr. Olimjon Murzajanov (Oliy toifali vrach-stomatolog va ortoped)"
@@ -215,16 +249,18 @@ const CertificatesShowcase = () => {
                     ? "Выдан: Д-р Олимжон Мурзажанов (Врач-стоматолог и ортопед)"
                     : "Awarded to: Dr. Olimjon Murzajanov (DDS, Prosthodontist & Restorative Specialist)"}
                 </p>
+
                 <p className="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed">
                   {activeCert.desc[lang]}
                 </p>
+
                 <div className="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-center gap-2 text-xs font-bold text-emerald-700">
-                  <IconCheckCircle className="w-4 h-4 text-emerald-600" />
+                  <IconCheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
                   <span>
                     {lang === "uz"
-                      ? `TASDIQLANGAN ORIGINAL SERTIFIKAT · #${activeCert.serial}`
+                      ? `TASDIQLANGAN RASMIY HUJJAT · #${activeCert.serial}`
                       : lang === "ru"
-                      ? `ПОДТВЕРЖДЁННЫЙ ОРИГИНАЛЬНЫЙ СЕРТИФИКАТ · #${activeCert.serial}`
+                      ? `ПОДТВЕРЖДЁННЫЙ ОФИЦИАЛЬНЫЙ ДОКУМЕНТ · #${activeCert.serial}`
                       : `VERIFIED OFFICIAL CERTIFICATE · #${activeCert.serial}`}
                   </span>
                 </div>
