@@ -63,4 +63,28 @@ export const FAQ_ITEMS = [
       en: "Click 'Book Visit' on the website, call +998 (94) 001-01-56, or message us on Telegram (@httmurzajanov) or Instagram (@dentist_olimjon) to reserve your preferred time slot with zero wait time.",
     },
   },
+  {
+    q: {
+      uz: "Konsultatsiya qanday o'tkaziladi va davolash narxlari qanday belgilanadi?",
+      ru: "Как проходит консультация и формируются цены на лечение?",
+      en: "How does the initial consultation work and how are prices determined?",
+    },
+    a: {
+      uz: "Birinchi tashrifda Dr. Olimjon Murzajanov og'iz bo'shlig'ini to'liq ko'rikdan o'tkazadi, zarurat bo'lsa raqamli viziografda suratga oladi va sizga bosqichma-bosqich aniq davolash rejasini taqdim etadi. Hech qanday yashirin to'lovlarsiz, barcha narxlar muolaja boshlanishidan avval ochiq-oydin tushuntiriladi.",
+      ru: "На первичной консультации Д-р Олимжон проводит детальный клинический осмотр, при необходимости делает снимок на цифровом визиографе и составляет пошаговый план лечения с прозрачной стоимостью без скрытых доплат.",
+      en: "During your first appointment, Dr. Olimjon conducts a thorough clinical examination, takes high-definition digital X-rays if needed, and outlines a clear, step-by-step treatment plan with fully transparent pricing before any treatment begins.",
+    },
+  },
+  {
+    q: {
+      uz: "Eski Shaharda «Sevdo Denta» klinikasini qanday oson topish mumkin?",
+      ru: "Как быстрее всего найти клинику «Sevdo Denta» в Эски Шахаре?",
+      en: "How can I easily locate «Sevdo Denta» dental clinic in Old City Andijan?",
+    },
+    a: {
+      uz: "Klinika Andijon shahrining Eski Shahar (Old City) markazida, 1-qavatda joylashgan. Bemorlar uchun bepul va qulay avtoturargoh (parkovka) mavjud. Saytimizdagi «Yandex Xarita» yoki «Google Xarita» tugmasi orqali to'g'ridan-to'g'ri marshrut chizishingiz mumkin.",
+      ru: "Клиника удобно расположена в центре Эски Шахар (Old City) на 1-м этаже, есть удобный подъезд и бесплатная парковка. Вы можете проложить точный маршрут через Яндекс Карты или Google Карты прямо на сайте.",
+      en: "The clinic is centrally located on the 1st floor in Old City (Eski Shahar), Andijan, with accessible parking. You can launch turn-by-turn navigation via Yandex Maps or Google Maps directly from our site.",
+    },
+  },
 ];

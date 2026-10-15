@@ -108,9 +108,9 @@ export const PAGE_SEO = {
 };
 
 export const PAGE_KEYWORDS = {
-  uz: "stomatolog andijon, tish shifokori andijon, dr olimjon murzajanov, olimjon stomatolog, dentist olimjon, sevdo denta andijon, eski shahar stomatolog, ortoped stomatolog andijon, tish davolash andijon, tsirkon karonka andijon, implantatsiya andijon, vinirlar andijon",
-  ru: "стоматолог андижан, стоматолог ортопед андижан, олимжон мурзажанов, севдо дента андижан, эски шахар стоматолог, лечение зубов андижан, циркониевые коронки андижан, имплантация зубов андижан, виниры андижан",
-  en: "dentist in andijan, prosthodontist andijan, dr olimjon murzajanov, sevdo denta clinic andijan, dental implants andijan, zirconia crowns andijan, dental veneers andijan",
+  uz: "stomatolog andijon, tish shifokori andijon, dr olimjon murzajanov, olimjon stomatolog, dentist olimjon, sevdo denta andijon, eski shahar stomatolog, ortoped stomatolog andijon, tish davolash andijon, tsirkon karonka andijon, implantatsiya andijon, vinirlar andijon, yaxshi stomatolog andijon, tish klinika andijon, tish og'rig'i andijon, stomatologiya andijon narxlari",
+  ru: "стоматолог андижан, стоматолог ортопед андижан, олимжон мурзажанов, севдо дента андижан, эски шахар стоматолог, лечение зубов андижан, циркониевые коронки андижан, имплантация зубов андижан, виниры андижан, лучшая стоматология андижан, удаление зуба без боли андижан, врач стоматолог андижан",
+  en: "dentist in andijan, prosthodontist andijan, dr olimjon murzajanov, sevdo denta clinic andijan, dental implants andijan, zirconia crowns andijan, dental veneers andijan, best dental clinic andijan uzbekistan, painless dentist andijan",
 };
 
 export const getPageSeo = (page, lang) => {
