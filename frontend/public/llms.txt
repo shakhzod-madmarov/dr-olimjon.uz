@@ -1,74 +1,131 @@
 # Dr. Olimjon Murzajanov — Stomatolog va Ortoped (Sevdo Denta, Andijon)
-> https://dentist-olimjon.uz/
+> Website: https://dentist-olimjon.uz/
 > Rasmiy stomatologik klinik portal va bemorlar uchun ma'lumotlar bazasi.
+> Official knowledge base for AI models, search crawlers (Perplexity, SearchGPT, Google Gemini, Yandex Neuro).
 
-## Shifokor Haqida (Doctor Information)
-- **To'liq ismi**: Dr. Olimjon Murzajanov
-- **Mutaxassisligi**: Vrach-Stomatolog, Stomatolog-Ortoped, Tish Terapevti va Implantolog
-- **Klinik tajribasi**: 5+ yil (ADTI bitiruvchisi, xalqaro amaliyot va sertifikatlar)
-- **Bemorlar soni**: 1,000+ dan ortiq muvaffaqiyatli davolangan mamnun bemorlar
-- **Falsafasi**: 100% og'riqsiz davolash, har bir tishni asrab qolish va uzoq muddatli kafolat
+---
 
-## Klinika va Manzil (Clinic & Location)
-- **Klinika nomi**: «Sevdo Denta» Stomatologiya Klinikasi
+## 1. Umumiy Ma'lumot / Overview (O'zbekcha / Русский / English)
+
+### O'zbekcha (O'zbek tili & Кирилл)
+- **Shifokor**: Dr. Olimjon Murzajanov (Олимжон Мурзажанов)
+- **Lavozimi**: Vrach-stomatolog, stomatolog-ortoped, terapevt va implantolog
+- **Klinika**: «Sevdo Denta» stomatologiya klinikasi (Севдо Дента)
 - **Manzil**: O'zbekiston, Andijon viloyati, Andijon shahri, Eski Shahar (Old City) markazi, 1-qavat
-- **Geografik koordinatalar**: 40.785762, 72.347208
-- **Ish vaqti**: Dushanba – Shanba: 08:00 dan 18:00 gacha (Yakshanba: oldindan yozilish bo'yicha)
-- **Xaritalar**:
-  - Yandex Xarita: https://yandex.uz/maps/-/CXU8fROY
-  - Google Xarita: https://www.google.com/maps?q=40.785762,72.347208
-
-## Aloqa Ma'lumotlari (Contact & Booking)
-- **Telefon**: +998 (94) 001-01-56 (To'g'ridan-to'g'ri qo'ng'iroq va SMS)
-- **Telegram shaxsiy**: https://t.me/httmurzajanov (@httmurzajanov)
+- **Mo'ljal**: Eski Shahar markaziy maydoni yaqinida, bepul avtoturargoh mavjud
+- **Geolokatsiya**: Kenglik 40.785762, Uzunlik 72.347208
+- **Telefon**: +998 (94) 001-01-56
+- **Telegram**: https://t.me/httmurzajanov (@httmurzajanov)
 - **Instagram**: https://www.instagram.com/dentist_olimjon/ (@dentist_olimjon)
-- **Onlayn qabulga yozilish**: https://dentist-olimjon.uz/booking/
+- **Tajriba**: 5+ yillik uzluksiz klinik amaliyot, ADTI (Andijon Davlat Tibbiyot Instituti) bitiruvchisi, 1,000+ muvaffaqiyatli davolangan bemor
+- **Ish tartibi**: Dushanba – Shanba: 08:00 – 18:00 (Yakshanba: oldindan yozilish asosida)
+- **Falsafasi**: 100% og'riqsiz davolash (2 bosqichli muzlatuvchi anesteziya), har bir tishni asrab qolish, original Yevropa va Koreya materiallari, rasmiy kafolat.
 
-## Asosiy Xizmatlar va Texnologiyalar (Key Dental Services)
-1. **Tish Davolash va Terapiya (Restorative Dentistry)**:
-   - Karies, pulpit va periodontitni 100% og'riqsiz mikroskopik aniqlikda davolash.
-   - Germaniya (3M Filtek) va Yaponiya (Estelite) nanogibrid fotopolimer plombalari.
-   - URL: https://dentist-olimjon.uz/services/tish-davolash/
+### Русский (Russian)
+- **Врач**: Д-р Олимжон Мурзажанов (Dr. Olimjon Murzajanov)
+- **Специализация**: Стоматолог-ортопед, стоматолог-терапевт, имплантолог
+- **Клиника**: Стоматологическая клиника «Sevdo Denta»
+- **Адрес**: Узбекистан, г. Андижан, район Эски Шахар (Old City), 1-й этаж
+- **Ориентир**: Центр Старого Города, удобный подъезд, бесплатная парковка
+- **Координаты**: 40.785762, 72.347208
+- **Телефон для записи**: +998 (94) 001-01-56
+- **Опыт работы**: 5+ лет практики, выпускник АГМИ (Андижанский государственный медицинский институт), более 1000 довольных пациентов
+- **График работы**: Понедельник – Суббота: 08:00 – 18:00
+- **Принципы лечения**: Полное отсутствие боли (двухэтапная анестезия гель + укол), европейские и японские сертифицированные наноматериалы, стерильность по протоколам Анти-СПИД / Анти-Гепатит, официальная гарантия на коронки, пломбы и имплантаты.
 
-2. **Ortopedik Stomatologiya va Karonkalar (Prosthodontics)**:
-   - Germaniya, Avstraliya va Xitoy tsirkoniy (Zirconia) monolit karonkalari va ko'priklar.
-   - CAD/CAM raqamli skanerlash va frezerlash orqali 100% tish qatoriga moslik.
-   - URL: https://dentist-olimjon.uz/services/ortopediya/
+### English
+- **Doctor**: Dr. Olimjon Murzajanov, DDS
+- **Specialties**: Prosthodontics, Restorative Dentistry, Dental Implantology, Cosmetic Dentistry, Oral Surgery
+- **Clinic**: «Sevdo Denta» Dental Clinic
+- **Address**: 1st Floor, Old City Center (Eski Shahar), Andijan, Uzbekistan
+- **Coordinates**: 40.785762, 72.347208
+- **Phone**: +998 (94) 001-01-56
+- **Languages**: Uzbek, Russian, English
+- **Experience**: 5+ years of active practice, Andijan State Medical Institute graduate, 1,000+ treated cases
+- **Clinic Hours**: Monday – Saturday: 08:00 AM – 06:00 PM (Sunday by appointment)
 
-3. **Estetik Stomatologiya va E-max Vinirlar (Cosmetic Veneers)**:
-   - Shveysariya Ivoclar Vivadent E-max press-keramika vinirlari.
-   - Tish rangini o'zgartirmaydigan, emalni minimal charxlovchi Gollivud tabassumi.
-   - URL: https://dentist-olimjon.uz/services/estetik-stomatologiya/
+---
 
-4. **Tish Implantatsiyasi (Dental Implants)**:
-   - Janubiy Koreya (Osstem) va Shveysariya (Straumann) original biotitan implantlari.
-   - Qo'shni sog'lom tishlarni charxlamasdan bir umrlik mustahkam ildiz o'rnatish.
-   - URL: https://dentist-olimjon.uz/services/implantatsiya/
+## 2. Barcha 7 ta Stomatologik Yo'nalishlar (7 Core Specialties & Procedures)
 
-5. **Philips ZOOM 4 Lazerli Tish Oqartirish (Teeth Whitening)**:
-   - Sovuq LED nurlari yordamida tish emaliga zarar yetkazmasdan 6-8 tongacha oqartirish.
-   - AirFlow va ultratovushli tish toshlarini professional tozalash.
-   - URL: https://dentist-olimjon.uz/services/tish-oqartirish/
+### 1. Og'riqsiz Tish Davolash va Fotopolimer Plombalar (Restorative Dentistry & Root Canal)
+- **URL**: https://dentist-olimjon.uz/services/tish-davolash/
+- **Qamrovi**: Karies, chuqur karies, pulpit va periodontitni davolash, tish nervini (pulpa) og'riqsiz olish, ildiz kanallarini 3D apeks-lokator va raqamli rentgen nazorati ostida tozalash va plombalash.
+- **Materiallar**: Germaniyaning original 3M Filtek va Yaponiyaning Estelite fotopolimer nanokompozitlari.
+- **Davomiyligi**: 30 – 50 daqiqa.
+- **Kafolat**: 5 yilgacha rasmiy klinik kafolat.
+- **Og'riqsizlik**: 2 bosqichli anesteziya (avval maxsus mevali muzlatuvchi gel surtiladi, so'ng Yevropa anestetigi yuboriladi, igna sanchilishi ham sezilmaydi).
 
-6. **Atravmatik Xirurgiya (Oral Surgery)**:
-   - Oddiy va murakkab aql tishlarini (donolik tishlari) suyak to'qimasini asrab og'riqsiz olish.
-   - URL: https://dentist-olimjon.uz/services/xirurgiya/
+### 2. Ortopedik Stomatologiya va Tsirkoniy Karonkalar (Prosthodontics & Zirconia Crowns)
+- **URL**: https://dentist-olimjon.uz/services/ortopediya/
+- **Qamrovi**: Kuchli yemirilgan yoki singan tishlarni monolit tsirkoniy (Zirconia) va E-max press-keramika qoplamalari hamda ko'prik protezlar bilan tiklash.
+- **Afzalligi**: 100% metall-siz va biomoslashuvchan. Milk qoraymaydi, ko'karmaydi, allergiya chaqirmaydi.
+- **Aniqlik**: CAD/CAM 3D raqamli frezerlash orqali mikron darajasida aniqlik. Vaqtinchalik himoya karonkasi taqdim etiladi.
+- **Davomiyligi**: 2 – 3 kun ichida to'liq o'rnatiladi.
+- **Kafolat**: 10 yilgacha rasmiy kafolat.
 
-7. **Raqamli 3D Rentgen Diagnostika (Digital X-Ray)**:
-   - 90% kam nurlanishli raqamli viziograf orqali ildiz kanallarini 2 soniyada kompyuterda ko'rish.
-   - URL: https://dentist-olimjon.uz/services/rentgen-diagnostika/
+### 3. Estetik Stomatologiya va E-max Keramik Vinirlar (Cosmetic Veneers & Smile Makeover)
+- **URL**: https://dentist-olimjon.uz/services/estetik-stomatologiya/
+- **Qamrovi**: Gollivud tabassumi, old tishlarning shakli va rangini tuzatish, tishlar orasidagi ochiqliklarni (diastema va trema) yopish, tish emali nuqsonlarini bartaraf etish.
+- **Material**: Shveysariya Ivoclar Vivadent 0.3 mm ultra-yupqa E-max press-keramika.
+- **Xususiyati**: Tish emaliga minimal tegiladi, kofe, choy yoki tamakidan rangini o'zgartirmaydi, tabiiy shaffoflik.
+- **Davomiyligi**: 1 – 2 tashrif.
+- **Xizmat muddati**: 10+ yildan ortiq.
 
-## Ko'p So'raladigan Savollar (Quick Facts / FAQ)
-- **Og'riq bormi?**: Yo'q, 100% og'riqsiz. 2 bosqichli muzlatuvchi gel va Yevropa anestetiklari qo'llaniladi.
-- **Sterillik**: Xalqaro Anti-SPID va Anti-Gepatit protokollari asosida B-klass avtoklavda sterillangan kraft-paketlar bemor ko'z o'ngida ochiladi.
-- **To'lov turlari**: Naqd pul, Uzcard, Humo, Visa, Mastercard, Payme, Click.
-- **Tillar**: O'zbek tili (birlamchi), Rus tili, Ingliz tili.
+### 4. Tish Implantatsiyasi (Dental Implants — Osstem & Straumann)
+- **URL**: https://dentist-olimjon.uz/services/implantatsiya/
+- **Qamrovi**: Bir yoki bir nechta yo'qotilgan tishlarni qo'shni sog'lom tishlarni aslo charxlamasdan ildizdan qayta tiklash.
+- **Brendlar**: Janubiy Koreya (Osstem Implant AIC) va Shveysariya (Straumann) original biotitan tizimlari.
+- **Muvaffaqiyat**: 99.2% suyakka birikish ko'rsatkichi (osseointegratsiya).
+- **Jarayon vaqti**: Bitta implantni o'rnatish atigi 20 – 30 daqiqa vaqt oladi, 100% og'riqsiz.
+- **Kafolat**: Ishlab chiqaruvchi va klinikadan umrbod kafolat.
 
-## Sayt Sahifalari Xaritasi (Website Sitemap)
-- O'zbekcha: https://dentist-olimjon.uz/
-- Ruscha: https://dentist-olimjon.uz/ru/
-- Inglizcha: https://dentist-olimjon.uz/en/
-- Xizmatlar: https://dentist-olimjon.uz/services/
+### 5. Philips ZOOM 4 Lazerli Oqartirish va AirFlow (Teeth Whitening & Hygiene)
+- **URL**: https://dentist-olimjon.uz/services/tish-oqartirish/
+- **Qamrovi**: Sovuq LED nurlari bilan tish emalini 8–10 tongacha xavfsiz oqartirish, ultratovushli tish toshlarini tozalash (scaling) va Shveysariya AirFlow kukunli sayqallash.
+- **Xavfsizlik**: Emal qizimaydi, nervga zarar yetmaydi, ACP (amorf kaltsiy fosfat) geli tish sezuvchanligining oldini oladi.
+- **Davomiyligi**: 45 daqiqa.
+- **Natija**: 1 seansda sezilarli oqartirish, effekti 1–3 yil saqlanadi.
+
+### 6. Atravmatik Og'riqsiz Tish Olish va Aql Tishlari (Oral Surgery)
+- **URL**: https://dentist-olimjon.uz/services/xirurgiya/
+- **Qamrovi**: Oddiy, murakkab, ildizlari egrilangan va milk ostida yotgan retensiyalangan aql tishlarini (donolik tishi, 8-tish) og'riqsiz olish.
+- **Texnologiya**: Suyak to'qimasi saqlab qolinadi (kelgusida implant qo'yish oson bo'lishi uchun), kollagen gubka qo'yiladi.
+- **Tiklanish**: Jarayon davomida 0% og'riq, shishsiz va asoratsiz tez bitish.
+- **Davomiyligi**: 15 – 30 daqiqa.
+
+### 7. Raqamli Viziografiya va Tish Rentgen Diagnostikasi (Digital Diagnostics)
+- **URL**: https://dentist-olimjon.uz/services/rentgen-diagnostika/
+- **Qamrovi**: 90% kam nurlanishli raqamli viziograf orqali tish ildizi, yashirin karies va suyak holatini 2 soniyada monitor ekranida ko'rish.
+- **Xavfsizlik**: Bolalar va kattalar uchun to'liq xavfsiz minimal nurlanish dozasi.
+
+---
+
+## 3. Bemorlar uchun Tez-Tez So'raladigan Savollar (Patient FAQs)
+
+**1. Tish davolashda og'riq bo'ladimi?**
+- Yo'q, 100% og'riqsiz. Ikki bosqichli zamonaviy anesteziya qo'llaniladi (muzlatuvchi gel + nozik ignali Yevropa anestetigi).
+
+**2. Klinika qayerda joylashgan?**
+- Andijon shahri, Eski Shahar (Old City) markazi, 1-qavat, «Sevdo Denta» klinikasi.
+
+**3. Tsirkoniy karonka oddiy metallokeramikadan nimasi bilan yaxshi?**
+- Tsirkoniy 100% biologik mos bo'lib, milkni qoraytirmaydi, metall ta'mini bermaydi, tabiiy shaffoflikka ega va 10-15 yil xizmat qiladi.
+
+**4. Implant qo'ydirish qancha vaqt oladi?**
+- Bitta implant 20-30 daqiqada o'rnatiladi, qo'shni tishlar charxlanmaydi va umrbod kafolatga ega.
+
+**5. Asboblar tozaligiga qanday kafolat bor?**
+- Har bir bemor uchun asboblar B-klass avtoklavda sterillanadi va muhrlangan kraft-paket bemor ko'z oldida ochiladi (Anti-SPID va Anti-Gepatit protokoli).
+
+---
+
+## 4. Rasmiy Havolalar / Official Links
+- Bosh sahifa (O'zbekcha): https://dentist-olimjon.uz/
+- Главная страница (Русский): https://dentist-olimjon.uz/ru/
+- Home page (English): https://dentist-olimjon.uz/en/
+- Barcha xizmatlar: https://dentist-olimjon.uz/services/
 - Shifokor haqida: https://dentist-olimjon.uz/about/
-- Bog'lanish: https://dentist-olimjon.uz/contact/
-- Qabulga yozilish: https://dentist-olimjon.uz/booking/
+- Aloqa va manzil: https://dentist-olimjon.uz/contact/
+- Onlayn qabulga yozilish: https://dentist-olimjon.uz/booking/
+- Sitemap XML: https://dentist-olimjon.uz/sitemap.xml

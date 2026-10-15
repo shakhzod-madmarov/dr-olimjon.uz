@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
 import { SERVICES_CATALOG } from "../constants/servicesCatalog";
 import { DOCTOR_INFO, getExperienceBadge } from "../constants/doctor";
-import { PAGE_KEYWORDS, SITE_ORIGIN } from "../constants/seo";
+import { getPageSeo, PAGE_KEYWORDS, SERVICE_KEYWORDS, SITE_ORIGIN } from "../constants/seo";
 import Seo from "../components/Seo";
 import { buildMedicalProcedureSchema } from "../utils/structuredData";
 import {
@@ -116,13 +116,18 @@ const ServiceDetail = () => {
     },
   ];
   const procedureSchema = buildMedicalProcedureSchema(service, lang, breadcrumbs);
+  const serviceSeo = getPageSeo(service.id, lang);
+  const resolvedTitle = serviceSeo?.title || `${service.title[lang]} — ${seoSuffix}`;
+  const resolvedDesc = serviceSeo?.description || service.shortDesc[lang];
+  const resolvedKeywords =
+    SERVICE_KEYWORDS[service.id]?.[lang] || PAGE_KEYWORDS[lang];
 
   return (
     <div className="py-6 sm:py-10 space-y-12">
       <Seo
-        title={`${service.title[lang]} — ${seoSuffix}`}
-        description={service.shortDesc[lang]}
-        keywords={PAGE_KEYWORDS[lang]}
+        title={resolvedTitle}
+        description={resolvedDesc}
+        keywords={resolvedKeywords}
         ogImage={serviceImageUrl}
         schemaJson={procedureSchema}
       />

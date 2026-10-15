@@ -43,6 +43,44 @@ export const buildFaqSchema = (faqItems, lang = "uz") => ({
   })),
 });
 
+const PROCEDURE_MEDICAL_CODES = {
+  "tish-davolash": {
+    codingSystem: "SNOMED-CT",
+    codeValue: "278854009",
+    name: "Restoration of tooth",
+  },
+  ortopediya: {
+    codingSystem: "SNOMED-CT",
+    codeValue: "281146001",
+    name: "Placement of dental crown",
+  },
+  "estetik-stomatologiya": {
+    codingSystem: "SNOMED-CT",
+    codeValue: "386000003",
+    name: "Dental veneer placement",
+  },
+  implantatsiya: {
+    codingSystem: "SNOMED-CT",
+    codeValue: "386001004",
+    name: "Insertion of dental implant",
+  },
+  "tish-oqartirish": {
+    codingSystem: "SNOMED-CT",
+    codeValue: "386004007",
+    name: "Tooth bleaching",
+  },
+  xirurgiya: {
+    codingSystem: "SNOMED-CT",
+    codeValue: "274151000",
+    name: "Tooth extraction",
+  },
+  "rentgen-diagnostika": {
+    codingSystem: "SNOMED-CT",
+    codeValue: "399208008",
+    name: "Dental radiography",
+  },
+};
+
 /**
  * Generate Schema.org MedicalProcedure for a specific treatment
  * @param {object} service
@@ -52,6 +90,7 @@ export const buildFaqSchema = (faqItems, lang = "uz") => ({
 export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = []) => {
   const serviceUrl = urlFor(`/services/${service.id}`, lang);
   const breadcrumbObj = breadcrumbs.length > 0 ? buildBreadcrumbSchema(breadcrumbs, lang) : null;
+  const medCode = PROCEDURE_MEDICAL_CODES[service.id];
 
   const procedure = {
     "@type": "MedicalProcedure",
@@ -62,9 +101,34 @@ export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = 
       ? "https://schema.org/SurgicalProcedure"
       : "https://schema.org/NoninvasiveProcedure",
     "bodyLocation": "https://en.wikipedia.org/wiki/Human_mouth",
-    "relevantSpecialty": {
-      "@type": "MedicalSpecialty",
-      "name": "Dentistry",
+    "relevantSpecialty": [
+      {
+        "@type": "MedicalSpecialty",
+        "name": "Dentistry",
+      },
+      {
+        "@type": "MedicalSpecialty",
+        "name":
+          service.id === "ortopediya"
+            ? "Prosthodontics"
+            : service.id === "implantatsiya" || service.id === "xirurgiya"
+            ? "OralSurgery"
+            : service.id === "estetik-stomatologiya"
+            ? "CosmeticDentistry"
+            : "Dentistry",
+      },
+    ],
+    "code": medCode
+      ? {
+          "@type": "MedicalCode",
+          "codingSystem": medCode.codingSystem,
+          "code": medCode.codeValue,
+          "name": medCode.name,
+        }
+      : undefined,
+    "recognizingAuthority": {
+      "@type": "Organization",
+      "name": "O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi",
     },
     "provider": {
       "@id": `${SITE_ORIGIN}/#dentist`,
@@ -79,6 +143,18 @@ export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = 
       "availability": "https://schema.org/InStock",
       "seller": {
         "@id": `${SITE_ORIGIN}/#dentist`,
+      },
+    },
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${SITE_ORIGIN}/booking/`,
+        "inLanguage": ["uz", "ru", "en"],
+      },
+      "result": {
+        "@type": "Reservation",
+        "name": "Stomatolog Ko'rigiga Qabul",
       },
     },
   };

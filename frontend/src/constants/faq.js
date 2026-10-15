@@ -87,4 +87,40 @@ export const FAQ_ITEMS = [
       en: "The clinic is centrally located on the 1st floor in Old City (Eski Shahar), Andijan, with accessible parking. You can launch turn-by-turn navigation via Yandex Maps or Google Maps directly from our site.",
     },
   },
+  {
+    q: {
+      uz: "Tsirkoniy karonka va oddiy metallokeramika o'rtasidagi farq nima?",
+      ru: "В чём главное отличие циркониевых коронок от металлокерамики?",
+      en: "What is the key difference between Zirconia crowns and Metal-Ceramic crowns?",
+    },
+    a: {
+      uz: "Tsirkoniy karonkalar 100% metall-siz va biomoslashuvchan materialdan tayyorlanadi. Ular milkda qorayish (ko'karish) keltirib chiqarmaydi, allergiya bermaydi va tabiiy tish kabi yorug'lik o'tkazadi. CAD/CAM 3D raqamli frezerlash orqali mikron aniqlikda tishga mos keladi va 10–15 yilgacha xizmat qiladi.",
+      ru: "Циркониевые коронки на 100% биосовместимы и не содержат металла. Они исключают потемнение десны, аллергические реакции и пропускают свет точно как натуральная эмаль. Изготавливаются на цифровом 3D CAD/CAM станке с микронной точностью.",
+      en: "Zirconia crowns are 100% metal-free and biocompatible. They eliminate dark gumline discoloration, prevent metal allergies, and reflect light naturally like real teeth. Milled with 3D CAD/CAM precision for a lifespan of 10 to 15+ years.",
+    },
+  },
+  {
+    q: {
+      uz: "Tish implantatsiyasi qancha vaqt oladi va kimlarga tavsiya etiladi?",
+      ru: "Сколько длится установка имплантата и кому подходит имплантация?",
+      en: "How long does a dental implant procedure take and who is it recommended for?",
+    },
+    a: {
+      uz: "Bitta biotitan implantni (Osstem yoki Straumann) o'rnatish atigi 20–30 daqiqa vaqt oladi va 100% og'riqsiz o'tadi. Implant qo'shni sog'lom tishlarni charxlamasdan yo'qotilgan tish o'rnini to'liq tiklaydi. 99.2% muvaffaqiyatli birikish ko'rsatkichi va umrbod kafolatga ega.",
+      ru: "Установка одного титанового имплантата (Osstem или Straumann) занимает всего 20–30 минут и проходит полностью безболезненно. Имплантация позволяет восстановить утраченный зуб без обточки соседних здоровых зубов. Приживаемость составляет 99.2%.",
+      en: "Placing a single titanium implant (Osstem or Straumann) takes only 20–30 minutes and is 100% painless. Implants restore missing teeth without grinding down adjacent healthy teeth, featuring a 99.2% clinical success rate and lifetime warranty.",
+    },
+  },
+  {
+    q: {
+      uz: "Aql tishini (8-tish) qachon va nima uchun oldirish kerak?",
+      ru: "Когда необходимо удалять зуб мудрости (восьмёрку)?",
+      en: "When should wisdom teeth (third molars) be extracted?",
+    },
+    a: {
+      uz: "Agar aql tishi qiyshiq o'sib qo'shni tishni surayotgan bo'lsa, chaynashda milkni jarohatlasa yoki kariesga chalinsa, uni oldirish tavsiya etiladi. Dr. Olimjon Murzajanov murakkab aql tishlarini ham 15–20 daqiqada suyak to'qimasini shikastlamasdan, og'riqsiz va shishsiz olib beradi.",
+      ru: "Удаление зуба мудрости рекомендуется при его неправильном наклоне, давлении на зубной ряд, разрушении соседнего зуба или регулярных воспалениях десны (перикоронит). Удаление проводится бережно, без боли и послеоперационных отёков за 15–20 минут.",
+      en: "Wisdom tooth extraction is advised when the tooth is impacted, pushing adjacent teeth out of alignment, or causing gum inflammation. Dr. Olimjon performs gentle, bone-preserving extractions in 15–20 minutes with zero pain and minimal swelling.",
+    },
+  },
 ];
