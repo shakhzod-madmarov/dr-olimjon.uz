@@ -34,7 +34,7 @@
     "src": "_vendor-utils-DHtLVDbd.css"
   },
   "index.html": {
-    "file": "assets/index-7B0JckAv.js",
+    "file": "assets/index-CIpqaLYM.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -48,21 +48,19 @@
       "node_modules/qrcode/lib/browser.js"
     ],
     "css": [
-      "assets/index-WJXVlqYn.css"
+      "assets/index-CwErTUGQ.css"
     ],
     "assets": [
       "assets/dr_olimjon_portrait-Rxx_ZCft.webp",
       "assets/dr_olimjon_clinic-C1eo41ee.webp",
       "assets/dr_olimjon_branded-BVSeNJLb.webp",
-      "assets/service_therapy-BBjhLw6t.webp",
-      "assets/service_crowns-Bm44UqZ8.webp",
-      "assets/service_veneers-zmGqypVU.webp",
-      "assets/service_implant-CTSanE_k.webp",
-      "assets/service_whitening-CQGwri_y.webp",
-      "assets/service_surgery-CbBrBo-2.webp",
-      "assets/service_xray-npsLC41l.webp",
-      "assets/clinic_treatment_room-AURAcrAA.webp",
-      "assets/clinic_sterilization-BUs4Tfv7.webp"
+      "assets/service_therapy-DGwJTFWq.webp",
+      "assets/service_crowns-mk_M_tlI.webp",
+      "assets/service_veneers-C6Mkn8We.webp",
+      "assets/service_implant-zYN93N6E.webp",
+      "assets/service_whitening-CC_-72yS.webp",
+      "assets/service_xray-B0grGwkx.webp",
+      "assets/clinic_sterilization-B6WUHj7V.webp"
     ]
   },
   "node_modules/qrcode/lib/browser.js": {
@@ -75,12 +73,12 @@
     ]
   },
   "src/assets/clinic_sterilization.webp": {
-    "file": "assets/clinic_sterilization-BUs4Tfv7.webp",
+    "file": "assets/clinic_sterilization-B6WUHj7V.webp",
     "src": "src/assets/clinic_sterilization.webp"
   },
   "src/assets/clinic_treatment_room.webp": {
-    "file": "assets/clinic_treatment_room-AURAcrAA.webp",
-    "src": "src/assets/clinic_treatment_room.webp"
+    "file": "assets/clinic_sterilization-B6WUHj7V.webp",
+    "src": "src/assets/clinic_sterilization.webp"
   },
   "src/assets/dr_olimjon_branded.webp": {
     "file": "assets/dr_olimjon_branded-BVSeNJLb.webp",
@@ -95,31 +93,31 @@
     "src": "src/assets/dr_olimjon_portrait.webp"
   },
   "src/assets/service_crowns.webp": {
-    "file": "assets/service_crowns-Bm44UqZ8.webp",
+    "file": "assets/service_crowns-mk_M_tlI.webp",
     "src": "src/assets/service_crowns.webp"
   },
   "src/assets/service_implant.webp": {
-    "file": "assets/service_implant-CTSanE_k.webp",
+    "file": "assets/service_implant-zYN93N6E.webp",
     "src": "src/assets/service_implant.webp"
   },
   "src/assets/service_surgery.webp": {
-    "file": "assets/service_surgery-CbBrBo-2.webp",
+    "file": "assets/service_xray-B0grGwkx.webp",
     "src": "src/assets/service_surgery.webp"
   },
   "src/assets/service_therapy.webp": {
-    "file": "assets/service_therapy-BBjhLw6t.webp",
+    "file": "assets/service_therapy-DGwJTFWq.webp",
     "src": "src/assets/service_therapy.webp"
   },
   "src/assets/service_veneers.webp": {
-    "file": "assets/service_veneers-zmGqypVU.webp",
+    "file": "assets/service_veneers-C6Mkn8We.webp",
     "src": "src/assets/service_veneers.webp"
   },
   "src/assets/service_whitening.webp": {
-    "file": "assets/service_whitening-CQGwri_y.webp",
+    "file": "assets/service_whitening-CC_-72yS.webp",
     "src": "src/assets/service_whitening.webp"
   },
   "src/assets/service_xray.webp": {
-    "file": "assets/service_xray-npsLC41l.webp",
-    "src": "src/assets/service_xray.webp"
+    "file": "assets/service_xray-B0grGwkx.webp",
+    "src": "src/assets/service_surgery.webp"
   }
 }
