@@ -172,26 +172,36 @@ const About = () => {
             </div>
 
             {/* In Clinic Card */}
-            <div className="grid grid-cols-12 gap-3 items-center bg-[#f8fafc] p-2.5 sm:p-3 rounded-2xl border border-[#d5e0ec]">
+            <div className="grid grid-cols-12 gap-3 items-center bg-[#f8fafc] p-2.5 sm:p-3 rounded-2xl border border-[#d5e0ec] shadow-xs">
               <img
                 src={assets.dr_olimjon_clinic}
-                alt="Dr. Olimjon Murzajanov qabulda"
-                width={160}
-                height={160}
+                alt={
+                  lang === "uz"
+                    ? "Dr. Olimjon Murzajanov qabul xonasi — Sevdo Denta Andijon"
+                    : lang === "ru"
+                    ? "Кабинет Д-ра Олимжона Мурзажанова — Sevdo Denta Андижан"
+                    : "Dr. Olimjon Murzajanov Dental Office — Sevdo Denta Andijan"
+                }
+                width={200}
+                height={200}
                 loading="lazy"
                 decoding="async"
-                className="col-span-4 w-full h-20 sm:h-24 rounded-xl object-cover object-top border border-[#d5e0ec]"
+                className="col-span-4 w-full h-20 sm:h-24 rounded-xl object-cover object-center border border-[#d5e0ec]"
               />
               <div className="col-span-8 space-y-1">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#285983] block">
-                  Andijon · Eski Shahar
+                  {lang === "uz"
+                    ? "Andijon · Ish Xonasi"
+                    : lang === "ru"
+                    ? "Андижан · Рабочий Кабинет"
+                    : "Andijan · Dental Operatory"}
                 </span>
                 <p className="text-xs font-bold text-[#132e53] leading-snug">
                   {lang === "uz"
-                    ? "Old City (Eski Shahar), 1-qavat"
+                    ? "Sevdo Denta, 1-qavat"
                     : lang === "ru"
-                    ? "Эски Шахар (Old City), 1-й этаж"
-                    : "Old City (Eski Shahar), 1st Floor"}
+                    ? "Sevdo Denta, 1-й этаж"
+                    : "Sevdo Denta, 1st Floor"}
                 </p>
                 <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-0.5">
                   <a

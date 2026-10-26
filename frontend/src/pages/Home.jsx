@@ -75,7 +75,7 @@ const HeroSection = () => {
       stat3Num: "100%",
       stat3Label: "Toza va Og'riqsiz",
       photo1Tab: "Klinik Portret",
-      photo2Tab: "Ish Jarayoni",
+      photo2Tab: "Ish Xonasi",
       clinicLocationText: "Andijon sh., Eski Shahar (Old City), 1-qavat",
     },
     ru: {
@@ -94,7 +94,7 @@ const HeroSection = () => {
       stat3Num: "100%",
       stat3Label: "Без Боли и Чисто",
       photo1Tab: "Портрет Врача",
-      photo2Tab: "В Кабинете",
+      photo2Tab: "Кабинет",
       clinicLocationText: "г. Андижан, Эски Шахар (Old City), 1-й этаж",
     },
     en: {
@@ -229,13 +229,28 @@ const HeroSection = () => {
                     ? assets.dr_olimjon_portrait
                     : assets.dr_olimjon_clinic
                 }
-                alt="Dr. Olimjon Murzajanov — Stomatolog Andijon"
+                alt={
+                  activePhoto === "studio"
+                    ? "Dr. Olimjon Murzajanov — Stomatolog Andijon"
+                    : "Dr. Olimjon Murzajanov stomatologiya xonasi — Sevdo Denta Andijon"
+                }
                 width={780}
                 height={840}
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-full object-cover object-top transition-opacity duration-300"
+                className={`w-full h-full ${
+                  activePhoto === "studio" ? "object-cover object-top" : "object-cover object-center"
+                } transition-all duration-300`}
               />
+              {activePhoto === "clinic" && (
+                <div className="absolute bottom-2.5 left-2.5 right-2.5 bg-slate-950/75 backdrop-blur-xs text-white px-3 py-1.5 rounded-xl text-[11px] font-semibold flex items-center justify-between border border-white/15">
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span>{lang === "uz" ? "Sevdo Denta qabul xonasi" : lang === "ru" ? "Рабочий кабинет Sevdo Denta" : "Sevdo Denta Operatory"}</span>
+                  </span>
+                  <span className="text-[10px] text-slate-300">Andijon, Eski Shahar</span>
+                </div>
+              )}
             </div>
 
             {/* Sub-bar with Doctor Name & Photo Switcher */}

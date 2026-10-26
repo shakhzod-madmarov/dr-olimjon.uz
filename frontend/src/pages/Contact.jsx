@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { assets } from "../assets/assets";
 import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
 import { useBooking } from "../context/BookingContext";
 import { PRIMARY_CLINIC } from "../constants/clinics";
@@ -228,6 +229,31 @@ const Contact = () => {
                 <span>Google Maps</span>
               </a>
             </div>
+          </div>
+
+          {/* Real Treatment Room Card */}
+          <div className="bg-white rounded-2xl p-4 sm:p-5 border border-[#d5e0ec] shadow-luxury overflow-hidden">
+            <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden bg-slate-100 mb-3 border border-slate-200">
+              <img
+                src={assets.clinic_working_room_wide}
+                alt="Dr. Olimjon Murzajanov stomatologiya xonasi"
+                width={800}
+                height={450}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute top-2.5 left-2.5 bg-slate-900/80 backdrop-blur-xs text-white text-[10px] font-bold px-2.5 py-1 rounded-lg">
+                {lang === "uz" ? "Qabul Xonasi" : lang === "ru" ? "Лечебный Кабинет" : "Treatment Operatory"}
+              </div>
+            </div>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              {lang === "uz"
+                ? "Sevdo Denta klinikasining zamonaviy, steril va qulay xonasida 100% og'riqsiz davolanish."
+                : lang === "ru"
+                ? "Современный, комфортный и полностью стерильный кабинет в клинике Sevdo Denta."
+                : "Modern, sterile, and comfortable dental operatory at Sevdo Denta clinic."}
+            </p>
           </div>
         </div>
 

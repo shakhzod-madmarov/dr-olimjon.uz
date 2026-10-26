@@ -40,7 +40,7 @@ export const ROUTES = [
     changefreq: "weekly",
     priority: "0.9",
     image: {
-      src: "src/assets/clinic_treatment_room.webp",
+      src: "src/assets/clinic_working_room_wide.webp",
       title: "Stomatologik Xizmatlar — Sevdo Denta Andijon",
       caption:
         "Og'riqsiz tish davolash, tsirkoniy karonka, E-max vinirlar, tish implantatsiyasi va lazerli oqartirish",
