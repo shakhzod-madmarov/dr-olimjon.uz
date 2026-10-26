@@ -43,19 +43,19 @@ const About = () => {
     },
     {
       year: {
-        uz: "2023 – 2025",
-        ru: "2023 – 2025",
-        en: "2023 – 2025",
+        uz: "2024 – 2025",
+        ru: "2024 – 2025",
+        en: "2024 – 2025",
       },
       title: {
-        uz: "Raqamli Ortopediya, E-max Vinirlar va Biotitan Implantologiya",
-        ru: "Цифровая Ортопедия, Виниры E-max и Корейская Имплантология",
-        en: "Digital Prosthodontics, E-max Veneers & Korean Implantology",
+        uz: "Ixtisoslashtirilgan Implantologiya, Ortopedik Rejalashtirish va Funksional Ortodontiya",
+        ru: "Специализированная Имплантология, Ортопедическое Планирование и Функциональная Ортодонтия",
+        en: "Advanced Implantology, Prosthodontic Planning & Functional Orthodontics",
       },
       desc: {
-        uz: "Janubiy Koreya (Osstem AIC) va xalqaro stomatologiya dasturlarida minimal invaziv keramik restavratsiya hamda biotitan implantlar bo'yicha amaliy malaka oshirish.",
-        ru: "Повышение квалификации по малоинвазивному протезированию керамикой E-max и установке титановых имплантатов Osstem и Straumann.",
-        en: "Advanced clinical certifications in minimally invasive E-max ceramic veneers and South Korean (Osstem) & Swiss (Straumann) implant protocols.",
+        uz: "Moissanite Dental (Dr. E. Mustafaev) bir bosqichli biotitan implantologiya, Samarqand Dental Academy (Sardor Mirakhmedov) 18 soatlik ortopedik davo rejasi hamda Jakhongir Najimov Functional Orthodontics (Toshkent) kurslarida muvaffaqiyatli malaka oshirish.",
+        ru: "Курсы повышения квалификации: одноэтапная имплантология Moissanite Dental (Д-р Э. Мустафаев), 18-часовой ортопедический курс Dental Academy (Самарканд, Сардор Мирахмедов) и функциональная ортодонтия Жахонгира Нажимова (Ташкент).",
+        en: "Certified advanced masterclasses: Moissanite Dental one-stage implantology (Dr. E. Mustafaev), Dental Academy prosthodontic planning (Samarkand, Sardor Mirakhmedov), and Jakhongir Najimov Functional Orthodontics (Tashkent).",
       },
     },
     {
