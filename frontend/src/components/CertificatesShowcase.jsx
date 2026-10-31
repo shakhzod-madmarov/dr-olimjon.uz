@@ -148,7 +148,7 @@ const CertificatesShowcase = () => {
   }, [activeIndex]);
 
   return (
-    <section className="py-10 sm:py-16 bg-[#f8fafc] border-t border-slate-200/70">
+    <section id="certificates" className="scroll-mt-24 py-10 sm:py-16 bg-[#f8fafc] border-t border-slate-200/70">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -308,7 +308,7 @@ const CertificatesShowcase = () => {
                     e.stopPropagation();
                     showPrev();
                   }}
-                  aria-label="Oldingi sertifikat"
+                  aria-label={a11y.prevCertificate}
                   className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center shadow-lg border border-slate-200 hover:scale-105 transition-all cursor-pointer font-black text-lg"
                 >
                   ‹
@@ -319,7 +319,7 @@ const CertificatesShowcase = () => {
                     e.stopPropagation();
                     showNext();
                   }}
-                  aria-label="Keyingi sertifikat"
+                  aria-label={a11y.nextCertificate}
                   className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center shadow-lg border border-slate-200 hover:scale-105 transition-all cursor-pointer font-black text-lg"
                 >
                   ›

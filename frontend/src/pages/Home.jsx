@@ -639,19 +639,19 @@ const DoctorBioSpotlight = () => {
     uz: [
       `Vrach-stomatolog, ortoped va implantolog (${getYearsOfExperience()}+ yillik uzluksiz klinik amaliyot)`,
       "Germaniya, Avstraliya va Yaponiya materiallari bilan yuqori aniqlikdagi restavratsiya va tsirkoniy protezlash",
-      "Janubiy Koreya (Osstem AIC) va Yevropa implantologiya dasturlari sertifikatlangan mutaxassisi",
+      "Moissanite Dental (bir bosqichli implantatsiya), Dental Academy Samarqand (ortopedik rejalashtirish) va Jakhongir Najimov Ortho sertifikatlangan mutaxassisi",
       "Har bir bemor uchun individual steril kraft-paketlar va 100% og'riqsiz yondashuv",
     ],
     ru: [
       `Врач-стоматолог, ортопед и хирург-имплантолог (${getYearsOfExperience()}+ лет непрерывной клинической практики)`,
       "Специалист по протезированию циркониевыми коронками, винирами E-max и художественной реставрации зубов",
-      "Сертифицированный участник международных курсов по имплантологии (Osstem, Straumann)",
+      "Сертифицированный специалист: Moissanite Dental (одноэтапная имплантация), Dental Academy Самарканд (ортопедический план) и функциональная ортодонтия Жахонгира Нажимова",
       "Индивидуальные крафт-пакеты и 100% безболезненный протокол для каждого пациента",
     ],
     en: [
       `Restorative Dentist, Prosthodontist & Implantologist (${getYearsOfExperience()}+ years of continuous clinical practice)`,
       "Specialist in German & Australian zirconia crowns, E-max porcelain veneers, and composite artistry",
-      "Certified in international implantology protocols across South Korea (Osstem) and Switzerland (Straumann)",
+      "Certified in single-stage implantology (Moissanite Dental), prosthodontic planning (Dental Academy), and functional orthodontics (Najimov Ortho)",
       "Strict hospital-grade sterilization and two-stage painless anesthesia for every patient",
     ],
   };
@@ -733,10 +733,10 @@ const DoctorBioSpotlight = () => {
             ))}
           </ul>
 
-          <div className="pt-3 flex flex-wrap gap-3">
+          <div className="pt-3 flex flex-wrap gap-2.5 sm:gap-3">
             <Link
               to={to("/about")}
-              className="px-6 py-3 rounded-xl bg-[#132e53] hover:bg-[#285983] text-white font-semibold text-xs sm:text-sm transition-colors text-center inline-block"
+              className="px-5 py-3 rounded-xl bg-[#132e53] hover:bg-[#285983] text-white font-semibold text-xs sm:text-sm transition-colors text-center inline-block"
             >
               {lang === "uz"
                 ? "Shifokor haqida batafsil →"
@@ -744,10 +744,23 @@ const DoctorBioSpotlight = () => {
                 ? "Подробнее о враче →"
                 : "Read Full Biography →"}
             </Link>
+            <Link
+              to={to("/about") + "#certificates"}
+              className="px-4 py-3 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200/90 font-bold text-xs sm:text-sm transition-colors flex items-center justify-center gap-1.5"
+            >
+              <IconAward className="w-4 h-4 text-amber-600 shrink-0" />
+              <span>
+                {lang === "uz"
+                  ? "3 ta Rasmiy Sertifikatlar →"
+                  : lang === "ru"
+                  ? "3 Подлинных Сертификата →"
+                  : "3 Verified Certificates →"}
+              </span>
+            </Link>
             <button
               type="button"
               onClick={() => scrollToBooking("tish-davolash")}
-              className="px-6 py-3 rounded-xl bg-[#f2f6fa] hover:bg-[#e4edf5] text-[#132e53] border border-[#d5e0ec] font-semibold text-xs sm:text-sm transition-colors cursor-pointer"
+              className="px-5 py-3 rounded-xl bg-[#f2f6fa] hover:bg-[#e4edf5] text-[#132e53] border border-[#d5e0ec] font-semibold text-xs sm:text-sm transition-colors cursor-pointer"
             >
               {lang === "uz"
                 ? "Konsultatsiyaga yozilish ↓"

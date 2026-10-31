@@ -29,7 +29,7 @@ const FaviconEnforcer = () => {
   useEffect(() => {
     const existing = document.querySelector("link[rel*='icon']");
     if (existing) {
-      existing.href = `/favicon-32x32.png?v=${Date.now()}`;
+      existing.href = "/favicon-32x32.png?v=20261031";
     }
   }, []);
   return null;

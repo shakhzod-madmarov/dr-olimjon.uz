@@ -1,5 +1,6 @@
 import { useLanguage } from "../context/LanguageContext";
 import { PRIMARY_CLINIC } from "../constants/clinics";
+import { getA11yLabels } from "../constants/a11yLabels";
 import {
   IconLocationPin,
   IconClock,
@@ -12,6 +13,7 @@ import {
 
 const ClinicLocationMap = ({ compact = false }) => {
   const { lang } = useLanguage();
+  const a11y = getA11yLabels(lang);
   const c = PRIMARY_CLINIC;
 
   const yandexEmbedUrl =
@@ -152,7 +154,7 @@ const ClinicLocationMap = ({ compact = false }) => {
         {/* Right Map Embed Column */}
         <div className="lg:col-span-7 rounded-xl overflow-hidden border border-[#d5e0ec] min-h-[340px] sm:min-h-[420px] relative bg-slate-100">
           <iframe
-            title="Dr. Olimjon Murzajanov — Sevdo Denta Klinikasi Andijon Xarita"
+            title={a11y.mapIframe}
             src={yandexEmbedUrl}
             width="100%"
             height="100%"
