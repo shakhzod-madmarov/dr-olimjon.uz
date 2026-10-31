@@ -202,7 +202,7 @@ const CertificatesShowcase = () => {
               <div>
                 {/* Header Pills */}
                 <div className="flex items-center justify-between gap-2 mb-3 pt-1">
-                  <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full bg-blue-50 text-[#132e53] border border-blue-200/70">
+                  <span className="text-[9.5px] min-[360px]:text-[10px] font-black uppercase tracking-wider px-2 min-[360px]:px-2.5 py-1 rounded-full bg-blue-50 text-[#132e53] border border-blue-200/70 truncate max-w-[200px] sm:max-w-none">
                     {cert.badge[lang]}
                   </span>
                   <span className="text-xs font-black text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200/70">
@@ -211,7 +211,7 @@ const CertificatesShowcase = () => {
                 </div>
 
                 {/* Certificate Document Frame Preview */}
-                <div className="relative h-56 sm:h-60 w-full rounded-xl sm:rounded-2xl overflow-hidden mb-3.5 border border-slate-200/90 shadow-inner bg-gradient-to-b from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0] group-hover:border-[#0284c7] transition-all flex items-center justify-center p-2.5">
+                <div className="relative h-48 min-[360px]:h-56 sm:h-60 w-full rounded-xl sm:rounded-2xl overflow-hidden mb-3.5 border border-slate-200/90 shadow-inner bg-gradient-to-b from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0] group-hover:border-[#0284c7] transition-all flex items-center justify-center p-2.5">
                   <img
                     src={cert.image}
                     alt={cert.title[lang]}
@@ -278,7 +278,7 @@ const CertificatesShowcase = () => {
               aria-modal="true"
               aria-label={`${a11y.certificateModal}: ${activeCert.title[lang]}`}
               tabIndex={-1}
-              className="bg-white rounded-2xl sm:rounded-3xl max-w-4xl w-full p-4 sm:p-7 border-2 border-amber-300 shadow-2xl relative max-h-[94vh] overflow-y-auto"
+              className="bg-white rounded-2xl sm:rounded-3xl max-w-4xl w-full p-3.5 min-[360px]:p-4 sm:p-7 border-2 border-amber-300 shadow-2xl relative max-h-[92dvh] sm:max-h-[94vh] overflow-y-auto pb-[max(1.25rem,env(safe-area-inset-bottom))]"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -286,7 +286,7 @@ const CertificatesShowcase = () => {
                 type="button"
                 onClick={closeCert}
                 aria-label={a11y.closeModal}
-                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/95 hover:bg-slate-100 text-slate-700 flex items-center justify-center font-bold cursor-pointer shadow-md border border-slate-200 transition-colors"
+                className="absolute top-2.5 right-2.5 sm:top-4 sm:right-4 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/95 hover:bg-slate-100 text-slate-700 flex items-center justify-center font-bold cursor-pointer shadow-md border border-slate-200 transition-colors text-sm sm:text-base touch-manipulation"
               >
                 ✕
               </button>
@@ -309,7 +309,7 @@ const CertificatesShowcase = () => {
                     showPrev();
                   }}
                   aria-label={a11y.prevCertificate}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center shadow-lg border border-slate-200 hover:scale-105 transition-all cursor-pointer font-black text-lg"
+                  className="absolute left-1.5 sm:left-3 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center shadow-lg border border-slate-200 hover:scale-105 transition-all cursor-pointer font-black text-base sm:text-lg touch-manipulation"
                 >
                   ‹
                 </button>
@@ -320,7 +320,7 @@ const CertificatesShowcase = () => {
                     showNext();
                   }}
                   aria-label={a11y.nextCertificate}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center shadow-lg border border-slate-200 hover:scale-105 transition-all cursor-pointer font-black text-lg"
+                  className="absolute right-1.5 sm:right-3 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center shadow-lg border border-slate-200 hover:scale-105 transition-all cursor-pointer font-black text-base sm:text-lg touch-manipulation"
                 >
                   ›
                 </button>

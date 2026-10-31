@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import { PRIMARY_CLINIC } from "../constants/clinics";
 import { IconTelegram, IconInstagram, IconYandex, IconPhone } from "./MedicalIcons";
@@ -6,8 +7,16 @@ import { getA11yLabels } from "../constants/a11yLabels";
 
 const FloatingActionHub = () => {
   const { lang } = useLanguage();
+  const location = useLocation();
   const a11y = getA11yLabels(lang);
   const [expanded, setExpanded] = useState(false);
+
+  // Auto-close on page navigation
+  const [prevPath, setPrevPath] = useState(location.pathname);
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname);
+    setExpanded(false);
+  }
 
   useEffect(() => {
     if (!expanded) return;
@@ -19,88 +28,97 @@ const FloatingActionHub = () => {
   }, [expanded]);
 
   return (
-    <div
-      role="region"
-      aria-label={a11y.quickActions}
-      className="fixed bottom-[max(0.75rem,env(safe-area-inset-bottom,0px))] sm:bottom-[max(1.25rem,env(safe-area-inset-bottom,0px))] right-[max(0.75rem,env(safe-area-inset-right,0px))] sm:right-[max(1.25rem,env(safe-area-inset-right,0px))] z-40 flex flex-col items-end gap-2 no-print"
-    >
+    <>
       {expanded && (
         <div
-          id="floating-action-menu"
-          className="flex flex-col items-end gap-2 mb-1 transition-all duration-200"
-        >
-          <a
-            href={PRIMARY_CLINIC.telegram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2.5 bg-[#285983] hover:bg-[#132e53] text-white px-4 py-2.5 rounded-xl shadow-md text-xs font-semibold transition-colors"
+          onClick={() => setExpanded(false)}
+          className="fixed inset-0 z-30 bg-slate-950/20 backdrop-blur-2xs transition-opacity sm:hidden"
+          aria-hidden="true"
+        />
+      )}
+      <div
+        role="region"
+        aria-label={a11y.quickActions}
+        className="fixed bottom-[max(0.75rem,env(safe-area-inset-bottom,0px))] sm:bottom-[max(1.25rem,env(safe-area-inset-bottom,0px))] right-[max(0.75rem,env(safe-area-inset-right,0px))] sm:right-[max(1.25rem,env(safe-area-inset-right,0px))] z-40 flex flex-col items-end gap-2 no-print"
+      >
+        {expanded && (
+          <div
+            id="floating-action-menu"
+            className="flex flex-col items-end gap-2 mb-1 transition-all duration-200"
           >
-            <IconTelegram className="w-4 h-4 text-white" />
-            <span>
-              {lang === "uz"
-                ? "Telegram (@httmurzajanov)"
-                : lang === "ru"
-                ? "Написать в Telegram"
-                : "Telegram (@httmurzajanov)"}
-            </span>
-          </a>
+            <a
+              href={PRIMARY_CLINIC.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 bg-[#285983] hover:bg-[#132e53] text-white px-4 py-2.5 rounded-xl shadow-md text-xs font-semibold transition-colors max-w-[calc(100vw-3rem)] truncate touch-manipulation"
+            >
+              <IconTelegram className="w-4 h-4 text-white shrink-0" />
+              <span className="truncate">
+                {lang === "uz"
+                  ? "Telegram (@httmurzajanov)"
+                  : lang === "ru"
+                  ? "Написать в Telegram"
+                  : "Telegram (@httmurzajanov)"}
+              </span>
+            </a>
 
-          <a
-            href={PRIMARY_CLINIC.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2.5 bg-[#132e53] hover:bg-[#285983] text-white px-4 py-2.5 rounded-xl shadow-md text-xs font-semibold transition-colors"
-          >
-            <IconInstagram className="w-4 h-4 text-white" />
-            <span>Instagram (@dentist_olimjon)</span>
-          </a>
+            <a
+              href={PRIMARY_CLINIC.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 bg-[#132e53] hover:bg-[#285983] text-white px-4 py-2.5 rounded-xl shadow-md text-xs font-semibold transition-colors max-w-[calc(100vw-3rem)] truncate touch-manipulation"
+            >
+              <IconInstagram className="w-4 h-4 text-white shrink-0" />
+              <span className="truncate">Instagram (@dentist_olimjon)</span>
+            </a>
 
-          <a
-            href={PRIMARY_CLINIC.maps.yandex}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2.5 bg-white hover:bg-[#f2f6fa] text-[#132e53] border border-[#d5e0ec] px-4 py-2.5 rounded-xl shadow-md text-xs font-semibold transition-colors"
-          >
-            <IconYandex className="w-4 h-4" />
-            <span>
-              {lang === "uz"
-                ? "Yandex Xarita (Sevdo Denta)"
-                : lang === "ru"
-                ? "Яндекс Карты (Маршрут)"
-                : "Yandex Maps Directions"}
-            </span>
-          </a>
+            <a
+              href={PRIMARY_CLINIC.maps.yandex}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 bg-white hover:bg-[#f2f6fa] text-[#132e53] border border-[#d5e0ec] px-4 py-2.5 rounded-xl shadow-md text-xs font-semibold transition-colors max-w-[calc(100vw-3rem)] truncate touch-manipulation"
+            >
+              <IconYandex className="w-4 h-4 shrink-0" />
+              <span className="truncate">
+                {lang === "uz"
+                  ? "Yandex Xarita (Sevdo Denta)"
+                  : lang === "ru"
+                  ? "Яндекс Карты (Маршрут)"
+                  : "Yandex Maps Directions"}
+              </span>
+            </a>
 
+            <a
+              href={`tel:${PRIMARY_CLINIC.phoneRaw}`}
+              className="flex items-center gap-2.5 bg-[#132e53] hover:bg-[#285983] text-white px-4 py-2.5 rounded-xl shadow-md text-xs font-semibold transition-colors max-w-[calc(100vw-3rem)] truncate touch-manipulation"
+            >
+              <IconPhone className="w-4 h-4 text-white shrink-0" />
+              <span className="truncate">{PRIMARY_CLINIC.phone}</span>
+            </a>
+          </div>
+        )}
+
+        <div className="flex items-center gap-2">
           <a
             href={`tel:${PRIMARY_CLINIC.phoneRaw}`}
-            className="flex items-center gap-2.5 bg-[#132e53] hover:bg-[#285983] text-white px-4 py-2.5 rounded-xl shadow-md text-xs font-semibold transition-colors"
+            className="hidden sm:flex items-center gap-2 bg-white text-[#132e53] hover:bg-[#f2f6fa] px-4 py-2.5 rounded-xl shadow-luxury border border-[#d5e0ec] text-xs font-bold transition-colors touch-manipulation"
           >
-            <IconPhone className="w-4 h-4 text-white" />
+            <IconPhone className="w-3.5 h-3.5 text-[#285983]" />
             <span>{PRIMARY_CLINIC.phone}</span>
           </a>
+
+          <button
+            onClick={() => setExpanded(!expanded)}
+            aria-label={expanded ? a11y.closeQuickActions : a11y.openQuickActions}
+            aria-expanded={expanded}
+            aria-controls="floating-action-menu"
+            className="w-12 h-12 sm:w-13 sm:h-13 rounded-xl bg-[#132e53] hover:bg-[#285983] text-white shadow-lg flex items-center justify-center text-lg font-bold cursor-pointer transition-colors border border-white/20 touch-manipulation"
+          >
+            {expanded ? "✕" : <IconPhone className="w-5 h-5 text-white" />}
+          </button>
         </div>
-      )}
-
-      <div className="flex items-center gap-2">
-        <a
-          href={`tel:${PRIMARY_CLINIC.phoneRaw}`}
-          className="hidden sm:flex items-center gap-2 bg-white text-[#132e53] hover:bg-[#f2f6fa] px-4 py-2.5 rounded-xl shadow-luxury border border-[#d5e0ec] text-xs font-bold transition-colors"
-        >
-          <IconPhone className="w-3.5 h-3.5 text-[#285983]" />
-          <span>{PRIMARY_CLINIC.phone}</span>
-        </a>
-
-        <button
-          onClick={() => setExpanded(!expanded)}
-          aria-label={expanded ? a11y.closeQuickActions : a11y.openQuickActions}
-          aria-expanded={expanded}
-          aria-controls="floating-action-menu"
-          className="w-12 h-12 sm:w-13 sm:h-13 rounded-xl bg-[#132e53] hover:bg-[#285983] text-white shadow-lg flex items-center justify-center text-lg font-bold cursor-pointer transition-colors border border-white/20"
-        >
-          {expanded ? "✕" : <IconPhone className="w-5 h-5 text-white" />}
-        </button>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -284,11 +284,11 @@ const QuickBookingModal = ({
         aria-modal="true"
         aria-label={a11y.quickBookingModal}
         tabIndex={-1}
-        className="relative w-full max-w-xl bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200 my-auto"
+        className="relative w-full max-w-xl bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200 my-auto max-h-[92dvh] sm:max-h-[88vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Luxury Header Banner */}
-        <div className="bg-gradient-to-r from-[#0a192f] via-[#132e53] to-[#0c1f3a] p-4 sm:p-6 text-white relative">
+        <div className="bg-gradient-to-r from-[#0a192f] via-[#132e53] to-[#0c1f3a] p-4 sm:p-6 text-white relative shrink-0">
           <button
             type="button"
             onClick={onClose}
@@ -334,7 +334,7 @@ const QuickBookingModal = ({
         </div>
 
         {/* Body */}
-        <div className="p-4 sm:p-6 max-h-[85dvh] sm:max-h-[80vh] overflow-y-auto">
+        <div className="p-3.5 min-[360px]:p-4 sm:p-6 overflow-y-auto flex-1 scroll-touch pb-[max(1.25rem,env(safe-area-inset-bottom))]">
           {submitted ? (
             <div className="text-center py-4 space-y-4">
               <div className="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto">
@@ -495,7 +495,7 @@ const QuickBookingModal = ({
                 </div>
 
                 {/* Days row */}
-                <div className="flex gap-1 sm:gap-1.5 overflow-x-auto pb-1">
+                <div className="flex gap-1 min-[360px]:gap-1.5 overflow-x-auto pb-1 scroll-touch overscroll-contain-x">
                   {availableDays.slice(0, 7).map((d) => {
                     const isSelectedDay = d.date === activeDayObj.date;
                     return (
@@ -516,7 +516,7 @@ const QuickBookingModal = ({
                 </div>
 
                 {/* Time slots grid */}
-                <div className="grid grid-cols-4 sm:grid-cols-6 gap-1 sm:gap-1.5">
+                <div className="grid grid-cols-4 sm:grid-cols-6 gap-1 min-[360px]:gap-1.5">
                   {(activeDayObj.slots || FALLBACK_TIME_SLOTS).map((slot) => {
                     const isSelectedSlot = selectedTime === slot;
                     return (
@@ -558,7 +558,7 @@ const QuickBookingModal = ({
                         ? "Например: Сардорбек"
                         : "e.g., Sardorbek"
                     }
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs sm:text-sm font-semibold focus:outline-none focus:border-[#132e53] focus:bg-white transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-base sm:text-sm font-semibold focus:outline-none focus:border-[#132e53] focus:bg-white transition-all"
                   />
                 </div>
                 <div>
@@ -574,7 +574,7 @@ const QuickBookingModal = ({
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="+998 (90) 123-45-67"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs sm:text-sm font-semibold focus:outline-none focus:border-[#132e53] focus:bg-white transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-base sm:text-sm font-semibold focus:outline-none focus:border-[#132e53] focus:bg-white transition-all"
                   />
                 </div>
               </div>

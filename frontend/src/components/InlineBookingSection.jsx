@@ -554,7 +554,7 @@ const InlineBookingSection = ({
               {t.dayGroupLabel}
             </p>
             <div
-              className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-2 justify-start sm:justify-center snap-x snap-mandatory"
+              className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-2 justify-start sm:justify-center snap-x snap-mandatory scroll-touch overscroll-contain-x"
               role="group"
               aria-label={t.dayGroupLabel}
             >
@@ -571,7 +571,7 @@ const InlineBookingSection = ({
                       );
                     }}
                     aria-pressed={isActive}
-                    className={`shrink-0 snap-start px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-colors cursor-pointer ${
+                    className={`shrink-0 snap-start px-2.5 min-[360px]:px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-colors cursor-pointer touch-manipulation ${
                       isActive
                         ? "bg-[#132e53] text-white border-[#132e53]"
                         : "bg-[#f7f9fc] text-slate-700 border-[#d5e0ec] hover:bg-[#eef3f8] hover:border-[#285983]"
@@ -591,7 +591,7 @@ const InlineBookingSection = ({
             </p>
             {activeDay && activeDay.times.length > 0 && (
               <div
-                className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 sm:gap-2.5"
+                className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-1.5 min-[360px]:gap-2 sm:gap-2.5"
                 role="group"
                 aria-label={t.timeGroupLabel}
               >
@@ -603,7 +603,7 @@ const InlineBookingSection = ({
                       type="button"
                       onClick={() => setSelectedTime(time)}
                       aria-pressed={isSelected}
-                      className={`py-2.5 sm:py-3 rounded-xl border text-xs sm:text-sm font-semibold transition-colors cursor-pointer ${
+                      className={`py-2 min-[360px]:py-2.5 sm:py-3 rounded-xl border text-xs sm:text-sm font-semibold transition-colors cursor-pointer touch-manipulation ${
                         isSelected
                           ? "bg-[#285983] text-white border-[#285983]"
                           : "bg-white text-[#132e53] border-[#d5e0ec] hover:bg-[#f2f6fa] hover:border-[#285983]"
@@ -674,7 +674,7 @@ const InlineBookingSection = ({
                   }
                 }}
                 required
-                className={`w-full h-[48px] px-4 rounded-xl border text-sm text-slate-800 placeholder:text-slate-400 bg-[#f7f9fc] focus:bg-white outline-none transition ${
+                className={`w-full h-[48px] px-4 rounded-xl border text-base sm:text-sm text-slate-800 placeholder:text-slate-400 bg-[#f7f9fc] focus:bg-white outline-none transition ${
                   errors.name
                     ? "border-red-500 ring-2 ring-red-500/10"
                     : "border-[#d5e0ec] focus:border-[#132e53]"
@@ -705,7 +705,7 @@ const InlineBookingSection = ({
                 onBlur={handlePhoneBlur}
                 onPaste={(e) => handleUzPhonePaste(e, setPhone)}
                 required
-                className={`w-full h-[48px] px-4 rounded-xl border text-sm font-medium tracking-wide text-slate-800 placeholder:text-slate-400 bg-[#f7f9fc] focus:bg-white outline-none transition ${
+                className={`w-full h-[48px] px-4 rounded-xl border text-base sm:text-sm font-medium tracking-wide text-slate-800 placeholder:text-slate-400 bg-[#f7f9fc] focus:bg-white outline-none transition ${
                   errors.phone
                     ? "border-red-500 ring-2 ring-red-500/10"
                     : "border-[#d5e0ec] focus:border-[#132e53]"
@@ -733,7 +733,7 @@ const InlineBookingSection = ({
                   max={todayYmd()}
                   value={dob}
                   onChange={(e) => setDob(e.target.value)}
-                  className="w-full h-[48px] px-4 rounded-xl border border-[#d5e0ec] focus:border-[#132e53] outline-none text-sm text-slate-800 bg-[#f7f9fc] focus:bg-white transition"
+                  className="w-full h-[48px] px-4 rounded-xl border border-[#d5e0ec] focus:border-[#132e53] outline-none text-base sm:text-sm text-slate-800 bg-[#f7f9fc] focus:bg-white transition"
                 />
                 <p className="mt-1 text-[11px] text-slate-500">{t.dobHint}</p>
               </div>
@@ -755,7 +755,7 @@ const InlineBookingSection = ({
                 placeholder={t.notePlaceholder}
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
-                className="w-full h-[48px] px-4 rounded-xl border border-[#d5e0ec] focus:border-[#132e53] outline-none text-sm text-slate-800 placeholder:text-slate-400 bg-[#f7f9fc] focus:bg-white transition"
+                className="w-full h-[48px] px-4 rounded-xl border border-[#d5e0ec] focus:border-[#132e53] outline-none text-base sm:text-sm text-slate-800 placeholder:text-slate-400 bg-[#f7f9fc] focus:bg-white transition"
               />
             </div>
           </div>

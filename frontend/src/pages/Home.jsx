@@ -192,26 +192,26 @@ const HeroSection = () => {
           {/* Key Metrics Row */}
           <div className="pt-5 sm:pt-6 border-t border-[#e2eaf2] grid grid-cols-3 divide-x divide-[#e2eaf2] text-center sm:text-left max-w-xl">
             <div className="pr-2 sm:pr-6">
-              <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">
+              <p className="font-serif-classic text-lg min-[360px]:text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">
                 {t.stat1Num}
               </p>
-              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
+              <p className="text-[9px] min-[360px]:text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
                 {t.stat1Label}
               </p>
             </div>
             <div className="px-2 sm:px-6">
-              <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">
+              <p className="font-serif-classic text-lg min-[360px]:text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">
                 {t.stat2Num}
               </p>
-              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
+              <p className="text-[9px] min-[360px]:text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
                 {t.stat2Label}
               </p>
             </div>
             <div className="pl-2 sm:pl-6">
-              <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#285983]">
+              <p className="font-serif-classic text-lg min-[360px]:text-xl sm:text-2xl lg:text-3xl font-bold text-[#285983]">
                 {t.stat3Num}
               </p>
-              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
+              <p className="text-[9px] min-[360px]:text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
                 {t.stat3Label}
               </p>
             </div>
@@ -553,7 +553,7 @@ const ServicesOverview = () => {
 
         <Link
           to={to("/services")}
-          className="self-start md:self-auto px-4 sm:px-5 py-2.5 rounded-xl bg-[#f2f6fa] hover:bg-[#132e53] text-[#132e53] hover:text-white border border-[#d5e0ec] text-xs sm:text-sm font-semibold transition-colors inline-block text-center"
+          className="self-stretch sm:self-auto w-full sm:w-auto px-4 sm:px-5 py-2.5 rounded-xl bg-[#f2f6fa] hover:bg-[#132e53] text-[#132e53] hover:text-white border border-[#d5e0ec] text-xs sm:text-sm font-semibold transition-colors inline-block text-center"
         >
           {lang === "uz"
             ? "Barcha xizmatlar va narxlar →"
@@ -733,10 +733,10 @@ const DoctorBioSpotlight = () => {
             ))}
           </ul>
 
-          <div className="pt-3 flex flex-wrap gap-2.5 sm:gap-3">
+          <div className="pt-3 flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
             <Link
               to={to("/about")}
-              className="px-5 py-3 rounded-xl bg-[#132e53] hover:bg-[#285983] text-white font-semibold text-xs sm:text-sm transition-colors text-center inline-block"
+              className="w-full sm:w-auto px-5 py-3 rounded-xl bg-[#132e53] hover:bg-[#285983] text-white font-semibold text-xs sm:text-sm transition-colors text-center inline-block"
             >
               {lang === "uz"
                 ? "Shifokor haqida batafsil →"
@@ -746,7 +746,7 @@ const DoctorBioSpotlight = () => {
             </Link>
             <Link
               to={to("/about") + "#certificates"}
-              className="px-4 py-3 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200/90 font-bold text-xs sm:text-sm transition-colors flex items-center justify-center gap-1.5"
+              className="w-full sm:w-auto px-4 py-3 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200/90 font-bold text-xs sm:text-sm transition-colors flex items-center justify-center gap-1.5"
             >
               <IconAward className="w-4 h-4 text-amber-600 shrink-0" />
               <span>
@@ -760,7 +760,7 @@ const DoctorBioSpotlight = () => {
             <button
               type="button"
               onClick={() => scrollToBooking("tish-davolash")}
-              className="px-5 py-3 rounded-xl bg-[#f2f6fa] hover:bg-[#e4edf5] text-[#132e53] border border-[#d5e0ec] font-semibold text-xs sm:text-sm transition-colors cursor-pointer"
+              className="w-full sm:w-auto px-5 py-3 rounded-xl bg-[#f2f6fa] hover:bg-[#e4edf5] text-[#132e53] border border-[#d5e0ec] font-semibold text-xs sm:text-sm transition-colors cursor-pointer text-center"
             >
               {lang === "uz"
                 ? "Konsultatsiyaga yozilish ↓"

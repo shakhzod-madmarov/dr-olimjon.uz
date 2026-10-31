@@ -304,7 +304,7 @@ const Contact = () => {
                     ? "Введите ваше имя"
                     : "Enter your name"
                 }
-                className="w-full px-4 py-3 rounded-xl bg-[#f7f9fc] border border-[#d5e0ec] text-sm focus:outline-none focus:border-[#132e53] focus:bg-white"
+                className="w-full px-4 py-3 rounded-xl bg-[#f7f9fc] border border-[#d5e0ec] text-base sm:text-sm focus:outline-none focus:border-[#132e53] focus:bg-white"
               />
             </div>
 
@@ -327,7 +327,7 @@ const Contact = () => {
                 required
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl bg-[#f7f9fc] border border-[#d5e0ec] text-sm focus:outline-none focus:border-[#132e53] focus:bg-white"
+                className="w-full px-4 py-3 rounded-xl bg-[#f7f9fc] border border-[#d5e0ec] text-base sm:text-sm focus:outline-none focus:border-[#132e53] focus:bg-white"
               />
             </div>
 
@@ -355,7 +355,7 @@ const Contact = () => {
                     ? "Например: хочу записаться на осмотр и узнать о циркониевых коронках..."
                     : "e.g., I would like to schedule a checkup and ask about zirconia crowns..."
                 }
-                className="w-full px-4 py-3 rounded-xl bg-[#f7f9fc] border border-[#d5e0ec] text-sm focus:outline-none focus:border-[#132e53] focus:bg-white"
+                className="w-full px-4 py-3 rounded-xl bg-[#f7f9fc] border border-[#d5e0ec] text-base sm:text-sm focus:outline-none focus:border-[#132e53] focus:bg-white"
               />
             </div>
 

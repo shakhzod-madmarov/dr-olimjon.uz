@@ -172,7 +172,7 @@ const About = () => {
             </div>
 
             {/* In Clinic Card */}
-            <div className="grid grid-cols-12 gap-3 items-center bg-[#f8fafc] p-2.5 sm:p-3 rounded-2xl border border-[#d5e0ec] shadow-xs">
+            <div className="grid grid-cols-12 gap-2 sm:gap-3 items-center bg-[#f8fafc] p-2 min-[360px]:p-2.5 sm:p-3 rounded-2xl border border-[#d5e0ec] shadow-xs">
               <img
                 src={assets.dr_olimjon_clinic}
                 alt={
@@ -186,7 +186,7 @@ const About = () => {
                 height={200}
                 loading="lazy"
                 decoding="async"
-                className="col-span-4 w-full h-20 sm:h-24 rounded-xl object-cover object-center border border-[#d5e0ec]"
+                className="col-span-4 w-full h-18 min-[360px]:h-20 sm:h-24 rounded-xl object-cover object-center border border-[#d5e0ec]"
               />
               <div className="col-span-8 space-y-1">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#285983] block">

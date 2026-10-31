@@ -152,13 +152,13 @@ const ClinicLocationMap = ({ compact = false }) => {
         </div>
 
         {/* Right Map Embed Column */}
-        <div className="lg:col-span-7 rounded-xl overflow-hidden border border-[#d5e0ec] min-h-[340px] sm:min-h-[420px] relative bg-slate-100">
+        <div className="lg:col-span-7 rounded-xl overflow-hidden border border-[#d5e0ec] min-h-[280px] sm:min-h-[380px] lg:min-h-[420px] relative bg-slate-100">
           <iframe
             title={a11y.mapIframe}
             src={yandexEmbedUrl}
             width="100%"
             height="100%"
-            className="w-full h-full min-h-[340px] sm:min-h-[420px] border-0"
+            className="w-full h-full min-h-[280px] sm:min-h-[380px] lg:min-h-[420px] border-0"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
