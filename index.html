@@ -65,6 +65,10 @@
     <!-- 5. Progressive Web App Manifest -->
     <link rel="manifest" href="/site.webmanifest" />
 
+    <!-- 6. AI Search & LLM Knowledge Protocol (Perplexity, SearchGPT, Gemini, Claude, Yandex Neuro) -->
+    <link rel="help" href="/llms.txt" type="text/markdown" title="AI Model Briefing" />
+    <link rel="alternate" href="/llms-full.txt" type="text/markdown" title="Full Clinical Knowledge Base for LLMs" />
+
     <!-- Open Graph / Facebook / Telegram / WhatsApp Preview -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Dr. Olimjon Murzajanov — Sevdo Denta Andijon" />
@@ -196,6 +200,28 @@
               "areaServed": "UZ",
               "availableLanguage": ["uz", "ru", "en"]
             },
+            "areaServed": [
+              {
+                "@type": "AdministrativeArea",
+                "name": "Andijon",
+                "alternateName": ["Andijan", "Андижан"]
+              },
+              {
+                "@type": "AdministrativeArea",
+                "name": "Andijon viloyati",
+                "alternateName": ["Andijan Region", "Андижанская область"]
+              },
+              {
+                "@type": "AdministrativeArea",
+                "name": "Farg'ona vodiysi",
+                "alternateName": ["Fergana Valley", "Ферганская долина"]
+              },
+              {
+                "@type": "Country",
+                "name": "O'zbekiston",
+                "alternateName": ["Uzbekistan", "Узбекистан"]
+              }
+            ],
             "sameAs": [
               "https://t.me/httmurzajanov",
               "https://www.instagram.com/dentist_olimjon/",
@@ -203,12 +229,74 @@
               "https://www.google.com/maps?q=40.785762,72.347208"
             ],
             "medicalSpecialty": [
-              "Dentistry",
-              "Prosthodontics",
-              "CosmeticDentistry",
-              "Endodontics",
-              "OralSurgery"
+              "https://schema.org/Dentistry",
+              "https://schema.org/Prosthodontics",
+              "https://schema.org/CosmeticDentistry",
+              "https://schema.org/Endodontics",
+              "https://schema.org/OralSurgery"
             ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Stomatologik Xizmatlar Katalogi — Sevdo Denta",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "MedicalProcedure",
+                    "name": "Og'riqsiz Tish Davolash va Fotopolimer Plombalar",
+                    "url": "https://dentist-olimjon.uz/services/tish-davolash/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "MedicalProcedure",
+                    "name": "Tsirkoniy Karonkalar va Ortopediya",
+                    "url": "https://dentist-olimjon.uz/services/ortopediya/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "MedicalProcedure",
+                    "name": "E-max Keramik Vinirlar va Estetik Restavratsiya",
+                    "url": "https://dentist-olimjon.uz/services/estetik-stomatologiya/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "MedicalProcedure",
+                    "name": "Biotitan Tish Implantatsiyasi (Osstem, Straumann)",
+                    "url": "https://dentist-olimjon.uz/services/implantatsiya/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "MedicalProcedure",
+                    "name": "Philips ZOOM 4 Lazerli Oqartirish va AirFlow",
+                    "url": "https://dentist-olimjon.uz/services/tish-oqartirish/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "MedicalProcedure",
+                    "name": "Atravmatik Og'riqsiz Tish Olish va Aql Tishlari",
+                    "url": "https://dentist-olimjon.uz/services/xirurgiya/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "MedicalProcedure",
+                    "name": "Raqamli 3D Viziografiya va Tish Rentgen Diagnostikasi",
+                    "url": "https://dentist-olimjon.uz/services/rentgen-diagnostika/"
+                  }
+                }
+              ]
+            },
             "availableService": [
               {
                 "@type": "MedicalProcedure",
@@ -284,16 +372,26 @@
             "@type": "Physician",
             "@id": "https://dentist-olimjon.uz/#doctor",
             "name": "Dr. Olimjon Murzajanov",
-            "jobTitle": "Vrach-Stomatolog va Ortoped",
+            "jobTitle": "Vrach-Stomatolog, Stomatolog-Ortoped va Implantolog",
             "medicalSpecialty": [
-              "Dentistry",
-              "Prosthodontics",
-              "CosmeticDentistry",
-              "Endodontics",
-              "OralSurgery"
+              "https://schema.org/Dentistry",
+              "https://schema.org/Prosthodontics",
+              "https://schema.org/CosmeticDentistry",
+              "https://schema.org/Endodontics",
+              "https://schema.org/OralSurgery"
             ],
             "worksFor": {
               "@id": "https://dentist-olimjon.uz/#dentist"
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Andijon Davlat Tibbiyot Instituti (ADTI)",
+              "alternateName": [
+                "Andijan State Medical Institute",
+                "Андижанский государственный медицинский институт",
+                "ADTI"
+              ],
+              "url": "https://adti.uz"
             },
             "image": "https://dentist-olimjon.uz/dr_olimjon_og.jpg",
             "hasCredential": [
@@ -337,12 +435,31 @@
             "knowsAbout": [
               "Dentistry",
               "Prosthodontics",
-              "Zirconia Crowns",
+              "CosmeticDentistry",
+              "Endodontics",
+              "OralSurgery",
               "Dental Implants",
+              "Zirconia Crowns",
               "E-max Veneers",
               "Painless Dentistry",
-              "Root Canal Treatment"
+              "Root Canal Treatment",
+              "Teeth Whitening",
+              "Digital Radiovisiography",
+              "Infection Control",
+              "Tish davolash",
+              "Tsirkoniy karonka",
+              "Vinirlar",
+              "Implantatsiya",
+              "Tish oqartirish",
+              "Aql tishini olish",
+              "Стоматолог Андижан",
+              "Лечение зубов Андижан",
+              "Циркониевые коронки Андижан",
+              "Имплантация зубов Андижан",
+              "Виниры Андижан",
+              "Sevdo Denta"
             ],
+            "availableLanguage": ["uz", "ru", "en"],
             "telephone": "+998940010156",
             "sameAs": [
               "https://t.me/httmurzajanov",
@@ -352,7 +469,7 @@
         ]
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-B-Rox9tx.js"></script>
+    <script type="module" crossorigin src="/assets/index-OMiKjdeO.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-D7zIpOPY.js">
     <link rel="modulepreload" crossorigin href="/assets/react-vendor-Ns-oaxmK.js">
     <link rel="modulepreload" crossorigin href="/assets/router-CdVpsHcY.js">
