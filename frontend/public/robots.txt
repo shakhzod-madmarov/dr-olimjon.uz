@@ -44,7 +44,7 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# Generative AI & LLM Search Crawlers (Perplexity, ChatGPT, Claude, Google AI Overviews)
+# Generative AI & LLM Search Crawlers (Perplexity, SearchGPT, OpenAI, Claude, Google Gemini, Apple Intelligence, Yandex Neuro)
 User-agent: GPTBot
 Allow: /
 
@@ -60,6 +60,9 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
@@ -69,9 +72,22 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+User-agent: Bytespider
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
 # Sitemaps & Host
 Sitemap: https://dentist-olimjon.uz/sitemap.xml
 Host: dentist-olimjon.uz
 
-# AI Knowledge Base
-# llms.txt: https://dentist-olimjon.uz/llms.txt
+# AI & LLM Knowledge Base Protocol (llms.txt standard)
+# https://dentist-olimjon.uz/llms.txt
+# https://dentist-olimjon.uz/llms-full.txt

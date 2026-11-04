@@ -43,6 +43,23 @@ const About = () => {
     },
     {
       year: {
+        uz: "Tibbiy Ta'lim",
+        ru: "Медицинское Образование",
+        en: "Medical Education",
+      },
+      title: {
+        uz: "Andijon Davlat Tibbiyot Instituti (ADTI) — Stomatologiya",
+        ru: "Андижанский Государственный Медицинский Институт (АГМИ)",
+        en: "Andijan State Medical Institute (ASMI) — Dentistry",
+      },
+      desc: {
+        uz: "Oliy tibbiy ma'lumot, vrach-stomatolog mutaxassisligi bo'yicha davlat diplomi va chuqur klinik-fundamental tayyorgarlik.",
+        ru: "Высшее медицинское образование, государственный диплом врача-стоматолога и фундаментальная клиническая подготовка.",
+        en: "Higher medical degree in dentistry, licensed dental surgeon qualification, and comprehensive clinical training.",
+      },
+    },
+    {
+      year: {
         uz: "2024 – 2025",
         ru: "2024 – 2025",
         en: "2024 – 2025",
