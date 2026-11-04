@@ -24,16 +24,6 @@ import { useLanguage } from "./context/LanguageContext";
 import { LANGS, DEFAULT_LANG } from "./utils/language";
 
 /* Sync <html lang="..."> with active UI language for SEO and a11y */
-/* Enforce authentic logo favicon in tab dynamically to bypass browser caching */
-const FaviconEnforcer = () => {
-  useEffect(() => {
-    const existing = document.querySelector("link[rel*='icon']");
-    if (existing) {
-      existing.href = "/favicon-32x32.png?v=20261031";
-    }
-  }, []);
-  return null;
-};
 
 /* Scroll to the top on route change only. This used to live in <Seo>, where it
    re-fired on every render and yanked the page up while users typed. */
@@ -75,7 +65,6 @@ const AppShell = () => {
       </a>
       <LangSync />
       <ScrollToTop />
-      <FaviconEnforcer />
       <ToastContainer
         position="top-right"
         autoClose={4000}

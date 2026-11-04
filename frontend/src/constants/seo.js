@@ -11,94 +11,94 @@ const years = getYearsOfExperience();
 export const PAGE_SEO = {
   home: {
     uz: {
-      title: "Dr. Olimjon Murzajanov — Stomatolog va Ortoped Andijon | Sevdo Denta",
-      description: `Andijon Eski Shahar «Sevdo Denta» klinikasida zamonaviy stomatolog va ortoped Dr. Olimjon Murzajanov. ${years}+ yil tajriba, 1,000+ mamnun bemor, 100% og'riqsiz tish davolash, tsirkoniy karonka, vinirlar va implantatsiya. Tel: +998 (94) 001-01-56.`,
+      title: "Dr. Olimjon Murzajanov — Stomatolog Andijon | Sevdo Denta",
+      description: `Andijon Eski Shaharda stomatolog Dr. Olimjon Murzajanov: og'riqsiz tish davolash, tsirkoniy karonka, vinirlar va implantlar. Tel: +998 94 001-01-56.`,
     },
     ru: {
-      title: "Д-р Олимжон Мурзажанов — Стоматолог-ортопед в Андижане | Клиника Sevdo Denta",
-      description: `Современный стоматолог-ортопед и терапевт в Андижане Д-р Олимжон Мурзажанов (клиника «Sevdo Denta», Эски Шахар). ${years}+ лет опыта, 1000+ пациентов, лечение зубов без боли, циркониевые коронки, виниры E-max и имплантация.`,
+      title: "Д-р Олимжон Мурзажанов — Стоматолог в Андижане | Sevdo Denta",
+      description: `Стоматолог в Андижане Д-р Олимжон Мурзажанов (Sevdo Denta, Эски Шахар): лечение зубов без боли, циркониевые коронки, виниры и импланты. Тел: +998 94 001-01-56.`,
     },
     en: {
-      title: "Dr. Olimjon Murzajanov — Modern Dentist & Prosthodontist in Andijan | Sevdo Denta",
-      description: `Dr. Olimjon Murzajanov at «Sevdo Denta» Clinic in Andijan (Old City). ${years}+ years of clinical experience, 1,000+ happy patients, 100% painless dental treatment, zirconia crowns, E-max veneers, and dental implants.`,
+      title: "Dr. Olimjon Murzajanov — Dentist in Andijan | Sevdo Denta",
+      description: `Dr. Olimjon Murzajanov at Sevdo Denta Clinic in Andijan: painless dental therapy, zirconia crowns, E-max veneers and implants. Call: +998 (94) 001-01-56.`,
     },
   },
   services: {
     uz: {
-      title: "Stomatologik Xizmatlar Katalogi — Dr. Olimjon Murzajanov | Sevdo Denta Andijon",
+      title: "Xizmatlar Katalogi — Dr. Olimjon | Sevdo Denta Andijon",
       description:
-        "Andijonda 100% og'riqsiz tish davolash, tsirkoniy karonka va ko'priklar, E-max vinirlar, Koreya va Shveysariya implantlari, lazerli oqartirish va jarrohlik. Rasmiy kafolat.",
+        "Andijonda og'riqsiz tish davolash, tsirkoniy karonka, E-max vinirlar, sifatli implantlar va ZOOM 4 oqartirish. Kafolat. Tel: +998 (94) 001-01-56.",
     },
     ru: {
-      title: "Каталог Стоматологических Услуг — Д-р Олимжон Мурзажанов | Андижан",
+      title: "Услуги Стоматолога в Андижане — Д-р Олимжон | Sevdo Denta",
       description:
-        "Полный спектр стоматологических услуг в Андижане: лечение кариеса и каналов без боли, циркониевые коронки, виниры E-max, имплантация Osstem и Straumann, отбеливание ZOOM 4.",
+        "Стоматология в Андижане: лечение кариеса и каналов без боли, циркониевые коронки, виниры E-max, имплантация и отбеливание. Тел: +998 (94) 001-01-56.",
     },
     en: {
-      title: "Dental Services & Specialties in Andijan — Dr. Olimjon Murzajanov | Sevdo Denta",
+      title: "Dental Services in Andijan — Dr. Olimjon | Sevdo Denta",
       description:
-        "Comprehensive painless dentistry in Andijan: restorative fillings, root canals, zirconia crowns, E-max veneers, Osstem & Straumann implants, and ZOOM 4 whitening.",
+        "Painless dentistry in Andijan: composite fillings, root canals, zirconia crowns, E-max veneers, titanium implants & whitening. Tel: +998 (94) 001-01-56.",
     },
   },
   about: {
     uz: {
-      title: `Dr. Olimjon Murzajanov Haqida — ${years}+ Yillik Tajribaga Ega Stomatolog va Ortoped`,
-      description: `Dr. Olimjon Murzajanov — Andijondagi «Sevdo Denta» klinikasi stomatolog-ortopedi va terapevti. ${years}+ yil tajriba, 1,000+ mamnun bemor, ADTI diplomi va xalqaro sertifikatlar.`,
+      title: "Dr. Olimjon Murzajanov — Stomatolog & Ortoped Andijon",
+      description: `Dr. Olimjon Murzajanov — Andijondagi Sevdo Denta klinikasi stomatologi. ${years}+ yil tajriba, 1,000+ bemor, ADTI diplomi va sertifikatlar.`,
     },
     ru: {
-      title: `О Докторе Олимжоне Мурзажанове — Стоматолог-ортопед с ${years}+ Летним Опытом`,
-      description: `Д-р Олимжон Мурзажанов — стоматолог-ортопед, терапевт и имплантолог клиники «Sevdo Denta» в Андижане. ${years}+ лет клинической практики и более 1 000 успешных работ.`,
+      title: "О Докторе Олимжоне Мурзажанове — Стоматолог в Андижане",
+      description: `Д-р Олимжон Мурзажанов — стоматолог-ортопед клиники Sevdo Denta в Андижане. ${years}+ лет практики, 1 000+ вылеченных пациентов. Тел: +998 94 001-01-56.`,
     },
     en: {
-      title: `About Dr. Olimjon Murzajanov — Dentist & Prosthodontist with ${years}+ Years Experience`,
-      description: `Meet Dr. Olimjon Murzajanov, restorative dentist and prosthodontist at «Sevdo Denta» Clinic in Andijan with ${years}+ years of experience and 1,000+ treated patients.`,
+      title: "About Dr. Olimjon Murzajanov — Dentist in Andijan",
+      description: `Meet Dr. Olimjon Murzajanov, dentist and prosthodontist at Sevdo Denta Clinic in Andijan: ${years}+ years experience, 1,000+ patients. Tel: +998 94 001-01-56.`,
     },
   },
   contact: {
     uz: {
-      title: "Aloqa va Manzil — Sevdo Denta Klinikasi (Andijon, Eski Shahar) | Dr. Olimjon",
+      title: "Aloqa va Manzil — Sevdo Denta Andijon | Dr. Olimjon",
       description:
-        "Andijon shahri, Eski Shahar (Old City) markazi, 1-qavat, «Sevdo Denta» stomatologiya klinikasi. Qabulga yozilish: +998 (94) 001-01-56, Telegram: @httmurzajanov.",
+        "Andijon, Eski Shahar (Old City), 1-qavat, Sevdo Denta klinikasi. Dr. Olimjon qabuliga yozilish: +998 (94) 001-01-56, Telegram: @httmurzajanov.",
     },
     ru: {
-      title: "Контакты и Адрес — Клиника Sevdo Denta (Андижан, Эски Шахар) | Д-р Олимжон",
+      title: "Контакты и Адрес — Клиника Sevdo Denta | Д-р Олимжон",
       description:
-        "г. Андижан, Эски Шахар (Old City), 1-й этаж, стоматология «Sevdo Denta». Запись на приём: +998 (94) 001-01-56, Telegram: @httmurzajanov.",
+        "г. Андижан, Эски Шахар (Old City), 1-й этаж, стоматология Sevdo Denta. Запись на приём к Д-ру Олимжону: +998 (94) 001-01-56, Telegram: @httmurzajanov.",
     },
     en: {
-      title: "Contact & Clinic Location — Sevdo Denta Clinic Andijan | Dr. Olimjon Murzajanov",
+      title: "Contact & Location — Sevdo Denta Clinic | Dr. Olimjon",
       description:
-        "Visit Dr. Olimjon Murzajanov at «Sevdo Denta» Clinic, Old City (Eski Shahar), 1st Floor, Andijan. Book by phone +998 (94) 001-01-56 or Telegram @httmurzajanov.",
+        "Visit Dr. Olimjon Murzajanov at Sevdo Denta Clinic, Old City, 1st Floor, Andijan. Book by phone +998 (94) 001-01-56 or Telegram: @httmurzajanov.",
     },
   },
   booking: {
     uz: {
-      title: "Qabulga Yozilish — Dr. Olimjon Murzajanov | Sevdo Denta Andijon",
+      title: "Onlayn Qabulga Yozilish — Dr. Olimjon | Sevdo Denta",
       description:
-        "Dr. Olimjon Murzajanov qabuliga onlayn yozilish: bo'sh kunlar va soatlarni tanlang. Andijon, Eski Shahar, «Sevdo Denta» klinikasi. Tel: +998 (94) 001-01-56.",
+        "Dr. Olimjon Murzajanov qabuliga onlayn yoziling: bo'sh kun va soatni tanlang. Andijon, Eski Shahar, Sevdo Denta klinikasi. Tel: +998 (94) 001-01-56.",
     },
     ru: {
-      title: "Онлайн-Запись на Приём — Д-р Олимжон Мурзажанов | Sevdo Denta Андижан",
+      title: "Онлайн-Запись на Приём — Д-р Олимжон | Sevdo Denta",
       description:
-        "Онлайн-запись к Д-ру Олимжону Мурзажанову: выберите свободный день и время приёма. Клиника «Sevdo Denta», г. Андижан, Эски Шахар. +998 (94) 001-01-56.",
+        "Онлайн-запись к Д-ру Олимжону: выберите свободный день и время приёма. Клиника Sevdo Denta, г. Андижан, Эски Шахар. Телефон: +998 (94) 001-01-56.",
     },
     en: {
-      title: "Book Dental Appointment — Dr. Olimjon Murzajanov | Sevdo Denta Andijan",
+      title: "Book Dental Appointment — Dr. Olimjon | Sevdo Denta",
       description:
-        "Direct online appointment booking with Dr. Olimjon Murzajanov in Andijan at «Sevdo Denta» Clinic. Choose an available date and time slot. +998 (94) 001-01-56.",
+        "Online appointment booking with Dr. Olimjon Murzajanov at Sevdo Denta Clinic in Andijan. Choose your available date and time. Tel: +998 (94) 001-01-56.",
     },
   },
   qabul: {
     uz: {
-      title: "Qabul Vaqtini Tanlang — Dr. Olimjon Murzajanov | Sevdo Denta",
+      title: "Qabul Vaqtini Tanlang — Dr. Olimjon | Sevdo Denta",
       description: "Dr. Olimjon Murzajanov qabuliga navbatsiz onlayn yoziling. 100% og'riqsiz ko'rik va bepul konsultatsiya. Tel: +998 (94) 001-01-56.",
     },
     ru: {
-      title: "Запись к Стоматологу — Д-р Олимжон Мурзажанов | Андижан",
+      title: "Запись к Стоматологу — Д-р Олимжон | Андижан",
       description: "Онлайн запись на прием к стоматологу-ортопеду в Андижане без очередей. Клиника Sevdo Denta, Эски Шахар. Тел: +998 (94) 001-01-56.",
     },
     en: {
-      title: "Schedule Consultation — Dr. Olimjon Murzajanov | Andijan",
+      title: "Schedule Consultation — Dr. Olimjon | Andijan",
       description: "Schedule your dental consultation with Dr. Olimjon Murzajanov in Andijan. Zero waiting time, gentle treatment. Call +998 (94) 001-01-56.",
     },
   },
@@ -108,7 +108,7 @@ export const PAGE_SEO = {
       description: "Siz qidirgan sahifa topilmadi. Bosh sahifaga qayting yoki stomatologik xizmatlarimiz bilan tanishing.",
     },
     ru: {
-      title: "Страница не найдена (404) — Д-р Олимжон Мурзажанов",
+      title: "Страница не найдена (404) — Д-р Олимжон",
       description: "Запрашиваемая страница не найдена. Вернитесь на главную или выберите нужную стоматологическую услугу.",
     },
     en: {
@@ -120,133 +120,133 @@ export const PAGE_SEO = {
   // 1. Restorative & Root Canal Therapy
   "tish-davolash": {
     uz: {
-      title: "Og'riqsiz Tish Davolash va Plomba Andijon — Dr. Olimjon Murzajanov",
+      title: "Tish Davolash va Plomba Andijon — Dr. Olimjon",
       description:
-        "Andijonda karies, pulpit va tish ildiz kanallarini 100% og'riqsiz mikroskopik davolash. Germaniya (3M Filtek) va Yaponiya (Estelite) nurli plombalari. Tel: +998 (94) 001-01-56.",
+        "Andijonda karies, pulpit va tish ildiz kanallarini 100% og'riqsiz davolash. Germaniya (3M Filtek) va Yaponiya plombalari. Tel: +998 (94) 001-01-56.",
     },
     ru: {
-      title: "Лечение Зубов и Каналов Без Боли в Андижане | Д-р Олимжон Мурзажанов",
+      title: "Лечение Зубов и Каналов Без Боли в Андижане | Д-р Олимжон",
       description:
-        "Безболезненное лечение кариеса, пульпита и периодонтита в Андижане. Световые нано-пломбы 3M Filtek (Германия) и Estelite (Япония). Запись: +998 (94) 001-01-56.",
+        "Безболезненное лечение кариеса, пульпита и периодонтита в Андижане. Световые нано-пломбы 3M Filtek (Германия) и Estelite. Запись: +998 (94) 001-01-56.",
     },
     en: {
-      title: "Painless Tooth Decay & Root Canal in Andijan — Dr. Olimjon Murzajanov",
+      title: "Painless Tooth Decay & Root Canal in Andijan | Dr. Olimjon",
       description:
-        "Gentle, painless root canal therapy and cavity fillings in Andijan using premium 3M Filtek (Germany) & Estelite (Japan) composites. Call +998 (94) 001-01-56.",
+        "Gentle, painless root canal therapy and cavity fillings in Andijan using premium 3M Filtek & Estelite composites. Call +998 (94) 001-01-56.",
     },
   },
 
   // 2. Prosthodontics & Zirconia Crowns
   ortopediya: {
     uz: {
-      title: "Tsirkoniy Karonka va Tish Qo'yish Andijon — Dr. Olimjon Murzajanov",
+      title: "Tsirkoniy Karonka va Protez Andijon — Dr. Olimjon",
       description:
-        "Andijonda tsirkoniy (zirconia) va E-max keramik karonkalar. 100% biomoslashuvchan, milk ko'karmaydi, CAD/CAM 3D aniqlik va 10 yilgacha kafolat. Tel: +998 (94) 001-01-56.",
+        "Andijonda tsirkoniy va E-max keramik karonkalar. 100% biomoslashuvchan, milk ko'karmaydi, CAD/CAM 3D aniqlik va 10 yil kafolat. Tel: +998 94 001-01-56.",
     },
     ru: {
-      title: "Циркониевые Коронки и Протезирование в Андижане | Д-р Олимжон",
+      title: "Циркониевые Коронки и Мосты в Андижане | Д-р Олимжон",
       description:
-        "Установка безметалловых циркониевых коронок и мостов в Андижане. 3D CAD/CAM моделирование, идеальная эстетика десны, гарантия до 10 лет. Тел: +998 (94) 001-01-56.",
+        "Установка безметалловых циркониевых коронок и мостов в Андижане. 3D CAD/CAM моделирование, идеальная эстетика десны, гарантия. Тел: +998 (94) 001-01-56.",
     },
     en: {
-      title: "Zirconia Crowns & Prosthodontics in Andijan — Dr. Olimjon Murzajanov",
+      title: "Zirconia Crowns & Dental Bridges in Andijan | Dr. Olimjon",
       description:
-        "Precision CAD/CAM monolithic zirconia crowns & dental bridges in Andijan. Biocompatible, zero dark gumlines, up to 10-year warranty. Tel: +998 (94) 001-01-56.",
+        "Monolithic CAD/CAM zirconia crowns & dental bridges in Andijan. Biocompatible, zero dark gumlines, up to 10-year warranty. Tel: +998 (94) 001-01-56.",
     },
   },
 
   // 3. Cosmetic Dentistry & E-max Veneers
   "estetik-stomatologiya": {
     uz: {
-      title: "E-max Keramik Vinirlar va Tabassum Dizayni Andijon — Dr. Olimjon",
+      title: "E-max Vinirlar va Estetik Tabassum Andijon — Dr. Olimjon",
       description:
-        "Gollivud tabassumi Andijonda! 0.3 mm ultra-yupqa E-max keramik vinirlar va badiiy restavratsiya. Qahva va choydan sarg'aymaydi, 10+ yil xizmat. Tel: +998 (94) 001-01-56.",
+        "Gollivud tabassumi Andijonda! 0.3 mm ultra-yupqa E-max keramik vinirlar va badiiy restavratsiya. Qahva va choydan sarg'aymaydi. Tel: +998 (94) 001-01-56.",
     },
     ru: {
-      title: "Керамические Виниры E-max в Андижане — Голливудская Улыбка",
+      title: "Керамические Виниры E-max в Андижане | Д-р Олимжон",
       description:
-        "Установка ультратонких виниров E-max (0.3 мм) и эстетическая реставрация зоны улыбки в Андижане. Натуральная прозрачность, стойкий цвет. Тел: +998 (94) 001-01-56.",
+        "Ультратонкие виниры E-max (0.3 мм) и эстетическая реставрация зоны улыбки в Андижане. Натуральная прозрачность, стойкий цвет. Тел: +998 (94) 001-01-56.",
     },
     en: {
-      title: "E-max Porcelain Veneers & Smile Design in Andijan | Dr. Olimjon",
+      title: "E-max Porcelain Veneers in Andijan | Dr. Olimjon",
       description:
-        "Get a stunning Hollywood smile in Andijan with ultra-thin 0.3mm E-max porcelain veneers. Stain-resistant, natural translucency, 10+ year lifespan.",
+        "Get a stunning Hollywood smile in Andijan with ultra-thin 0.3mm E-max porcelain veneers. Stain-resistant, natural translucency. Tel: +998 (94) 001-01-56.",
     },
   },
 
   // 4. Dental Implants (Osstem & Straumann)
   implantatsiya: {
     uz: {
-      title: "Tish Implantatsiyasi Andijon (Osstem Koreya) — Dr. Olimjon Murzajanov",
+      title: "Tish Implantatsiyasi Andijon (Osstem) — Dr. Olimjon",
       description:
-        "Andijonda tish implantatsiyasi: Janubiy Koreya (Osstem) va Shveysariya (Straumann) biotitan implantlari. 20 daqiqada og'riqsiz, umrbod kafolat. Tel: +998 (94) 001-01-56.",
+        "Andijonda tish implantatsiyasi: Janubiy Koreya (Osstem) va Shveysariya (Straumann) biotitan implantlari. 20 daqiqada og'riqsiz, kafolat. Tel: +998 94 001-01-56.",
     },
     ru: {
-      title: "Имплантация Зубов в Андижане (Osstem / Straumann) | Д-р Олимжон",
+      title: "Имплантация Зубов в Андижане (Osstem) | Д-р Олимжон",
       description:
-        "Надёжная дентальная имплантация в Андижане за 20 минут без боли. Оригинальные титановые системы Osstem (Корея) и Straumann (Швейцария), пожизненная гарантия.",
+        "Надёжная дентальная имплантация в Андижане за 20 минут без боли. Оригинальные титановые системы Osstem (Корея) и Straumann. Запись: +998 (94) 001-01-56.",
     },
     en: {
-      title: "Dental Implants in Andijan (Osstem & Straumann) — Dr. Olimjon",
+      title: "Titanium Dental Implants in Andijan | Dr. Olimjon",
       description:
-        "Painless 20-minute dental implants in Andijan using genuine South Korean (Osstem) & Swiss (Straumann) titanium implants with lifetime warranty.",
+        "Painless dental implants in Andijan using genuine South Korean (Osstem) and Swiss (Straumann) titanium systems with warranty. Tel: +998 94 001-01-56.",
     },
   },
 
   // 5. Laser Whitening & Prophylaxis
   "tish-oqartirish": {
     uz: {
-      title: "Philips ZOOM 4 Tish Oqartirish va AirFlow Andijon — Dr. Olimjon",
+      title: "Philips ZOOM 4 Tish Oqartirish Andijon — Dr. Olimjon",
       description:
-        "Andijonda sovuq LED nuri bilan Philips ZOOM 4 lazerli oqartirish va AirFlow tozalash. Tish emaliga bezarar, 8-10 tongacha oqartirish. Tel: +998 (94) 001-01-56.",
+        "Andijonda Philips ZOOM 4 lazerli oqartirish va AirFlow tozalash. Tish emaliga bezarar, 8-10 tongacha xavfsiz oqartirish. Tel: +998 (94) 001-01-56.",
     },
     ru: {
-      title: "Отбеливание Зубов ZOOM 4 и Чистка AirFlow в Андижане | Д-р Олимжон",
+      title: "Отбеливание Зубов ZOOM 4 в Андижане | Д-р Олимжон",
       description:
-        "Безопасное лазерное отбеливание зубов Philips ZOOM 4 на 8–10 тонов и профессиональная чистка AirFlow в Андижане. Без вреда для эмали. Тел: +998 (94) 001-01-56.",
+        "Безопасное лазерное отбеливание зубов Philips ZOOM 4 на 8–10 тонов и профессиональная чистка AirFlow в Андижане. Без вреда эмали. Тел: +998 (94) 001-01-56.",
     },
     en: {
-      title: "Philips ZOOM 4 Teeth Whitening & AirFlow in Andijan | Dr. Olimjon",
+      title: "Philips ZOOM 4 Teeth Whitening in Andijan | Dr. Olimjon",
       description:
-        "Gentle Philips ZOOM 4 cold-LED teeth whitening up to 8–10 shades brighter and ultrasonic AirFlow scaling in Andijan. Zero enamel damage. Call +998 (94) 001-01-56.",
+        "Philips ZOOM 4 cold-LED teeth whitening up to 8–10 shades brighter and ultrasonic AirFlow scaling in Andijan. Safe enamel care. Tel: +998 94 001-01-56.",
     },
   },
 
   // 6. Oral Surgery & Atraumatic Tooth Extraction
   xirurgiya: {
     uz: {
-      title: "Og'riqsiz Tish Olish va Aql Tishi Jarrohligi Andijon — Dr. Olimjon",
+      title: "Og'riqsiz Aql Tishini Oldirish Andijon — Dr. Olimjon",
       description:
-        "Andijonda oddiy va murakkab aql tishlarini (donolik tishi) 100% og'riqsiz, suyakni shikastlamasdan olish. Kuchaytirilgan anesteziya va tez bitish. Tel: +998 (94) 001-01-56.",
+        "Andijonda oddiy va murakkab aql tishlarini 100% og'riqsiz, suyakni shikastlamasdan olish. Kuchaytirilgan anesteziya va tez bitish. Tel: +998 (94) 001-01-56.",
     },
     ru: {
-      title: "Удаление Зуба Мудрости Без Боли в Андижане | Д-р Олимжон Мурзажанов",
+      title: "Удаление Зуба Мудрости Без Боли в Андижане | Д-р Олимжон",
       description:
-        "Атравматичное и безопасное удаление зубов любой сложности и ретинированных зубов мудрости в Андижане. Полное обезболивание, быстрое заживление лунки.",
+        "Атравматичное удаление зубов любой сложности и зубов мудрости в Андижане. Полное обезболивание, быстрое заживление лунки. Запись: +998 (94) 001-01-56.",
     },
     en: {
-      title: "Painless Wisdom Tooth Extraction in Andijan | Dr. Olimjon Murzajanov",
+      title: "Wisdom Tooth Extraction in Andijan | Dr. Olimjon",
       description:
-        "Atraumatic, painless tooth and wisdom tooth removal in Andijan. Bone-preserving microsurgical techniques with rapid, swelling-free healing.",
+        "Atraumatic, painless tooth and wisdom tooth removal in Andijan. Gentle microsurgical technique with rapid swelling-free recovery. Tel: +998 94 001-01-56.",
     },
   },
 
   // 7. Digital Radiovisiography Diagnostics
   "rentgen-diagnostika": {
     uz: {
-      title: "Raqamli Tish Rentgen Diagnostikasi Andijon — Dr. Olimjon Murzajanov",
+      title: "Raqamli Tish Rentgen Diagnostika Andijon — Dr. Olimjon",
       description:
-        "Andijonda 90% kam nurlanishli raqamli viziograf orqali tish ildiz kanallari va yashirin kariesni 2 soniyada aniqlash. Bolalar va kattalar uchun xavfsiz.",
+        "Andijonda 90% kam nurlanishli raqamli viziograf orqali tish ildiz kanallari va yashirin kariesni 2 soniyada aniqlash. Xavfsiz. Tel: +998 (94) 001-01-56.",
     },
     ru: {
       title: "Цифровой Рентген Зуба (Визиограф) в Андижане | Д-р Олимжон",
       description:
-        "Мгновенный прицельный цифровой снимок зуба в Андижане. Лучевая нагрузка на 90% ниже плёночного рентгена, результат за 2 секунды. Тел: +998 (94) 001-01-56.",
+        "Мгновенный цифровой снимок зуба в Андижане. Лучевая нагрузка на 90% ниже плёночного рентгена, результат за 2 секунды. Телефон: +998 (94) 001-01-56.",
     },
     en: {
-      title: "Digital Dental X-Ray & Diagnostics in Andijan | Dr. Olimjon Murzajanov",
+      title: "Digital Dental X-Ray & Diagnostics in Andijan | Dr. Olimjon",
       description:
-        "Low-dose high-definition digital radiovisiography in Andijan. 90% less radiation than film, crystal-clear 2-second imaging for precise diagnosis.",
+        "Low-dose high-definition digital radiovisiography in Andijan. 90% less radiation than film, crystal-clear 2-second imaging. Tel: +998 (94) 001-01-56.",
     },
   },
 };
@@ -260,10 +260,6 @@ PAGE_SEO["services/tish-oqartirish"] = PAGE_SEO["tish-oqartirish"];
 PAGE_SEO["services/xirurgiya"] = PAGE_SEO["xirurgiya"];
 PAGE_SEO["services/rentgen-diagnostika"] = PAGE_SEO["rentgen-diagnostika"];
 
-/**
- * Multilingual search query matrices for Google, Yandex, and Generative Search engines.
- * Includes Uzbek Latin, Uzbek Cyrillic (widely searched in Uzbekistan), Russian, and English.
- */
 export const PAGE_KEYWORDS = {
   uz: "stomatolog andijon, tish shifokori andijon, dr olimjon murzajanov, olimjon stomatolog, dentist olimjon, sevdo denta andijon, eski shahar stomatolog, ortoped stomatolog andijon, tish davolash andijon, tish qo'yish andijon, tsirkon tish narxi andijon, tsirkoniy karonka andijon, implantatsiya andijon, osstem implant andijon, vinirlar andijon, e-max vinirlar, tish oqartirish zoom 4 andijon, aql tishini oldirish andijon, tish rentgen andijon, yaxshi stomatolog andijon, og'riqsiz tish davolash, tish klinika andijon, tish og'rig'i andijon, stomatologiya andijon narxlari, стоматолог андижон, тиш шифокори андижон, тиш даволаш андижон, циркон тиш нархи, имплантация андижон, винирлар андижон, олимжон стоматолог, севдо дента",
   ru: "стоматолог андижан, стоматология андижан, клиника севдо дента андижан, доктор олимжон мурзажанов, олимжон стоматолог, эски шахар стоматолог, стоматолог ортопед андижан, лечение зубов андижан, лечение зубов без боли андижан, циркониевые коронки андижан, коронка на зуб цена андижан, протезирование зубов андижан, имплантация зубов андижан, зубные импланты осстем андижан, виниры емакс андижан, голливудская улыбка андижан, отбеливание зубов зум 4 андижан, удаление зуба мудрости андижан, рентген зуба андижан, лучшая стоматология в андижане, сколько стоит поставить коронку в андижане",
