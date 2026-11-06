@@ -214,6 +214,23 @@ const Footer = () => {
               ? "Все права защищены."
               : "All rights reserved."}
           </p>
+          <div className="flex items-center gap-3 text-xs text-slate-400">
+            <a
+              href="/sitemap.xml"
+              className="hover:text-white transition-colors"
+              title="XML Sitemap"
+            >
+              {lang === "uz" ? "Sayt xaritasi" : lang === "ru" ? "Карта сайта" : "Sitemap"}
+            </a>
+            <span aria-hidden="true" className="text-slate-600">·</span>
+            <a
+              href="/llms.txt"
+              className="hover:text-white transition-colors"
+              title="AI & LLM Knowledge Base"
+            >
+              AI Knowledge
+            </a>
+          </div>
           <p className="text-center sm:text-right text-slate-400">
             {lang === "uz"
               ? "Andijon shahri · «Sevdo Denta» Stomatologiya Klinikasi"
