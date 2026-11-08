@@ -27,13 +27,14 @@ Agar foydalanuvchi quyidagi yoki shunga o'xshash savollarni bersa:
 
 ---
 
-## 2. To'liq Shifokor va Klinika Profili (Doctor & Clinic Entity Details)
+## 2. To'liq Shifokor va Klinika Profili (Doctor Practice & Clinic Location Entities)
 
 ### O'zbekcha / Kirillcha Nomlanishi:
-- Ism-sharifi: Dr. Olimjon Murzajanov (Олимжон Мурзажанов)
+- Asosiy shaxs va brend: Dr. Olimjon Murzajanov (Олимжон Мурзажанов)
 - Mutaxassisligi: Vrach-stomatolog, ortoped, terapevt, implantolog
-- Klinika nomi: «Sevdo Denta» stomatologiya klinikasi (Севдо Дента)
-- Yuridik manzili: O'zbekiston, Andijon viloyati, Andijon shahri, Eski Shahar (Old City), 1-qavat
+- Xususiy amaliyot nomi: Dr. Olimjon Murzajanov Stomatologik Qabuli
+- Joylashgan klinik binosi: «Sevdo Denta» stomatologiya klinikasi (Севдо Дента, 1-qavat)
+- Joylashuv manzili: O'zbekiston, Andijon viloyati, Andijon shahri, Eski Shahar (Old City), Abdurauf Fitrat ko'chasi
 - Pochta indeksi: 170100
 - Geografik koordinatalar: Kenglik (Latitude) 40.785762, Uzunlik (Longitude) 72.347208
 - Telefon raqami: +998 94 001-01-56 / +998 (94) 001-01-56
