@@ -109,25 +109,25 @@
       rel="stylesheet"
     />
 
-    <!-- Structured Data (JSON-LD Core Knowledge Graph): Dentist + MedicalClinic + Physician + WebSite -->
+    <!-- Structured Data (JSON-LD Core Knowledge Graph): Distinct Dentist Practice + Clinic Facility + Physician + WebSite -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": ["Dentist", "MedicalClinic", "LocalBusiness", "MedicalBusiness"],
+            "@type": ["Dentist", "Physician", "LocalBusiness", "MedicalBusiness"],
             "@id": "https://dentist-olimjon.uz/#dentist",
-            "name": "Dr. Olimjon Murzajanov — Sevdo Denta Stomatologiya Klinikasi",
+            "name": "Dr. Olimjon Murzajanov — Stomatolog Andijon",
             "alternateName": [
               "Dr. Olimjon Murzajanov",
-              "Dr. Olimjon Stomatolog Andijon",
-              "Sevdo Denta Andijon",
-              "Стоматолог Олимжон Мурзажанов Андижан",
-              "Клиника Sevdo Denta Андижан",
+              "Stomatolog Dr. Olimjon Murzajanov",
+              "Стоматолог Олимжон Мурзажанов",
+              "Врач-стоматолог Олимжон Мурзажанов",
+              "Dentist Olimjon Murzajanov Andijan",
               "Тиш шифокори Олимжон Мурзажанов",
-              "Севдо Дента Андижон"
+              "Dr. Olimjon Murzajanov Dental Practice"
             ],
-            "description": "Andijon shahri Eski Shahar (Old City) hududidagi Sevdo Denta klinikasida faoliyat yurituvchi zamonaviy stomatolog va ortoped Dr. Olimjon Murzajanov. 5+ yillik tajriba, 1,000+ mamnun bemor, 100% og'riqsiz terapevtik davolash, tsirkoniy karonka, E-max vinirlar, tish implantatsiyasi va jarrohlik.",
+            "description": "Andijon shahrida faoliyat yurituvchi mustaqil vrach-stomatolog, stomatolog-ortoped va implantolog Dr. Olimjon Murzajanov qabuli. 5+ yillik tajriba, 1,000+ mamnun bemor, 100% og'riqsiz terapevtik davolash, Germaniya va Yaponiya materiallari, tsirkoniy karonka, E-max vinirlar va xavfsiz tish implantatsiyasi.",
             "url": "https://dentist-olimjon.uz/",
             "logo": {
               "@type": "ImageObject",
@@ -153,9 +153,15 @@
               "worstRating": "1"
             },
             "isAcceptingNewPatients": true,
+            "containedInPlace": {
+              "@id": "https://dentist-olimjon.uz/#clinic-facility"
+            },
+            "location": {
+              "@id": "https://dentist-olimjon.uz/#clinic-facility"
+            },
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Eski Shahar (Old City) markazi, 1-qavat, Sevdo Denta klinikasi",
+              "streetAddress": "Eski Shahar (Old City) markazi, Abdurauf Fitrat ko'chasi, Sevdo Denta binosi, 1-qavat",
               "addressLocality": "Andijon",
               "addressRegion": "Andijon viloyati",
               "postalCode": "170100",
@@ -166,7 +172,6 @@
               "latitude": 40.785762,
               "longitude": 72.347208
             },
-            "hasMap": "https://yandex.uz/maps/-/CXU8fROY",
             "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",
@@ -227,7 +232,7 @@
             ],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Stomatologik Xizmatlar Katalogi — Sevdo Denta",
+              "name": "Stomatologik Xizmatlar Katalogi — Dr. Olimjon Murzajanov",
               "itemListElement": [
                 {
                   "@type": "Offer",
@@ -349,6 +354,43 @@
             }
           },
           {
+            "@type": ["MedicalClinic", "Place"],
+            "@id": "https://dentist-olimjon.uz/#clinic-facility",
+            "name": "«Sevdo Denta» Stomatologiya Klinikasi",
+            "alternateName": [
+              "Sevdo Denta",
+              "Sevdo Denta Andijon",
+              "Клиника Sevdo Denta Андижан",
+              "Стоматологическая клиника Sevdo Denta",
+              "Севдо Дента Андижон",
+              "Sevdo Denta Dental Clinic"
+            ],
+            "description": "Andijon shahri Eski Shahar markazidagi «Sevdo Denta» zamonaviy stomatologiya klinikasi binosi. Dr. Olimjon Murzajanov ushbu klinikada qabul olib boradi.",
+            "url": "https://dentist-olimjon.uz/contact/",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Eski Shahar (Old City) markazi, Abdurauf Fitrat ko'chasi, 1-qavat",
+              "addressLocality": "Andijon",
+              "addressRegion": "Andijon viloyati",
+              "postalCode": "170100",
+              "addressCountry": "UZ"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 40.785762,
+              "longitude": 72.347208
+            },
+            "hasMap": "https://yandex.uz/maps/org/sevdo_denta/157971592658/",
+            "sameAs": [
+              "https://yandex.uz/maps/org/sevdo_denta/157971592658/",
+              "https://yandex.uz/maps/-/CXU8fROY",
+              "https://www.google.com/maps?q=40.785762,72.347208"
+            ],
+            "medicalStaff": {
+              "@id": "https://dentist-olimjon.uz/#doctor"
+            }
+          },
+          {
             "@type": "WebSite",
             "@id": "https://dentist-olimjon.uz/#website",
             "url": "https://dentist-olimjon.uz/",
@@ -459,7 +501,7 @@
         ]
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-Ci0uoHf1.js"></script>
+    <script type="module" crossorigin src="/assets/index-DCdQ09i0.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-D7zIpOPY.js">
     <link rel="modulepreload" crossorigin href="/assets/react-vendor-Ns-oaxmK.js">
     <link rel="modulepreload" crossorigin href="/assets/router-CdVpsHcY.js">
