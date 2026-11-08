@@ -158,7 +158,7 @@ const HeroSection = () => {
           </div>
 
           {/* Subtitle */}
-          <p className="text-xs sm:text-base text-slate-600 leading-relaxed max-w-xl">
+          <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-xl">
             {t.subtitle}
           </p>
 
@@ -195,7 +195,7 @@ const HeroSection = () => {
               <p className="font-serif-classic text-lg min-[360px]:text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">
                 {t.stat1Num}
               </p>
-              <p className="text-[9px] min-[360px]:text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
+              <p className="text-[11px] min-[360px]:text-xs sm:text-sm text-slate-700 font-semibold mt-1 leading-snug">
                 {t.stat1Label}
               </p>
             </div>
@@ -203,7 +203,7 @@ const HeroSection = () => {
               <p className="font-serif-classic text-lg min-[360px]:text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">
                 {t.stat2Num}
               </p>
-              <p className="text-[9px] min-[360px]:text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
+              <p className="text-[11px] min-[360px]:text-xs sm:text-sm text-slate-700 font-semibold mt-1 leading-snug">
                 {t.stat2Label}
               </p>
             </div>
@@ -211,7 +211,7 @@ const HeroSection = () => {
               <p className="font-serif-classic text-lg min-[360px]:text-xl sm:text-2xl lg:text-3xl font-bold text-[#285983]">
                 {t.stat3Num}
               </p>
-              <p className="text-[9px] min-[360px]:text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
+              <p className="text-[11px] min-[360px]:text-xs sm:text-sm text-slate-700 font-semibold mt-1 leading-snug">
                 {t.stat3Label}
               </p>
             </div>
@@ -284,7 +284,7 @@ const HeroSection = () => {
                   role="tab"
                   aria-selected={activePhoto === "studio"}
                   onClick={() => setActivePhoto("studio")}
-                  className={`px-2.5 py-1 rounded-md text-[10px] font-semibold transition-colors cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-md text-xs font-bold transition-colors cursor-pointer ${
                     activePhoto === "studio"
                       ? "bg-[#132e53] text-white"
                       : "text-slate-600 hover:text-[#132e53]"
@@ -297,7 +297,7 @@ const HeroSection = () => {
                   role="tab"
                   aria-selected={activePhoto === "clinic"}
                   onClick={() => setActivePhoto("clinic")}
-                  className={`px-2.5 py-1 rounded-md text-[10px] font-semibold transition-colors cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-md text-xs font-bold transition-colors cursor-pointer ${
                     activePhoto === "clinic"
                       ? "bg-[#132e53] text-white"
                       : "text-slate-600 hover:text-[#132e53]"
@@ -395,15 +395,15 @@ const ClinicalPillars = () => {
                 <div className="w-12 h-12 rounded-2xl bg-[#f2f6fa] border border-[#d5e0ec] flex items-center justify-center">
                   {p.icon}
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#f2f6fa] text-[#285983] border border-[#d5e0ec]">
+                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#f2f6fa] text-[#285983] border border-[#d5e0ec]">
                   {p.badge[lang]}
                 </span>
               </div>
 
-              <h3 className="text-lg font-bold text-[#132e53] mb-2">
+              <h3 className="text-lg sm:text-xl font-bold text-[#132e53] mb-2">
                 {p.title[lang]}
               </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                 {p.desc[lang]}
               </p>
             </div>
@@ -594,14 +594,14 @@ const ServicesOverview = () => {
                 <h3 className="text-base sm:text-lg font-bold text-[#132e53] group-hover:text-[#285983] transition-colors">
                   {s.title[lang]}
                 </h3>
-                <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed">
                   {s.desc[lang]}
                 </p>
               </div>
             </Link>
 
             <div className="px-4 sm:px-5 pb-3.5 sm:pb-4 pt-3 border-t border-[#e2eaf2] flex items-center justify-between text-xs">
-              <span className="text-slate-500 font-medium flex items-center gap-1.5">
+              <span className="text-slate-600 font-medium flex items-center gap-1.5">
                 <IconClock className="w-3.5 h-3.5 text-[#285983]" />
                 <span>{s.duration[lang]}</span>
               </span>
@@ -609,7 +609,7 @@ const ServicesOverview = () => {
                 <button
                   type="button"
                   onClick={() => scrollToBooking(s.id, s.title[lang])}
-                  className="px-3.5 py-1.5 rounded-lg bg-[#132e53] hover:bg-[#285983] text-white font-semibold text-[11px] transition-colors cursor-pointer"
+                  className="px-3.5 py-1.5 rounded-lg bg-[#132e53] hover:bg-[#285983] text-white font-semibold text-xs transition-colors cursor-pointer"
                 >
                   {lang === "uz" ? "Yozilish" : lang === "ru" ? "Записаться" : "Book"}
                 </button>
@@ -713,7 +713,7 @@ const DoctorBioSpotlight = () => {
               : "Olimjon Murzajanov — Dedicated to Saving & Restoring Every Smile"}
           </h2>
 
-          <blockquote className="pl-4 border-l-2 border-[#285983] text-sm sm:text-base text-slate-600 leading-relaxed italic">
+          <blockquote className="pl-4 border-l-2 border-[#285983] text-sm sm:text-base text-slate-700 leading-relaxed font-medium italic">
             {lang === "uz"
               ? "«Mening asosiy maqsadim — bemor stomatolog kreslosiga o'tirgan ilk daqiqadanoq qo'rquv va og'riqni unutishi, har bir muolaja esa uzoq yillar davomida ishonchli xizmat qilishidir.»"
               : lang === "ru"
@@ -725,7 +725,7 @@ const DoctorBioSpotlight = () => {
             {credentials.map((item, idx) => (
               <li
                 key={idx}
-                className="flex items-start gap-3 text-xs sm:text-sm text-slate-700 font-medium"
+                className="flex items-start gap-3 text-sm text-slate-700 font-medium leading-snug"
               >
                 <IconCheckCircle className="w-4 h-4 text-[#285983] shrink-0 mt-0.5" />
                 <span>{item}</span>

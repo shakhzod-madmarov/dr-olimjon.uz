@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 html {
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100%;
@@ -30,11 +33,19 @@ body {
 .font-serif-classic,
 .font-serif-luxury {
   font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -0.01em;
+  font-feature-settings: "kern" 1, "liga" 1;
 }
 
-h1, h2, h3 {
-  letter-spacing: -0.02em;
+h1, h2, h3, h4 {
   text-wrap: balance;
+}
+
+h1:not(.font-serif-classic),
+h2:not(.font-serif-classic),
+h3:not(.font-serif-classic),
+h4:not(.font-serif-classic) {
+  letter-spacing: -0.02em;
 }
 
 p {

@@ -178,7 +178,7 @@ const ServiceDetail = () => {
           <h1 className="font-serif-classic text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
             {service.title[lang]}
           </h1>
-          <p className="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed max-w-2xl">
+          <p className="text-sm sm:text-base text-slate-100 leading-relaxed max-w-2xl">
             {service.shortDesc[lang]}
           </p>
 
@@ -258,7 +258,7 @@ const ServiceDetail = () => {
             {service.highlights[lang].map((point, idx) => (
               <li
                 key={idx}
-                className="flex items-start gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-xs sm:text-sm text-slate-800 font-medium"
+                className="flex items-start gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-sm text-slate-800 font-medium"
               >
                 <IconCheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#285983] shrink-0 mt-0.5" />
                 <span>{point}</span>
@@ -290,7 +290,7 @@ const ServiceDetail = () => {
                   <h3 className="text-sm sm:text-base font-bold text-[#132e53]">
                     {st.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 mt-0.5 sm:mt-1 leading-relaxed">
+                  <p className="text-sm text-slate-700 mt-1 leading-relaxed">
                     {st.desc}
                   </p>
                 </div>

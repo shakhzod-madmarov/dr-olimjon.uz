@@ -619,7 +619,7 @@ const InlineBookingSection = ({
 
           {/* Service Selection Pills */}
           <div className="pt-3 border-t border-[#e2eaf2]">
-            <p className="text-xs font-bold text-[#132e53] mb-2.5">
+            <p className="text-xs sm:text-sm font-bold text-[#132e53] mb-2.5">
               {t.serviceLabel}
             </p>
             <div
@@ -635,7 +635,7 @@ const InlineBookingSection = ({
                     type="button"
                     onClick={() => setService(item.id)}
                     aria-pressed={isSelected}
-                    className={`px-3.5 py-2.5 rounded-xl border text-xs font-semibold text-left transition-colors cursor-pointer flex items-center justify-between ${
+                    className={`px-3.5 py-2.5 rounded-xl border text-xs sm:text-sm font-semibold text-left transition-colors cursor-pointer flex items-center justify-between ${
                       isSelected
                         ? "bg-[#132e53] text-white border-[#132e53]"
                         : "bg-[#f7f9fc] text-slate-700 border-[#d5e0ec] hover:bg-[#eef3f8]"
@@ -656,7 +656,7 @@ const InlineBookingSection = ({
             <div>
               <label
                 htmlFor={`${sectionId}-name`}
-                className="block text-xs font-bold text-[#132e53] mb-1.5"
+                className="block text-xs sm:text-sm font-bold text-[#132e53] mb-1.5"
               >
                 {t.nameLabel}
               </label>
@@ -688,7 +688,7 @@ const InlineBookingSection = ({
             <div>
               <label
                 htmlFor={`${sectionId}-phone`}
-                className="block text-xs font-bold text-[#132e53] mb-1.5"
+                className="block text-xs sm:text-sm font-bold text-[#132e53] mb-1.5"
               >
                 {t.phoneLabel}
               </label>
@@ -720,7 +720,7 @@ const InlineBookingSection = ({
               <div>
                 <label
                   htmlFor={`${sectionId}-dob`}
-                  className="block text-xs font-bold text-[#132e53] mb-1.5"
+                  className="block text-xs sm:text-sm font-bold text-[#132e53] mb-1.5"
                 >
                   {t.dobLabel}{" "}
                   <span className="font-normal text-slate-400">({t.optional})</span>
@@ -735,14 +735,14 @@ const InlineBookingSection = ({
                   onChange={(e) => setDob(e.target.value)}
                   className="w-full h-[48px] px-4 rounded-xl border border-[#d5e0ec] focus:border-[#132e53] outline-none text-base sm:text-sm text-slate-800 bg-[#f7f9fc] focus:bg-white transition"
                 />
-                <p className="mt-1 text-[11px] text-slate-500">{t.dobHint}</p>
+                <p className="mt-1 text-xs text-slate-500">{t.dobHint}</p>
               </div>
             )}
 
             <div className={compact ? "sm:col-span-2" : ""}>
               <label
                 htmlFor={`${sectionId}-note`}
-                className="block text-xs font-bold text-[#132e53] mb-1.5"
+                className="block text-xs sm:text-sm font-bold text-[#132e53] mb-1.5"
               >
                 {t.noteLabel}{" "}
                 <span className="font-normal text-slate-400">({t.optional})</span>

@@ -50,7 +50,7 @@ const EmergencyBanner = ({ onHeightChange }) => {
         
         <div className="flex items-center gap-1.5 sm:gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
           <span className="w-2 h-2 rounded-full bg-amber-300 animate-ping shrink-0" />
-          <span className="text-amber-200 font-bold uppercase tracking-wider text-[9.5px] sm:text-[10px]">
+          <span className="text-amber-200 font-bold uppercase tracking-wider text-[11px] sm:text-xs">
             {lang === "uz" ? "Shoshilinch Yordam" : lang === "ru" ? "Срочная Помощь" : "Emergency"}
           </span>
           <span className="hidden sm:inline text-sky-100 font-normal">
@@ -65,9 +65,9 @@ const EmergencyBanner = ({ onHeightChange }) => {
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <a
             href={DOCTOR_INFO.phoneHref}
-            className="flex items-center gap-1.5 bg-white text-[#132e53] px-2.5 sm:px-3 py-1 rounded-full text-[10.5px] sm:text-[11px] font-black hover:bg-sky-100 transition-colors shadow-xs"
+            className="flex items-center gap-1.5 bg-white text-[#132e53] px-3 py-1 rounded-full text-xs sm:text-sm font-bold hover:bg-sky-100 transition-colors shadow-xs"
           >
-            <IconPhone className="w-3 h-3 text-[#132e53]" />
+            <IconPhone className="w-3.5 h-3.5 text-[#132e53]" />
             <span>{DOCTOR_INFO.phone}</span>
           </a>
 

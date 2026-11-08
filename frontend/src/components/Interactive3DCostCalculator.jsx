@@ -392,7 +392,7 @@ const Interactive3DCostCalculator = () => {
               </div>
               
               {/* Clinical Narrative */}
-              <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed font-normal mb-5">
+              <p className="text-slate-700 text-sm sm:text-base leading-relaxed font-normal mb-5">
                 {current.desc[lang]}
               </p>
 
@@ -405,14 +405,14 @@ const Interactive3DCostCalculator = () => {
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5">
                     {current.plombaTypes.map((p, idx) => (
-                      <div key={idx} className="p-2 sm:p-2.5 rounded-xl bg-slate-50 border border-slate-200/90 text-left">
-                        <span className="text-[9.5px] sm:text-[10px] font-black uppercase tracking-wider text-[#0284c7] block">
+                      <div key={idx} className="p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200/90 text-left">
+                        <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#0284c7] block">
                           {p.country[lang]}
                         </span>
-                        <span className="text-[11px] sm:text-xs font-bold text-slate-900 block mt-0.5 leading-snug">
+                        <span className="text-xs sm:text-sm font-bold text-slate-900 block mt-0.5 leading-snug">
                           {p.brand}
                         </span>
-                        <span className="text-[9.5px] sm:text-[10px] text-slate-500 block mt-1 leading-tight font-medium">
+                        <span className="text-[11px] sm:text-xs text-slate-600 block mt-1 leading-snug font-medium">
                           {p.desc[lang]}
                         </span>
                       </div>
@@ -431,13 +431,13 @@ const Interactive3DCostCalculator = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-2.5">
                     {current.crownTypes.map((c, idx) => (
                       <div key={idx} className="p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200/90 text-left">
-                        <span className="text-[9.5px] sm:text-[10px] font-black uppercase tracking-wider text-[#0284c7] block">
+                        <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#0284c7] block">
                           {c.country[lang]}
                         </span>
-                        <span className="text-[11px] sm:text-xs font-bold text-slate-900 block mt-0.5 leading-snug">
+                        <span className="text-xs sm:text-sm font-bold text-slate-900 block mt-0.5 leading-snug">
                           {c.brand}
                         </span>
-                        <span className="text-[9.5px] sm:text-[10px] text-slate-500 block mt-1 leading-tight font-medium">
+                        <span className="text-[11px] sm:text-xs text-slate-600 block mt-1 leading-snug font-medium">
                           {c.desc[lang]}
                         </span>
                       </div>
@@ -449,7 +449,7 @@ const Interactive3DCostCalculator = () => {
               {/* 3 Clinical Guarantees */}
               <ul className="space-y-2.5 mb-5 sm:mb-6">
                 {current.points[lang].map((point, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-xs sm:text-sm font-semibold text-slate-700">
+                  <li key={idx} className="flex items-center gap-3 text-sm sm:text-base font-semibold text-slate-700">
                     <span className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200/80 flex items-center justify-center text-xs shrink-0 font-black">
                       ✓
                     </span>
@@ -462,26 +462,26 @@ const Interactive3DCostCalculator = () => {
             {/* 3 Metric Tiles at Bottom */}
             <div className="pt-4 border-t border-slate-100 grid grid-cols-3 gap-1.5 sm:gap-3 text-left">
               <div className="bg-slate-50/80 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-slate-200/70 text-center sm:text-left">
-                <span className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
                   {lang === "uz" ? "Vaqt" : lang === "ru" ? "Время" : "Duration"}
                 </span>
-                <span className="text-[11px] sm:text-xs md:text-sm font-black text-slate-900 mt-0.5 block leading-tight">
+                <span className="text-xs sm:text-sm md:text-base font-black text-slate-900 mt-0.5 block leading-tight">
                   {current.duration[lang]}
                 </span>
               </div>
               <div className="bg-slate-50/80 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-slate-200/70 text-center sm:text-left">
-                <span className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
                   {lang === "uz" ? "Tashrif" : lang === "ru" ? "Визиты" : "Visits"}
                 </span>
-                <span className="text-[11px] sm:text-xs md:text-sm font-black text-slate-900 mt-0.5 block leading-tight">
+                <span className="text-xs sm:text-sm md:text-base font-black text-slate-900 mt-0.5 block leading-tight">
                   {current.visits[lang]}
                 </span>
               </div>
               <div className="bg-slate-50/80 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-slate-200/70 text-center sm:text-left">
-                <span className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
                   {lang === "uz" ? "Kafolat" : lang === "ru" ? "Гарантия" : "Outcome"}
                 </span>
-                <span className="text-[11px] sm:text-xs md:text-sm font-black text-slate-900 mt-0.5 block leading-tight">
+                <span className="text-xs sm:text-sm md:text-base font-black text-slate-900 mt-0.5 block leading-tight">
                   {current.result[lang]}
                 </span>
               </div>

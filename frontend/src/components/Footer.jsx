@@ -77,7 +77,7 @@ const Footer = () => {
               <Logo className="h-10" inverted={true} />
             </Link>
 
-            <p className="text-xs sm:text-sm text-slate-300/85 leading-relaxed">
+            <p className="text-sm text-slate-300/90 leading-relaxed">
               {lang === "uz"
                 ? `Andijon shahri Eski Shahar (Old City) hududidagi «Sevdo Denta» klinikasida 100% og'riqsiz davolash, zamonaviy ortopediya va implantatsiya. Dr. Olimjon Murzajanov — ${getExperienceText("uz").toLowerCase()} va 1,000+ mamnun bemorlar ishonchi.`
                 : lang === "ru"
@@ -104,7 +104,7 @@ const Footer = () => {
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9cb8d4]">
               {lang === "uz" ? "Sahifalar" : lang === "ru" ? "Навигация" : "Navigation"}
             </p>
-            <ul className="space-y-2.5 text-xs sm:text-sm">
+            <ul className="space-y-2.5 text-sm">
               {quickLinks.map((item) => (
                 <li key={item.path}>
                   <Link
@@ -123,7 +123,7 @@ const Footer = () => {
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9cb8d4]">
               {lang === "uz" ? "Asosiy Xizmatlar" : lang === "ru" ? "Основные Услуги" : "Core Specialties"}
             </p>
-            <ul className="space-y-2.5 text-xs sm:text-sm">
+            <ul className="space-y-2.5 text-sm">
               {specialtyLinks.map((item) => (
                 <li key={item.path}>
                   <Link
@@ -143,7 +143,7 @@ const Footer = () => {
               {lang === "uz" ? "Manzil va Aloqa" : lang === "ru" ? "Адрес и Контакты" : "Clinic & Contact"}
             </p>
 
-            <div className="space-y-2.5 text-xs sm:text-sm text-slate-300/90">
+            <div className="space-y-2.5 text-sm text-slate-200/90">
               <p className="flex items-start gap-2.5">
                 <IconLocationPin className="w-4 h-4 text-[#9cb8d4] shrink-0 mt-0.5" />
                 <span>{PRIMARY_CLINIC.address[lang]}</span>
@@ -205,7 +205,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Copyright Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-slate-400">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs sm:text-sm text-slate-400">
           <p className="text-center sm:text-left">
             © {new Date().getFullYear()} Dr. Olimjon Murzajanov (dentist-olimjon.uz).{" "}
             {lang === "uz"

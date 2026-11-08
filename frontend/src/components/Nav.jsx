@@ -75,7 +75,7 @@ const Nav = ({ topOffset = 0 }) => {
                 to={to(link.path)}
                 end={link.path === "/"}
                 className={({ isActive }) =>
-                  `px-4 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all duration-150 ${
+                  `px-3.5 py-2 rounded-lg text-sm font-semibold transition-all duration-150 ${
                     isActive
                       ? "bg-[#eaf1f8] text-[#132e53] font-bold border border-[#bcd2e8]"
                       : "text-slate-600 hover:text-[#132e53] hover:bg-[#f2f6fa]"
@@ -101,7 +101,7 @@ const Nav = ({ topOffset = 0 }) => {
                   onClick={() => changeLanguage(l)}
                   aria-pressed={lang === l}
                   aria-label={l === "uz" ? "O'zbek tili" : l === "ru" ? "Русский язык" : "English"}
-                  className={`px-1.5 sm:px-2.5 py-1 rounded-md text-[9.5px] min-[360px]:text-[10px] sm:text-[11px] font-bold uppercase transition-colors cursor-pointer touch-manipulation ${
+                  className={`px-2 sm:px-2.5 py-1 rounded-md text-[11px] sm:text-xs font-bold uppercase transition-colors cursor-pointer touch-manipulation ${
                     lang === l
                       ? "bg-[#132e53] text-white"
                       : "text-slate-600 hover:text-[#132e53]"
@@ -115,7 +115,7 @@ const Nav = ({ topOffset = 0 }) => {
             {/* Direct Phone Link (XL Screens) */}
             <a
               href={DOCTOR_INFO.phoneHref}
-              className="hidden xl:flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#f2f6fa] border border-[#d5e0ec] text-[#132e53] hover:bg-[#e4edf5] transition-colors text-xs font-bold"
+              className="hidden xl:flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#f2f6fa] border border-[#d5e0ec] text-[#132e53] hover:bg-[#e4edf5] transition-colors text-sm font-semibold"
             >
               <IconPhone className="w-3.5 h-3.5 text-[#285983] shrink-0" />
               <span>{DOCTOR_INFO.phone}</span>

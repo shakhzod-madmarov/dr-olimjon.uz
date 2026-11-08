@@ -12,7 +12,7 @@ export default {
       },
       fontFamily: {
         serif: ["'Cormorant Garamond'", "Georgia", "serif"],
-        sans: ["'Plus Jakarta Sans'", "system-ui", "sans-serif"],
+        sans: ["'Manrope'", "'Plus Jakarta Sans'", "system-ui", "-apple-system", "sans-serif"],
       },
       gridTemplateColumns: {
         auto: "repeat(auto-fill, minmax(220px, 1fr))",

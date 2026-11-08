@@ -69,7 +69,7 @@ const Services = () => {
             ? "Каталог Стоматологических Услуг"
             : "Dental Services & Specialties"}
         </h1>
-        <p className="text-sm sm:text-base text-slate-600">
+        <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
           {lang === "uz"
             ? "Dr. Olimjon Murzajanov tomonidan Germaniya, Yaponiya va Janubiy Koreya texnologiyalari asosida 100% og'riqsiz va kafolatli muolajalar."
             : lang === "ru"
@@ -122,13 +122,13 @@ const Services = () => {
                   {service.title[lang]}
                 </h2>
 
-                <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p className="mt-2 text-sm sm:text-base text-slate-700 leading-relaxed">
                   {service.shortDesc[lang]}
                 </p>
 
                 <ul className="mt-4 sm:mt-5 space-y-2.5">
                   {service.highlights[lang].map((point, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 font-medium">
+                    <li key={idx} className="flex items-start gap-2.5 text-sm text-slate-800 font-medium">
                       <IconCheckCircle className="w-4 h-4 text-[#285983] shrink-0 mt-0.5" />
                       <span>{point}</span>
                     </li>

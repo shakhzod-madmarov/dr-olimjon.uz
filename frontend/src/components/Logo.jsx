@@ -37,7 +37,7 @@ const Logo = ({ className = "h-10", inverted = false }) => {
           Dr. Olimjon Murzajanov
         </span>
         <span
-          className={`text-[7.5px] min-[360px]:text-[8px] sm:text-[10px] font-semibold uppercase tracking-[0.1em] sm:tracking-[0.18em] mt-0.5 sm:mt-1 truncate ${
+          className={`text-[9.5px] min-[360px]:text-[10px] sm:text-xs font-bold uppercase tracking-[0.08em] sm:tracking-[0.14em] mt-0.5 sm:mt-1 truncate ${
             inverted ? "text-[#9cb8d4]" : "text-[#285983]"
           }`}
         >

@@ -91,7 +91,7 @@ const Contact = () => {
             ? "Контакты и Адрес Клиники"
             : "Contact & Clinic Location"}
         </h1>
-        <p className="text-xs sm:text-sm md:text-base text-slate-600">
+        <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed">
           {lang === "uz"
             ? "Dr. Olimjon Murzajanov qabuliga telefon, Telegram, Instagram yoki onlayn shakl orqali yozilishingiz mumkin."
             : lang === "ru"
@@ -113,7 +113,7 @@ const Contact = () => {
               <p className="font-serif-classic text-xl sm:text-2xl md:text-3xl font-bold text-[#132e53]">
                 {c.phone}
               </p>
-              <p className="text-xs text-slate-500">{c.hours[lang]}</p>
+              <p className="text-xs sm:text-sm text-slate-600 font-medium">{c.hours[lang]}</p>
             </div>
             <a
               href={`tel:${c.phoneRaw}`}

@@ -268,7 +268,7 @@ const About = () => {
               : "Restorative Dentist, Prosthodontist & Implantologist, Andijan"}
           </p>
 
-          <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed">
             {lang === "uz"
               ? `Dr. Olimjon Murzajanov ${years} yildan ortiq vaqt davomida Andijon shahri va Farg'ona vodiysi aholisiga zamonaviy, 100% og'riqsiz va yuqori aniqlikdagi stomatologik xizmat ko'rsatib kelmoqda. Uning klinik yondashuvi tabiiy tishlarni maksimal darajada saqlab qolish, zamonaviy tsirkoniy va E-max keramik protezlash hamda xavfsiz implantatsiyaga asoslangan.`
               : lang === "ru"
@@ -280,25 +280,25 @@ const About = () => {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 pt-2">
             <div className="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-center">
               <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">{years}+</p>
-              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
+              <p className="text-xs sm:text-sm text-slate-700 font-semibold mt-1 leading-snug">
                 {lang === "uz" ? "Yil Tajriba" : lang === "ru" ? "Лет Опыта" : "Years Exp."}
               </p>
             </div>
             <div className="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-center">
               <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">1,000+</p>
-              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
+              <p className="text-xs sm:text-sm text-slate-700 font-semibold mt-1 leading-snug">
                 {lang === "uz" ? "Mamnun Bemor" : lang === "ru" ? "Пациентов" : "Patients"}
               </p>
             </div>
             <div className="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-center">
               <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#132e53]">99.2%</p>
-              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
+              <p className="text-xs sm:text-sm text-slate-700 font-semibold mt-1 leading-snug">
                 {lang === "uz" ? "Implant Muvaffaqiyati" : lang === "ru" ? "Приживаемость" : "Implant Success"}
               </p>
             </div>
             <div className="p-2.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-center">
               <p className="font-serif-classic text-xl sm:text-2xl lg:text-3xl font-bold text-[#285983]">100%</p>
-              <p className="text-[10px] sm:text-xs text-slate-600 font-medium mt-0.5 leading-tight">
+              <p className="text-xs sm:text-sm text-slate-700 font-semibold mt-1 leading-snug">
                 {lang === "uz" ? "Steril va Og'riqsiz" : lang === "ru" ? "Без Боли" : "Painless Care"}
               </p>
             </div>
@@ -353,7 +353,7 @@ const About = () => {
               <h3 className="text-base sm:text-lg font-bold text-[#132e53]">
                 {v.title[lang]}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                 {v.desc[lang]}
               </p>
             </div>
@@ -384,7 +384,7 @@ const About = () => {
                 <h3 className="text-sm sm:text-base md:text-lg font-bold text-[#132e53]">
                   {item.title[lang]}
                 </h3>
-                <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p className="mt-1 text-sm text-slate-700 leading-relaxed">
                   {item.desc[lang]}
                 </p>
               </div>
