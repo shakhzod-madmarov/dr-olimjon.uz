@@ -39,6 +39,8 @@ export const CLINICS = [
     maps: {
       google: "https://www.google.com/maps?q=40.785762,72.347208",
       yandex: "https://yandex.uz/maps/-/CXU8fROY",
+      yandexOrg: "https://yandex.uz/maps/org/sevdo_denta/157971592658/",
+      yandexBusinessId: "157971592658",
     },
   },
 ];

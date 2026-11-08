@@ -32,8 +32,10 @@ Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&fbclid&gcli
 User-agent: YandexFavicons
 Allow: /
 Allow: /favicon.ico
+Allow: /favicon.svg
 Allow: /favicon-48x48.png
 Allow: /favicon-96x96.png
+Allow: /favicon-144x144.png
 
 User-agent: Bingbot
 Allow: /
