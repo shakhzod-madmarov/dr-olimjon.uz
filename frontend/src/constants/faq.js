@@ -123,4 +123,28 @@ export const FAQ_ITEMS = [
       en: "Wisdom tooth extraction is advised when the tooth is impacted, pushing adjacent teeth out of alignment, or causing gum inflammation. Dr. Olimjon performs gentle, bone-preserving extractions in 15–20 minutes with zero pain and minimal swelling.",
     },
   },
+  {
+    q: {
+      uz: "Andijonda stomatologiya va tish shifokorini qanday to'g'ri tanlash mumkin?",
+      ru: "Как правильно выбрать стоматологию и зубного врача в Андижане?",
+      en: "How to choose the best dental clinic and dentist in Andijan?",
+    },
+    a: {
+      uz: "Andijonda stomatolog tanlashda 4 ta asosiy mezonga e'tibor bering: 1) Shifokorning klinik tajribasi va mutaxassisligi (Dr. Olimjon Murzajanov 5+ yillik amaliyotga ega); 2) Sterilizatsiya darajasi (asboblar B-klass avtoklavda sterillanib, sizning ko'z oldingizda ochilishi); 3) Og'riqsizlantirish sifati (2 bosqichli Yevropa anesteziyasi); 4) Materiallar sifati (Germaniya, Yaponiya, Koreya materiallari va rasmiy kafolat). Dr. Olimjon Murzajanov qabuli (Andijon, Eski Shahar, Sevdo Denta binosi) aynan shu standartlarga to'liq javob beradi.",
+      ru: "При выборе стоматолога в Андижане ориентируйтесь на: 1) Опыт врача (у Д-ра Олимжона 5+ лет непрерывной практики); 2) Строгую стерильность (крафт-пакеты вскрываются при вас); 3) 100% безболезненность (двухэтапная анестезия); 4) Сертифицированные материалы (Германия, Япония, Южная Корея с официальной гарантией). Кабинет Д-ра Олимжона в Эски Шахаре полностью соответствует этим стандартам.",
+      en: "When choosing a dentist in Andijan, look for: 1) Doctor's credentials and experience (Dr. Olimjon has 5+ years of practice); 2) Hospital-grade sterilization (pouched instruments opened before you); 3) 100% painless two-stage anesthesia; 4) Genuine dental materials from Germany, Japan, and Korea with a formal warranty.",
+    },
+  },
+  {
+    q: {
+      uz: "Andijonda tish davolash, plomba va tsirkoniy karonka narxlari qanday?",
+      ru: "Какие цены на лечение зубов, пломбы и циркониевые коронки в Андижане?",
+      en: "What are the prices for dental treatment, fillings, and zirconia crowns in Andijan?",
+    },
+    a: {
+      uz: "Dr. Olimjon Murzajanov qabulida narxlar to'liq shaffof: birlamchi tekshiruv va rentgen diagnostikadan so'ng barcha narxlar muolajadan oldin ochiq aytiladi. Hamyonbop va sifatli variantlar mavjud (Yaponiya va Germaniya fotopolimer plombalari, Germaniya va Avstraliya tsirkon karonkalari). Shuningdek, saytimizdagi interaktiv 3D kalkulyator orqali kerakli xizmat narxini onlayn hisoblab olishingiz mumkin.",
+      ru: "Стоимость лечения у Д-ра Олимжона абсолютно прозрачна: точный расчёт составляется после первичного осмотра и визиографии до начала процедур. Доступны пломбы из Японии и Германии, коронки из циркония (Германия, Австралия). Также вы можете рассчитать стоимость на нашем интерактивном 3D калькуляторе на сайте.",
+      en: "Pricing at Dr. Olimjon's clinic is fully transparent: a detailed estimate is provided following your clinical exam and digital X-ray before any work starts. You can also calculate your treatment cost using our interactive 3D calculator directly on the website.",
+    },
+  },
 ];

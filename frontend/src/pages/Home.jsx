@@ -60,12 +60,12 @@ const HeroSection = () => {
 
   const T = {
     uz: {
-      badge: "Vrach-Stomatolog · Andijon",
+      badge: "Andijonda Stomatologiya · Vrach-Stomatolog",
       doctorName: "Dr. Olimjon Murzajanov",
       specialtyTitle: "Stomatolog-Terapevt · Ortoped · Implantolog",
       headline: "Tabiiy va Sog'lom Tabassum Uchun Ehtiyotkor va Og'riqsiz Stomatologiya",
       subtitle:
-        "Andijon shahrida sifatli va og'riqsiz tish davolash, tishlarni plombalash, karonka qo'yish hamda har bir bemorga samimiy e'tibor va maslahat.",
+        "Andijon shahrida zamonaviy va 100% og'riqsiz stomatologiya: sifatli tish davolash, fotopolimer plombalar, tsirkoniy karonka, vinirlar va xavfsiz implantatsiya.",
       ctaBook: "Qabulga Yozilish",
       ctaServices: "Xizmatlar Bilan Tanishish",
       stat1Num: `${getYearsOfExperience()}+ yil`,
@@ -79,12 +79,12 @@ const HeroSection = () => {
       clinicLocationText: "Andijon sh., Eski Shahar (Old City), 1-qavat",
     },
     ru: {
-      badge: "Врач-Стоматолог · Андижан",
+      badge: "Стоматология в Андижане · Врач-Стоматолог",
       doctorName: "Д-р Олимжон Мурзажанов",
       specialtyTitle: "Стоматолог-Терапевт · Ортопед · Имплантолог",
       headline: "Бережная и Безболезненная Стоматология для Здоровой Улыбки",
       subtitle:
-        "Качественное и комфортное лечение зубов в Андижане, надёжное пломбирование, протезирование и внимательное отношение к каждому пациенту.",
+        "Современная стоматология и лечение зубов без боли в Андижане: надёжное пломбирование, циркониевые коронки, виниры E-max и дентальная имплантация.",
       ctaBook: "Записаться на Приём",
       ctaServices: "Все Услуги",
       stat1Num: `${getYearsOfExperience()}+ лет`,
@@ -98,12 +98,12 @@ const HeroSection = () => {
       clinicLocationText: "г. Андижан, Эски Шахар (Old City), 1-й этаж",
     },
     en: {
-      badge: "Dental Surgeon · Andijan",
+      badge: "Dentistry in Andijan · Dental Surgeon",
       doctorName: "Dr. Olimjon Murzajanov",
       specialtyTitle: "Restorative Dentist · Prosthodontist · Implantologist",
       headline: "Gentle & 100% Painless Dental Care for Your Natural Smile",
       subtitle:
-        "Dedicated, attentive dental care in Andijan: cavity treatments, restorative crowns, and gentle dental checkups.",
+        "Modern and 100% painless dental care in Andijan: composite restorations, zirconia crowns, porcelain veneers, and safe titanium implants.",
       ctaBook: "Book Appointment",
       ctaServices: "Explore Services",
       stat1Num: `${getYearsOfExperience()}+ Yrs`,
