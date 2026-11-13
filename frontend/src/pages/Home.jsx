@@ -151,6 +151,13 @@ const HeroSection = () => {
             </p>
             <h1 className="font-serif-classic text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold text-[#132e53] leading-[1.12]">
               {t.doctorName}
+              <span className="block text-lg sm:text-2xl md:text-3xl font-sans font-bold text-[#285983] mt-2">
+                {lang === "uz"
+                  ? "Andijonda Stomatologiya va Malakali Tish Shifokori"
+                  : lang === "ru"
+                  ? "Стоматология и Врач-Стоматолог в Андижане"
+                  : "Dentistry & Qualified Dentist in Andijan"}
+              </span>
             </h1>
             <p className="pt-1 text-base sm:text-xl font-bold text-slate-800 leading-snug max-w-2xl">
               {t.headline}
