@@ -27,6 +27,16 @@ export const SERVICES_CATALOG = [
     },
     duration: { uz: "30 – 50 daqiqa", ru: "30 – 50 минут", en: "30 – 50 mins" },
     warranty: { uz: "5 yilgacha kafolat", ru: "Гарантия до 5 лет", en: "Up to 5-year warranty" },
+    materials: {
+      uz: "3M Filtek (Germaniya) va Estelite (Yaponiya) nanokompozitlari",
+      ru: "3M Filtek (Германия) и Estelite (Япония) нанокомпозиты",
+      en: "3M Filtek (Germany) & Estelite (Japan) nano-composites",
+    },
+    anesthesia: {
+      uz: "2 bosqichli og'riqsiz: muzlatuvchi gel + mikro-anestetik",
+      ru: "Двухэтапная анестезия: гель + европейский анестетик",
+      en: "Two-stage painless: topical numbing gel + micro-injection",
+    },
     highlights: {
       uz: [
         "Germaniya (3M Filtek) va Yaponiya (Estelite) fotopolimer plombalari",
@@ -65,6 +75,16 @@ export const SERVICES_CATALOG = [
     },
     duration: { uz: "2 – 3 kun", ru: "2 – 3 дня", en: "2 – 3 days" },
     warranty: { uz: "10 yilgacha kafolat", ru: "Гарантия до 10 лет", en: "Up to 10-year warranty" },
+    materials: {
+      uz: "Monolit Tsirkoniy (Germaniya) va Ivoclar E-max (Shveysariya)",
+      ru: "Диоксид циркония (Германия) и Ivoclar E-max (Швейцария)",
+      en: "Monolithic Zirconia (Germany) & Ivoclar E-max (Switzerland)",
+    },
+    anesthesia: {
+      uz: "100% og'riqsiz mikro-anesteziya",
+      ru: "100% безболезненная микро-анестезия",
+      en: "100% painless local micro-anesthesia",
+    },
     highlights: {
       uz: [
         "Milk ko'karishi va temir ta'mi mutlaqo bo'lmaydi (100% biomoslashuvchan)",
@@ -103,6 +123,16 @@ export const SERVICES_CATALOG = [
     },
     duration: { uz: "1 – 2 tashrif", ru: "1 – 2 визита", en: "1 – 2 visits" },
     warranty: { uz: "10+ yil xizmat muddati", ru: "Срок службы 10+ лет", en: "10+ years durability" },
+    materials: {
+      uz: "Ivoclar Vivadent E-max press-keramika (0.3–0.5 mm)",
+      ru: "Пресс-керамика Ivoclar Vivadent E-max (0.3–0.5 мм)",
+      en: "Ivoclar Vivadent E-max press-ceramic (0.3–0.5 mm)",
+    },
+    anesthesia: {
+      uz: "Mikro-anesteziya (nervga tegilmaydi, tish tirik qoladi)",
+      ru: "Микро-анестезия (без депульпации, зуб остаётся живым)",
+      en: "Micro-anesthesia (no nerve removal, tooth stays vital)",
+    },
     highlights: {
       uz: [
         "0.3 mm ultra-yupqa E-max press-keramika vinirlari",
@@ -141,6 +171,16 @@ export const SERVICES_CATALOG = [
     },
     duration: { uz: "20 – 30 daqiqa", ru: "20 – 30 минут", en: "20 – 30 mins" },
     warranty: { uz: "Umrbod implant kafolati", ru: "Пожизненная гарантия", en: "Lifetime implant warranty" },
+    materials: {
+      uz: "Osstem (Janubiy Koreya) va Straumann SLActive (Shveysariya)",
+      ru: "Osstem (Южная Корея) и Straumann SLActive (Швейцария)",
+      en: "Osstem (South Korea) & Straumann SLActive (Switzerland)",
+    },
+    anesthesia: {
+      uz: "2 bosqichli og'riqsiz anesteziya (jarayon 0% og'riq)",
+      ru: "Двухэтапная анестезия (процесс без боли — 0% боли)",
+      en: "Two-stage anesthesia (100% painless procedure — 0% pain)",
+    },
     highlights: {
       uz: [
         "99.2% suyakka muvaffaqiyatli birikish ko'rsatkichi",
@@ -179,6 +219,16 @@ export const SERVICES_CATALOG = [
     },
     duration: { uz: "45 daqiqa", ru: "45 минут", en: "45 mins" },
     warranty: { uz: "1–3 yil natija", ru: "Эффект 1–3 года", en: "1–3 years brightness" },
+    materials: {
+      uz: "Philips ZOOM 4 (AQSH) va Shveysariya AirFlow",
+      ru: "Philips ZOOM 4 (США) и порошок AirFlow (Швейцария)",
+      en: "Philips ZOOM 4 (USA) & Swiss EMS AirFlow",
+    },
+    anesthesia: {
+      uz: "Zarurat yo'q (emal qizdirilmaydi, sovuq LED nuri)",
+      ru: "Не требуется (холодный LED-свет без нагрева)",
+      en: "Not required (cold LED light, zero overheating)",
+    },
     highlights: {
       uz: [
         "Emalni qizdirmaydigan sovuq LED nuri va ACP himoya geli",
@@ -217,6 +267,16 @@ export const SERVICES_CATALOG = [
     },
     duration: { uz: "15 – 30 daqiqa", ru: "15 – 30 минут", en: "15 – 30 mins" },
     warranty: { uz: "Tez va shishsiz bitish", ru: "Быстрое заживление", en: "Rapid healing protocol" },
+    materials: {
+      uz: "Atravmatik mikroxirurgiya va steril kollagen gemostatik gubka",
+      ru: "Атравматичная микрохирургия и стерильная коллагеновая губка",
+      en: "Atraumatic microsurgery & sterile collagen healing sponge",
+    },
+    anesthesia: {
+      uz: "Kuchaytirilgan 2 bosqichli mikro-anesteziya (0% og'riq)",
+      ru: "Усиленная двухэтапная анестезия (0% боли)",
+      en: "Reinforced two-stage local anesthesia (0% pain)",
+    },
     highlights: {
       uz: [
         "Kuchaytirilgan anesteziya — jarayon davomida 0% og'riq",
@@ -255,6 +315,16 @@ export const SERVICES_CATALOG = [
     },
     duration: { uz: "2 daqiqa", ru: "2 минуты", en: "2 mins" },
     warranty: { uz: "100% xavfsiz", ru: "100% безопасно", en: "90% lower radiation" },
+    materials: {
+      uz: "Yuqori aniqlikdagi raqamli datchik (90% kam nurlanish)",
+      ru: "Высокоточный цифровой сенсор (на 90% ниже нагрузка)",
+      en: "High-resolution digital sensor (90% lower radiation)",
+    },
+    anesthesia: {
+      uz: "Talab etilmaydi (kontaktsiz va og'riqsiz)",
+      ru: "Не требуется (бесконтактно и безболезненно)",
+      en: "Not required (contactless & painless)",
+    },
     highlights: {
       uz: [
         "Tasvir 2 soniyada kompyuter ekraniga yuqori aniqlikda chiqadi",

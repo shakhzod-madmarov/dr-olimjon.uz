@@ -14,6 +14,7 @@ import {
   IconPhone,
   IconTelegram,
   IconAward,
+  IconSparkleStar,
 } from "../components/MedicalIcons";
 
 const ServiceDetail = () => {
@@ -246,6 +247,54 @@ const ServiceDetail = () => {
           </div>
         </div>
       </div>
+
+      {/* Quick Clinical Facts Table / AEO Answer Capsule */}
+      <section aria-label="Klinik Ko'rsatkichlar" className="bg-[#f8fafc] rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-[#d5e0ec] shadow-xs">
+        <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#285983] mb-3">
+          {lang === "uz" ? "Tezkor Klinik Ko'rsatkichlar" : lang === "ru" ? "Краткая Клиническая Справка" : "Clinical Quick Facts"}
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <div className="bg-white p-3.5 rounded-xl border border-[#d5e0ec]">
+            <div className="flex items-center gap-2 text-[#285983] text-xs font-bold uppercase tracking-wider">
+              <IconClock className="w-4 h-4 text-[#285983] shrink-0" />
+              <span>{lang === "uz" ? "Davomiyligi" : lang === "ru" ? "Длительность" : "Duration"}</span>
+            </div>
+            <p className="mt-1.5 text-sm sm:text-base font-bold text-[#132e53]">
+              {service.duration[lang]}
+            </p>
+          </div>
+
+          <div className="bg-white p-3.5 rounded-xl border border-[#d5e0ec]">
+            <div className="flex items-center gap-2 text-[#285983] text-xs font-bold uppercase tracking-wider">
+              <IconShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+              <span>{lang === "uz" ? "Kafolat" : lang === "ru" ? "Гарантия" : "Warranty"}</span>
+            </div>
+            <p className="mt-1.5 text-sm sm:text-base font-bold text-[#132e53]">
+              {service.warranty[lang]}
+            </p>
+          </div>
+
+          <div className="bg-white p-3.5 rounded-xl border border-[#d5e0ec]">
+            <div className="flex items-center gap-2 text-[#285983] text-xs font-bold uppercase tracking-wider">
+              <IconAward className="w-4 h-4 text-[#285983] shrink-0" />
+              <span>{lang === "uz" ? "Materiallar" : lang === "ru" ? "Материалы" : "Materials"}</span>
+            </div>
+            <p className="mt-1.5 text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
+              {service.materials?.[lang] || "Sertifikatlangan original materiallar"}
+            </p>
+          </div>
+
+          <div className="bg-white p-3.5 rounded-xl border border-[#d5e0ec]">
+            <div className="flex items-center gap-2 text-[#285983] text-xs font-bold uppercase tracking-wider">
+              <IconSparkleStar className="w-4 h-4 text-[#285983] shrink-0" />
+              <span>{lang === "uz" ? "Og'riqsizlantirish" : lang === "ru" ? "Анестезия" : "Anesthesia"}</span>
+            </div>
+            <p className="mt-1.5 text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
+              {service.anesthesia?.[lang] || "100% og'riqsiz anesteziya"}
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Advantages & Procedure Steps */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
