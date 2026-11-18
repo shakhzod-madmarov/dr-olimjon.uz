@@ -12,9 +12,9 @@ export const CLINICS = [
       en: "Andijan · Old City (Eski Shahar)",
     },
     address: {
-      uz: "Andijon shahri, Eski Shahar (Old City), 1-qavat, «Sevdo Denta» klinikasi",
-      ru: "г. Андижан, Эски Шахар (Old City), 1-й этаж, клиника «Sevdo Denta»",
-      en: "Old City (Eski Shahar), 1st Floor, «Sevdo Denta» Clinic, Andijan",
+      uz: "Andijon shahri, Eski Shahar (Old City), Abdurauf Fitrat ko'chasi, 243A-uy, 1-qavat («Sevdo Denta» binosi)",
+      ru: "г. Андижан, Эски Шахар (Old City), улица Абдурауфа Фитрата, 243А, 1-й этаж (здание «Sevdo Denta»)",
+      en: "Old City (Eski Shahar), 243A Abdurauf Fitrat Street, 1st Floor («Sevdo Denta» Building), Andijan",
     },
     hours: {
       uz: "Dushanba – Shanba: 08:00 – 18:00",
@@ -40,7 +40,8 @@ export const CLINICS = [
       google: "https://www.google.com/maps?q=40.785762,72.347208",
       yandex: "https://yandex.uz/maps/-/CXU8fROY",
       yandexOrg: "https://yandex.uz/maps/org/sevdo_denta/157971592658/",
-      yandexBusinessId: "157971592658",
+      yandexBusinessId: "42407498627",
+      yandexSpravId: "42407498627",
     },
   },
 ];
