@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -22,6 +22,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useLanguage } from "./context/LanguageContext";
 import { LANGS, DEFAULT_LANG } from "./utils/language";
+import { YM_COUNTER_ID } from "./utils/analytics";
 
 /* Sync <html lang="..."> with active UI language for SEO and a11y */
 
@@ -34,6 +35,24 @@ const ScrollToTop = () => {
        and "auto" defers to it, which animates the jump across the whole page. */
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [pathname]);
+  return null;
+};
+
+/* Track SPA (Single Page Application) client route transitions in Yandex.Metrika */
+const YandexMetrikaTracker = () => {
+  const { pathname, search } = useLocation();
+  const isFirstRender = useRef(true);
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    if (typeof window !== "undefined" && typeof window.ym === "function") {
+      window.ym(YM_COUNTER_ID, "hit", window.location.href);
+    }
+  }, [pathname, search]);
+
   return null;
 };
 
@@ -65,6 +84,7 @@ const AppShell = () => {
       </a>
       <LangSync />
       <ScrollToTop />
+      <YandexMetrikaTracker />
       <ToastContainer
         position="top-right"
         autoClose={4000}

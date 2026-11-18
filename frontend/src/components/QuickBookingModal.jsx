@@ -21,6 +21,7 @@ import {
   fetchAvailableSlots,
   submitMedinsonBooking,
 } from "../lib/medinsonBooking";
+import { reachYmGoal } from "../utils/analytics";
 
 const SERVICE_OPTIONS = [
   {
@@ -247,6 +248,10 @@ const QuickBookingModal = ({
         lang,
       });
 
+      reachYmGoal("booking_submit", {
+        service: currentService?.id || "quick_modal",
+        date: activeDayObj?.date || selectedDate,
+      });
       setBookingResponse(result);
       setSubmitted(true);
     } catch (err) {

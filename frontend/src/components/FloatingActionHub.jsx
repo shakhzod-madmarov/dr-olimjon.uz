@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import { PRIMARY_CLINIC } from "../constants/clinics";
+import { reachYmGoal } from "../utils/analytics";
 import { IconTelegram, IconInstagram, IconYandex, IconPhone } from "./MedicalIcons";
 import { getA11yLabels } from "../constants/a11yLabels";
 
@@ -50,6 +51,7 @@ const FloatingActionHub = () => {
               href={PRIMARY_CLINIC.telegram}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => reachYmGoal("telegram_click")}
               className="flex items-center gap-2.5 bg-[#285983] hover:bg-[#132e53] text-white px-4 py-2.5 rounded-xl shadow-md text-xs font-semibold transition-colors max-w-[calc(100vw-3rem)] truncate touch-manipulation"
             >
               <IconTelegram className="w-4 h-4 text-white shrink-0" />
@@ -66,6 +68,7 @@ const FloatingActionHub = () => {
               href={PRIMARY_CLINIC.instagram}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => reachYmGoal("instagram_click")}
               className="flex items-center gap-2.5 bg-[#132e53] hover:bg-[#285983] text-white px-4 py-2.5 rounded-xl shadow-md text-xs font-semibold transition-colors max-w-[calc(100vw-3rem)] truncate touch-manipulation"
             >
               <IconInstagram className="w-4 h-4 text-white shrink-0" />
@@ -76,6 +79,7 @@ const FloatingActionHub = () => {
               href={PRIMARY_CLINIC.maps.yandex}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => reachYmGoal("yandex_maps_click")}
               className="flex items-center gap-2.5 bg-white hover:bg-[#f2f6fa] text-[#132e53] border border-[#d5e0ec] px-4 py-2.5 rounded-xl shadow-md text-xs font-semibold transition-colors max-w-[calc(100vw-3rem)] truncate touch-manipulation"
             >
               <IconYandex className="w-4 h-4 shrink-0" />
@@ -90,6 +94,7 @@ const FloatingActionHub = () => {
 
             <a
               href={`tel:${PRIMARY_CLINIC.phoneRaw}`}
+              onClick={() => reachYmGoal("phone_click")}
               className="flex items-center gap-2.5 bg-[#132e53] hover:bg-[#285983] text-white px-4 py-2.5 rounded-xl shadow-md text-xs font-semibold transition-colors max-w-[calc(100vw-3rem)] truncate touch-manipulation"
             >
               <IconPhone className="w-4 h-4 text-white shrink-0" />
@@ -101,6 +106,7 @@ const FloatingActionHub = () => {
         <div className="flex items-center gap-2">
           <a
             href={`tel:${PRIMARY_CLINIC.phoneRaw}`}
+            onClick={() => reachYmGoal("phone_click")}
             className="hidden sm:flex items-center gap-2 bg-white text-[#132e53] hover:bg-[#f2f6fa] px-4 py-2.5 rounded-xl shadow-luxury border border-[#d5e0ec] text-xs font-bold transition-colors touch-manipulation"
           >
             <IconPhone className="w-3.5 h-3.5 text-[#285983]" />

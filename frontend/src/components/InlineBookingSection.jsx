@@ -22,6 +22,7 @@ import {
   handleUzPhonePaste,
 } from "../utils/phone";
 import { CLASSIC_SERVICES } from "../constants/bookingServices";
+import { reachYmGoal } from "../utils/analytics";
 
 /* ── Helpers ─────────────────────────────────────────────────────────── */
 
@@ -397,6 +398,7 @@ const InlineBookingSection = ({
           .catch(() => setBotQr(""));
       }
 
+      reachYmGoal("booking_submit", { service: serviceLabel, date: selectedDate });
       setIsSuccess(true);
       loadAvailability();
       confetti({
