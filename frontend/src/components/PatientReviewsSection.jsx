@@ -178,7 +178,7 @@ const PatientReviewsSection = () => {
               <span>{t.btnYandexReview}</span>
             </a>
             <a
-              href={PRIMARY_CLINIC.maps.google}
+              href={PRIMARY_CLINIC.maps.googleReview || PRIMARY_CLINIC.maps.google}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#f2f6fa] hover:bg-[#e4edf5] border border-[#d5e0ec] text-xs font-semibold text-slate-800 transition-colors"

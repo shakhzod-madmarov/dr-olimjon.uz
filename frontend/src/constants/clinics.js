@@ -38,6 +38,8 @@ export const CLINICS = [
     },
     maps: {
       google: "https://www.google.com/maps?q=40.785762,72.347208",
+      googleReview: "https://g.page/r/CRe-TP_QxEP-EBM/review",
+      googleBusinessId: "15286333300409079416",
       yandex: "https://yandex.uz/maps/-/CXU8fROY",
       yandexOrg: "https://yandex.uz/maps/org/sevdo_denta/157971592658/",
       yandexBusinessId: "42407498627",
