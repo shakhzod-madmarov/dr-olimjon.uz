@@ -41,6 +41,30 @@ export const SERVICE_FAQS = {
         en: "These nano-hybrid composites are globally recognized as gold standards: they resist shrinkage, do not discolor, and match the abrasion resistance of natural enamel. With regular oral hygiene, they last 5 to 10+ years with full clinical warranty.",
       },
     },
+    {
+      q: {
+        uz: "Tishimda qora dog' yoki teshik paydo bo'ldi, lekin og'rimayapti — uni davolatish shartmi?",
+        ru: "Появилась черная точка или дырка в зубе, но он не болит — нужно ли лечить?",
+        en: "A dark spot or small cavity appeared, but it doesn't hurt yet — do I still need to treat it?",
+      },
+      a: {
+        uz: "Ha, albatta! Karies dastlabki bosqichida tish emalida bo'ladi va hech qanday og'riq bermaydi. Agar og'riq boshlansa, bu infeksiya allaqachon tish nerviga (pulpaga) yetib borganini bildiradi. Og'riq boshlanmasidan oldin davolash — tish nervini tirik saqlab qolish va muolajani ancha tez hamda arzon yakunlash imkonini beradi.",
+        ru: "Да, обязательно! На ранних стадиях кариес поражает только эмаль и дентин, не затрагивая нерв, поэтому зуб не болит. Когда появляется острая боль — это значит, что инфекция дошла до пульпы (нерва). Лечение на ранней стадии позволяет сохранить зуб живым, избежать удаления нерва и сэкономить деньги.",
+        en: "Yes, absolutely! In early stages, decay only affects enamel and dentin without reaching the nerve, causing zero pain. When acute pain starts, infection has already invaded the dental pulp. Treating it early keeps the nerve alive, prevents root canal therapy, and is far quicker and more cost-effective.",
+      },
+    },
+    {
+      q: {
+        uz: "Tish nervi olinsa (depultatsiya), tish tezda sinib ketmaydimi yoki qoraymaydimi?",
+        ru: "Если удалить нерв из зуба, потемнеет ли он и не сломается ли со временем?",
+        en: "If a tooth nerve is removed (root canal), will the tooth discolor or become brittle?",
+      },
+      a: {
+        uz: "Zamonaviy stomatologiyada Dr. Olimjon kanalni mikron aniqlikdagi apeks-lokator nazoratida tozalab, 3D gipogidridli bio-obturatsiya qiladi. Tish devorlari mustahkam kompozit restavratsiya yoki tsirkoniy karonka bilan himoyalanganda, bunday tish o'zining tabiiy rangini saqlab qoladi va 10–15 yil bemalol xizmat qiladi.",
+        ru: "В нашей клинике каналы пломбируются под контролем апекслокатора современными биосовместимыми силлерами без токсичных паст старого поколения (резорцин-формалина), поэтому зуб не темнеет и не становится розовым. При необходимости зуб укрепляется штифтом или циркониевой коронкой, предотвращающей сколы.",
+        en: "At our clinic, root canals are sanitized under electronic apex-locator guidance and sealed with biocompatible resin sealers rather than staining legacy pastes. The tooth retains natural aesthetics and, when reinforced with a composite core or zirconia crown, functions securely for decades.",
+      },
+    },
   ],
   ortopediya: [
     {
@@ -77,6 +101,18 @@ export const SERVICE_FAQS = {
         uz: "Yo'q, mutlaqo! CAD/CAM 3D kompyuter modellashtirish orqali karonka tishga mikron aniqlikda yopishadi. Oziq-ovqat qoldiqlari yoki bakteriyalar karonka ostiga kirmaydi, milk bilan mukammal tutashadi va milk doimo tabiiy pushti rangda saqlanadi.",
         ru: "Нет, абсолютно исключено! Благодаря цифровой CAD/CAM фрезеровке коронка прилегает к культе зуба с микронной точностью. Под неё не попадают бактерии и пища, десна остаётся здоровой, розовой, без малейшего неприятного запаха.",
         en: "No, never! Thanks to precision CAD/CAM digital milling, the crown fits with microscopic margin accuracy. Bacteria and food debris cannot enter underneath, preserving healthy pink gums with zero odor.",
+      },
+    },
+    {
+      q: {
+        uz: "Tishim butunlay sinib, faqat ildizi qolgan bo'lsa, uni sug'urtirmasdan karonka bilan qutqarib qolsa bo'ladimi?",
+        ru: "Если зуб полностью сломался под корень, можно ли спасти его коронкой без удаления?",
+        en: "If a tooth broke down to the gumline and only the root remains, can it be saved with a crown?",
+      },
+      a: {
+        uz: "Ha, ko'p hollarda ildiz sog'lom bo'lsa, uni sug'urishga aslo shoshilmang! Dr. Olimjon ildiz ichiga individual kultavaya vkladka (tish asosi) o'rnatib, ustiga monolit tsirkoniy karonka kiydiradi. Bu sizning o'z tabiiy tishingiz ildizini saqlab qolish va tish qatorini bus-butun tiklashning eng yaxshi usulidir.",
+        ru: "Да, если корень устойчив и не воспален, удалять его не нужно! Д-р Олимжон укрепляет корень индивидуальной культевой вкладкой и фиксирует циркониевую коронку. Это позволяет спасти собственный корень зуба и избежать хирургического удаления.",
+        en: "Yes, if the root structure is intact and non-infected, extraction can be avoided! Dr. Olimjon places a custom post-and-core buildup inside the root and seals it with a monolithic zirconia crown. Preserving your natural root is always the preferred clinical choice.",
       },
     },
   ],
@@ -155,6 +191,18 @@ export const SERVICE_FAQS = {
         en: "Clinical success for modern biocompatible titanium implants exceeds 99%. Because we assess bone volume and density using digital imaging before placement, risks are negligible. Each patient receives an official implant serial passport and warranty.",
       },
     },
+    {
+      q: {
+        uz: "Tish olingan kuni o'sha zahotiyoq o'rniga yangi implant qo'ysa bo'ladimi (bir bosqichli implantatsiya)?",
+        ru: "Можно ли поставить имплант сразу в день удаления разрушенного зуба (одномоментная имплантация)?",
+        en: "Can an implant be placed immediately on the day of tooth extraction (immediate implant placement)?",
+      },
+      a: {
+        uz: "Ha, agar ildiz atrofida o'tkir yiringli yallig'lanish bo'lmasa, bir bosqichli (odnomomentnaya) implantatsiya eng mukammal yechimdir! Kasal tish ehtiyotkorlik bilan olinadi va o'sha teshikning o'ziga darhol Osstem yoki Straumann biotitan vinti o'rnatiladi. Natijada siz ikki marta jarrohlikka kirmaysiz, vaqtingiz va jag' suyagi hajmi tejaladi.",
+        ru: "Да, при отсутствии острого гнойного воспаления одномоментная имплантация является золотым стандартом! Не подлежащий восстановлению зуб атравматично удаляется, и в ту же лунку сразу устанавливается биосовместимый имплантат. Вы экономите время и сохраняете естественный объём кости.",
+        en: "Yes, provided there is no acute infection, immediate implant placement is the gold standard! The non-restorable tooth is atraumatically removed, and a titanium implant (Osstem or Straumann) is placed into the extraction socket immediately. This eliminates a second surgery and preserves vital bone volume.",
+      },
+    },
   ],
   "tish-oqartirish": [
     {
@@ -229,6 +277,18 @@ export const SERVICE_FAQS = {
         uz: "Avval raqamli viziograf rentgen orqali ildizning egri-bugriligi va chuqurligi aniqlanadi. So'ngra nozik mikro-jarrohlik asboblari yordamida suyak devorlariga tegmasdan ildiz ehtiyotkorlik bilan chiqariladi.",
         ru: "Сначала делается прицельный цифровой снимок для оценки анатомии корня. Затем с помощью микрохирургических инструментов корень бережно извлекается без повреждения костной ткани.",
         en: "First, a high-resolution digital X-ray is captured to assess root curvature and depth. Micro-surgical elevators then gently mobilize the root fragment without sacrificing surrounding bone.",
+      },
+    },
+    {
+      q: {
+        uz: "Tish oldirgandan so'ng og'izni chayqash mumkinmi va birinchi sutkada nimalar qilish taqiqlanadi?",
+        ru: "Можно ли полоскать рот после удаления зуба и что категорически нельзя делать в первые сутки?",
+        en: "Can I rinse my mouth after tooth extraction and what is strictly prohibited on day one?",
+      },
+      a: {
+        uz: "Birinchi 24 soatda og'izni kuchli chayqash QAT'IYAN TAQIQLANADI! Tish o'rnida hosil bo'lgan qon laxtasi (tromb) suyakni infeksiyadan himoya qiladi. Agar u chayqab tashlansa, og'riqli «quruq teshik» (alveolit) yuzaga keladi. Shuningdek, issiq hammom, issiq ovqat va ichimliklar, spirt hamda tamakidan 2–3 kun saqlanish zarur.",
+        ru: "В первые 24 часа полоскать рот КАТЕГОРИЧЕСКИ НЕЛЬЗЯ! В лунке должен сформироваться кровяной сгусток, защищающий кость от бактерий. При вымывании сгустка развивается болезненный альвеолит. Также в первые дни исключите горячую пищу, баню, физические нагрузки и курение.",
+        en: "Vigorous rinsing is STRICTLY PROHIBITED in the first 24 hours! The protective blood clot in the socket shields underlying bone from bacteria. Rinsing it away leads to a painful dry socket (alveolitis). Also avoid hot foods/baths, heavy workouts, alcohol, and smoking for 48 hours.",
       },
     },
   ],

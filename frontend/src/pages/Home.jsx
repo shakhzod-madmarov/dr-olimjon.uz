@@ -12,6 +12,7 @@ import { PAGE_SEO, PAGE_KEYWORDS } from "../constants/seo";
 import Seo from "../components/Seo";
 import InlineBookingSection from "../components/InlineBookingSection";
 import PatientReviewsSection from "../components/PatientReviewsSection";
+import DentalSymptomGuide from "../components/DentalSymptomGuide";
 import ClinicLocationMap from "../components/ClinicLocationMap";
 import FaqAccordion from "../components/FaqAccordion";
 import { FAQ_ITEMS } from "../constants/faq";
@@ -786,7 +787,7 @@ const DoctorBioSpotlight = () => {
 /* ═══════════════════════════════════════════════════════════════════
    MAIN HOME COMPONENT
    ═══════════════════════════════════════════════════════════════════ */
-const Home = () => {
+const Home = ({ onOpenBooking }) => {
   const { lang } = useLanguage();
   const seo = PAGE_SEO.home[lang] || PAGE_SEO.home.uz;
   const faqSchema = buildFaqSchema(FAQ_ITEMS, lang);
@@ -802,6 +803,7 @@ const Home = () => {
       <HeroSection />
       <ClinicalPillars />
       <ServicesOverview />
+      <DentalSymptomGuide onOpenBooking={onOpenBooking} />
       <DoctorBioSpotlight />
       <div className="py-6">
         <InlineBookingSection sectionId="booking" />

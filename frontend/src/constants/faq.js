@@ -147,4 +147,76 @@ export const FAQ_ITEMS = [
       en: "Pricing at Dr. Olimjon's clinic is fully transparent: a detailed estimate is provided following your clinical exam and digital X-ray before any work starts. You can also calculate your treatment cost using our interactive 3D calculator directly on the website.",
     },
   },
+  {
+    q: {
+      uz: "Tishim kechasi lo'qillab og'riyapti, og'riq qoldiruvchi dorilar yordam bermayapti — nima qilishim kerak?",
+      ru: "Что делать, если зуб сильно ноет и пульсирует ночью, а обезболивающие не помогают?",
+      en: "What should I do if my tooth is throbbing intensely at night and painkillers don't help?",
+    },
+    a: {
+      uz: "Kechasi kuchayuvchi o'tkir lo'qillash — tish nervining yallig'lanishi (o'tkir pulpit) belgisidir. Uy sharoitida issiq kompress qilish qat'iyan taqiqlanadi (yiringni kuchaytiradi). Iloji boricha tezroq Dr. Olimjon qabuliga yoziling (+998 94 001-01-56). Klinikamizda 2 bosqichli og'riqsiz anesteziya yordamida o'tkir og'riq 1-tashrifdayoq to'liq bartaraf etiladi va nerv apeks-lokator nazoratida tozalab davolanadi.",
+      ru: "Пульсирующая ночная боль свидетельствует об остром воспалении нерва зуба (пульпите). Ни в коем случае не грейте щеку — тепло ускоряет развитие гнойного процесса. Срочно свяжитесь с клиникой Д-ра Олимжона (+998 94 001-01-56). Мы снимем острую боль за один визит с помощью современной двухэтапной анестезии и бережно пролечим каналы под контролем апекслокатора.",
+      en: "Throbbing nocturnal tooth pain is a classic sign of acute pulpitis (nerve inflammation). Never apply heat to the area as warmth promotes infection. Contact Dr. Olimjon immediately (+998 94 001-01-56). With our advanced two-step anesthesia protocol, acute pain is stopped completely within the first visit, and the root canal is gently sanitized under apex-locator control.",
+    },
+  },
+  {
+    q: {
+      uz: "Muzdek suv yoki issiq choy ichganda tishlar qamashishi va simillab og'rishi nimadan bo'ladi?",
+      ru: "Почему зубы резко реагируют на холодную воду или горячий чай (ломота и чувствительность)?",
+      en: "Why do my teeth ache or feel sharp sensitivity when drinking cold water or hot tea?",
+    },
+    a: {
+      uz: "Tish qamashishi (giperesteziya) odatda tish emalining yemirilishi, tish toshlari sababli milk chekinishi (bo'yin ochilishi) yoki yashirin kariesdan darak beradi. Shifokor ko'rigida sabab aniqlanib, mikro-karies bo'lsa Germaniya fotopolimeri (3M Filtek) bilan plombalanadi yoki emal maxsus remineralizatsiyalovchi ftor-preparatlari bilan mustahkamlanadi.",
+      ru: "Повышенная чувствительность (гиперестезия) возникает из-за истончения эмали, оголения шеек зубов при зубном камне или скрытого пришеечного кариеса. На осмотре врач определяет точную причину: при кариесе ставится световая нано-пломба 3M Filtek, а при микротрещинах проводится глубокое фторирование эмали.",
+      en: "Tooth sensitivity (hyperesthesia) is caused by enamel thinning, gum recession exposing tooth necks, or hidden cervical cavities. During examination, Dr. Olimjon diagnoses the root cause: cavities are restored with authentic 3M Filtek composites, while enamel micro-defects are treated with deep remineralization therapy.",
+    },
+  },
+  {
+    q: {
+      uz: "Tishim sinib ketdi yoki eski plomba tushib qoldi — tishni sug'urtirmasdan saqlab qolish mumkinmi?",
+      ru: "Откололся зуб или выпала старая пломба — можно ли спасти зуб без удаления?",
+      en: "A tooth broke or an old filling fell out — can the tooth still be saved without extraction?",
+    },
+    a: {
+      uz: "Ha, 95% holatlarda tishni saqlab qolish mumkin! Agar tishning bir qismi yoki butun devori singan bo'lsa, Dr. Olimjon ildizni saqlab qolgan holda mikroskopik aniqlikdagi shtift yoki kultavaya vkladka o'rnatadi va ustiga monolit tsirkoniy karonka yoki badiiy restavratsiya qo'yadi. Asosiy qoida — qancha tez shifokorga kelsangiz, tishni saqlash ehtimoli shuncha yuqori bo'ladi.",
+      ru: "Да, в 95% случаев зуб можно спасти! Даже если откололась большая часть коронковой части, Д-р Олимжон сохраняет корень: укрепляет его культевой вкладкой или штифтом и восстанавливает анатомию циркониевой коронкой или композитной реставрацией. Главное — не затягивать с визитом к врачу.",
+      en: "Yes, in 95% of cases the tooth can be saved! Even with significant coronal breakage, Dr. Olimjon preserves the root foundation by placing a supportive core and rebuilding the tooth with a monolithic zirconia crown or cosmetic composite. The sooner you visit, the better the tooth can be preserved.",
+    },
+  },
+  {
+    q: {
+      uz: "Tish yuvayotganda milkdan qon kelishi va og'izdan noxush hid paydo bo'lishining sababi nima?",
+      ru: "Почему кровоточат десны при чистке зубов и появляется неприятный запах изо рта?",
+      en: "Why do gums bleed during brushing and what causes chronic bad breath?",
+    },
+    a: {
+      uz: "Milk qonashi va og'izdan hid kelishining 90% sababi — tishlar orasida va milk ostida yig'ilib qolgan qattiq tish toshlari (kamen) hamda bakterial karashdir. Bu gingivit va periodontitga olib keladi. Ultratovushli apparat va AirFlow tozalash yordamida tish toshlari 30 daqiqada og'riqsiz tozalanadi, milk yallig'lanishi butunlay to'xtaydi.",
+      ru: "В 90% случаев кровоточивость и запах вызваны поддесневыми зубными камнями и бактериальным налётом, вызывающими гингивит и пародонтит. С помощью ультразвукового скейлинга и аппарата AirFlow налет и камни удаляются безболезненно за 30 минут, после чего десна полностью восстанавливается.",
+      en: "Over 90% of bleeding and breath odor cases stem from subgingival tartar and bacterial biofilm triggering gingivitis. Ultrasonic scaling and AirFlow polishing gently remove all hard deposits in a 30-minute session, completely halting inflammation and restoring fresh breath.",
+    },
+  },
+  {
+    q: {
+      uz: "Tish tushib ketganidan keyin qancha vaqt ichida yangi tish (implant yoki karonka) qo'ydirish kerak?",
+      ru: "Через какое время после потери зуба необходимо поставить новый имплант или мост?",
+      en: "How soon after losing a tooth should an implant or bridge be placed?",
+    },
+    a: {
+      uz: "Tish yo'qotilgach, jag' suyagi 3–6 oy ichida yemirila (kichraya) boshlaydi va qo'shni tishlar bo'shliq tomon qiyshayib siljiydi. Shuning uchun tish olingandan so'ng 2–4 oy ichida biotitan implant (Osstem) yoki tsirkoniy ko'prik qo'ydirish eng optimal davr hisoblanadi. Bu suyak hajmini va yuz shaklini tabiiy saqlab qoladi.",
+      ru: "После удаления зуба костная ткань начинает атрофироваться уже через 3–6 месяцев, а соседние зубы наклоняются в сторону дефекта. Оптимальный срок для имплантации (Osstem) или установки циркониевого моста — через 2–4 месяца. Это предотвращает потерю кости и деформацию прикуса.",
+      en: "Following tooth loss, jawbone naturally atrophies within 3 to 6 months, and neighboring teeth shift into the gap. Placing an Osstem titanium implant or zirconia bridge within 2 to 4 months is ideal to prevent bone resorption, bite collapse, and facial changes.",
+    },
+  },
+  {
+    q: {
+      uz: "Tish shifokoriga borishdan juda qo'rqaman: davolash va ukol qilish og'riqlimi?",
+      ru: "Очень боюсь стоматологов: больно ли лечить зубы и делать укол в десну?",
+      en: "I have severe dental anxiety: is dental treatment and gum numbing painful?",
+    },
+    a: {
+      uz: "Dr. Olimjon kabinetiga kelgan bemorlarning 70% dan ortig'i bolalikdagi qo'rquv bilan kelishadi. Biz bu qo'rquvni to'liq yo'qotamiz: ukol qilinadigan milk avval maxsus mevali muzlatuvchi gel bilan og'riqsizlantiriladi — siz ukol ignasini umuman sezmaysiz. Barcha muolajalar qulay, sokin muhitda, sizning to'liq nazoratingiz ostida o'tadi.",
+      ru: "Более 70% наших пациентов приходят с детским страхом перед бормашиной. Мы полностью развеиваем эти опасения: перед уколом десна обезболивается ароматным охлаждающим гелем, так что укол не чувствуется совсем. Лечение проходит в спокойной, доброжелательной атмосфере.",
+      en: "Over 70% of our patients arrive with past dental phobias. We completely eliminate that fear: a soothing fruit-flavored topical gel numbs the gum prior to local injection so you feel zero needle sensation. Treatment proceeds at your pace in a serene, supportive setting.",
+    },
+  },
 ];
