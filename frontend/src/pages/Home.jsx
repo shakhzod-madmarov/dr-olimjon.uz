@@ -11,6 +11,7 @@ import {
 import { PAGE_SEO, PAGE_KEYWORDS } from "../constants/seo";
 import Seo from "../components/Seo";
 import InlineBookingSection from "../components/InlineBookingSection";
+import PatientReviewsSection from "../components/PatientReviewsSection";
 import ClinicLocationMap from "../components/ClinicLocationMap";
 import FaqAccordion from "../components/FaqAccordion";
 import { FAQ_ITEMS } from "../constants/faq";
@@ -805,6 +806,7 @@ const Home = () => {
       <div className="py-6">
         <InlineBookingSection sectionId="booking" />
       </div>
+      <PatientReviewsSection />
       <FaqAccordion />
       <ClinicLocationMap />
     </div>
