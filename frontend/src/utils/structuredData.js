@@ -86,8 +86,9 @@ const PROCEDURE_MEDICAL_CODES = {
  * @param {object} service
  * @param {string} lang
  * @param {Array<{ name: string, path: string }>} breadcrumbs
+ * @param {Array<{ q: Record<string, string>, a: Record<string, string> }>} faqs
  */
-export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = []) => {
+export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = [], faqs = []) => {
   const serviceUrl = urlFor(`/services/${service.id}`, lang);
   const breadcrumbObj = breadcrumbs.length > 0 ? buildBreadcrumbSchema(breadcrumbs, lang) : null;
   const medCode = PROCEDURE_MEDICAL_CODES[service.id];
@@ -159,16 +160,27 @@ export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = 
     },
   };
 
-  if (breadcrumbObj) {
-    return {
-      "@context": "https://schema.org",
-      "@graph": [breadcrumbObj, procedure],
-    };
-  }
+  const faqObj = faqs && faqs.length > 0 ? {
+    "@type": "FAQPage",
+    "@id": `${serviceUrl}#faq`,
+    "mainEntity": faqs.map((item) => ({
+      "@type": "Question",
+      "name": item.q[lang] || item.q.uz,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a[lang] || item.a.uz,
+      },
+    })),
+  } : null;
+
+  const graph = [];
+  if (breadcrumbObj) graph.push(breadcrumbObj);
+  graph.push(procedure);
+  if (faqObj) graph.push(faqObj);
 
   return {
     "@context": "https://schema.org",
-    ...procedure,
+    "@graph": graph,
   };
 };
 

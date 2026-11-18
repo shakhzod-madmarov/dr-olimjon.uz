@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useLanguage, useLocalizedPath } from "../context/LanguageContext";
 import { SERVICES_CATALOG } from "../constants/servicesCatalog";
+import { SERVICE_FAQS } from "../constants/serviceFaq";
 import { DOCTOR_INFO, getExperienceBadge } from "../constants/doctor";
 import { getPageSeo, PAGE_KEYWORDS, SERVICE_KEYWORDS, SITE_ORIGIN } from "../constants/seo";
 import Seo from "../components/Seo";
@@ -115,7 +117,9 @@ const ServiceDetail = () => {
       path: `/services/${service.id}`,
     },
   ];
-  const procedureSchema = buildMedicalProcedureSchema(service, lang, breadcrumbs);
+  const [openFaqIdx, setOpenFaqIdx] = useState(0);
+  const faqs = SERVICE_FAQS[service.id] || [];
+  const procedureSchema = buildMedicalProcedureSchema(service, lang, breadcrumbs, faqs);
   const serviceSeo = getPageSeo(service.id, lang);
   const resolvedTitle = serviceSeo?.title || `${service.title[lang]} — ${seoSuffix}`;
   const resolvedDesc = serviceSeo?.description || service.shortDesc[lang];
@@ -299,6 +303,69 @@ const ServiceDetail = () => {
           </div>
         </div>
       </div>
+
+      {/* Service-Specific FAQ Section */}
+      {faqs.length > 0 && (
+        <section className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-sm space-y-4 sm:space-y-6">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#285983]">
+              {lang === "uz"
+                ? "Tez-tez So'raladigan Savollar"
+                : lang === "ru"
+                ? "Частые Вопросы по Процедуре"
+                : "Procedure FAQs"}
+            </p>
+            <h2 className="mt-1 font-serif-classic text-xl sm:text-2xl font-bold text-[#132e53]">
+              {lang === "uz"
+                ? `${service.title[lang]} Haqida Ko'p Beriladigan Savollar`
+                : lang === "ru"
+                ? `Вопросы и Ответы: ${service.title[lang]}`
+                : `Frequently Asked Questions: ${service.title[lang]}`}
+            </h2>
+          </div>
+
+          <div className="space-y-3">
+            {faqs.map((item, idx) => {
+              const isOpen = openFaqIdx === idx;
+              return (
+                <div
+                  key={idx}
+                  className={`rounded-xl border transition-colors duration-150 ${
+                    isOpen
+                      ? "bg-[#f2f6fa] border-[#285983]"
+                      : "bg-[#f8fafc] border-[#d5e0ec] hover:bg-slate-50"
+                  }`}
+                >
+                  <button
+                    type="button"
+                    onClick={() => setOpenFaqIdx(isOpen ? -1 : idx)}
+                    className="w-full px-4 py-3 sm:py-3.5 text-left flex items-center justify-between gap-3 cursor-pointer"
+                  >
+                    <span className="text-sm sm:text-base font-bold text-[#132e53]">
+                      {item.q[lang]}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className={`w-6 h-6 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 transition-transform duration-200 ${
+                        isOpen
+                          ? "bg-[#132e53] text-white rotate-45"
+                          : "bg-white text-[#132e53] border border-[#d5e0ec]"
+                      }`}
+                    >
+                      +
+                    </span>
+                  </button>
+                  {isOpen && (
+                    <div className="px-4 pb-4 pt-2 text-sm text-slate-700 leading-relaxed border-t border-[#d5e0ec]">
+                      {item.a[lang]}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       {/* Other Services Navigation */}
       <div className="pt-4">
