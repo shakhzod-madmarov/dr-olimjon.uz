@@ -812,5 +812,31 @@ def main():
             f.write(html_content)
         print(f"Generated: {dist_target}")
 
+    # Generate standalone PDF via headless Edge
+    import subprocess, tempfile, shutil
+    edge_path = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+    if os.path.exists(edge_path):
+        pdf_public = os.path.abspath("frontend/public/review-stand-dr-olimjon.pdf")
+        user_data = os.path.join(tempfile.gettempdir(), "edge_pdf_profile")
+        cmd = [
+            edge_path,
+            "--headless=new",
+            "--disable-gpu",
+            f"--user-data-dir={user_data}",
+            f"--print-to-pdf={pdf_public}",
+            "--no-pdf-header-footer",
+            f"file:///{public_target}"
+        ]
+        try:
+            res = subprocess.run(cmd, capture_output=True, text=True, timeout=15)
+            if os.path.exists(pdf_public):
+                print(f"Generated PDF: {pdf_public} ({os.path.getsize(pdf_public)} bytes)")
+                if os.path.exists(dist_dir):
+                    pdf_dist = os.path.join(dist_dir, "review-stand-dr-olimjon.pdf")
+                    shutil.copy2(pdf_public, pdf_dist)
+                    print(f"Copied PDF to: {pdf_dist}")
+        except Exception as e:
+            print(f"PDF generation note: {e}")
+
 if __name__ == "__main__":
     main()
