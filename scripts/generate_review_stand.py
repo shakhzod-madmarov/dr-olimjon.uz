@@ -1,4 +1,5 @@
 import os
+import base64
 import qrcode
 import qrcode.image.svg
 
@@ -27,9 +28,19 @@ def generate_svg_qr(url):
     return svg_str
 
 def main():
-    # Target URLs: specifically for Dentist Olimjon Murzajanov
+    # Load doctor portrait as Base64 Data URI for 100% reliable offline/PDF rendering
+    portrait_path = os.path.abspath("frontend/public/dr_olimjon_portrait.webp")
+    portrait_data_uri = ""
+    if os.path.exists(portrait_path):
+        with open(portrait_path, "rb") as f:
+            b64_img = base64.b64encode(f.read()).decode("utf-8")
+            portrait_data_uri = f"data:image/webp;base64,{b64_img}"
+    
+    # Target URLs:
+    # 1. Google Maps Review Dialog (Verified working)
     google_url = "https://g.page/r/CRe-TP_QxEP-EBM/review"
-    yandex_url = "https://yandex.uz/maps/org/42407498627/reviews/"
+    # 2. Yandex Maps Live Organization Reviews Tab (Verified live HTTP 200 OK, not empty!)
+    yandex_url = "https://yandex.uz/maps/org/sevdo_denta/157971592658/reviews/"
     
     google_qr_svg = generate_svg_qr(google_url)
     yandex_qr_svg = generate_svg_qr(yandex_url)
@@ -201,29 +212,30 @@ def main():
     }}
 
     .brand-logo {{
-      width: 62px;
-      height: 62px;
-      border-radius: 14px;
-      background: white;
-      box-shadow: 0 4px 12px rgba(19, 46, 83, 0.12);
-      border: 1.5px solid #cbd5e1;
-      padding: 4px;
+      width: 66px;
+      height: 66px;
+      border-radius: 16px;
+      background: #f1f5f9;
+      box-shadow: 0 4px 12px rgba(19, 46, 83, 0.14);
+      border: 2px solid #38bdf8;
+      overflow: hidden;
+      flex-shrink: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
     }}
 
-    .brand-logo svg, .brand-logo img {{
+    .brand-logo img {{
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }}
 
     .brand-titles h1 {{
       font-size: 23px;
       font-weight: 900;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.3px;
       color: var(--navy-800);
       line-height: 1.15;
     }}
@@ -254,9 +266,10 @@ def main():
     }}
 
     .header-contacts .phone {{
-      font-size: 14px;
-      font-weight: 800;
+      font-size: 15px;
+      font-weight: 900;
       color: var(--navy-800);
+      letter-spacing: 0.2px;
     }}
 
     .header-contacts .address {{
@@ -639,18 +652,17 @@ def main():
         <header class="clinic-header">
           <div class="brand-left">
             <div class="brand-logo">
-              <!-- Doctor Olimjon portrait / Clinic smiling tooth logo -->
-              <img src="/dr_olimjon_portrait.webp" alt="Dr. Olimjon Murzajanov" style="border-radius: 10px;" onerror="this.onerror=null; this.src='/favicon.svg';" />
+              <!-- Dr. Olimjon Portrait (Base64 embedded) -->
+              <img src="{portrait_data_uri}" alt="Dr. Olimjon Murzajanov" />
             </div>
             <div class="brand-titles">
               <h1>DR. OLIMJON MURZAJANOV</h1>
               <div class="doctor-spec">Dentist Olimjon • Shifokor-Implantolog, Ortoped</div>
-              <div class="doctor-clinic">«Sevdo Denta» stomatologiya binosida • Врач-стоматолог</div>
+              <div class="doctor-clinic">«Sevdo Denta» stomatologiya markazi</div>
             </div>
           </div>
           <div class="header-contacts">
             <div class="phone">📞 +998 94 001-01-56</div>
-            <div class="phone" style="font-size: 12px; color: var(--slate-600);">+998 90 253-06-00</div>
             <div class="address">📍 Andijon sh., Abdurauf Fitrat ko'chasi, 243A</div>
           </div>
         </header>
@@ -690,8 +702,8 @@ def main():
               </span>
               <span class="badge-text">Google Maps</span>
             </div>
-            <div class="card-action-title">Google da Dr. Olimjonni baholash</div>
-            <div class="card-action-ru">Оценить Dr. Olimjon в Google Maps</div>
+            <div class="card-action-title">Google da baholash</div>
+            <div class="card-action-ru">Оставить отзыв в Google Maps</div>
             
             <div class="qr-code-box">
               {google_qr_svg}
@@ -704,10 +716,10 @@ def main():
               </svg>
               Kamerani qarating
             </div>
-            <div class="card-link-preview">Google: Dentist Olimjon Murzajanov</div>
+            <div class="card-link-preview">g.page/r/CRe-TP_QxEP-EBM/review</div>
           </div>
 
-          <!-- Card 2: Yandex Reviews -->
+          <!-- Card 2: Yandex Reviews (Verified Live Sevdo Denta Reviews URL) -->
           <div class="qr-card yandex-card">
             <div class="card-service-badge">
               <span class="badge-icon">
@@ -719,8 +731,8 @@ def main():
               </span>
               <span class="badge-text">Yandex Xaritalar</span>
             </div>
-            <div class="card-action-title">Yandex da Dr. Olimjonni baholash</div>
-            <div class="card-action-ru">Оценить Dr. Olimjon в Яндекс Картах</div>
+            <div class="card-action-title">Yandex da baholash</div>
+            <div class="card-action-ru">Оставить отзыв в Яндекс Картах</div>
             
             <div class="qr-code-box">
               {yandex_qr_svg}
@@ -733,7 +745,7 @@ def main():
               </svg>
               Kamerani qarating
             </div>
-            <div class="card-link-preview">yandex.uz/maps/org/42407498627</div>
+            <div class="card-link-preview">yandex.uz/maps/org/sevdo_denta</div>
           </div>
 
         </section>
@@ -755,7 +767,7 @@ def main():
             <div class="step-item">
               <div class="step-num">3</div>
               <div class="step-text-uz">5 ⭐ qo'ying</div>
-              <div class="step-text-ru">Поставьте 5 звёзд и напишите ваш тёплый отзыв</div>
+              <div class="step-text-ru">Поставьте 5 звёzd va samimiy fikringizni yozing</div>
             </div>
           </div>
         </section>
