@@ -7,6 +7,7 @@
  */
 export const DOCTOR_INFO = {
   name: "Dr. Olimjon Murzajanov",
+  shortName: "Dr. Olimjon",
   careerStartYear: 2021,
   phone: "+998 (94) 001-01-56",
   phoneHref: "tel:+998940010156",
@@ -15,6 +16,26 @@ export const DOCTOR_INFO = {
   telegramHandle: "@httmurzajanov",
   instagramUrl: "https://www.instagram.com/dentist_olimjon/",
   instagramHandle: "@dentist_olimjon",
+  clinicName: "Sevdo Denta",
+  clinicAddress: "Andijon shahri, Eski Shahar (Old City), Abdurauf Fitrat ko'chasi, 243A-uy, 1-qavat",
+  education: {
+    uz: "Andijon Davlat Tibbiyot Instituti (ADTI) — Stomatologiya fakulteti",
+    ru: "Андижанский Государственный Медицинский Институт (АГМИ) — Стоматологический факультет",
+    en: "Andijan State Medical Institute (ASMI) — Faculty of Dentistry",
+  },
+  searchAliases: [
+    "Stomatolog Olimjon",
+    "Dentist Olimjon",
+    "Implantolog Olimjon",
+    "Olimjon Murzajanov",
+    "Dr. Olimjon Murzajanov",
+    "Стоматолог Олимжон",
+    "Врач Олимжон",
+    "Имплантолог Олимжон",
+    "Доктор Олимжон Мурзажанов",
+    "Sevdo Denta Olimjon",
+    "Dentist Olimjon Andijan",
+  ],
 };
 
 export const getYearsOfExperience = () =>

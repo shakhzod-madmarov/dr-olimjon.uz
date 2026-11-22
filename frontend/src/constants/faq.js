@@ -219,4 +219,52 @@ export const FAQ_ITEMS = [
       en: "Over 70% of our patients arrive with past dental phobias. We completely eliminate that fear: a soothing fruit-flavored topical gel numbs the gum prior to local injection so you feel zero needle sensation. Treatment proceeds at your pace in a serene, supportive setting.",
     },
   },
+  {
+    q: {
+      uz: "Stomatolog Olimjon (Dr. Olimjon Murzajanov) kim va qanday xizmatlarni ko'rsatadi?",
+      ru: "Кто такой стоматолог Олимжон (Д-р Олимжон Мурзажанов) и какие услуги он оказывает?",
+      en: "Who is Dentist Olimjon (Dr. Olimjon Murzajanov) and what dental services does he provide?",
+    },
+    a: {
+      uz: "Dr. Olimjon Murzajanov — Andijon shahrida 5+ yillik uzluksiz klinik tajribaga ega bo'lgan yetakchi vrach-stomatolog, stomatolog-ortoped va implantolog. Andijon Davlat Tibbiyot Instituti (ADTI) bitiruvchisi hamda Moissanite Dental Academy (implantologiya), Samarqand Dental Academy (ortopedik rejalashtirish) va Jakhongir Najimov Orthodontics sertifikatlariga ega. U og'riqsiz tish davolash, tsirkoniy karonkalar, E-max vinirlar, Janubiy Koreya (Osstem) biotitan implantatsiyasi, Philips ZOOM 4 lazerli oqartirish, aql tishlarini atravmatik olish va raqamli 3D rentgen (viziografiya) xizmatlarini ko'rsatadi.",
+      ru: "Д-р Олимжон Мурзажанов — ведущий врач-стоматолог, ортопед и имплантолог в Андижане с 5+ годами клинического опыта. Выпускник Андижанского Государственного Медицинского Института (АГМИ), сертифицирован по имплантологии (Moissanite Dental), ортопедии (Dental Academy Самарканд) и функциональной ортодонтии. Оказывает полный спектр услуг: безболезненное лечение кариеса и пульпита, циркониевые коронки, виниры E-max, дентальные импланты Osstem, отбеливание ZOOM 4, удаление зубов мудрости и цифровая визиография.",
+      en: "Dr. Olimjon Murzajanov is a leading restorative dentist, prosthodontist, and implantologist in Andijan with 5+ years of continuous clinical practice. An ASMI graduate certified in dental implantology, prosthodontics, and functional orthodontics. He provides painless root canal & cavity treatments, monolithic zirconia crowns, E-max porcelain veneers, Osstem dental implants, Philips ZOOM 4 whitening, gentle wisdom tooth extractions, and low-dose digital 3D X-rays.",
+    },
+  },
+  {
+    q: {
+      uz: "Stomatolog Olimjonga Andijonda qanday bog'lanish va qabulga navbatsiz yozilish mumkin?",
+      ru: "Как связаться со стоматологом Олимжоном в Андижане и записаться на приём без очереди?",
+      en: "How can I contact Dentist Olimjon in Andijan and book an appointment with zero wait time?",
+    },
+    a: {
+      uz: "Dr. Olimjon Murzajanov bilan to'g'ridan-to'g'ri bog'lanish uchun telefon: +998 (94) 001-01-56, Telegram: @httmurzajanov yoki rasmiy sayt (dentist-olimjon.uz/booking) orqali onlayn qabul vaqtini tanlashingiz mumkin. Qabul dushanba – shanba kunlari soat 08:00 dan 18:00 gacha, yakshanba esa oldindan yozilish bo'yicha olib boriladi. Bemorlar faqat o'z vaqtida, navbatsiz va kutishlarsiz qabul qilinadi.",
+      ru: "Связаться с Д-ром Олимжоном можно напрямую по телефону +998 (94) 001-01-56, через Telegram @httmurzajanov или на официальном сайте (dentist-olimjon.uz/booking). Часы приёма: понедельник – суббота с 08:00 до 18:00 (воскресенье по записи). Все пациенты принимаются точно по времени без ожидания в очереди.",
+      en: "You can reach Dr. Olimjon directly by phone at +998 (94) 001-01-56, via Telegram @httmurzajanov, or book online at dentist-olimjon.uz/booking. Office hours: Monday – Saturday 08:00 – 18:00 (Sunday by appointment). Every visit is scheduled individually with zero waiting line.",
+    },
+  },
+  {
+    q: {
+      uz: "Stomatolog Olimjon qaysi klinikada qabul olib boradi — «Sevdo Denta» binosidami?",
+      ru: "В какой клинике принимает стоматолог Олимжон — в здании «Sevdo Denta»?",
+      en: "Which clinic does Dentist Olimjon practice at — is it in the «Sevdo Denta» building?",
+    },
+    a: {
+      uz: "Ha, Dr. Olimjon Murzajanov Andijon shahrining Eski Shahar (Old City) markazidagi «Sevdo Denta» zamonaviy stomatologiya klinikasi binosida (1-qavat, Abdurauf Fitrat ko'chasi 243A-uy) qabul olib boradi. Bino oldida keng bepul avtoturargoh mavjud. Yandex Xarita va Google Xaritada «Sevdo Denta» yoki «Dr. Olimjon Murzajanov» deb qidirib, to'g'ridan-to'g'ri yo'nalish olishingiz mumkin.",
+      ru: "Да, Д-р Олимжон Мурзажанов ведёт приём в современной стоматологической клинике «Sevdo Denta» на 1-м этаже по адресу: г. Андижан, Эски Шахар (Old City), улица Абдурауфа Фитрата, дом 243А. Перед клиникой есть бесплатная парковка. В Яндекс Картах и Google Maps вы можете найти клинику по названию «Sevdo Denta» или «Dr. Olimjon Murzajanov».",
+      en: "Yes, Dr. Olimjon Murzajanov practices at the «Sevdo Denta» Dental Clinic located on the 1st Floor, 243A Abdurauf Fitrat Street, Old City (Eski Shahar), Andijan. Free patient parking is available. You can navigate directly via Yandex Maps or Google Maps by searching «Sevdo Denta» or «Dr. Olimjon Murzajanov».",
+    },
+  },
+  {
+    q: {
+      uz: "Andijonda tish qo'ydirish (tsirkoniy karonka, protez va implant) narxi va tayyorlanish muddati qancha?",
+      ru: "Сколько стоит вставить зубы (циркониевые коронки, протезы, импланты) в Андижане и какие сроки?",
+      en: "How much does tooth replacement (zirconia crowns, bridges, implants) cost in Andijan and what is the turnaround time?",
+    },
+    a: {
+      uz: "Tish qo'yish narxlari tanlangan usulga bog'liq: metall-siz monolit tsirkoniy karonkalar 2–3 ish kunida CAD/CAM 3D frezerlash bilan tayyorlanadi va 10 yilgacha kafolat beriladi. Janubiy Koreyaning original Osstem biotitan implantlari esa 20–30 daqiqada og'riqsiz o'rnatilib, umrbod kafolatga ega. Barcha narxlar birlamchi ko'rik va raqamli viziografiyadan so'ng oldindan aniq aytiladi. Saytimizdagi interaktiv 3D kalkulyatordan ham narxlarni onlayn hisoblashingiz mumkin.",
+      ru: "Стоимость восстановления зубов зависит от выбранного метода: безметалловые циркониевые коронки изготавливаются за 2–3 дня по технологии 3D CAD/CAM с гарантией до 10 лет. Оригинальные корейские импланты Osstem устанавливаются за 20–30 минут с пожизненной гарантией. Точный расчет согласовывается до начала лечения после осмотра и рентгена. Также можно рассчитать стоимость в 3D калькуляторе на сайте.",
+      en: "Tooth replacement costs depend on the procedure: metal-free monolithic zirconia crowns are milled via CAD/CAM 3D precision in just 2–3 days with up to 10 years warranty. Genuine South Korean Osstem titanium implants are placed painlessly in 20–30 minutes with a lifetime warranty. Exact pricing is confirmed upfront after an exam and digital X-ray, or via our 3D online calculator.",
+    },
+  },
 ];
