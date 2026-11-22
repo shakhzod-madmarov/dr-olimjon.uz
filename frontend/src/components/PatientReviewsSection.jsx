@@ -169,7 +169,7 @@ const PatientReviewsSection = () => {
 
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full sm:w-auto justify-center">
             <a
-              href={PRIMARY_CLINIC.maps.yandexOrg || PRIMARY_CLINIC.maps.yandex}
+              href={PRIMARY_CLINIC.maps.yandexReview || PRIMARY_CLINIC.maps.yandexOrg || PRIMARY_CLINIC.maps.yandex}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#f2f6fa] hover:bg-[#e4edf5] border border-[#d5e0ec] text-xs font-semibold text-slate-800 transition-colors"

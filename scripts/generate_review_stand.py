@@ -27,8 +27,9 @@ def generate_svg_qr(url):
     return svg_str
 
 def main():
+    # Target URLs: specifically for Dentist Olimjon Murzajanov
     google_url = "https://g.page/r/CRe-TP_QxEP-EBM/review"
-    yandex_url = "https://yandex.uz/maps/org/sevdo_denta/157971592658/"
+    yandex_url = "https://yandex.uz/maps/org/42407498627/reviews/"
     
     google_qr_svg = generate_svg_qr(google_url)
     yandex_qr_svg = generate_svg_qr(yandex_url)
@@ -38,7 +39,7 @@ def main():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Olimjon Murzajanov — Sevdo Denta | Bemorlar uchun QR Baholash Standi (A4)</title>
+  <title>Dr. Olimjon Murzajanov (Dentist Olimjon) | Bemorlar uchun QR Baholash Standi (A4)</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -184,7 +185,7 @@ def main():
       justify-content: space-between;
     }}
 
-    /* Header */
+    /* Header - Centered on Doctor Olimjon */
     .clinic-header {{
       display: flex;
       align-items: center;
@@ -200,42 +201,43 @@ def main():
     }}
 
     .brand-logo {{
-      width: 58px;
-      height: 58px;
+      width: 62px;
+      height: 62px;
       border-radius: 14px;
       background: white;
       box-shadow: 0 4px 12px rgba(19, 46, 83, 0.12);
-      border: 1px solid #e2e8f0;
+      border: 1.5px solid #cbd5e1;
       padding: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }}
 
     .brand-logo svg, .brand-logo img {{
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }}
 
     .brand-titles h1 {{
       font-size: 23px;
       font-weight: 900;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.2px;
       color: var(--navy-800);
       line-height: 1.15;
     }}
 
-    .brand-titles .clinic-type {{
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+    .brand-titles .doctor-spec {{
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 1px;
       text-transform: uppercase;
       color: var(--cyan-600);
       margin-top: 2px;
     }}
 
-    .brand-titles .doctor-sub {{
+    .brand-titles .doctor-clinic {{
       font-size: 12px;
       font-weight: 600;
       color: var(--slate-600);
@@ -383,7 +385,7 @@ def main():
     }}
 
     .badge-text {{
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 800;
       color: var(--slate-800);
       letter-spacing: -0.2px;
@@ -608,10 +610,13 @@ def main():
         <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
         <rect x="6" y="14" width="12" height="8"></rect>
       </svg>
-      <span>A4 Baholash Standi (Dr. Olimjon Murzajanov — Sevdo Denta)</span>
+      <span>A4 Baholash Standi (Dentist Olimjon Murzajanov)</span>
     </div>
     <div class="toolbar-actions">
       <a href="/" class="btn btn-site">← Asosiy saytga qaytish</a>
+      <a href="/review-stand-dr-olimjon.pdf" download class="btn btn-site" style="background: rgba(245, 158, 11, 0.2); border-color: rgba(245, 158, 11, 0.5); color: #fef08a;">
+        📥 PDF yuklab olish
+      </a>
       <button onclick="window.print()" class="btn btn-print">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="6 9 6 2 18 2 18 9"></polyline>
@@ -630,46 +635,23 @@ def main():
       
       <div class="page-content">
         
-        <!-- Header -->
+        <!-- Header: Centered on Doctor Olimjon -->
         <header class="clinic-header">
           <div class="brand-left">
             <div class="brand-logo">
-              <!-- Clinic Smiling Tooth Logo -->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" width="50" height="50">
-                <defs>
-                  <clipPath id="hLeft">
-                    <rect x="0" y="0" width="170" height="340"/>
-                  </clipPath>
-                  <clipPath id="hRight">
-                    <rect x="170" y="0" width="170" height="340"/>
-                  </clipPath>
-                </defs>
-                <g clip-path="url(#hLeft)">
-                  <circle cx="170" cy="170" r="122" fill="none" stroke="#122d52" stroke-width="18"/>
-                  <path d="M108 134 C106 105, 130 92, 152 100 C162 104, 166 108, 185 110" fill="none" stroke="#122d52" stroke-width="15" stroke-linecap="round"/>
-                  <path d="M108 134 C108 175, 120 222, 134 252 C140 264, 150 264, 155 246 C160 228, 164 214, 170 214" fill="none" stroke="#122d52" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M138 176 C158 196, 198 196, 236 154" fill="none" stroke="#122d52" stroke-width="14" stroke-linecap="round"/>
-                  <path d="M133 182 C134 172, 141 169, 146 171" fill="none" stroke="#122d52" stroke-width="6" stroke-linecap="round"/>
-                </g>
-                <g clip-path="url(#hRight)">
-                  <circle cx="170" cy="170" r="122" fill="none" stroke="#245b84" stroke-width="18"/>
-                  <path d="M166 98 C184 90, 212 94, 214 128 C215 142, 212 156, 208 168" fill="none" stroke="#245b84" stroke-width="15" stroke-linecap="round"/>
-                  <path d="M204 188 C198 216, 192 240, 185 252 C180 264, 170 264, 165 246 C160 228, 156 214, 170 214" fill="none" stroke="#245b84" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M138 176 C158 196, 198 196, 236 154" fill="none" stroke="#173863" stroke-width="14" stroke-linecap="round"/>
-                  <path d="M229 148 C238 148, 243 155, 240 164" fill="none" stroke="#173863" stroke-width="6" stroke-linecap="round"/>
-                </g>
-              </svg>
+              <!-- Doctor Olimjon portrait / Clinic smiling tooth logo -->
+              <img src="/dr_olimjon_portrait.webp" alt="Dr. Olimjon Murzajanov" style="border-radius: 10px;" onerror="this.onerror=null; this.src='/favicon.svg';" />
             </div>
             <div class="brand-titles">
-              <h1>SEVDO DENTA</h1>
-              <div class="clinic-type">Stomatologiya Markazi • Стоматология</div>
-              <div class="doctor-sub">Dr. Olimjon Murzajanov — Bosh shifokor, implantolog</div>
+              <h1>DR. OLIMJON MURZAJANOV</h1>
+              <div class="doctor-spec">Dentist Olimjon • Shifokor-Implantolog, Ortoped</div>
+              <div class="doctor-clinic">«Sevdo Denta» stomatologiya binosida • Врач-стоматолог</div>
             </div>
           </div>
           <div class="header-contacts">
             <div class="phone">📞 +998 94 001-01-56</div>
             <div class="phone" style="font-size: 12px; color: var(--slate-600);">+998 90 253-06-00</div>
-            <div class="address">📍 Andijon sh., Eski shahar, Abdurauf Fitrat ko'chasi, 243A</div>
+            <div class="address">📍 Andijon sh., Abdurauf Fitrat ko'chasi, 243A</div>
           </div>
         </header>
 
@@ -683,11 +665,11 @@ def main():
             <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <h2>Bizning xizmatimiz sizga ma'qul keldimi?</h2>
+          <h2>Dr. Olimjon qabulidan mamnunmisiz?</h2>
           <p>
-            <span class="hero-uz">Sizning 5 yulduzli bahoyingiz biz uchun eng oliy mukofotdir!</span><br>
-            Fikr-mulohazangizni yozib qoldiring va boshqa bemorlarga ishonchli shifokorni tanlashda ko'maklashing.
-            <span class="hero-ru">Пожалуйста, оцените наш приём на 5 звёзд в Google или Яндекс Картах!</span>
+            <span class="hero-uz">Sizning 5 yulduzli bahoyingiz shifokorimiz uchun eng katta minnatdorchilikdir!</span><br>
+            Dr. Olimjon Murzajanov xizmatiga o'z fikringizni bildiring va boshqalarga to'g'ri mutaxassisni tanlashda yordam bering.
+            <span class="hero-ru">Пожалуйста, оцените прием доктора Олимжона на 5 звёзд в Google или Яндекс Картах!</span>
           </p>
         </section>
 
@@ -706,10 +688,10 @@ def main():
                   <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
                 </svg>
               </span>
-              <span class="badge-text">Google Xaritalar</span>
+              <span class="badge-text">Google Maps</span>
             </div>
-            <div class="card-action-title">Google da baholash</div>
-            <div class="card-action-ru">Оставить отзыв в Google Maps</div>
+            <div class="card-action-title">Google da Dr. Olimjonni baholash</div>
+            <div class="card-action-ru">Оценить Dr. Olimjon в Google Maps</div>
             
             <div class="qr-code-box">
               {google_qr_svg}
@@ -722,7 +704,7 @@ def main():
               </svg>
               Kamerani qarating
             </div>
-            <div class="card-link-preview">g.page/r/CRe-TP_QxEP-EBM/review</div>
+            <div class="card-link-preview">Google: Dentist Olimjon Murzajanov</div>
           </div>
 
           <!-- Card 2: Yandex Reviews -->
@@ -737,8 +719,8 @@ def main():
               </span>
               <span class="badge-text">Yandex Xaritalar</span>
             </div>
-            <div class="card-action-title">Yandex da baholash</div>
-            <div class="card-action-ru">Оставить отзыв в Яндекс Картах</div>
+            <div class="card-action-title">Yandex da Dr. Olimjonni baholash</div>
+            <div class="card-action-ru">Оценить Dr. Olimjon в Яндекс Картах</div>
             
             <div class="qr-code-box">
               {yandex_qr_svg}
@@ -751,14 +733,14 @@ def main():
               </svg>
               Kamerani qarating
             </div>
-            <div class="card-link-preview">yandex.uz/maps/org/sevdo_denta</div>
+            <div class="card-link-preview">yandex.uz/maps/org/42407498627</div>
           </div>
 
         </section>
 
         <!-- 3-Step Instruction Guide -->
         <section class="steps-section">
-          <div class="steps-title">3 ta oddiy qadamda fikr bildiring • 3 простых шага</div>
+          <div class="steps-title">3 ta oddiy qadamda shifokorga baho bering • 3 простых шага</div>
           <div class="steps-grid">
             <div class="step-item">
               <div class="step-num">1</div>
@@ -782,7 +764,7 @@ def main():
         <footer class="stand-footer">
           <div class="footer-gratitude">
             E'tiboringiz va ishonchingiz uchun chin dildan minnatdormiz!
-            <span>Спасибо за доверие к нашей клинике «Sevdo Denta»!</span>
+            <span>Спасибо за доверие доктору Олимжону Мурзажанову!</span>
           </div>
           <div class="footer-meta">
             <span class="site-domain">🌐 dentist-olimjon.uz</span>
