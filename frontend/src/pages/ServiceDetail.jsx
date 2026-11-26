@@ -26,74 +26,12 @@ const ServiceDetail = () => {
   const service =
     SERVICES_CATALOG.find((s) => s.id === activeServiceId) || SERVICES_CATALOG[0];
 
-  const steps = {
-    uz: [
-      {
-        num: "01",
-        title: "Ko'rik va Raqamli Rentgen Diagnostika",
-        desc: "Dr. Olimjon Murzajanov tish holatini diqqat bilan tekshiradi, zarur bo'lsa raqamli rentgen orqali ildiz kanallari ko'riladi va aniq davolash rejasi tuziladi.",
-      },
-      {
-        num: "02",
-        title: "2 Bosqichli Og'riqsiz Anesteziya",
-        desc: "Avval milk maxsus muzlatuvchi gel bilan og'riqsizlantiriladi, so'ng Yevropa anestetigi yuboriladi — bemor hatto igna sanchilishini ham sezmaydi.",
-      },
-      {
-        num: "03",
-        title: "Mikroskopik Aniqlikda Asosiy Muolaja",
-        desc: "Germaniya, Yaponiya va Janubiy Koreyaning original sertifikatlangan materiallari yordamida tish funksiyasi va estetikasi tiklanadi.",
-      },
-      {
-        num: "04",
-        title: "Sifat Nazorati va Kafolat",
-        desc: "Muolaja yakunida tishning chaynash balansi tekshiriladi, sayqallanadi va uzoq muddatli kafolat hamda parvarish tavsiyalari beriladi.",
-      },
-    ],
-    ru: [
-      {
-        num: "01",
-        title: "Осмотр и Цифровая Рентген-Диагностика",
-        desc: "Д-р Олимжон Мурзажанов проводит детальный осмотр, при необходимости делает прицельный цифровой снимок и составляет прозрачный план лечения.",
-      },
-      {
-        num: "02",
-        title: "Двухэтапная Анестезия Без Боли",
-        desc: "Десна предварительно обрабатывается обезболивающим гелем, после чего мягко вводится европейский анестетик.",
-      },
-      {
-        num: "03",
-        title: "Основной Этап Лечения / Реставрации",
-        desc: "Работа выполняется с использованием сертифицированных материалов из Германии, Японии и Южной Кореи в условиях 100% стерильности.",
-      },
-      {
-        num: "04",
-        title: "Финальная Полировка и Гарантия",
-        desc: "Проверка прикуса, полировка до естественного блеска эмали и выдача рекомендаций с официальной гарантией.",
-      },
-    ],
-    en: [
-      {
-        num: "01",
-        title: "Consultation & Digital X-Ray Diagnostics",
-        desc: "Dr. Olimjon Murzajanov performs a thorough exam and digital X-ray imaging to create a transparent treatment plan.",
-      },
-      {
-        num: "02",
-        title: "Two-Stage Painless Anesthesia",
-        desc: "Topical numbing gel is applied to the gum before gentle European anesthesia so you never feel the needle.",
-      },
-      {
-        num: "03",
-        title: "Precision Restorative Procedure",
-        desc: "Treatment is carried out in a 100% sterile suite using genuine German, Japanese, and South Korean dental materials.",
-      },
-      {
-        num: "04",
-        title: "Quality Verification & Warranty",
-        desc: "Bite calibration, high-gloss enamel polishing, and formal clinical warranty with personalized aftercare guidance.",
-      },
-    ],
-  }[lang];
+  const steps = service.steps?.[lang] || service.steps?.uz || [];
+  const aeoSummary = service.aeoSummary?.[lang] || service.shortDesc?.[lang];
+  const indications = service.indications?.[lang] || [];
+  const tableData = service.comparisonTable;
+  const costFactors = service.costFactors?.[lang];
+  const safetyAndCare = service.safetyAndCare?.[lang];
 
   const seoSuffix = {
     uz: "Dr. Olimjon Murzajanov | Stomatolog Andijon",
@@ -128,7 +66,7 @@ const ServiceDetail = () => {
     SERVICE_KEYWORDS[service.id]?.[lang] || PAGE_KEYWORDS[lang];
 
   return (
-    <div className="py-6 sm:py-10 space-y-12">
+    <div className="py-6 sm:py-10 space-y-10 sm:space-y-12">
       <Seo
         title={resolvedTitle}
         description={resolvedDesc}
@@ -248,86 +186,128 @@ const ServiceDetail = () => {
         </div>
       </div>
 
-      {/* Quick Clinical Facts Table / AEO Answer Capsule */}
-      <section aria-label="Klinik Ko'rsatkichlar" className="bg-[#f8fafc] rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-[#d5e0ec] shadow-xs">
-        <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#285983] mb-3">
-          {lang === "uz" ? "Tezkor Klinik Ko'rsatkichlar" : lang === "ru" ? "Краткая Клиническая Справка" : "Clinical Quick Facts"}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-          <div className="bg-white p-3.5 rounded-xl border border-[#d5e0ec]">
-            <div className="flex items-center gap-2 text-[#285983] text-xs font-bold uppercase tracking-wider">
-              <IconClock className="w-4 h-4 text-[#285983] shrink-0" />
-              <span>{lang === "uz" ? "Davomiyligi" : lang === "ru" ? "Длительность" : "Duration"}</span>
-            </div>
-            <p className="mt-1.5 text-sm sm:text-base font-bold text-[#132e53]">
-              {service.duration[lang]}
+      {/* Quick Clinical Facts Table + AEO Definition Answer Capsule */}
+      <section aria-label="Klinik Ko'rsatkichlar" className="bg-[#f8fafc] rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-xs space-y-5">
+        {aeoSummary && (
+          <div data-aeo-summary className="bg-white p-4 sm:p-5 rounded-2xl border border-[#d5e0ec] space-y-1.5">
+            <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#285983]">
+              {lang === "uz"
+                ? "Muolaja Haqida Qisqacha (Asosiy Ma'lumot)"
+                : lang === "ru"
+                ? "Кратко о Процедуре (Медицинская Справка)"
+                : "Clinical Overview"}
+            </h2>
+            <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-medium">
+              {aeoSummary}
             </p>
           </div>
+        )}
 
-          <div className="bg-white p-3.5 rounded-xl border border-[#d5e0ec]">
-            <div className="flex items-center gap-2 text-[#285983] text-xs font-bold uppercase tracking-wider">
-              <IconShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>{lang === "uz" ? "Kafolat" : lang === "ru" ? "Гарантия" : "Warranty"}</span>
+        <div>
+          <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#285983] mb-3">
+            {lang === "uz" ? "Tezkor Klinik Ko'rsatkichlar" : lang === "ru" ? "Краткая Клиническая Справка" : "Clinical Quick Facts"}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            <div className="bg-white p-3.5 rounded-xl border border-[#d5e0ec]">
+              <div className="flex items-center gap-2 text-[#285983] text-xs font-bold uppercase tracking-wider">
+                <IconClock className="w-4 h-4 text-[#285983] shrink-0" />
+                <span>{lang === "uz" ? "Davomiyligi" : lang === "ru" ? "Длительность" : "Duration"}</span>
+              </div>
+              <p className="mt-1.5 text-sm sm:text-base font-bold text-[#132e53]">
+                {service.duration[lang]}
+              </p>
             </div>
-            <p className="mt-1.5 text-sm sm:text-base font-bold text-[#132e53]">
-              {service.warranty[lang]}
-            </p>
-          </div>
 
-          <div className="bg-white p-3.5 rounded-xl border border-[#d5e0ec]">
-            <div className="flex items-center gap-2 text-[#285983] text-xs font-bold uppercase tracking-wider">
-              <IconAward className="w-4 h-4 text-[#285983] shrink-0" />
-              <span>{lang === "uz" ? "Materiallar" : lang === "ru" ? "Материалы" : "Materials"}</span>
+            <div className="bg-white p-3.5 rounded-xl border border-[#d5e0ec]">
+              <div className="flex items-center gap-2 text-[#285983] text-xs font-bold uppercase tracking-wider">
+                <IconShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>{lang === "uz" ? "Kafolat" : lang === "ru" ? "Гарантия" : "Warranty"}</span>
+              </div>
+              <p className="mt-1.5 text-sm sm:text-base font-bold text-[#132e53]">
+                {service.warranty[lang]}
+              </p>
             </div>
-            <p className="mt-1.5 text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
-              {service.materials?.[lang] || "Sertifikatlangan original materiallar"}
-            </p>
-          </div>
 
-          <div className="bg-white p-3.5 rounded-xl border border-[#d5e0ec]">
-            <div className="flex items-center gap-2 text-[#285983] text-xs font-bold uppercase tracking-wider">
-              <IconSparkleStar className="w-4 h-4 text-[#285983] shrink-0" />
-              <span>{lang === "uz" ? "Og'riqsizlantirish" : lang === "ru" ? "Анестезия" : "Anesthesia"}</span>
+            <div className="bg-white p-3.5 rounded-xl border border-[#d5e0ec]">
+              <div className="flex items-center gap-2 text-[#285983] text-xs font-bold uppercase tracking-wider">
+                <IconAward className="w-4 h-4 text-[#285983] shrink-0" />
+                <span>{lang === "uz" ? "Materiallar" : lang === "ru" ? "Материалы" : "Materials"}</span>
+              </div>
+              <p className="mt-1.5 text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
+                {service.materials?.[lang] || "Sertifikatlangan original materiallar"}
+              </p>
             </div>
-            <p className="mt-1.5 text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
-              {service.anesthesia?.[lang] || "100% og'riqsiz anesteziya"}
-            </p>
+
+            <div className="bg-white p-3.5 rounded-xl border border-[#d5e0ec]">
+              <div className="flex items-center gap-2 text-[#285983] text-xs font-bold uppercase tracking-wider">
+                <IconSparkleStar className="w-4 h-4 text-[#285983] shrink-0" />
+                <span>{lang === "uz" ? "Og'riqsizlantirish" : lang === "ru" ? "Анестезия" : "Anesthesia"}</span>
+              </div>
+              <p className="mt-1.5 text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
+                {service.anesthesia?.[lang] || "100% og'riqsiz anesteziya"}
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Advantages & Procedure Steps */}
+      {/* Advantages + When Is It Needed + Procedure Steps */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
-        <div className="lg:col-span-6 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-sm space-y-4 sm:space-y-5">
-          <h2 className="font-serif-classic text-xl sm:text-2xl font-bold text-[#132e53]">
-            {lang === "uz"
-              ? "Asosiy Ustunliklar va Texnologiya"
-              : lang === "ru"
-              ? "Преимущества и Технология Лечения"
-              : "Key Clinical Advantages"}
-          </h2>
+        <div className="lg:col-span-6 space-y-6">
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-sm space-y-4">
+            <h2 className="font-serif-classic text-xl sm:text-2xl font-bold text-[#132e53]">
+              {lang === "uz"
+                ? "Asosiy Ustunliklar va Texnologiya"
+                : lang === "ru"
+                ? "Преимущества и Технология Лечения"
+                : "Key Clinical Advantages"}
+            </h2>
 
-          <ul className="space-y-3">
-            {service.highlights[lang].map((point, idx) => (
-              <li
-                key={idx}
-                className="flex items-start gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-sm text-slate-800 font-medium"
-              >
-                <IconCheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#285983] shrink-0 mt-0.5" />
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
+            <ul className="space-y-3">
+              {service.highlights[lang].map((point, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-start gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-[#f8fafc] border border-[#d5e0ec] text-sm text-slate-800 font-medium"
+                >
+                  <IconCheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#285983] shrink-0 mt-0.5" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {indications.length > 0 && (
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-sm space-y-4">
+              <h2 className="font-serif-classic text-xl sm:text-2xl font-bold text-[#132e53]">
+                {lang === "uz"
+                  ? "Qachon Murojaat Qilish Kerak? (Ko'rsatmalar)"
+                  : lang === "ru"
+                  ? "Когда Необходима Процедура (Показания)"
+                  : "When Is This Procedure Needed? (Indications)"}
+              </h2>
+              <ul className="space-y-2.5">
+                {indications.map((ind, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-start gap-2.5 text-sm text-slate-700 leading-relaxed"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-[#285983] shrink-0 mt-2" />
+                    <span>{ind}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
-        {/* Step-by-Step Procedure */}
-        <div className="lg:col-span-6 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-sm space-y-4 sm:space-y-5">
+        {/* Procedure-Specific Step-by-Step Guide */}
+        <div className="lg:col-span-6 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-sm space-y-4 sm:space-y-5 h-fit">
           <h2 className="font-serif-classic text-xl sm:text-2xl font-bold text-[#132e53]">
             {lang === "uz"
               ? "Muolaja Qanday Bosqichlarda O'tadi?"
               : lang === "ru"
-              ? "Этапы Проведения Процедуры"
-              : "Step-by-Step Treatment Process"}
+              ? "Этапы Проведения и Сроки"
+              : "Step-by-Step Clinical Stages"}
           </h2>
 
           <div className="space-y-3 sm:space-y-4">
@@ -353,7 +333,101 @@ const ServiceDetail = () => {
         </div>
       </div>
 
-      {/* Service-Specific FAQ Section */}
+      {/* Comparison Table (Rich Snippet & AI Overview Magnet) */}
+      {tableData && (
+        <section className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-sm space-y-4">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#285983]">
+              {lang === "uz" ? "Materiallar va Turlari" : lang === "ru" ? "Сравнение Систем" : "Options & Systems"}
+            </p>
+            <h2 className="mt-1 font-serif-classic text-xl sm:text-2xl font-bold text-[#132e53]">
+              {tableData.title[lang]}
+            </h2>
+          </div>
+
+          <div className="overflow-x-auto rounded-2xl border border-[#d5e0ec]">
+            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr className="bg-[#132e53] text-white">
+                  {tableData.headers[lang].map((h, i) => (
+                    <th key={i} className="py-3 px-3.5 sm:px-4 font-bold whitespace-nowrap">
+                      {h}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[#e2eaf2]">
+                {tableData.rows[lang].map((row, rIdx) => (
+                  <tr key={rIdx} className={rIdx % 2 === 0 ? "bg-white" : "bg-[#f8fafc]"}>
+                    {row.map((cell, cIdx) => (
+                      <td
+                        key={cIdx}
+                        className={`py-3 px-3.5 sm:px-4 ${
+                          cIdx === 0 ? "font-bold text-[#132e53]" : "text-slate-700"
+                        }`}
+                      >
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+      {/* 2026 Cost Factors + Safety, Ethics & Post-Op Care */}
+      {(costFactors || safetyAndCare) && (
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {costFactors && (
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-sm space-y-2.5">
+              <h2 className="font-serif-classic text-lg sm:text-xl font-bold text-[#132e53]">
+                {lang === "uz"
+                  ? "2026-yilda Narxlar Nimalarga Bog'liq?"
+                  : lang === "ru"
+                  ? "От Чего Зависит Стоимость в 2026 Году?"
+                  : "What Determines 2026 Treatment Costs?"}
+              </h2>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                {costFactors}
+              </p>
+              <div className="pt-2">
+                <Link
+                  to={`${to("/booking")}?service=${service.id}`}
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#285983] hover:text-[#132e53] hover:underline"
+                >
+                  {lang === "uz"
+                    ? "Bepul ko'rik va aniq narx hisobi uchun yozilish →"
+                    : lang === "ru"
+                    ? "Записаться на осмотр и точный расчёт →"
+                    : "Book an exam for a transparent price quote →"}
+                </Link>
+              </div>
+            </div>
+          )}
+
+          {safetyAndCare && (
+            <div className="bg-[#f8fafc] rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-sm space-y-2.5">
+              <h2 className="font-serif-classic text-lg sm:text-xl font-bold text-[#132e53] flex items-center gap-2">
+                <IconShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
+                <span>
+                  {lang === "uz"
+                    ? "Xavfsizlik, Qarshi Ko'rsatmalar va Parvarish"
+                    : lang === "ru"
+                    ? "Безопасность, Противопоказания и Уход"
+                    : "Clinical Safety & Aftercare Guidance"}
+                </span>
+              </h2>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                {safetyAndCare}
+              </p>
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* Service-Specific FAQ Section (All answers kept in DOM for search crawlers & AI) */}
       {faqs.length > 0 && (
         <section className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-sm space-y-4 sm:space-y-6">
           <div>
@@ -376,6 +450,8 @@ const ServiceDetail = () => {
           <div className="space-y-3">
             {faqs.map((item, idx) => {
               const isOpen = openFaqIdx === idx;
+              const panelId = `service-faq-panel-${idx}`;
+              const btnId = `service-faq-btn-${idx}`;
               return (
                 <div
                   key={idx}
@@ -386,7 +462,10 @@ const ServiceDetail = () => {
                   }`}
                 >
                   <button
+                    id={btnId}
                     type="button"
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
                     onClick={() => setOpenFaqIdx(isOpen ? -1 : idx)}
                     className="w-full px-4 py-3 sm:py-3.5 text-left flex items-center justify-between gap-3 cursor-pointer"
                   >
@@ -404,11 +483,19 @@ const ServiceDetail = () => {
                       +
                     </span>
                   </button>
-                  {isOpen && (
-                    <div className="px-4 pb-4 pt-2 text-sm text-slate-700 leading-relaxed border-t border-[#d5e0ec]">
-                      {item.a[lang]}
-                    </div>
-                  )}
+                  <div
+                    id={panelId}
+                    role="region"
+                    aria-labelledby={btnId}
+                    hidden={!isOpen}
+                    className={
+                      isOpen
+                        ? "px-4 pb-4 pt-2 text-sm text-slate-700 leading-relaxed border-t border-[#d5e0ec]"
+                        : "hidden"
+                    }
+                  >
+                    {item.a[lang]}
+                  </div>
                 </div>
               );
             })}
@@ -416,8 +503,35 @@ const ServiceDetail = () => {
         </section>
       )}
 
+      {/* E-E-A-T Medical Reviewer Attribution Bar */}
+      <aside className="bg-[#f2f6fa] rounded-2xl p-4 sm:p-5 border border-[#d5e0ec] flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs sm:text-sm text-slate-700">
+        <div className="flex items-start sm:items-center gap-2.5">
+          <IconAward className="w-5 h-5 text-[#132e53] shrink-0 mt-0.5 sm:mt-0" />
+          <p>
+            <strong className="text-[#132e53]">
+              {lang === "uz"
+                ? "Tibbiy jihatdan tekshirdi va tasdiqladi:"
+                : lang === "ru"
+                ? "Проверено и подтверждено врачом:"
+                : "Medically reviewed by:"}
+            </strong>{" "}
+            <Link to={to("/about")} className="font-bold text-[#285983] hover:underline">
+              Dr. Olimjon Murzajanov
+            </Link>{" "}
+            {lang === "uz"
+              ? `(${DOCTOR_INFO.education.uz}, ${getExperienceBadge("uz")}) · Andijon, Eski Shahar (Sevdo Denta)`
+              : lang === "ru"
+              ? `(${DOCTOR_INFO.education.ru}, ${getExperienceBadge("ru")}) · г. Андижан, Эски Шахар (Sevdo Denta)`
+              : `(${DOCTOR_INFO.education.en}, ${getExperienceBadge("en")}) · Old City, Andijan`}
+          </p>
+        </div>
+        <span className="text-xs text-slate-500 font-semibold shrink-0">
+          {lang === "uz" ? "Yangilangan: 2026" : lang === "ru" ? "Обновлено: 2026" : "Updated: 2026"}
+        </span>
+      </aside>
+
       {/* Other Services Navigation */}
-      <div className="pt-4">
+      <div className="pt-2">
         <h2 className="font-serif-classic text-xl font-bold text-[#132e53] mb-4">
           {lang === "uz"
             ? "Boshqa Stomatologik Xizmatlar:"

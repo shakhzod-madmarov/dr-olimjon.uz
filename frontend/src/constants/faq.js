@@ -142,9 +142,9 @@ export const FAQ_ITEMS = [
       en: "What are the prices for dental treatment, fillings, and zirconia crowns in Andijan?",
     },
     a: {
-      uz: "Dr. Olimjon Murzajanov qabulida narxlar to'liq shaffof: birlamchi tekshiruv va rentgen diagnostikadan so'ng barcha narxlar muolajadan oldin ochiq aytiladi. Hamyonbop va sifatli variantlar mavjud (Yaponiya va Germaniya fotopolimer plombalari, Germaniya va Avstraliya tsirkon karonkalari). Shuningdek, saytimizdagi interaktiv 3D kalkulyator orqali kerakli xizmat narxini onlayn hisoblab olishingiz mumkin.",
-      ru: "Стоимость лечения у Д-ра Олимжона абсолютно прозрачна: точный расчёт составляется после первичного осмотра и визиографии до начала процедур. Доступны пломбы из Японии и Германии, коронки из циркония (Германия, Австралия). Также вы можете рассчитать стоимость на нашем интерактивном 3D калькуляторе на сайте.",
-      en: "Pricing at Dr. Olimjon's clinic is fully transparent: a detailed estimate is provided following your clinical exam and digital X-ray before any work starts. You can also calculate your treatment cost using our interactive 3D calculator directly on the website.",
+      uz: "Dr. Olimjon Murzajanov qabulida narxlar to'liq shaffof: birlamchi tekshiruv va rentgen diagnostikadan so'ng barcha narxlar muolajadan oldin ochiq aytiladi. Hamyonbop va sifatli variantlar mavjud (Yaponiya, Germaniya, Koreya va Rossiya fotopolimer plombalari; Germaniya, Avstraliya va Xitoy tsirkon karonkalari). Saytimizdagi «Xizmatlar» bo'limida materiallar va muddatlarni solishtirib, to'g'ridan-to'g'ri konsultatsiyaga yozilishingiz mumkin.",
+      ru: "Стоимость лечения у Д-ра Олимжона абсолютно прозрачна: точный расчёт составляется после первичного осмотра и визиографии до начала процедур. Доступны пломбы из Германии, Японии, Кореи и России, а также коронки из циркония (Германия, Австралия, Китай). В разделе «Услуги» можно сравнить материалы, сроки и сразу выбрать время приёма.",
+      en: "Pricing at Dr. Olimjon's clinic is fully transparent: a detailed estimate is provided following your clinical exam and digital X-ray before any work starts. Multiple material tiers (Germany, Japan, Korea, Australia) are clearly compared in our Services section.",
     },
   },
   {
@@ -262,9 +262,33 @@ export const FAQ_ITEMS = [
       en: "How much does tooth replacement (zirconia crowns, bridges, implants) cost in Andijan and what is the turnaround time?",
     },
     a: {
-      uz: "Tish qo'yish narxlari tanlangan usulga bog'liq: metall-siz monolit tsirkoniy karonkalar 2–3 ish kunida CAD/CAM 3D frezerlash bilan tayyorlanadi va 10 yilgacha kafolat beriladi. Janubiy Koreyaning original Osstem biotitan implantlari esa 20–30 daqiqada og'riqsiz o'rnatilib, umrbod kafolatga ega. Barcha narxlar birlamchi ko'rik va raqamli viziografiyadan so'ng oldindan aniq aytiladi. Saytimizdagi interaktiv 3D kalkulyatordan ham narxlarni onlayn hisoblashingiz mumkin.",
-      ru: "Стоимость восстановления зубов зависит от выбранного метода: безметалловые циркониевые коронки изготавливаются за 2–3 дня по технологии 3D CAD/CAM с гарантией до 10 лет. Оригинальные корейские импланты Osstem устанавливаются за 20–30 минут с пожизненной гарантией. Точный расчет согласовывается до начала лечения после осмотра и рентгена. Также можно рассчитать стоимость в 3D калькуляторе на сайте.",
-      en: "Tooth replacement costs depend on the procedure: metal-free monolithic zirconia crowns are milled via CAD/CAM 3D precision in just 2–3 days with up to 10 years warranty. Genuine South Korean Osstem titanium implants are placed painlessly in 20–30 minutes with a lifetime warranty. Exact pricing is confirmed upfront after an exam and digital X-ray, or via our 3D online calculator.",
+      uz: "Tish qo'yish narxlari tanlangan usulga bog'liq: metall-siz monolit tsirkoniy karonkalar 2–3 ish kunida CAD/CAM 3D frezerlash bilan tayyorlanadi va 10 yilgacha kafolat beriladi. Janubiy Koreyaning original Osstem biotitan implantlari esa 20–30 daqiqada og'riqsiz o'rnatilib, umrbod kafolatga ega. Barcha narxlar birlamchi ko'rik va raqamli viziografiyadan so'ng oldindan aniq aytiladi. Saytimizdagi xizmatlar bo'limidan barcha materiallar va muddatlarni solishtirishingiz mumkin.",
+      ru: "Стоимость восстановления зубов зависит от выбранного метода: безметалловые циркониевые коронки изготавливаются за 2–3 дня по технологии 3D CAD/CAM с гарантией до 10 лет. Оригинальные корейские импланты Osstem устанавливаются за 20–30 минут с пожизненной гарантией. Точный расчет согласовывается до начала лечения после осмотра и рентгена.",
+      en: "Tooth replacement costs depend on the procedure: metal-free monolithic zirconia crowns are milled via CAD/CAM 3D precision in just 2–3 days with up to 10 years warranty. Genuine South Korean Osstem titanium implants are placed painlessly in 20–30 minutes with a lifetime warranty. Exact pricing is confirmed upfront after an exam and digital X-ray.",
+    },
+  },
+  {
+    q: {
+      uz: "Implant tish halolmi (diniy jihatdan joizmi) va organizmga zarari bormi?",
+      ru: "Дозволены ли зубные импланты в исламе (халяль) и вредны ли они для организма?",
+      en: "Are dental implants permissible (Halal) and completely safe for the body?",
+    },
+    a: {
+      uz: "Ha, O'zbekiston Musulmonlari Idorasi fatvolariga ko'ra yo'qolgan tishni tibbiy maqsadda sun'iy ildiz bilan tiklash to'liq halol (joiz) sanaladi — Osstem va Straumann implantlari 100% sof tibbiy titandan tayyorlangan (cho'chqa yoki inson suyagi ishlatilmaydi). Titan organizmga mutlaqo bezarar: allergiya chaqirmaydi, zanglamaydi va MRT tekshiruviga xalaqit bermaydi.",
+      ru: "Да, согласно фетвам духовного управления, восстановление утраченных зубов медицинскими имплантами полностью разрешено (халяль): системы Osstem и Straumann изготовлены из чистого медицинского биотитана без использования запрещённых материалов. Титан абсолютно безвреден, гипоаллергенен и совместим с МРТ.",
+      en: "Yes. Per guidance from Uzbekistan's religious authorities, restoring missing teeth with medical implants is permissible (Halal); Osstem and Straumann fixtures are crafted strictly from pure medical titanium without porcine or human tissues. Bio-titanium is completely safe, hypoallergenic, and MRI-compatible.",
+    },
+  },
+  {
+    q: {
+      uz: "Andijon tumanlari (Asaka, Shahrixon, Xo'jaobod, Oltinko'l) dan kelgan bemorlar ham qabul qilinadimi?",
+      ru: "Принимает ли Д-р Олимжон пациентов из Асаки, Шахрихана и других районов Андижанской области?",
+      en: "Do you treat patients traveling from Asaka, Shahrixon, and nearby Andijan districts?",
+    },
+    a: {
+      uz: "Ha, albatta! Klinikamiz Andijon shahri Eski Shahar markazida (Abdurauf Fitrat ko'chasi 243A, bepul parkovka) joylashgan bo'lib, Asaka, Shahrixon, Xo'jaobod, Oltinko'l, Marhamat, Qo'rg'ontepa, Buloqboshi hamda Farg'ona vodiysidan keladigan bemorlar uchun onlayn band qilish orqali aniq vaqtda navbatsiz qabul tashkil qilinadi.",
+      ru: "Конечно! Наша клиника в центре Эски Шахар (ул. Абдурауфа Фитрата 243А, удобная бесплатная парковка) ежедневно принимает пациентов из Андижана, Асаки, Шахрихана, Ходжаабада, Алтынкульского, Мархаматского и Кургантепинского районов строго по предварительной записи без очередей.",
+      en: "Yes! Located centrally in Old City Andijan (243A Abdurauf Fitrat St with free parking), Dr. Olimjon regularly treats patients arriving from Asaka, Shahrixon, Khojaobod, Oltinkol, Marhamat, Kurgantepa, and the Fergana Valley with guaranteed zero-wait appointment slots.",
     },
   },
 ];

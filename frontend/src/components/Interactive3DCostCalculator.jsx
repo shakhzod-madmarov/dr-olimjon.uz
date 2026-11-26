@@ -321,7 +321,7 @@ const Interactive3DCostCalculator = () => {
                 role="tab"
                 aria-selected={isSelected}
                 id={`plan-tab-${t.id}`}
-                aria-controls="plan-panel"
+                aria-controls={`plan-panel-${t.id}`}
                 onClick={() => setSelectedId(t.id)}
                 className={`group relative p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl text-left transition-all duration-200 flex items-center gap-2 sm:gap-3 border cursor-pointer select-none last:col-span-2 sm:last:col-span-1 ${
                   isSelected
@@ -356,136 +356,147 @@ const Interactive3DCostCalculator = () => {
         </div>
 
         {/* ─── MAIN TWO-COLUMN DENTAL CARD CONTAINER ──────────────────────── */}
-        <div
-          id="plan-panel"
-          role="tabpanel"
-          aria-labelledby={`plan-tab-${selectedId}`}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8 items-stretch"
-        >
-          
-          {/* Left: Clean Clinical Dental Specification Sheet */}
-          <div className="lg:col-span-7 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200/90 shadow-sm flex flex-col justify-between">
-            <div>
-              
-              {/* Header with Authentic Dental Icon Badge */}
-              <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3.5 sm:pb-4 mb-4">
-                <div className="flex items-center gap-2.5 sm:gap-3">
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-50 border border-blue-200/70 text-[#132e53] flex items-center justify-center shadow-2xs shrink-0">
-                    {current.icon}
-                  </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8 items-stretch">
+          {/* Left: Render all treatment spec sheets in DOM for full SEO/AI indexing; hide inactive tabs */}
+          <div className="lg:col-span-7 flex flex-col">
+            {treatments.map((plan) => {
+              const isActive = plan.id === selectedId;
+              return (
+                <div
+                  key={plan.id}
+                  id={`plan-panel-${plan.id}`}
+                  role="tabpanel"
+                  aria-labelledby={`plan-tab-${plan.id}`}
+                  hidden={!isActive}
+                  className={
+                    isActive
+                      ? "bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200/90 shadow-sm flex flex-col justify-between flex-1"
+                      : "hidden"
+                  }
+                >
                   <div>
-                    <span className="text-[9.5px] sm:text-[10px] font-black uppercase tracking-widest text-[#0284c7] block leading-none mb-1">
-                      {current.badgeTitle[lang]}
-                    </span>
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-tight">
-                      {current.title[lang]}
-                    </h3>
-                  </div>
-                </div>
-
-                <span className="text-[11px] sm:text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 sm:px-3 py-1 rounded-full border border-emerald-200/70 shrink-0 inline-flex items-center gap-1.5">
-                  <IconShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>
-                    {lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Painless"}
-                  </span>
-                </span>
-              </div>
-              
-              {/* Clinical Narrative */}
-              <p className="text-slate-700 text-sm sm:text-base leading-relaxed font-normal mb-5">
-                {current.desc[lang]}
-              </p>
-
-              {/* 4 PLOMBA TYPES SHOWCASE (IF TREATMENT SELECTED) */}
-              {current.plombaTypes && (
-                <div className="mb-5 sm:mb-6">
-                  <div className="text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-800 mb-2.5 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#132e53]" />
-                    <span>{lang === "uz" ? "Mavjud Plomba Materiallari:" : lang === "ru" ? "Доступные Пломбировочные Материалы:" : "Available Filling Materials:"}</span>
-                  </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5">
-                    {current.plombaTypes.map((p, idx) => (
-                      <div key={idx} className="p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200/90 text-left">
-                        <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#0284c7] block">
-                          {p.country[lang]}
-                        </span>
-                        <span className="text-xs sm:text-sm font-bold text-slate-900 block mt-0.5 leading-snug">
-                          {p.brand}
-                        </span>
-                        <span className="text-[11px] sm:text-xs text-slate-600 block mt-1 leading-snug font-medium">
-                          {p.desc[lang]}
-                        </span>
+                    {/* Header with Authentic Dental Icon Badge */}
+                    <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-3.5 sm:pb-4 mb-4">
+                      <div className="flex items-center gap-2.5 sm:gap-3">
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-50 border border-blue-200/70 text-[#132e53] flex items-center justify-center shadow-2xs shrink-0">
+                          {plan.icon}
+                        </div>
+                        <div>
+                          <span className="text-[9.5px] sm:text-[10px] font-black uppercase tracking-widest text-[#0284c7] block leading-none mb-1">
+                            {plan.badgeTitle[lang]}
+                          </span>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-tight">
+                            {plan.title[lang]}
+                          </h3>
+                        </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
-              )}
 
-              {/* 3 CROWN TYPES SHOWCASE */}
-              {current.crownTypes && (
-                <div className="mb-5 sm:mb-6">
-                  <div className="text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-800 mb-2.5 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#132e53]" />
-                    <span>{lang === "uz" ? "Old & Orqa Tish Karonkalari (Xitoy, Germaniya, Avstraliya):" : lang === "ru" ? "Коронки для Передних и Жевательных Зубов:" : "Crown Systems (Front & Back):"}</span>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-2.5">
-                    {current.crownTypes.map((c, idx) => (
-                      <div key={idx} className="p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200/90 text-left">
-                        <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#0284c7] block">
-                          {c.country[lang]}
+                      <span className="text-[11px] sm:text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 sm:px-3 py-1 rounded-full border border-emerald-200/70 shrink-0 inline-flex items-center gap-1.5">
+                        <IconShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                        <span>
+                          {lang === "uz" ? "100% Og'riqsiz" : lang === "ru" ? "100% Без боли" : "100% Painless"}
                         </span>
-                        <span className="text-xs sm:text-sm font-bold text-slate-900 block mt-0.5 leading-snug">
-                          {c.brand}
-                        </span>
-                        <span className="text-[11px] sm:text-xs text-slate-600 block mt-1 leading-snug font-medium">
-                          {c.desc[lang]}
-                        </span>
+                      </span>
+                    </div>
+
+                    {/* Clinical Narrative */}
+                    <p className="text-slate-700 text-sm sm:text-base leading-relaxed font-normal mb-5">
+                      {plan.desc[lang]}
+                    </p>
+
+                    {/* 4 PLOMBA TYPES SHOWCASE */}
+                    {plan.plombaTypes && (
+                      <div className="mb-5 sm:mb-6">
+                        <div className="text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-800 mb-2.5 flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-[#132e53]" />
+                          <span>{lang === "uz" ? "Mavjud Plomba Materiallari:" : lang === "ru" ? "Доступные Пломбировочные Материалы:" : "Available Filling Materials:"}</span>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5">
+                          {plan.plombaTypes.map((p, idx) => (
+                            <div key={idx} className="p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200/90 text-left">
+                              <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#0284c7] block">
+                                {p.country[lang]}
+                              </span>
+                              <span className="text-xs sm:text-sm font-bold text-slate-900 block mt-0.5 leading-snug">
+                                {p.brand}
+                              </span>
+                              <span className="text-[11px] sm:text-xs text-slate-600 block mt-1 leading-snug font-medium">
+                                {p.desc[lang]}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    ))}
+                    )}
+
+                    {/* 3 CROWN TYPES SHOWCASE */}
+                    {plan.crownTypes && (
+                      <div className="mb-5 sm:mb-6">
+                        <div className="text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-800 mb-2.5 flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-[#132e53]" />
+                          <span>{lang === "uz" ? "Old & Orqa Tish Karonkalari (Xitoy, Germaniya, Avstraliya):" : lang === "ru" ? "Коронки для Передних и Жевательных Зубов:" : "Crown Systems (Front & Back):"}</span>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-2.5">
+                          {plan.crownTypes.map((c, idx) => (
+                            <div key={idx} className="p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200/90 text-left">
+                              <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#0284c7] block">
+                                {c.country[lang]}
+                              </span>
+                              <span className="text-xs sm:text-sm font-bold text-slate-900 block mt-0.5 leading-snug">
+                                {c.brand}
+                              </span>
+                              <span className="text-[11px] sm:text-xs text-slate-600 block mt-1 leading-snug font-medium">
+                                {c.desc[lang]}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* 3 Clinical Guarantees */}
+                    <ul className="space-y-2.5 mb-5 sm:mb-6">
+                      {plan.points[lang].map((point, idx) => (
+                        <li key={idx} className="flex items-center gap-3 text-sm sm:text-base font-semibold text-slate-700">
+                          <span className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200/80 flex items-center justify-center text-xs shrink-0 font-black">
+                            ✓
+                          </span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* 3 Metric Tiles at Bottom */}
+                  <div className="pt-4 border-t border-slate-100 grid grid-cols-3 gap-1.5 sm:gap-3 text-left">
+                    <div className="bg-slate-50/80 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-slate-200/70 text-center sm:text-left">
+                      <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+                        {lang === "uz" ? "Vaqt" : lang === "ru" ? "Время" : "Duration"}
+                      </span>
+                      <span className="text-xs sm:text-sm md:text-base font-black text-slate-900 mt-0.5 block leading-tight">
+                        {plan.duration[lang]}
+                      </span>
+                    </div>
+                    <div className="bg-slate-50/80 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-slate-200/70 text-center sm:text-left">
+                      <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+                        {lang === "uz" ? "Tashrif" : lang === "ru" ? "Визиты" : "Visits"}
+                      </span>
+                      <span className="text-xs sm:text-sm md:text-base font-black text-slate-900 mt-0.5 block leading-tight">
+                        {plan.visits[lang]}
+                      </span>
+                    </div>
+                    <div className="bg-slate-50/80 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-slate-200/70 text-center sm:text-left">
+                      <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
+                        {lang === "uz" ? "Kafolat" : lang === "ru" ? "Гарантия" : "Outcome"}
+                      </span>
+                      <span className="text-xs sm:text-sm md:text-base font-black text-slate-900 mt-0.5 block leading-tight">
+                        {plan.result[lang]}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              )}
-
-              {/* 3 Clinical Guarantees */}
-              <ul className="space-y-2.5 mb-5 sm:mb-6">
-                {current.points[lang].map((point, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-sm sm:text-base font-semibold text-slate-700">
-                    <span className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200/80 flex items-center justify-center text-xs shrink-0 font-black">
-                      ✓
-                    </span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* 3 Metric Tiles at Bottom */}
-            <div className="pt-4 border-t border-slate-100 grid grid-cols-3 gap-1.5 sm:gap-3 text-left">
-              <div className="bg-slate-50/80 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-slate-200/70 text-center sm:text-left">
-                <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
-                  {lang === "uz" ? "Vaqt" : lang === "ru" ? "Время" : "Duration"}
-                </span>
-                <span className="text-xs sm:text-sm md:text-base font-black text-slate-900 mt-0.5 block leading-tight">
-                  {current.duration[lang]}
-                </span>
-              </div>
-              <div className="bg-slate-50/80 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-slate-200/70 text-center sm:text-left">
-                <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
-                  {lang === "uz" ? "Tashrif" : lang === "ru" ? "Визиты" : "Visits"}
-                </span>
-                <span className="text-xs sm:text-sm md:text-base font-black text-slate-900 mt-0.5 block leading-tight">
-                  {current.visits[lang]}
-                </span>
-              </div>
-              <div className="bg-slate-50/80 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-slate-200/70 text-center sm:text-left">
-                <span className="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
-                  {lang === "uz" ? "Kafolat" : lang === "ru" ? "Гарантия" : "Outcome"}
-                </span>
-                <span className="text-xs sm:text-sm md:text-base font-black text-slate-900 mt-0.5 block leading-tight">
-                  {current.result[lang]}
-                </span>
-              </div>
-            </div>
+              );
+            })}
           </div>
 
           {/* Right: Quick Booking Form Card (Clean Luxury) */}

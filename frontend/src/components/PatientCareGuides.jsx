@@ -251,75 +251,82 @@ const PatientCareGuides = () => {
           })}
         </div>
 
-        {/* Content Card */}
-        <div
-          id={`guide-panel-${current.id}`}
-          role="tabpanel"
-          aria-labelledby={`guide-tab-${current.id}`}
-          className="bg-slate-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200/90"
-        >
-          <div className="flex flex-wrap items-center justify-between gap-2 pb-4 sm:pb-5 mb-5 sm:mb-6 border-b border-slate-200/80">
-            <h3 className="text-base sm:text-xl md:text-2xl font-black text-slate-900">
-              {current.title[lang]}
-            </h3>
-            <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-[#132e53] bg-blue-50 px-2.5 sm:px-3 py-1 rounded-full border border-blue-200">
-              <IconClock className="w-3.5 h-3.5 text-[#0284c7]" />
-              <span>Dr. Olimjon Murzajanov · Sevdo Denta</span>
-            </span>
-          </div>
+        {/* All Care Guide Panels in DOM for full SEO/AI indexing */}
+        {guides.map((guide) => {
+          const isSelected = guide.id === activeId;
+          return (
+            <div
+              key={guide.id}
+              id={`guide-panel-${guide.id}`}
+              role="tabpanel"
+              aria-labelledby={`guide-tab-${guide.id}`}
+              hidden={!isSelected}
+              className={isSelected ? "bg-slate-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200/90" : "hidden"}
+            >
+              <div className="flex flex-wrap items-center justify-between gap-2 pb-4 sm:pb-5 mb-5 sm:mb-6 border-b border-slate-200/80">
+                <h3 className="text-base sm:text-xl md:text-2xl font-black text-slate-900">
+                  {guide.title[lang]}
+                </h3>
+                <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-[#132e53] bg-blue-50 px-2.5 sm:px-3 py-1 rounded-full border border-blue-200">
+                  <IconClock className="w-3.5 h-3.5 text-[#0284c7]" />
+                  <span>Dr. Olimjon Murzajanov · Sevdo Denta</span>
+                </span>
+              </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            {/* DOs */}
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-emerald-200/80 shadow-2xs">
-              <span className="text-xs font-black uppercase tracking-wider text-emerald-700 flex items-center gap-2 mb-3">
-                <IconCheckCircle className="w-4 h-4 text-emerald-600" />
-                <span>
-                  {lang === "uz"
-                    ? "Tavsiya etiladi (Bajarish shart):"
-                    : lang === "ru"
-                    ? "Рекомендуется делать:"
-                    : "Recommended Do's:"}
-                </span>
-              </span>
-              <ul className="space-y-2.5">
-                {current.dos[lang].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 font-medium">
-                    <span className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
-                      ✓
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                {/* DOs */}
+                <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-emerald-200/80 shadow-2xs">
+                  <span className="text-xs font-black uppercase tracking-wider text-emerald-700 flex items-center gap-2 mb-3">
+                    <IconCheckCircle className="w-4 h-4 text-emerald-600" />
+                    <span>
+                      {lang === "uz"
+                        ? "Tavsiya etiladi (Bajarish shart):"
+                        : lang === "ru"
+                        ? "Рекомендуется делать:"
+                        : "Recommended Do's:"}
                     </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                  </span>
+                  <ul className="space-y-2.5">
+                    {guide.dos[lang].map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 font-medium">
+                        <span className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                          ✓
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-            {/* DONTs */}
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-red-200/80 shadow-2xs">
-              <span className="text-xs font-black uppercase tracking-wider text-red-700 flex items-center gap-2 mb-3">
-                <span className="w-4 h-4 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-[10px] font-black">
-                  ✕
-                </span>
-                <span>
-                  {lang === "uz"
-                    ? "Mumkin emas (Cheklovlar):"
-                    : lang === "ru"
-                    ? "Чего делать нельзя:"
-                    : "Important Restrictions:"}
-                </span>
-              </span>
-              <ul className="space-y-2.5">
-                {current.donts[lang].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 font-medium">
-                    <span className="w-5 h-5 rounded-full bg-red-50 text-red-600 font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
-                      !
+                {/* DONTs */}
+                <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-red-200/80 shadow-2xs">
+                  <span className="text-xs font-black uppercase tracking-wider text-red-700 flex items-center gap-2 mb-3">
+                    <span className="w-4 h-4 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-[10px] font-black">
+                      ✕
                     </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+                    <span>
+                      {lang === "uz"
+                        ? "Mumkin emas (Cheklovlar):"
+                        : lang === "ru"
+                        ? "Чего делать нельзя:"
+                        : "Important Restrictions:"}
+                    </span>
+                  </span>
+                  <ul className="space-y-2.5">
+                    {guide.donts[lang].map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 font-medium">
+                        <span className="w-5 h-5 rounded-full bg-red-50 text-red-600 font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                          !
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          );
+        })}
 
       </div>
     </section>

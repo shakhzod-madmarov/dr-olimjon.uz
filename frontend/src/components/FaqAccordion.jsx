@@ -67,16 +67,19 @@ const FaqAccordion = () => {
                     +
                   </span>
                 </button>
-                {isOpen && (
-                  <div
-                    id={panelId}
-                    role="region"
-                    aria-labelledby={buttonId}
-                    className="px-3.5 sm:px-5 pb-3.5 sm:pb-4 text-sm sm:text-base text-slate-700 leading-relaxed border-t border-[#d5e0ec] pt-3 sm:pt-4"
-                  >
-                    {item.a[lang]}
-                  </div>
-                )}
+                <div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={buttonId}
+                  hidden={!isOpen}
+                  className={
+                    isOpen
+                      ? "px-3.5 sm:px-5 pb-3.5 sm:pb-4 text-sm sm:text-base text-slate-700 leading-relaxed border-t border-[#d5e0ec] pt-3 sm:pt-4"
+                      : "hidden"
+                  }
+                >
+                  {item.a[lang]}
+                </div>
               </div>
             );
           })}

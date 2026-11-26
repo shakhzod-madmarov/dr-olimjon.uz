@@ -173,6 +173,29 @@ const Services = () => {
       {/* Post-Treatment Care Instructions */}
       <PatientCareGuides />
 
+      {/* Local Patient Search Intent & Service Areas Directory */}
+      <section className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d5e0ec] shadow-xs space-y-4">
+        <div className="space-y-1">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#285983]">
+            {lang === "uz" ? "Andijon va Farg'ona Vodiysi Bo'ylab" : lang === "ru" ? "География Приёма" : "Local Dental Care Coverage"}
+          </p>
+          <h2 className="font-serif-classic text-xl sm:text-2xl font-bold text-[#132e53]">
+            {lang === "uz"
+              ? "Barcha Tish Muammolari Uchun Bitta Markaz — Eski Shahar, «Sevdo Denta»"
+              : lang === "ru"
+              ? "Полный Спектр Стоматологии в Андижане — Эски Шахар, «Sevdo Denta»"
+              : "Comprehensive Care in Old City Andijan — «Sevdo Denta»"}
+          </h2>
+        </div>
+        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          {lang === "uz"
+            ? "Dr. Olimjon Murzajanov qabulida Andijon shahri (Eski Shahar, Abdurauf Fitrat ko'chasi 243A), Asaka, Shahrixon, Xo'jaobod, Oltinko'l, Marhamat, Qo'rg'ontepa va Buloqboshi aholisiga tish qo'yish (tsirkoniy karonka), tish implanti (Osstem, Straumann), og'riqsiz tish davolash (karies, kechki tish og'rig'i), aql tishini olish, E-max vinirlar, breket/elayner diagnostikasi hamda Philips ZOOM 4 oqartirish xizmatlari navbatsiz va rasmiy kafolat bilan ko'rsatiladi."
+            : lang === "ru"
+            ? "В клинике Д-ра Олимжона Мурзажанова принимают пациентов из Андижана (Эски Шахар, ул. Абдурауфа Фитрата 243А), Асаки, Шахрихана, Ходжаабада, Алтынкульского, Мархаматского и Кургантепинского районов: имплантация Osstem/Straumann, циркониевые коронки, лечение острой боли, виниры E-max, удаление зубов мудрости и отбеливание ZOOM 4 по записи без очередей."
+            : "Serving patients from Andijan City (243A Abdurauf Fitrat St, Old City), Asaka, Shahrixon, Khojaobod, Oltinkol, Marhamat, Kurgantepa, and the Fergana Valley with guaranteed zero-wait dental implants, zirconia crowns, painless root canals, wisdom tooth surgery, E-max veneers, and ZOOM 4 whitening."}
+        </p>
+      </section>
+
       {/* Bottom Consultation Card */}
       <div className="rounded-2xl sm:rounded-3xl bg-[#132e53] text-white p-5 sm:p-8 lg:p-10 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-2 text-center md:text-left">

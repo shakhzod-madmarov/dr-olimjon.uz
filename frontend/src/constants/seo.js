@@ -5,248 +5,257 @@ export const SITE_ORIGIN = "https://dentist-olimjon.uz";
 const years = getYearsOfExperience();
 
 /**
- * Per-page, per-language SEO copy with deep local, clinical, and search-intent optimization.
- * Tailored for Google Search, Yandex, and Generative AI Search engines (SearchGPT, Perplexity, Gemini, Yandex Neuro).
+ * Per-page, per-language SEO copy with concise 50–60 char titles and 140–158 char descriptions
+ * so Google, Yandex, and AI Overviews display full un-truncated titles, procedures, location, and phone.
  */
 export const PAGE_SEO = {
   home: {
     uz: {
-      title: "Tish Davolash, Tish Qo'yish va Stomatologiya Andijon — Dr. Olimjon Murzajanov",
-      description: `Andijonda zamonaviy stomatologiya: og'riqsiz tish davolash, tish qo'yish (tish qoyish), tsirkoniy karonkalar, tish implanti (Osstem), vinirlar va kechki tish og'rig'ini qoldirish. Dr. Olimjon Murzajanov (Sevdo Denta, Eski Shahar). Tel: +998 94 001-01-56.`,
+      title: "Stomatolog va Tish Implantatsiyasi Andijon — Dr. Olimjon",
+      description:
+        "Andijonda og'riqsiz tish davolash, tish implanti (Osstem), tish qo'yish (tsirkoniy), aql tishi olish. Dr. Olimjon (Sevdo Denta). Tel: +998 94 001-01-56",
     },
     ru: {
-      title: "Стоматология в Андижане — Врач-стоматолог Д-р Олимжон Мурзажанов | Sevdo Denta",
-      description: `Стоматология в Андижане: безболезненное лечение зубов, вставить зубы, циркониевые коронки, импланты и снятие ночной боли у Д-ра Олимжона Мурзажанова (Sevdo Denta, Эски Шахар). Тел: +998 94 001-01-56.`,
+      title: "Стоматология и Имплантация Зубов Андижан — Д-р Олимжон",
+      description:
+        "Безболезненное лечение зубов, импланты Osstem, циркониевые коронки, виниры и удаление зубов мудрости в Андижане (Sevdo Denta). Тел: +998 94 001-01-56",
     },
     en: {
-      title: "Dentistry & Tooth Restoration in Andijan — Dr. Olimjon Murzajanov",
-      description: `Modern dentistry in Andijan by Dr. Olimjon Murzajanov (Sevdo Denta Clinic): painless root canals, zirconia crowns, dental implants, veneers & emergency toothache relief. Call: +998 (94) 001-01-56.`,
+      title: "Dentist & Dental Implants in Andijan — Dr. Olimjon",
+      description:
+        "Painless dentistry in Andijan: Osstem implants, zirconia crowns, E-max veneers & wisdom tooth removal by Dr. Olimjon (Sevdo Denta). +998 94 001-01-56",
     },
   },
   services: {
     uz: {
-      title: "Xizmatlar Katalogi — Dr. Olimjon | Sevdo Denta Andijon",
+      title: "Tish Davolash, Qo'yish va Implantlar — Dr. Olimjon Andijon",
       description:
-        "Andijonda og'riqsiz tish davolash, tsirkoniy karonka, E-max vinirlar, sifatli implantlar va ZOOM 4 oqartirish. Kafolat. Tel: +998 (94) 001-01-56.",
+        "Andijon stomatologiya xizmatlari: plomba, tsirkoniy karonka, E-max vinir, Osstem implant, ZOOM 4 oqartirish, aql tishi olish, rentgen. +998 94 001-01-56",
     },
     ru: {
       title: "Услуги Стоматолога в Андижане — Д-р Олимжон | Sevdo Denta",
       description:
-        "Стоматология в Андижане: лечение кариеса и каналов без боли, циркониевые коронки, виниры E-max, имплантация и отбеливание. Тел: +998 (94) 001-01-56.",
+        "Лечение кариеса и каналов без боли, циркониевые коронки, виниры E-max, импланты Osstem, ZOOM 4 и удаление зубов в Андижане. Тел: +998 94 001-01-56",
     },
     en: {
-      title: "Dental Services in Andijan — Dr. Olimjon | Sevdo Denta",
+      title: "Dental Services & Treatments in Andijan — Dr. Olimjon",
       description:
-        "Painless dentistry in Andijan: composite fillings, root canals, zirconia crowns, E-max veneers, titanium implants & whitening. Tel: +998 (94) 001-01-56.",
+        "Painless dentistry in Andijan: composite fillings, root canals, zirconia crowns, E-max veneers, titanium implants & whitening. Tel: +998 94 001-01-56",
     },
   },
   about: {
     uz: {
       title: "Dr. Olimjon Murzajanov — Stomatolog & Ortoped Andijon",
-      description: `Dr. Olimjon Murzajanov — Andijondagi Sevdo Denta klinikasi stomatologi. ${years}+ yil tajriba, 1,000+ bemor, ADTI diplomi va sertifikatlar.`,
+      description: `Dr. Olimjon Murzajanov — Andijon (Sevdo Denta) stomatolog-implantologi. ${years}+ yil tajriba, 1,000+ bemor, ADTI diplomi va sertifikatlar. +998 94 001-01-56`,
     },
     ru: {
       title: "О Докторе Олимжоне Мурзажанове — Стоматолог в Андижане",
-      description: `Д-р Олимжон Мурзажанов — стоматолог-ортопед клиники Sevdo Denta в Андижане. ${years}+ лет практики, 1 000+ вылеченных пациентов. Тел: +998 94 001-01-56.`,
+      description: `Д-р Олимжон Мурзажанов — стоматолог-ортопед и имплантолог в Андижане (Sevdo Denta). ${years}+ лет практики, 1 000+ пациентов. Тел: +998 94 001-01-56`,
     },
     en: {
       title: "About Dr. Olimjon Murzajanov — Dentist in Andijan",
-      description: `Meet Dr. Olimjon Murzajanov, dentist and prosthodontist at Sevdo Denta Clinic in Andijan: ${years}+ years experience, 1,000+ patients. Tel: +998 94 001-01-56.`,
+      description: `Meet Dr. Olimjon Murzajanov, dentist and implantologist at Sevdo Denta in Andijan: ${years}+ years experience, 1,000+ patients. Tel: +998 94 001-01-56`,
     },
   },
   contact: {
     uz: {
-      title: "Aloqa va Manzil — Sevdo Denta Andijon | Dr. Olimjon",
+      title: "Aloqa va Manzil — Dr. Olimjon | Sevdo Denta Andijon",
       description:
-        "Andijon, Eski Shahar (Old City), 1-qavat, Sevdo Denta klinikasi. Dr. Olimjon qabuliga yozilish: +998 (94) 001-01-56, Telegram: @httmurzajanov.",
+        "Andijon, Eski Shahar, Abdurauf Fitrat 243A (Sevdo Denta, 1-qavat). Dr. Olimjon qabuliga yozilish: +998 94 001-01-56, Telegram: @httmurzajanov",
     },
     ru: {
-      title: "Контакты и Адрес — Клиника Sevdo Denta | Д-р Олимжон",
+      title: "Контакты и Адрес — Д-р Олимжон | Sevdo Denta Андижан",
       description:
-        "г. Андижан, Эски Шахар (Old City), 1-й этаж, стоматология Sevdo Denta. Запись на приём к Д-ру Олимжону: +998 (94) 001-01-56, Telegram: @httmurzajanov.",
+        "г. Андижан, Эски Шахар, ул. Абдурауфа Фитрата 243А (Sevdo Denta, 1-й этаж). Запись к Д-ру Олимжону: +998 94 001-01-56, Telegram: @httmurzajanov",
     },
     en: {
-      title: "Contact & Location — Sevdo Denta Clinic | Dr. Olimjon",
+      title: "Contact & Location — Dr. Olimjon | Sevdo Denta Andijan",
       description:
-        "Visit Dr. Olimjon Murzajanov at Sevdo Denta Clinic, Old City, 1st Floor, Andijan. Book by phone +998 (94) 001-01-56 or Telegram: @httmurzajanov.",
+        "Visit Dr. Olimjon Murzajanov at Sevdo Denta, 243A Abdurauf Fitrat St, Old City, Andijan. Book: +998 94 001-01-56 or Telegram @httmurzajanov",
     },
   },
   booking: {
     uz: {
       title: "Onlayn Qabulga Yozilish — Dr. Olimjon | Sevdo Denta",
       description:
-        "Dr. Olimjon Murzajanov qabuliga onlayn yoziling: bo'sh kun va soatni tanlang. Andijon, Eski Shahar, Sevdo Denta klinikasi. Tel: +998 (94) 001-01-56.",
+        "Dr. Olimjon Murzajanov qabuliga navbatsiz onlayn yoziling: bo'sh kun va soatni tanlang. Andijon, Eski Shahar, Sevdo Denta. Tel: +998 94 001-01-56",
     },
     ru: {
-      title: "Онлайн-Запись на Приём — Д-р Олимжон | Sevdo Denta",
+      title: "Онлайн-Запись на Приём — Д-р Олимжон | Андижан",
       description:
-        "Онлайн-запись к Д-ру Олимжону: выберите свободный день и время приёма. Клиника Sevdo Denta, г. Андижан, Эски Шахар. Телефон: +998 (94) 001-01-56.",
+        "Онлайн-запись к Д-ру Олимжону без очередей: выберите свободный день и время. Клиника Sevdo Denta, г. Андижан. Тел: +998 94 001-01-56",
     },
     en: {
-      title: "Book Dental Appointment — Dr. Olimjon | Sevdo Denta",
+      title: "Book Dental Appointment — Dr. Olimjon | Andijan",
       description:
-        "Online appointment booking with Dr. Olimjon Murzajanov at Sevdo Denta Clinic in Andijan. Choose your available date and time. Tel: +998 (94) 001-01-56.",
+        "Book online with Dr. Olimjon Murzajanov at Sevdo Denta Clinic in Andijan. Zero waiting line, choose your available slot. Tel: +998 94 001-01-56",
     },
   },
   qabul: {
     uz: {
       title: "Qabul Vaqtini Tanlang — Dr. Olimjon | Sevdo Denta",
-      description: "Dr. Olimjon Murzajanov qabuliga navbatsiz onlayn yoziling. 100% og'riqsiz ko'rik va bepul konsultatsiya. Tel: +998 (94) 001-01-56.",
+      description:
+        "Dr. Olimjon Murzajanov qabuliga navbatsiz onlayn yoziling. 100% og'riqsiz ko'rik va aniq davolash rejasi. Andijon, Eski Shahar. +998 94 001-01-56",
     },
     ru: {
       title: "Запись к Стоматологу — Д-р Олимжон | Андижан",
-      description: "Онлайн запись на прием к стоматологу-ортопеду в Андижане без очередей. Клиника Sevdo Denta, Эски Шахар. Тел: +998 (94) 001-01-56.",
+      description:
+        "Онлайн запись на приём к стоматологу-ортопеду в Андижане без очередей. Клиника Sevdo Denta, Эски Шахар. Тел: +998 94 001-01-56",
     },
     en: {
       title: "Schedule Consultation — Dr. Olimjon | Andijan",
-      description: "Schedule your dental consultation with Dr. Olimjon Murzajanov in Andijan. Zero waiting time, gentle treatment. Call +998 (94) 001-01-56.",
+      description:
+        "Schedule your dental consultation with Dr. Olimjon Murzajanov in Andijan. Zero waiting time, gentle treatment. Call +998 94 001-01-56",
     },
   },
   notFound: {
     uz: {
       title: "Sahifa topilmadi (404) — Dr. Olimjon Murzajanov",
-      description: "Siz qidirgan sahifa topilmadi. Bosh sahifaga qayting yoki stomatologik xizmatlarimiz bilan tanishing.",
+      description:
+        "Siz qidirgan sahifa topilmadi. Bosh sahifaga qayting yoki Andijondagi stomatologik xizmatlarimiz bilan tanishing.",
     },
     ru: {
       title: "Страница не найдена (404) — Д-р Олимжон",
-      description: "Запрашиваемая страница не найдена. Вернитесь на главную или выберите нужную стоматологическую услугу.",
+      description:
+        "Запрашиваемая страница не найдена. Вернитесь на главную или выберите нужную стоматологическую услугу.",
     },
     en: {
       title: "Page Not Found (404) — Dr. Olimjon Murzajanov",
-      description: "The page you requested could not be found. Return to the homepage or browse our dental services.",
+      description:
+        "The page you requested could not be found. Return to the homepage or browse our dental services in Andijan.",
     },
   },
 
   // 1. Restorative & Root Canal Therapy
   "tish-davolash": {
     uz: {
-      title: "Tish Davolash va Plomba Andijon — Dr. Olimjon",
+      title: "Og'riqsiz Tish Davolash va Plomba Andijon — Dr. Olimjon",
       description:
-        "Andijonda karies, pulpit va tish ildiz kanallarini 100% og'riqsiz davolash. Germaniya (3M Filtek) va Yaponiya plombalari. Tel: +998 (94) 001-01-56.",
+        "Andijonda tish og'rig'i, karies va nerv (pulpit) davolash. Germaniya 3M Filtek va Yaponiya Estelite plombalari. 0% og'riq. +998 94 001-01-56",
     },
     ru: {
-      title: "Лечение Зубов и Каналов Без Боли в Андижане | Д-р Олимжон",
+      title: "Лечение Зубов и Каналов Без Боли в Андижане — Д-р Олимжон",
       description:
-        "Безболезненное лечение кариеса, пульпита и периодонтита в Андижане. Световые нано-пломбы 3M Filtek (Германия) и Estelite. Запись: +998 (94) 001-01-56.",
+        "Безболезненное лечение кариеса, пульпита и ночной зубной боли в Андижане. Немецкие и японские пломбы 3M Filtek, Estelite. +998 94 001-01-56",
     },
     en: {
-      title: "Painless Tooth Decay & Root Canal in Andijan | Dr. Olimjon",
+      title: "Painless Tooth Decay & Root Canal in Andijan — Dr. Olimjon",
       description:
-        "Gentle, painless root canal therapy and cavity fillings in Andijan using premium 3M Filtek & Estelite composites. Call +998 (94) 001-01-56.",
+        "Gentle, painless root canal therapy and cavity fillings in Andijan using genuine 3M Filtek & Estelite nano-composites. Tel: +998 94 001-01-56",
     },
   },
 
-  // 2. Prosthodontics & Zirconia Crowns (Tish Qo'yish, Tsirkon Karonkalar)
+  // 2. Prosthodontics & Zirconia Crowns
   ortopediya: {
     uz: {
       title: "Tish Qo'yish va Tsirkoniy Karonka Andijon — Dr. Olimjon",
       description:
-        "Andijonda sifatli tish qo'yish (tish qoyish): monolit tsirkoniy karonkalar (tish koronkasi), ko'prik protezlar va singan tishni tiklash. 2–3 kunda og'riqsiz, 10 yil kafolat. Tel: +998 94 001-01-56.",
+        "Andijonda sifatli tish qo'yish (tish qoyish): Germaniya va Avstraliya tsirkoniy karonkalari, ko'prik protezlar. 2-3 kunda, 10 yil kafolat. +998 94 001-01-56",
     },
     ru: {
-      title: "Вставить Зуб и Циркониевые Коронки в Андижане | Д-р Олимжон",
+      title: "Вставить Зуб и Циркониевые Коронки в Андижане — Д-р Олимжон",
       description:
-        "Установка безметалловых циркониевых коронок и мостов в Андижане. 3D CAD/CAM моделирование, идеальная эстетика десны, гарантия до 10 лет. Тел: +998 (94) 001-01-56.",
+        "Установка безметалловых циркониевых коронок и мостов в Андижане за 2–3 дня. 3D CAD/CAM точность, без посинения десны, гарантия 10 лет. +998 94 001-01-56",
     },
     en: {
-      title: "Tooth Replacement & Zirconia Crowns in Andijan | Dr. Olimjon",
+      title: "Tooth Replacement & Zirconia Crowns in Andijan — Dr. Olimjon",
       description:
-        "Monolithic CAD/CAM zirconia crowns & dental bridges in Andijan. Biocompatible, zero dark gumlines, up to 10-year warranty. Tel: +998 (94) 001-01-56.",
+        "Monolithic CAD/CAM zirconia crowns & dental bridges in Andijan in 2–3 days. Metal-free aesthetics, up to 10-year warranty. Tel: +998 94 001-01-56",
     },
   },
 
-  // 3. Cosmetic Dentistry & E-max Veneers
+  // 3. Cosmetic Dentistry, Veneers & Alignment Planning
   "estetik-stomatologiya": {
     uz: {
-      title: "E-max Vinirlar va Estetik Tabassum Andijon — Dr. Olimjon",
+      title: "Vinirlar (E-max) va Tish Tekislash Andijon — Dr. Olimjon",
       description:
-        "Gollivud tabassumi Andijonda! 0.3 mm ultra-yupqa E-max keramik vinirlar va badiiy restavratsiya. Qahva va choydan sarg'aymaydi. Tel: +998 (94) 001-01-56.",
+        "Andijonda E-max keramik vinirlar, diastema yopish va breket/elayner bilan tish tekislash. Tabiiy Gollivud tabassumi, 10+ yil kafolat. +998 94 001-01-56",
     },
     ru: {
-      title: "Керамические Виниры E-max в Андижане | Д-р Олимжон",
+      title: "Виниры E-max и Выравнивание Зубов в Андижане — Д-р Олимжон",
       description:
-        "Ультратонкие виниры E-max (0.3 мм) и эстетическая реставрация зоны улыбки в Андижане. Натуральная прозрачность, стойкий цвет. Тел: +998 (94) 001-01-56.",
+        "Ультратонкие керамические виниры E-max (0.3 мм), закрытие диастемы и эстетическая реставрация улыбки в Андижане. Тел: +998 94 001-01-56",
     },
     en: {
-      title: "E-max Porcelain Veneers in Andijan | Dr. Olimjon",
+      title: "E-max Porcelain Veneers & Smile Design Andijan — Dr. Olimjon",
       description:
-        "Get a stunning Hollywood smile in Andijan with ultra-thin 0.3mm E-max porcelain veneers. Stain-resistant, natural translucency. Tel: +998 (94) 001-01-56.",
+        "Ultra-thin 0.3mm E-max porcelain veneers, diastema closure, and smile design in Andijan. Natural stain-resistant translucency. Tel: +998 94 001-01-56",
     },
   },
 
-  // 4. Dental Implants (Tish Implanti, Osstem & Straumann)
+  // 4. Dental Implants
   implantatsiya: {
     uz: {
-      title: "Tish Implanti va Implantatsiya Andijon (Osstem) — Dr. Olimjon",
+      title: "Tish Implantatsiyasi Andijon (Osstem, Straumann) — Olimjon",
       description:
-        "Andijonda tish implanti (tish ektirish): Janubiy Koreya (Osstem) va Shveysariya (Straumann) biotitan implantlari. 20 daqiqada 100% og'riqsiz, umrbod kafolat. Tel: +998 94 001-01-56.",
+        "Andijonda tish implanti: Koreya (Osstem) va Shveysariya (Straumann) implantatsiyasi. 20 daqiqada og'riqsiz, umrbod kafolat, 99.2% natija. +998 94 001-01-56",
     },
     ru: {
-      title: "Зубные Импланты и Имплантация в Андижане (Osstem) | Д-р Олимжон",
+      title: "Имплантация Зубов и Импланты Osstem в Андижане — Д-р Олимжон",
       description:
-        "Надёжная дентальная имплантация в Андижане за 20 минут без боли. Оригинальные титановые системы Osstem (Корея) и Straumann. Пожизненная гарантия. Запись: +998 (94) 001-01-56.",
+        "Дентальная имплантация в Андижане за 20 минут без боли: оригинальные титановые системы Osstem (Корея) и Straumann. Приживаемость 99.2%. +998 94 001-01-56",
     },
     en: {
-      title: "Dental Implants & Tooth Replacement in Andijan | Dr. Olimjon",
+      title: "Dental Implants (Osstem, Straumann) in Andijan — Dr. Olimjon",
       description:
-        "Painless dental implants in Andijan using genuine South Korean (Osstem) and Swiss (Straumann) titanium systems with lifetime warranty. Tel: +998 94 001-01-56.",
+        "Painless dental implants in Andijan: South Korean Osstem & Swiss Straumann titanium fixtures placed in 20 mins with lifetime warranty. +998 94 001-01-56",
     },
   },
 
   // 5. Laser Whitening & Prophylaxis
   "tish-oqartirish": {
     uz: {
-      title: "Philips ZOOM 4 Tish Oqartirish Andijon — Dr. Olimjon",
+      title: "Tish Oqartirish ZOOM 4 va Tosh Tozalash Andijon — Olimjon",
       description:
-        "Andijonda Philips ZOOM 4 lazerli oqartirish va AirFlow tozalash. Tish emaliga bezarar, 8-10 tongacha xavfsiz oqartirish. Tel: +998 (94) 001-01-56.",
+        "Andijonda Philips ZOOM 4 lazerli tish oqartirish va AirFlow tosh tozalash. Emalga zarar yetkazmaydi, milk qonashini to'xtatadi. +998 94 001-01-56",
     },
     ru: {
-      title: "Отбеливание Зубов ZOOM 4 в Андижане | Д-р Олимжон",
+      title: "Отбеливание ZOOM 4 и Чистка Зубов в Андижане — Д-р Олимжон",
       description:
-        "Безопасное лазерное отбеливание зубов Philips ZOOM 4 на 8–10 тонов и профессиональная чистка AirFlow в Андижане. Без вреда эмали. Тел: +998 (94) 001-01-56.",
+        "Безопасное осветление зубов Philips ZOOM 4 холодным LED-светом и ультразвуковая чистка AirFlow в Андижане без повреждения эмали. +998 94 001-01-56",
     },
     en: {
-      title: "Philips ZOOM 4 Teeth Whitening in Andijan | Dr. Olimjon",
+      title: "Philips ZOOM 4 Teeth Whitening & AirFlow Andijan — Dr. Olimjon",
       description:
-        "Philips ZOOM 4 cold-LED teeth whitening up to 8–10 shades brighter and ultrasonic AirFlow scaling in Andijan. Safe enamel care. Tel: +998 94 001-01-56.",
+        "Safe cold-LED Philips ZOOM 4 teeth whitening and Swiss AirFlow tartar scaling in Andijan. Zero enamel damage or sensitivity. Tel: +998 94 001-01-56",
     },
   },
 
-  // 6. Oral Surgery & Atraumatic Tooth Extraction (Tish Olish, Aql Tishi)
+  // 6. Oral Surgery & Wisdom Tooth Extraction
   xirurgiya: {
     uz: {
-      title: "Tish Olish va Aql Tishini Oldirish Andijon (Og'riqsiz) — Dr. Olimjon",
+      title: "Og'riqsiz Tish Olish va Aql Tishi Andijon — Dr. Olimjon",
       description:
-        "Andijonda 100% og'riqsiz tish olish (tish oldirish, sug'urish), chirigan ildizlarni olish va aql tishini (8-tish) asoratsiz oldirish. 2 bosqichli anesteziya, shishsiz tez bitish. Tel: +998 (94) 001-01-56.",
+        "Andijonda og'riqsiz tish olish (sug'urish), singan ildiz va aql tishini (8-tish) atravmatik olish. 2 bosqichli anesteziya, shishsiz bitish. +998 94 001-01-56",
     },
     ru: {
-      title: "Удаление Зуба и Зуба Мудрости Без Боли в Андижане | Д-р Олимжон",
+      title: "Удаление Зуба и Зуба Мудрости Без Боли Андижан — Олимжон",
       description:
-        "Атравматичное удаление зубов любой сложности и зубов мудрости в Андижане без боли (0% боли). Полное обезболивание, быстрое заживление лунки без отёка. Запись: +998 (94) 001-01-56.",
+        "Атравматичное удаление зубов любой сложности и зубов мудрости в Андижане без боли и отёка. Коллагеновая губка для заживления. Тел: +998 94 001-01-56",
     },
     en: {
-      title: "Tooth Extraction & Wisdom Tooth Removal in Andijan | Dr. Olimjon",
+      title: "Painless Tooth & Wisdom Tooth Extraction Andijan — Olimjon",
       description:
-        "Atraumatic, 100% painless tooth and wisdom tooth extraction in Andijan. Gentle microsurgical technique with rapid swelling-free recovery. Tel: +998 94 001-01-56.",
+        "Atraumatic, 100% painless tooth and wisdom tooth extraction in Andijan. Bone-preserving technique with rapid swelling-free healing. +998 94 001-01-56",
     },
   },
 
   // 7. Digital Radiovisiography Diagnostics
   "rentgen-diagnostika": {
     uz: {
-      title: "Raqamli Tish Rentgen Diagnostika Andijon — Dr. Olimjon",
+      title: "Raqamli Tish Rentgen (Viziograf) Andijon — Dr. Olimjon",
       description:
-        "Andijonda 90% kam nurlanishli raqamli viziograf orqali tish ildiz kanallari va yashirin kariesni 2 soniyada aniqlash. Xavfsiz. Tel: +998 (94) 001-01-56.",
+        "Andijonda 90% kam nurlanishli raqamli tish rentgeni. 2 soniyada yashirin karies, ildiz kanallari va suyakni aniq ko'rish. Tel: +998 94 001-01-56",
     },
     ru: {
-      title: "Цифровой Рентген Зуба (Визиограф) в Андижане | Д-р Олимжон",
+      title: "Цифровой Рентген Зуба (Визиограф) в Андижане — Д-р Олимжон",
       description:
-        "Мгновенный цифровой снимок зуба в Андижане. Лучевая нагрузка на 90% ниже плёночного рентгена, результат за 2 секунды. Телефон: +998 (94) 001-01-56.",
+        "Мгновенный цифровой снимок зуба в Андижане за 2 секунды: лучевая нагрузка на 90% ниже плёночного рентгена, точный контроль каналов. +998 94 001-01-56",
     },
     en: {
-      title: "Digital Dental X-Ray & Diagnostics in Andijan | Dr. Olimjon",
+      title: "Digital Dental X-Ray (Radiovisiograph) Andijan — Dr. Olimjon",
       description:
-        "Low-dose high-definition digital radiovisiography in Andijan. 90% less radiation than film, crystal-clear 2-second imaging. Tel: +998 (94) 001-01-56.",
+        "Low-dose high-definition digital radiovisiography in Andijan: 90% less radiation and crystal-clear 2-second root canal imaging. Tel: +998 94 001-01-56",
     },
   },
 };
@@ -261,49 +270,50 @@ PAGE_SEO["services/xirurgiya"] = PAGE_SEO["xirurgiya"];
 PAGE_SEO["services/rentgen-diagnostika"] = PAGE_SEO["rentgen-diagnostika"];
 
 export const PAGE_KEYWORDS = {
-  uz: "tish qoyish, tish qo'yish, tish qoyish narxi andijon, oq tish qo'yish narxi 2026, tish implanti, tish implantatsiyasi, tish olish, tish oldirish, og'riqsiz tish olish, tish sug'urish, kechki payt tishim ogriyapti, kechki payt ogriyapti, kechasi tish og'rig'i, tish karonkalari, tish koronkasi, sirkoniy karonka, tsirkon tish narxi, tish breketlari, tish tekislash, stomatolog olimjon, dentist olimjon, implantolog olimjon, doktor olimjon, vrach olimjon, olimjon murzajanov, dr olimjon murzajanov, sevdo denta andijon, eski shahar stomatolog, andijonda stomatologiya, andijonda stomatolog, andijon stomatologiya klinikalari, andijonda tish shifokori, stomatolog andijon, tish shifokori andijon, ortoped stomatolog andijon, tish davolash andijon, tish qo'yish andijon, tsirkon tish narxi andijon, tsirkoniy karonka andijon, implantatsiya andijon, osstem implant andijon, straumann implant andijon, vinirlar andijon, e-max vinirlar, tish oqartirish zoom 4 andijon, aql tishini oldirish andijon, tish rentgen andijon, yaxshi stomatolog andijon, eng yaxshi stomatolog andijon, og'riqsiz tish davolash, tish klinika andijon, tish og'rig'i andijon, stomatologiya andijon narxlari, tish plomba narxi andijon, nurli plomba andijon, 24 soat stomatolog andijon, shoshilinch tish yordami andijon, tishim og'riyapti, tish og'rig'ini qoldirish, tishim lo'qillab og'riyapti, tish nervi shamollashi, tish qamashishi, issiq sovuqqa tish og'rishi, tishim sinib ketdi, plombam tushib ketdi, tishim teshildi, milk qonashi sabablari, tish yuvganda milkdan qon kelishi, milk shishishi, flyus davolash andijon, tish ostida yiring, og'izdan hid kelishi sababi, tish toshlarini tozalash narxi, tish sarg'ayishi, aql tishim chiqyapti, 8 tish og'rig'i, tishim qimirlayapti, tish qo'ydirish narxi andijon, tish yo'qligida nima qilish kerak, tish og'rig'iga dori, tish ukoli og'riqlimi, tish oldirish og'riqlimi, bolalar tishi davolash, homiladorlikda tish davolash andijon, arzon tish davolash andijon, asaka stomatolog, shahrixon stomatolog, oltinko'l stomatolog, xo'jaobod stomatolog, marhamat stomatolog, qo'rg'ontepa stomatolog, farg'ona vodiysi stomatologiya, тиш қўйиш, тиш қўйиш нархи, тиш импланти, тиш олиш, кечки пайт тишим оғрияпти, тиш коронкалари, цирконий коронка, тиш брекетлари, стоматолог олимжон, олимжон мурзажанов, севдо дента, эски шаҳар стоматология",
-  ru: "вставить зуб андижан, поставить коронку андижан, циркониевые коронки на зубы андижан, коронки на зубы цена андижан, зубные импланты андижан, имплантация зубов андижан, удаление зуба андижан, удалить зуб без боли андижан, болит зуб ночью что делать, пульсирует зуб ночью, стоматолог олимжон, доктор олимжон мурзажанов, стоматология в андижане, стоматолог в андижане, стоматология андижан, стоматолог андижан, клиники стоматологии андижан, лучшие стоматологи андижана, хороший стоматолог в андижане, клиника севдо дента андижан, олимжон стоматолог, эски шахар стоматолог, стоматолог ортопед андижан, лечение зубов андижан, лечение зубов без боли андижан, лечение кариеса и каналов андижан, циркониевые коронки андижан, коронка на зуб цена андижан, протезирование зубов андижан, зубные импланты осстем андижан, импланты штрауман андижан, виниры емакс андижан, голливудская улыбка андижан, отбеливание зубов зум 4 андижан, профессиональная чистка зубов андижан, удаление зуба мудрости андижан, рентген зуба андижан, лучшая стоматология в андижане, сколько стоит поставить коронку в андижане, сколько стоит имплант в андижане, частная стоматологическая клиника андижан, болит зуб что делать, острая зубная боль снять в домашних условиях, зуб ноет ночью, зуб пульсирует, зуб реагирует на горячее и холодное, чувствительность зубов, откололся зуб что делать, выпала пломба, дырка в зубе, потемнел зуб, шатается зуб, кровоточат десны при чистке, опухла десна флюс, гной в десне лечение, неприятный запах изо рта как избавиться, зубной камень удаление ультразвуком, желтые зубы как отбелить, режется зуб мудрости опухла щека, болит челюсть, сколько стоит вставить зуб в андижане, больно ли лечить зубы, больно ли ставить укол в десну, лечение зубов при беременности андижан, круглосуточная стоматология андижан, экстренная помощь при зубной боли андижан, хороший стоматолог в андижане отзывы, стоматология асака, стоматология шахрихан",
-  en: "tooth replacement andijan, dental crowns andijan, zirconia crowns andijan, dental implants andijan, tooth extraction andijan, wisdom tooth removal andijan, severe toothache at night, throbbing tooth pain relief, dentist olimjon, dr olimjon murzajanov, dentistry in andijan, dentist in andijan, dental clinic andijan uzbekistan, dental clinics in andijan, best dentist andijan, top rated dentist andijan, sevdo denta clinic andijan, prosthodontist andijan, osstem implants andijan, straumann dental implants andijan, porcelain veneers andijan, emax veneers andijan, teeth whitening zoom 4 andijan, painless root canal andijan, emergency dentist andijan, english speaking dentist uzbekistan, toothache relief andijan, tooth sensitive to hot and cold, chipped tooth repair andijan, lost dental filling what to do, bleeding gums treatment, swollen gum abscess relief, bad breath cure andijan, broken tooth extraction andijan, wisdom tooth pain swelling, how much dental crown cost andijan, painless dental care andijan, emergency toothache relief andijan",
+  uz: "tish implantatsiyasi, tish implantatsiyasi andijon, implant tish narxi, implant tish narxi 2026, tish qo yish narxlari, tish implantatsiya nima, implant tish qo yish jarayoni, implant tish halolmi, implant tish zararlari, implant tish turlari, tish qoyish, tish qo'yish, tish qoyish narxi andijon, oq tish qo'yish narxi 2026, tish implanti, tish olish, tish oldirish, og'riqsiz tish olish, tish sug'urish, kechki payt tishim ogriyapti, kechasi tish og'rig'iga nima qilish kerak, tish og'rig'iga issiq qo'ysa bo'ladimi, tish karonkalari, tish koronkasi, sirkoniy karonka, tsirkon tish narxi, tish breketlari, tish tekislash, stomatolog olimjon, dentist olimjon, implantolog olimjon, doktor olimjon, vrach olimjon, olimjon murzajanov, dr olimjon murzajanov, sevdo denta andijon, eski shahar stomatolog, abdurauf fitrat stomatolog, andijonda stomatologiya, andijonda stomatolog, andijon stomatologiya klinikalari, yaxshi stomatolog andijon, eng yaxshi stomatolog andijon, og'riqsiz tish davolash, tishim lo'qillab og'riyapti, tish nervi shamollashi, tish qamashishi, issiq sovuqqa tish og'rishi, tishim sinib ketdi, plombam tushib ketdi, milk qonashi sabablari, og'izdan hid kelishi sababi, tish toshlarini tozalash narxi, aql tishini oldirish andijon, 8 tish og'rig'i, asaka stomatolog, shahrixon stomatolog, oltinko'l stomatolog, xo'jaobod stomatolog, marhamat stomatolog, qo'rg'ontepa stomatolog, buloqboshi stomatolog, farg'ona vodiysi stomatologiya, тиш имплантацияси, имплант тиш нархи, тиш қўйиш нархи, тиш импланти, имплант тиш ҳалолми, имплант тиш зарарлари, тиш олиш, кечки пайт тишим оғрияпти, тиш коронкалари, цирконий коронка, тиш брекетлари, стоматолог олимжон, олимжон мурзажанов, севдо дента",
+  ru: "имплантация зубов андижан, имплантация зубов андижан цена 2026, зубные импланты андижан, импланты осстем штрауман андижан, виды зубных имплантов, вредны ли импланты зубов, можно ли ставить имплант халяль, вставить зуб андижан, сколько стоит вставить зуб андижан, поставить коронку андижан, циркониевые коронки на зубы андижан, коронки на зубы цена андижан, удаление зуба андижан, удалить зуб мудрости без боли андижан, болит зуб ночью что делать, пульсирует зуб ночью, можно ли греть щеку при зубной боли, стоматолог олимжон, доктор олимжон мурзажанов, стоматология в андижане, стоматолог в андижане, клиники стоматологии андижан, лучшие стоматологи андижана, хороший стоматолог в андижане отзывы, клиника севдо дента андижан, эски шахар стоматолог, стоматолог ортопед андижан, лечение зубов без боли андижан, световая пломба 3m filtek андижан, виниры емакс андижан, голливудская улыбка андижан, отбеливание зубов зум 4 андижан, чистка зубов airflow андижан, рентген зуба андижан, откололся зуб что делать, выпала пломба, кровоточат десны, неприятный запах изо рта, стоматология асака, стоматология шахрихан",
+  en: "dental implants andijan, tooth implant cost uzbekistan, osstem straumann implants andijan, tooth replacement andijan, dental crowns andijan, zirconia crowns andijan, porcelain veneers andijan, emax veneers andijan, tooth extraction andijan, wisdom tooth removal andijan, severe toothache at night relief, dentist olimjon, dr olimjon murzajanov, dentistry in andijan, best dentist in andijan, sevdo denta clinic andijan, prosthodontist andijan, teeth whitening zoom 4 andijan, painless root canal andijan, emergency dentist andijan, digital dental x-ray andijan",
 };
 
 /**
- * Service-specific high-intent keyword matrices
+ * Service-specific high-intent keyword matrices covering clinical synonyms,
+ * cost/safety/halal/timeline queries, and colloquial variants (Latin & Cyrillic).
  */
 export const SERVICE_KEYWORDS = {
   "tish-davolash": {
-    uz: "kechki payt tishim ogriyapti, kechki payt ogriyapti, kechasi tish ogrishi, tishim loqillayapti, tish davolash andijon, tish plomba narxi andijon, nurli plomba andijon, fotopolimer plomba narxi, tish nervini olish andijon, pulpit davolash andijon, karies davolash andijon, periodontit davolash, 3m filtek plomba andijon, estelite quick plomba, ogriqsiz tish davolash, tish qamashishi davolash, tish ogriq qoldirish, ildiz kanalini tozalash, apekslokator bilan davolash, old tishni plombalash, orqa tishni davolash, tish yemirilishi, emal shikastlanishi, tishim ogriyapti, issiq sovuqqa qamashish, chuchuk tish, tish teshilishi, tishda qora dog, plomba tushib qoldi, old tish sinishi, karies davolash narxi, ildiz kanalini davolash, тиш даволаш андижон, тиш пломба нархи, нурли пломба, тиш оғриғи, кечки пайт тишим оғрияпти, кариес даволаш, пульпит даволаш, тишим оғрияпти, тиш қамашиши",
-    ru: "болит зуб ночью что делать, пульсирует зуб ночью, ноющая зубная боль, лечение зубов андижан, лечение кариеса андижан, лечение пульпита без боли андижан, световая пломба андижан, пломбирование каналов зуба андижан, 3m filtek андижан, estelite quick андижан, зубной врач андижан, зубная боль андижан, лечение периодонтита андижан, чистка каналов зуба андижан, качественная пломба цена андижан, сколько стоит вылечить зуб в андижане, болит зуб что делать, зуб реагирует на горячее и холодное, чувствительность эмали, потемнел зуб",
-    en: "severe toothache at night, tooth throbbing at night, tooth decay treatment andijan, cavity filling andijan, painless root canal andijan, dental fillings 3m filtek, composite filling andijan, estelite quick composite, emergency toothache relief andijan, endodontist andijan, pulpitis treatment andijan, sensitive teeth treatment, lost filling replacement, deep cavity restoration",
+    uz: "tish davolash andijon, kechki payt tishim ogriyapti, kechasi tish og'riganda nima qilish kerak, tish og'rig'iga issiq qo'yish mumkinmi, tishim loqillayapti, tish og'rig'iga dori, tish plomba narxi andijon, nurli plomba andijon, 3m filtek plomba germaniya, estelite yaponiya plomba, denfil koreya plomba, vladmiva rossiya plomba, tish nervini olish og'riqlimi, pulpit davolash andijon, karies davolash andijon, periodontit davolash, og'riqsiz tish davolash, tish qamashishi davolash, issiq sovuqqa tish qamashishi, ildiz kanalini tozalash apekslokator, plomba tushib qoldi, tishda qora dog, old tish sinishi, tish ukoli og'riqlimi, тиш даволаш андижон, тиш пломба нархи, нурли пломба, тиш оғриғи, кечки пайт тишим оғрияпти, кариес даволаш, пульпит даволаш",
+    ru: "лечение зубов андижан, болит зуб ночью что делать, пульсирует зуб ночью, ноющая зубная боль, лечение кариеса андижан, лечение пульпита без боли андижан, световая пломба андижан, пломбирование каналов зуба андижан, 3m filtek германия андижан, estelite япония, denfil корея, зубной врач андижан, сколько стоит вылечить зуб в андижане, чувствительность эмали, потемнел зуб, выпала пломба",
+    en: "tooth decay treatment andijan, severe toothache at night relief, cavity filling andijan, painless root canal andijan, 3m filtek estelite composite filling, emergency toothache relief andijan, pulpitis treatment andijan, sensitive teeth treatment, lost filling replacement",
   },
   ortopediya: {
-    uz: "tish qoyish, tish qo'yish, tish qoyish narxi andijon, oq tish qo'yish narxi 2026, tish karonkalari, tish koronkasi, sirkoniy karonka, tsirkon tish narxi andijon, tsirkoniy karonka andijon, tsirkon qoplama narxi, ortoped stomatolog andijon, tish protez narxlari andijon, tishga karonka qoyish, e-max karonka andijon, germaniya tsirkon karonka, avstraliya keramikasi, xitoy tsirkon karonkasi, koprik protez andijon, metallokeramika almashtirish, tish tushib qolganda, tish yoqligida nima qilish kerak, chaynash tishlariga karonka, sirkon tish andijon, tish sinib ketdi, ildizi qolgan tishni tiklash, bitta tish qoyish, butun jag tish qoyish, тиш қўйиш, тиш қўйиш нархи, тиш коронкалари, циркон тиш нархи андижон, цирконий коронка, тиш қўйиш андижон, протез тишлар нархи, синган тишни тиклаш",
-    ru: "вставить зуб андижан, вставить зубы цена андижан, коронки на зубы андижан, циркониевые коронки андижан, коронка из диоксида циркония андижан, коронка из циркония цена андижан, поставить коронку на зуб цена андижан, протезирование зубов андижан, стоматолог ортопед андижан, мостовидный протез андижан, безметалловая керамика андижан, коронки емакс андижан, цирконий германия австралия, замена металлокерамики на цирконий, откололся зуб под корень, восстановление сломанного зуба, сколько стоит поставить коронку в андижане",
-    en: "tooth replacement andijan, dental crowns andijan, zirconia crowns andijan, dental crowns price andijan, prosthodontist andijan, dental bridges andijan, cad cam zirconia andijan, emax crowns andijan, metal free crowns andijan, full mouth rehabilitation andijan, tooth crown replacement andijan, broken tooth restoration, post and core buildup andijan",
+    uz: "tish qoyish, tish qo'yish, tish qo yish narxlari, tish qoyish narxi andijon, oq tish qo'yish narxi 2026, tish karonkalari, tish koronkasi, sirkoniy karonka, tsirkoniy karonka andijon, germaniya tsirkon karonka, avstraliya keramikasi, xitoy tsirkon karonkasi, tsirkon va metallokeramika farqi, e-max karonka andijon, ko'prik protez andijon, kultavaya vkladka ildizni tiklash, ortoped stomatolog andijon, tish sinib ketdi, bitta tish qo'yish, butun jag' tish qo'yish, milk qoraymaydigan karonka, 2-3 kunda tish qo'yish, cad cam 3d tish, тиш қўйиш, тиш қўйиш нархи, тиш коронкалари, циркон тиш нархи андижон, цирконий коронка",
+    ru: "вставить зуб андижан, сколько стоит вставить зубы в андижане, коронки на зубы андижан, циркониевые коронки андижан, цирконий германия австралия китай, отличие циркония от металлокерамики, поставить коронку на зуб цена андижан, протезирование зубов андижан, стоматолог ортопед андижан, мостовидный протез андижан, культевая вкладка спасти корень зуба",
+    en: "tooth replacement andijan, dental crowns andijan, zirconia crowns andijan, zirconia vs metal ceramic crowns, prosthodontist andijan, dental bridges andijan, cad cam 3d zirconia andijan, post and core buildup andijan",
   },
   "estetik-stomatologiya": {
-    uz: "tish breketlari, tish tekislash, vinirlar andijon, vinir narxi andijon, emax vinirlar andijon, keramik vinir narxi, gollivud tabassumi andijon, estetik stomatologiya andijon, tish restavratsiyasi andijon, badiiy tish restavratsiyasi, diastema yopish andijon, tishlar orasidagi ochiqlikni yopish, tish qiyshiqligini vinir bilan togirlash, tish oqligi, tabassum dizayni, kompozit vinir andijon, tishlar orasidagi tirqish, tish qiyshiqligi, sariq tishlarni oqartirish, old tish restavratsiyasi, винирлар андижон, винир нархи, голливуд табассуми, эмакс винирлар, тиш реставрацияси",
-    ru: "брекеты андижан, выравнивание зубов андижан, виниры андижан, керамические виниры emax андижан, виниры цена андижан, виниры на зубы цена в андижане, голливудская улыбка андижан, эстетическая стоматология андижан, художественная реставрация зубов андижан, закрыть щель между зубами диастема, композитные виниры андижан, выравнивание зубов винирами, щель между зубами, как сделать красивую улыбку",
-    en: "clear aligners andijan, dental veneers andijan, porcelain veneers emax andijan, cosmetic dentistry andijan, smile makeover andijan, aesthetic restoration andijan, hollywood smile andijan, diastema closure veneers, composite bonding andijan, cosmetic dentist andijan, gap between front teeth closure",
+    uz: "vinirlar andijon, e-max vinirlar andijon, keramik vinir narxi, gollivud tabassumi andijon, estetik stomatologiya andijon, tish breketlari, tish tekislash andijon, elaynerlar andijon, tish ortodontiyasi, diastema yopish, tishlar orasidagi ochiqlikni yopish, old tish restavratsiyasi, kompozit vinir andijon, vinirlar tishni charxlaydimi, vinirlar sarg'ayadimi, винирлар андижон, голливуд табассуми, эмакс винирлар, тиш брекетлари, тиш текислаш андижон",
+    ru: "виниры андижан, керамические виниры emax андижан, виниры на зубы цена в андижане, голливудская улыбка андижан, эстетическая стоматология андижан, брекеты и элайнеры андижан, выравнивание зубов андижан, художественная реставрация зубов андижан, закрыть щель между зубами диастема",
+    en: "porcelain veneers emax andijan, cosmetic dentistry andijan, smile makeover andijan, clear aligners braces planning andijan, hollywood smile andijan, diastema closure veneers, composite bonding andijan",
   },
   implantatsiya: {
-    uz: "tish implanti, tish implantatsiyasi, tish ektirish, implantatsiya andijon, tish implant narxi andijon, osstem implant andijon narxi, straumann implant andijon, koreyski implant andijon, shveysariya implant, tish ektirish narxi andijon, tish implantolog andijon, bir bosqichli implantatsiya, suyak yetishmovchiligi implant, ogriqsiz tish implantatsiyasi, suniy tish ildizi, butun jag implantatsiyasi, all on 4 andijon, all on 6 andijon, tish tushib qolganda, tish sugurgandan keyin implant, implant qoyish ogriqlimi, bitta tish implantatsiyasi, тиш импланти, тиш имплантацияси, имплантация андижон, тиш имплант нархи, осстем имплант, штрауман имплант, тиш экиш нархи",
-    ru: "зубные импланты андижан, имплантация зубов андижан, зубной имплант цена андижан, импланты осстем цена андижан, имплантация штрауман андижан, поставить имплант цена андижан, лучший имплантолог андижан, корейские импланты осстем, швейцарские импланты штрауман, одноэтапная имплантация андижан, имплантация зубов под ключ андижан, приживаемость имплантов, нет зуба что делать, имплант или мост, сколько стоит вставить зуб имплант андижан",
-    en: "dental implants andijan, tooth implant andijan, osstem implants andijan, straumann dental implants andijan, tooth replacement implant andijan, dental surgery uzbekistan, dental implantologist andijan, immediate implant placement, single tooth implant cost andijan, all on 4 dental implants uzbekistan, missing tooth solution, tooth extraction with immediate implant",
+    uz: "tish implantatsiyasi, tish implanti, tish implantatsiyasi andijon, implant tish narxi, implant tish narxi 2026, tish implantatsiya nima, implant tish qo yish jarayoni, implant tish halolmi, implant tish zararlari, implant tish turlari, tish implanti bosqichlari, osteointegratsiya muddati, tish ektirish narxi andijon, osstem implant andijon, straumann implant andijon, koreyski implant andijon, shveysariya implant, bir bosqichli implantatsiya, tish olingan kuni implant, suyak plastikasi, og'riqsiz tish implantatsiyasi, tish implantolog andijon, 20 daqiqada implant, 99.2% kafolat, тиш имплантацияси, тиш импланти, имплант тиш нархи 2026, имплант тиш ҳалолми, имплант тиш зарарлари, осстем имплант, штрауман имплант",
+    ru: "имплантация зубов андижан, зубные импланты андижан, зубной имплант цена андижан 2026, этапы имплантации зубов, импланты осстем цена андижан, имплантация штрауман андижан, вредны ли импланты зубов противопоказания, можно ли ставить импланты халяль, одномоментная имплантация в день удаления, сколько приживается имплант, лучший имплантолог андижан",
+    en: "dental implants andijan, tooth implant cost 2026 andijan, osstem implants andijan, straumann dental implants andijan, dental implant stages osteointegration, immediate implant placement, single tooth implant andijan, implant safety contraindications",
   },
   "tish-oqartirish": {
-    uz: "tish oqartirish andijon narxi, zoom 4 tish oqartirish andijon, lazerli tish oqartirish, tish toshlarini tozalash andijon, airflow tozalash andijon, ultratovushli tish tozalash, kashanda tishlarini tozalash, choy va kofe doglarini ketkazish, tish sargayishi sababi, tish toshini oldirish narxi andijon, emalni oqartirish, tish toshini oldirish, milk qonashi tozalash, kashanda tishlari sariqligi, ogizdan hid kelishi, emalni oqartirish zararsizmi, тиш оқартириш андижон, зум 4 оқартириш, тиш тошларини тозалаш, эйрфлоу тозалаш, тиш сарғайиши",
-    ru: "отбеливание зубов андижан, отбеливание зум 4 андижан, безопасное отбеливание зубов андижан, профессиональная чистка зубов андижан, ультразвуковая чистка зубов андижан, удаление зубного камня андижан, эйрфлоу андижан, снятие налета курильщика андижан, чистка зубов цена андижан, полировка зубов пастой, желтые зубы чистка, кровоточат десны налет, камень на зубах удалить ультразвуком",
-    en: "teeth whitening andijan, laser teeth whitening zoom 4 andijan, dental cleaning andijan, airflow dental andijan, remove tartar teeth andijan, ultrasonic scaling and polishing andijan, professional dental hygiene andijan, safe enamel brightening, remove yellow teeth stains, bad breath dental scaling",
+    uz: "tish oqartirish andijon narxi, zoom 4 tish oqartirish andijon, philips zoom 4 lazerli oqartirish, tish toshlarini tozalash andijon, airflow tozalash andijon, ultratovushli tish tozalash, kashanda tishlarini tozalash, choy va kofe doglarini ketkazish, oq parhez 48 soat, milk qonashi tozalash, ogizdan hid kelishi sababi davolash, tish oqartirish emalga zarar qilmaydimi, acp himoya geli, тиш оқартириш андижон, зум 4 оқартириш, тиш тошларини тозалаш, эйрфлоу тозалаш",
+    ru: "отбеливание зубов андижан, отбеливание philips zoom 4 андижан, безопасное отбеливание зубов андижан, белая диета после отбеливания, профессиональная чистка зубов airflow андижан, ультразвуковая чистка удаление камня андижан, кровоточат десны запах изо рта",
+    en: "teeth whitening andijan, philips zoom 4 laser whitening andijan, airflow tartar scaling andijan, ultrasonic dental cleaning andijan, bleeding gums bad breath treatment, safe enamel whitening",
   },
   xirurgiya: {
-    uz: "tish olish, tish oldirish, ogriqsiz tish olish, tish sugurish, aql tishini oldirish andijon, 8 tishni oldirish narxi andijon, donolik tishi ogriq, ogriqsiz tish sugurish andijon, tish oldirish narxi andijon, murakkab tish olish, ildiz qolib ketganda olish, atravmatik jarrohlik, jarroh stomatolog andijon, aql tishi yalliglanishi, perikoronit davolash, aql tishim chiqyapti, 8 tish ogrishi, aql tishi milk shishi, ogiz ochilmayapti tish ogrigi, tish sugurish ogriqlimi, tish oldirgandan keyin shish, тиш олиш, тиш олдириш, тиш суғуриш, ақл тишини олдириш, тиш жарроҳи, саккизинчи тиш оғриғи",
-    ru: "удаление зуба андижан, удалить зуб без боли андижан, вырвать зуб андижан, удаление зуба мудрости андижан, удаление зуба мудрости цена андижан, безболезненное удаление зуба андижан, хирург стоматолог андижан, удаление восьмерки андижан, сложное удаление зуба с корнями, перикоронит зуба мудрости андижан, атравматичное удаление, режется зуб мудрости, опухла щека зуб мудрости",
-    en: "tooth extraction andijan, painless dental extraction andijan, wisdom tooth removal andijan, oral surgeon andijan, impacted wisdom tooth andijan, third molar extraction cost, surgical tooth removal, atraumatic bone preserving extraction, wisdom tooth swelling jaw pain relief",
+    uz: "tish olish, tish oldirish, og'riqsiz tish olish, tish sug'urish, aql tishini oldirish andijon, 8 tishni oldirish narxi andijon, donolik tishi og'riq, retensiyalangan aql tishi, murakkab tish olish, ildiz milk ichida qolganda olish, atravmatik jarrohlik, kollagen gubka, shishsiz tish olish, perikoronit milk shishi davolash, tish oldirgandan keyin og'iz chayqash mumkinmi, alveolit oldini olish, jarroh stomatolog andijon, тиш олиш, тиш олдириш, ақл тишини олдириш, тиш суғуриш андижон",
+    ru: "удаление зуба андижан, удалить зуб без боли андижан, удаление зуба мудрости андижан, удаление восьмерки цена андижан, сложное удаление ретинированного зуба мудрости, удаление корня зуба, атравматичное удаление без отёка, можно ли полоскать рот после удаления зуба, перикоронит опухла десна, хирург стоматолог андижан",
+    en: "tooth extraction andijan, painless wisdom tooth removal andijan, impacted third molar extraction, atraumatic oral surgery andijan, post extraction care dry socket prevention, broken root removal",
   },
   "rentgen-diagnostika": {
-    uz: "tish rentgen andijon, viziografiya andijon, tishni rentgen qilish andijon, tish rasmi tushirish narxi, raqamli tish diagnostikasi, 3d rentgen andijon, tish ildizi rasmi, yashirin kariesni aniqlash, radioviziograf andijon, tish rasmi tushirish, tishim nega ogriyapti rentgen, 3d tish tekshirish, тиш рентген андижон, визиография андижон, тиш сурати, рақамли рентген",
-    ru: "рентген зуба андижан, снимок зуба андижан, визиография зубов андижан, прицельный снимок зуба андижан, компьютерная диагностика зубов андижан, где сделать снимок зуба в андижане, цифровой рентген зуба цена, радиовизиограф андижан, снимок корня зуба, скрытый кариес снимок",
-    en: "dental x-ray andijan, digital dental imaging andijan, radiovisiography andijan, tooth scan andijan, periapical x-ray andijan, low radiation dental x-ray, root canal imaging andijan, digital radiovisiograph andijan",
+    uz: "tish rentgen andijon, viziografiya andijon, raqamli tish rentgeni, tish rasmi tushirish andijon, 90 foiz kam nurlanish, 2 soniyada tish surati, tish ildizi rasmi, yashirin kariesni aniqlash, implant oldi rentgen diagnostikasi, aql tishi rentgeni, homiladorlikda tish rentgeni xavfsizmi, bolalar tish rentgeni, тиш рентген андижон, визиография андижон, тиш сурати",
+    ru: "рентген зуба андижан, снимок зуба андижан, цифровой визиограф андижан, безопасный рентген зубов снижение нагрузки на 90 процентов, прицельный снимок корня зуба, скрытый кариес диагностика",
+    en: "dental x-ray andijan, digital radiovisiography andijan, low dose tooth x-ray, instant 2 second dental imaging, hidden cavity and root canal scan",
   },
 };
 

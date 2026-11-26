@@ -210,7 +210,7 @@ const SmileAssessmentWizard = () => {
                   role="tab"
                   aria-selected={isSelected}
                   id={`concern-tab-${item.id}`}
-                  aria-controls="concern-panel"
+                  aria-controls={`concern-panel-${item.id}`}
                   onClick={() => setSelectedConcern(item.id)}
                   className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl border text-left transition-all duration-200 flex items-center gap-2.5 sm:gap-3.5 cursor-pointer ${
                     isSelected
@@ -247,62 +247,69 @@ const SmileAssessmentWizard = () => {
             })}
           </div>
 
-          {/* Right: Doctor's Instant Clinical Recommendation & Direct Booking */}
-          <div
-            id="concern-panel"
-            role="tabpanel"
-            aria-labelledby={`concern-tab-${selectedConcern}`}
-            className="lg:col-span-7 bg-slate-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200/90 flex flex-col justify-between"
-          >
-            <div>
-              <div className="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-slate-200/80">
-                <span className="text-[11px] font-black uppercase tracking-widest text-[#132e53] bg-blue-100/80 px-3 py-1 rounded-full">
-                  {lang === "uz"
-                    ? "DR. OLIMJON TAVSIYASI"
-                    : lang === "ru"
-                    ? "РЕКОМЕНДАЦИЯ Д-РА ОЛИМЖОНА"
-                    : "DR. OLIMJON'S RECOMMENDATION"}
-                </span>
-                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-                  <IconShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>{active.warranty[lang]}</span>
-                </span>
-              </div>
-
-              <h3 className="mt-3 sm:mt-4 text-lg sm:text-xl md:text-2xl font-black text-slate-900 leading-snug">
-                {active.recommendation[lang]}
-              </h3>
-
-              <p className="mt-2 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
-                {active.summary[lang]}
-              </p>
-
-              {/* 2 Protocol Pills */}
-              <div className="mt-4 sm:mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
-                <div className="p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white border border-slate-200/80">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-                    <IconClock className="w-3.5 h-3.5 text-[#0284c7]" />
-                    <span>
-                      {lang === "uz" ? "Muolaja davomiyligi" : lang === "ru" ? "Длительность" : "Procedure Duration"}
+          {/* Right: Render all clinical recommendation panels in DOM for crawling, plus shared booking form */}
+          <div className="lg:col-span-7 bg-slate-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-slate-200/90 flex flex-col justify-between">
+            {concerns.map((item) => {
+              const isSelected = item.id === selectedConcern;
+              return (
+                <div
+                  key={item.id}
+                  id={`concern-panel-${item.id}`}
+                  role="tabpanel"
+                  aria-labelledby={`concern-tab-${item.id}`}
+                  hidden={!isSelected}
+                  className={isSelected ? "" : "hidden"}
+                >
+                  <div className="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-slate-200/80">
+                    <span className="text-[11px] font-black uppercase tracking-widest text-[#132e53] bg-blue-100/80 px-3 py-1 rounded-full">
+                      {lang === "uz"
+                        ? "DR. OLIMJON TAVSIYASI"
+                        : lang === "ru"
+                        ? "РЕКОМЕНДАЦИЯ Д-РА ОЛИМЖОНА"
+                        : "DR. OLIMJON'S RECOMMENDATION"}
                     </span>
-                  </span>
-                  <span className="text-xs sm:text-sm font-extrabold text-slate-900 block mt-1">
-                    {active.duration[lang]}
-                  </span>
-                </div>
-                <div className="p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white border border-slate-200/80">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-                    <IconShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                    <span>
-                      {lang === "uz" ? "Og'riqsizlantirish" : lang === "ru" ? "Обезболивание" : "Pain Control"}
+                    <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                      <IconShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>{item.warranty[lang]}</span>
                     </span>
-                  </span>
-                  <span className="text-xs sm:text-sm font-extrabold text-slate-900 block mt-1">
-                    {active.anesthesia[lang]}
-                  </span>
+                  </div>
+
+                  <h3 className="mt-3 sm:mt-4 text-lg sm:text-xl md:text-2xl font-black text-slate-900 leading-snug">
+                    {item.recommendation[lang]}
+                  </h3>
+
+                  <p className="mt-2 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
+                    {item.summary[lang]}
+                  </p>
+
+                  {/* 2 Protocol Pills */}
+                  <div className="mt-4 sm:mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+                    <div className="p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white border border-slate-200/80">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+                        <IconClock className="w-3.5 h-3.5 text-[#0284c7]" />
+                        <span>
+                          {lang === "uz" ? "Muolaja davomiyligi" : lang === "ru" ? "Длительность" : "Procedure Duration"}
+                        </span>
+                      </span>
+                      <span className="text-xs sm:text-sm font-extrabold text-slate-900 block mt-1">
+                        {item.duration[lang]}
+                      </span>
+                    </div>
+                    <div className="p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white border border-slate-200/80">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+                        <IconShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                        <span>
+                          {lang === "uz" ? "Og'riqsizlantirish" : lang === "ru" ? "Обезболивание" : "Pain Control"}
+                        </span>
+                      </span>
+                      <span className="text-xs sm:text-sm font-extrabold text-slate-900 block mt-1">
+                        {item.anesthesia[lang]}
+                      </span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              );
+            })}
 
             {/* Mini Inline Form */}
             <form onSubmit={handleSubmit} className="mt-6 pt-5 border-t border-slate-200/80">

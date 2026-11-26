@@ -92,16 +92,18 @@ export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = 
   const serviceUrl = urlFor(`/services/${service.id}`, lang);
   const breadcrumbObj = breadcrumbs.length > 0 ? buildBreadcrumbSchema(breadcrumbs, lang) : null;
   const medCode = PROCEDURE_MEDICAL_CODES[service.id];
+  const serviceSteps = service.steps?.[lang] || service.steps?.uz || [];
 
   const procedure = {
     "@type": "MedicalProcedure",
     "@id": `${serviceUrl}#procedure`,
     "name": service.title[lang] || service.title.uz,
-    "description": service.shortDesc[lang] || service.shortDesc.uz,
+    "description": service.aeoSummary?.[lang] || service.shortDesc[lang] || service.shortDesc.uz,
     "procedureType": service.id === "xirurgiya" || service.id === "implantatsiya"
       ? "https://schema.org/SurgicalProcedure"
       : "https://schema.org/NoninvasiveProcedure",
     "bodyLocation": "https://en.wikipedia.org/wiki/Human_mouth",
+    "howPerformed": serviceSteps.map((st, idx) => `${idx + 1}. ${st.title}: ${st.desc}`).join(" ") || undefined,
     "relevantSpecialty": [
       {
         "@type": "MedicalSpecialty",
@@ -160,6 +162,29 @@ export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = 
     },
   };
 
+  const medicalWebPage = {
+    "@type": "MedicalWebPage",
+    "@id": `${serviceUrl}#webpage`,
+    "url": serviceUrl,
+    "name": service.title[lang] || service.title.uz,
+    "inLanguage": lang === "ru" ? "ru-RU" : lang === "en" ? "en-US" : "uz-UZ",
+    "about": {
+      "@id": `${serviceUrl}#procedure`,
+    },
+    "author": {
+      "@id": `${SITE_ORIGIN}/#doctor`,
+    },
+    "reviewedBy": {
+      "@id": `${SITE_ORIGIN}/#doctor`,
+    },
+    "lastReviewed": "2026-11-26",
+    "dateModified": "2026-11-26",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "[data-aeo-summary]"],
+    },
+  };
+
   const faqObj = faqs && faqs.length > 0 ? {
     "@type": "FAQPage",
     "@id": `${serviceUrl}#faq`,
@@ -175,6 +200,7 @@ export const buildMedicalProcedureSchema = (service, lang = "uz", breadcrumbs = 
 
   const graph = [];
   if (breadcrumbObj) graph.push(breadcrumbObj);
+  graph.push(medicalWebPage);
   graph.push(procedure);
   if (faqObj) graph.push(faqObj);
 
